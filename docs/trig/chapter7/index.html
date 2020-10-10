@@ -1,4 +1,254 @@
-<!DOCTYPE html><html><head><link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.8a512196.css"><script src="https://colbyn.github.io/school-notes/system.f84e1103.js"></script><script>window.MathJax={tex:{inlineMath:[["\\(","\\)"],["stem:[","]"]]},svg:{fontCache:"global"},processEscapes:!0};</script><script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
-</script><link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width,initial-scale=1"><meta charset="utf-8"><script src="https://www.geogebra.org/apps/deployggb.js"></script><script src="https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script></head><body> <style>header#root{border:1px solid #000;border-radius:3px;overflow:hidden;display:flex;flex-direction:column;width:100%;margin:10px auto 0}header#root>span{border-bottom:1px solid #000;margin-bottom:4px;padding:4px}header#root ul{color:#000;margin-left:4px;border-left:1px solid #e0e0e0;padding-left:10px}header#root ul,header#root ul>li{display:flex;flex-direction:column}header#root ul>li{color:inherit}header#root ul>li>a{color:inherit;display:flex;align-items:center;text-decoration:none}header#root ul>li>a>span.suffix{margin-right:10px;font-size:.8em;font-weight:100;padding:3px;font-size:.3em;text-decoration:none;border:1px solid #e0e0e0;color:#191919}header#root ul>li>a>span.chapter{margin-right:10px;text-decoration:underline}header#root ul>li>a>span.name{text-decoration:underline}</style><header id="root"> <span>Navigation</span>
-</header><script>function t(t,n){var a;if("undefined"==typeof Symbol||null==t[Symbol.iterator]){if(Array.isArray(t)||(a=e(t))||n&&t&&"number"==typeof t.length){a&&(t=a);var r=0,i=function(){};return{s:i,n:function(){return r>=t.length?{done:!0}:{done:!1,value:t[r++]}},e:function(t){throw t},f:i}}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}var o,c=!0,h=!1;return{s:function(){a=t[Symbol.iterator]()},n:function(){var t=a.next();return c=t.done,t},e:function(t){h=!0,o=t},f:function(){try{c||null==a.return||a.return()}finally{if(h)throw o}}}}function e(t,e){if(t){if("string"==typeof t)return n(t,e);var a=Object.prototype.toString.call(t).slice(8,-1);return"Object"===a&&t.constructor&&(a=t.constructor.name),"Map"===a||"Set"===a?Array.from(t):"Arguments"===a||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(a)?n(t,e):void 0}}function n(t,e){(null==e||e>t.length)&&(e=t.length);for(var n=0,a=new Array(e);n<e;n++)a[n]=t[n];return a}function a(t){return t()}var r=[{name:"Homepage",path:"index.html"},{name:"Calculus 1",suffix:"Class Notes",path:"calc/index.html",sub:[{name:"Functions and Limits",chapter:"1",path:"calc/chapter1/index.html"},{name:"Derivatives",chapter:"2",path:"calc/chapter2/index.html"},{name:"Applications of Differentiation ",chapter:"3",path:"calc/chapter3/index.html"},{name:"Integrals",chapter:"4",path:"calc/chapter4/index.html"},{name:"Applications of Integration",chapter:"5",path:"calc/chapter5/index.html"},{name:"Inverse Functions",chapter:"6",path:"calc/chapter6/index.html"}]},{name:"Trigonometry",suffix:"Class Notes",path:"trig/index.html",sub:[{name:"Functions and Graphs",chapter:"1",path:"trig/chapter1/index.html"},{name:"Trigonometric Functions",chapter:"2",path:"trig/chapter2/index.html"},{name:"Trigonometric Identities and Equations",chapter:"3",path:"trig/chapter3/index.html"},{name:"Applications of Trigonometry",chapter:"4",path:"trig/chapter4/index.html"},{name:"Complex Numbers",chapter:"5",path:"trig/chapter5/index.html"},{name:"Topics in Analytic Geometry",chapter:"6",path:"trig/chapter6/index.html"},{name:"Exponential and Logarithmic Functions",chapter:"7",path:"trig/chapter6/index.html"}]}],i=window.location.host;function o(t){return"colbyn.github.io"===i?"https://colbyn.github.io/school-notes/".concat(t):"/".concat(t)}function c(t){window.location.host;var e=document.createElement("li");return a(function(){var n=document.createElement("a");if(n.href=o(t.path),"suffix"in t){var a=document.createElement("span");a.className="suffix",a.textContent=t.suffix,n.appendChild(a)}if("chapter"in t){var r=document.createElement("span");r.className="chapter",r.textContent="Chapter ".concat(t.chapter),n.appendChild(r)}if("name"in t){var i=document.createElement("span");i.className="name",i.textContent=t.name,n.appendChild(i)}e.appendChild(n)}),"sub"in t&&e.appendChild(h(t.sub)),e}function h(e){var n,a=document.createElement("ul"),r=t(e);try{for(r.s();!(n=r.n()).done;)entry=n.value,a.appendChild(c(entry))}catch(i){r.e(i)}finally{r.f()}return a}var l=document.querySelector("header#root");console.assert(l),l.appendChild(h(r));</script> <h1>Chapter 7 | Exponential and Logarithmic Functions</h1>
-</body></html>
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.6e450e63.css">
+    <script src="https://colbyn.github.io/school-notes/system.f84e1103.js"></script>
+    <!-- MATH-JAX -->
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(', '\\)'], ['stem:[', ']']]
+  },
+  svg: {
+    fontCache: 'global'
+  },
+  processEscapes: true
+};</script>
+<script type="text/javascript" id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+<!--FONTS (TODO SMALLER)-->
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+
+<!-- MISC -->
+<meta name="viewport" content="width=device-width,initial-scale=1">  
+<meta charset="utf-8">
+
+<!-- GEOGEBRA -->
+<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+
+<!-- DESMOS -->
+<script src="https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+</head>
+<body>
+    <!-- WIP NEW NAVIGATION -->
+
+<style>header#root {
+        border: 1px solid #000;
+        border-radius: 3px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        margin: 25px;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+    header#root > span {
+        border-bottom: 1px solid #000;
+        margin-bottom: 4px;
+        padding: 4px;
+    }
+
+    header#root ul {
+        display: flex;
+        flex-direction: column;
+        color: #000;
+
+        margin-left: 4px;
+        border-left: 1px solid #e0e0e0;
+        padding-left: 10px;
+    }
+    header#root ul > li {
+        display: flex;
+        color: inherit;
+        flex-direction: column;
+    }
+    header#root ul > li > a {
+        color: inherit;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+    header#root ul > li > a > span.suffix {
+        margin-right: 10px;
+        font-size: 0.8em;
+        font-weight: 100;
+
+        padding: 3px;
+        font-size: 0.3em;
+        text-decoration: none;
+        border: 1px solid #e0e0e0;
+        color: #191919;
+    }
+    header#root ul > li > a > span.chapter {
+        margin-right: 10px;
+        text-decoration: underline;
+    }
+    header#root ul > li > a > span.name {
+        text-decoration: underline;
+    }</style>
+
+<header id="root">
+    <span>Navigation</span>
+</header>
+
+<script>function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function $(f) {
+  return f();
+}
+
+var menu = [{
+  name: 'Homepage',
+  path: 'index.html'
+}, {
+  name: 'Calculus 1',
+  suffix: 'Class Notes',
+  path: 'calc/index.html',
+  sub: [{
+    name: 'Functions and Limits',
+    chapter: '1',
+    path: 'calc/chapter1/index.html'
+  }, {
+    name: 'Derivatives',
+    chapter: '2',
+    path: 'calc/chapter2/index.html'
+  }, {
+    name: 'Applications of Differentiation ',
+    chapter: '3',
+    path: 'calc/chapter3/index.html'
+  }, {
+    name: 'Integrals',
+    chapter: '4',
+    path: 'calc/chapter4/index.html'
+  }, {
+    name: 'Applications of Integration',
+    chapter: '5',
+    path: 'calc/chapter5/index.html'
+  }, {
+    name: 'Inverse Functions',
+    chapter: '6',
+    path: 'calc/chapter6/index.html'
+  }]
+}, {
+  name: 'Trigonometry',
+  suffix: 'Class Notes',
+  path: 'trig/index.html',
+  sub: [{
+    name: 'Functions and Graphs',
+    chapter: '1',
+    path: 'trig/chapter1/index.html'
+  }, {
+    name: 'Trigonometric Functions',
+    chapter: '2',
+    path: 'trig/chapter2/index.html'
+  }, {
+    name: 'Trigonometric Identities and Equations',
+    chapter: '3',
+    path: 'trig/chapter3/index.html'
+  }, {
+    name: 'Applications of Trigonometry',
+    chapter: '4',
+    path: 'trig/chapter4/index.html'
+  }, {
+    name: 'Complex Numbers',
+    chapter: '5',
+    path: 'trig/chapter5/index.html'
+  }, {
+    name: 'Topics in Analytic Geometry',
+    chapter: '6',
+    path: 'trig/chapter6/index.html'
+  }, {
+    name: 'Exponential and Logarithmic Functions',
+    chapter: '7',
+    path: 'trig/chapter6/index.html'
+  }]
+}];
+var host = window.location.host;
+
+function get_link(ref_ref) {
+  var href = "";
+
+  if (host === "colbyn.github.io") {
+    href = "https://colbyn.github.io/school-notes/".concat(ref_ref);
+  } else {
+    href = "/".concat(ref_ref);
+  }
+
+  return href;
+}
+
+function build_entry(entry) {
+  var host = window.location.host;
+  var node = document.createElement("li"); // LINK NODE
+
+  $(function () {
+    var link_node = document.createElement('a');
+    link_node.href = get_link(entry.path); // SUFFIX
+
+    if ('suffix' in entry) {
+      var span_node = document.createElement('span');
+      span_node.className = "suffix";
+      span_node.textContent = entry.suffix;
+      link_node.appendChild(span_node);
+    } // CHAPTER
+
+
+    if ('chapter' in entry) {
+      var span = document.createElement("span");
+      span.className = "chapter";
+      span.textContent = "Chapter ".concat(entry.chapter);
+      link_node.appendChild(span);
+    } // NAME
+
+
+    if ('name' in entry) {
+      var _span = document.createElement("span");
+
+      _span.className = "name";
+      _span.textContent = entry.name;
+      link_node.appendChild(_span);
+    }
+
+    node.appendChild(link_node);
+  }); // CHILD NODES
+
+  if ('sub' in entry) {
+    node.appendChild(build_entries(entry.sub));
+  } // DONE
+
+
+  return node;
+}
+
+function build_entries(entries) {
+  var ul_node = document.createElement("ul");
+
+  var _iterator = _createForOfIteratorHelper(entries),
+      _step;
+
+  try {
+    for (_iterator.s(); !(_step = _iterator.n()).done;) {
+      entry = _step.value;
+      ul_node.appendChild(build_entry(entry));
+    }
+  } catch (err) {
+    _iterator.e(err);
+  } finally {
+    _iterator.f();
+  }
+
+  return ul_node;
+} // BUILD ROOT MENU
+
+
+var root_ul_node = document.querySelector("header#root");
+console.assert(root_ul_node);
+root_ul_node.appendChild(build_entries(menu));</script>
+    <h1>Chapter 7 | Exponential and Logarithmic Functions</h1>
+</body>
+</html>
