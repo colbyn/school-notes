@@ -194,50 +194,57 @@ function guidGenerator() {
 }
 
 function geogebra(tree) {
-    const uid = `geo_${guidGenerator()}`;
-    const init = (setup) => `
-    <div id="${uid}" style="width: 100%;"></div>
-    <script>
-    let ggbApp = new GGBApplet(
-        {
-            id: "${uid}",
-            "appName": "${setup.app_type}",
-            "width": ${setup.width || window.innerWidth},
-            "height": ${setup.height || 500},
-            "showToolBar": false,
-            "showAlgebraInput": false,
-            "showMenuBar": false,
-            "showToolBarHelp": false,
-            "showTutorialLink": false,
-            "borderColor":null,
-            "showResetIcon":true,
-            "enableLabelDrags":false,
-            "enableShiftDragZoom":true,
-            "enableRightClick":false,
-            "capturingThreshold":null,
-            "errorDialogsActive":false,
-            "useBrowserForJS":false,
-            appletOnLoad: (x) => {
-                for (cmd of ${JSON.stringify(setup.commands)}) {
-                    window.${uid}.evalCommand(cmd);
+    const init = (setup) => {
+        const uid = `geo_${guidGenerator()}`;
+        return `
+        <div id="${uid}" style="width: 100%;"></div>
+        <script>
+        var ${uid}_setup = new GGBApplet(
+            {
+                id: "${uid}",
+                "appName": '${setup.app_type}',
+                "width": ${setup.width} || window.innerWidth,
+                "height": ${setup.height} || 500,
+                "showToolBar": false,
+                "allowStyleBar": false,
+                "showAlgebraInput": false,
+                "showMenuBar": false,
+                "showScreenshot": false,
+                "showTutorialLink": false,
+                "borderColor": false,
+                "showResetIcon": false,
+                "enableUndoRedo": false,
+                "enableLabelDrags": false,
+                "enableShiftDragZoom": false,
+                "enableRightClick": false,
+                "preventFocus": true,
+                appletOnLoad: (x) => {
+                    for (cmd of ${JSON.stringify(setup.commands)}) {
+                        window.${uid}.evalCommand(cmd);
+                    }
+                    if (!${setup.width}) {
+                        window.${uid}.setWidth(window.innerWidth);
+                    }
                 }
-                window.${uid}.setWidth(window.innerWidth);
+            },
+            true
+        );
+        window.addEventListener("load", function() {
+            ${uid}_setup.inject('${uid}', 'preferHTML5');
+        });
+        window.addEventListener('resize', (event) => {
+            let width = window.innerWidth;
+            if (!${setup.width}) {
+                window.${uid}.setWidth(width);
             }
-        },
-        true
-    );
-    window.addEventListener("load", function() { 
-        ggbApp.inject('${uid}');
-    });
-    window.addEventListener('resize', (event) => {
-        let width = window.innerWidth;
-        window.${uid}.setWidth(width);
-    });
-    </script>
-    `;
+        });
+        </script>
+        `
+    };
     return tree.match({ tag: 'geogebra' }, (node) => {
-        let app_type = 'geometry';
-        let width = 800;
+        // let app_type = 'geometry';
+        let app_type = 'classic';
+        let width = null;
         let height = 500;
         if (!('attrs' in node)) {
             node.attrs = {};
@@ -251,9 +258,8 @@ function geogebra(tree) {
         if (node.attrs && 'height' in node.attrs) {
             height = node.attrs.height;
         }
-
         let commands = [
-
+            'SetPerspective("G")'
         ];
         for (child of node.content) {
             if (child.tag && child.tag === 'cmd') {
@@ -263,8 +269,8 @@ function geogebra(tree) {
         let body = init({
             commands: commands,
             app_type: app_type,
-            width,
-            height,
+            width: width,
+            height: height,
         });
         node.tag = "div";
         node.attrs['block'] = '';
@@ -280,23 +286,25 @@ function geogebra(tree) {
 }
 
 function desmos(tree) {
-    const uid = `des_${guidGenerator()}`;
-    const init = (setup) => `
-    <div id="${uid}" style="width: ${setup.width || '100%'}; height: ${setup.height || '400px'};"></div>
-    <script>
-    window.addEventListener("load", function on_load() { 
-        var elt = document.getElementById('${uid}');
-        var options = {
-            expressionsCollapsed: true,
-            lockViewport: ${setup.lockViewport || true},
-        };
-        var calculator = Desmos.GraphingCalculator(elt, options);
-        for (cmd of ${JSON.stringify(setup.commands)}) {
-            calculator.setExpression({id: 'graph1', latex: \`\$\{cmd\}\`});
-        }
-    });
-    </script>
-    `;
+    const init = (setup) => {
+        const uid = `des_${guidGenerator()}`;
+        return `
+        <div id="${uid}" style="width: ${setup.width || '100%'}; height: ${setup.height || '400px'};"></div>
+        <script>
+        window.addEventListener("load", function on_load() {
+            var elt = document.getElementById('${uid}');
+            var options = {
+                expressionsCollapsed: true,
+                lockViewport: ${setup.lockViewport || true},
+            };
+            var calculator = Desmos.GraphingCalculator(elt, options);
+            for (cmd of ${JSON.stringify(setup.commands)}) {
+                calculator.setExpression({id: 'graph1', latex: \`\$\{cmd\}\`});
+            }
+        });
+        </script>
+        `
+    };
     return tree.match({ tag: 'desmos' }, (node) => {
         let width = "100%";
         let height = "500px";
@@ -349,4 +357,3 @@ module.exports = function postHTMLPluginName(options = {}) {
         desmos(tree);
     }
 }
-    
