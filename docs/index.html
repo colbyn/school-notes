@@ -262,64 +262,232 @@ root_ul_node.appendChild(build_entries(menu));</script>
         max-width: unset;
         margin: 0;
         ">
-    <div id="des_1d6503e2_d0e1_6160_35cc_8267559e0c84" style="width: 100%; height: 200px;"></div>
-    <script>
-    window.addEventListener("load", function on_load() { 
-        var elt = document.getElementById('des_1d6503e2_d0e1_6160_35cc_8267559e0c84');
-        var options = {
-            expressionsCollapsed: true,
-            lockViewport: true,
-        };
-        var calculator = Desmos.GraphingCalculator(elt, options);
-        for (cmd of ["y=x^2"]) {
-            calculator.setExpression({id: 'graph1', latex: `${cmd}`});
-        }
-    });
-    </script>
-    </div>
+        <div id="des_01ffbdfc_fe3d_f3df_5261_d8e2442a987a" style="width: 100%; height: 200px;"></div>
+        <script>
+        window.addEventListener("load", function on_load() {
+            var elt = document.getElementById('des_01ffbdfc_fe3d_f3df_5261_d8e2442a987a');
+            var options = {
+                expressionsCollapsed: true,
+                lockViewport: true,
+            };
+            var calculator = Desmos.GraphingCalculator(elt, options);
+            for (cmd of ["y=x^2"]) {
+                calculator.setExpression({id: 'graph1', latex: `${cmd}`});
+            }
+        });
+        </script>
+        </div>
+    <div height="200px" block="" desmos="" style="
+        width: 100%;
+        max-width: unset;
+        margin: 0;
+        ">
+        <div id="des_e34f81d1_9881_c2c6_9d29_0a273bba5440" style="width: 100%; height: 200px;"></div>
+        <script>
+        window.addEventListener("load", function on_load() {
+            var elt = document.getElementById('des_e34f81d1_9881_c2c6_9d29_0a273bba5440');
+            var options = {
+                expressionsCollapsed: true,
+                lockViewport: true,
+            };
+            var calculator = Desmos.GraphingCalculator(elt, options);
+            for (cmd of ["y=x^2"]) {
+                calculator.setExpression({id: 'graph1', latex: `${cmd}`});
+            }
+        });
+        </script>
+        </div>
     <div height="200" type="graphing" block="" geogebra="" style="
         width: 100%;
         max-width: unset;
         margin: 0;
         ">
-    <div id="geo_a552e78f_4c18_979d_8968_2c5ab83e9304" style="width: 100%;"></div>
-    <script>
-    let ggbApp = new GGBApplet(
-        {
-            id: "geo_a552e78f_4c18_979d_8968_2c5ab83e9304",
-            "appName": "graphing",
-            "width": 800,
-            "height": 200,
-            "showToolBar": false,
-            "showAlgebraInput": false,
-            "showMenuBar": false,
-            "showToolBarHelp": false,
-            "showTutorialLink": false,
-            "borderColor":null,
-            "showResetIcon":true,
-            "enableLabelDrags":false,
-            "enableShiftDragZoom":true,
-            "enableRightClick":false,
-            "capturingThreshold":null,
-            "errorDialogsActive":false,
-            "useBrowserForJS":false,
-            appletOnLoad: (x) => {
-                for (cmd of ["y=x^2"]) {
-                    window.geo_a552e78f_4c18_979d_8968_2c5ab83e9304.evalCommand(cmd);
+        <div id="geo_d8b608a8_f38c_f390_36ab_b917758268b0" style="width: 100%;"></div>
+        <script>
+        var geo_d8b608a8_f38c_f390_36ab_b917758268b0_setup = new GGBApplet(
+            {
+                id: "geo_d8b608a8_f38c_f390_36ab_b917758268b0",
+                "appName": 'graphing',
+                "width": null || window.innerWidth,
+                "height": 200 || 500,
+                "showToolBar": false,
+                "allowStyleBar": false,
+                "showAlgebraInput": false,
+                "showMenuBar": false,
+                "showScreenshot": false,
+                "showTutorialLink": false,
+                "borderColor": false,
+                "showResetIcon": false,
+                "enableUndoRedo": false,
+                "enableLabelDrags": false,
+                "enableShiftDragZoom": false,
+                "enableRightClick": false,
+                "preventFocus": true,
+                appletOnLoad: (x) => {
+                    for (cmd of ["SetPerspective(\"G\")","y=x^2"]) {
+                        window.geo_d8b608a8_f38c_f390_36ab_b917758268b0.evalCommand(cmd);
+                    }
+                    if (!null) {
+                        window.geo_d8b608a8_f38c_f390_36ab_b917758268b0.setWidth(window.innerWidth);
+                    }
                 }
-                window.geo_a552e78f_4c18_979d_8968_2c5ab83e9304.setWidth(window.innerWidth);
+            },
+            true
+        );
+        window.addEventListener("load", function() {
+            geo_d8b608a8_f38c_f390_36ab_b917758268b0_setup.inject('geo_d8b608a8_f38c_f390_36ab_b917758268b0', 'preferHTML5');
+        });
+        window.addEventListener('resize', (event) => {
+            let width = window.innerWidth;
+            if (!null) {
+                window.geo_d8b608a8_f38c_f390_36ab_b917758268b0.setWidth(width);
             }
-        },
-        true
-    );
-    window.addEventListener("load", function() { 
-        ggbApp.inject('geo_a552e78f_4c18_979d_8968_2c5ab83e9304');
-    });
-    window.addEventListener('resize', (event) => {
-        let width = window.innerWidth;
-        window.geo_a552e78f_4c18_979d_8968_2c5ab83e9304.setWidth(width);
-    });
-    </script>
-    </div>
+        });
+        </script>
+        </div>
+    <div height="200" type="geometry" block="" geogebra="" style="
+        width: 100%;
+        max-width: unset;
+        margin: 0;
+        ">
+        <div id="geo_531944eb_cac7_4ae0_3bab_e8517d2814d0" style="width: 100%;"></div>
+        <script>
+        var geo_531944eb_cac7_4ae0_3bab_e8517d2814d0_setup = new GGBApplet(
+            {
+                id: "geo_531944eb_cac7_4ae0_3bab_e8517d2814d0",
+                "appName": 'geometry',
+                "width": null || window.innerWidth,
+                "height": 200 || 500,
+                "showToolBar": false,
+                "allowStyleBar": false,
+                "showAlgebraInput": false,
+                "showMenuBar": false,
+                "showScreenshot": false,
+                "showTutorialLink": false,
+                "borderColor": false,
+                "showResetIcon": false,
+                "enableUndoRedo": false,
+                "enableLabelDrags": false,
+                "enableShiftDragZoom": false,
+                "enableRightClick": false,
+                "preventFocus": true,
+                appletOnLoad: (x) => {
+                    for (cmd of ["SetPerspective(\"G\")","y=x^2"]) {
+                        window.geo_531944eb_cac7_4ae0_3bab_e8517d2814d0.evalCommand(cmd);
+                    }
+                    if (!null) {
+                        window.geo_531944eb_cac7_4ae0_3bab_e8517d2814d0.setWidth(window.innerWidth);
+                    }
+                }
+            },
+            true
+        );
+        window.addEventListener("load", function() {
+            geo_531944eb_cac7_4ae0_3bab_e8517d2814d0_setup.inject('geo_531944eb_cac7_4ae0_3bab_e8517d2814d0', 'preferHTML5');
+        });
+        window.addEventListener('resize', (event) => {
+            let width = window.innerWidth;
+            if (!null) {
+                window.geo_531944eb_cac7_4ae0_3bab_e8517d2814d0.setWidth(width);
+            }
+        });
+        </script>
+        </div>
+    <div height="200" type="classic" block="" geogebra="" style="
+        width: 100%;
+        max-width: unset;
+        margin: 0;
+        ">
+        <div id="geo_b9203194_ffc6_c4d8_be87_aae79578d1db" style="width: 100%;"></div>
+        <script>
+        var geo_b9203194_ffc6_c4d8_be87_aae79578d1db_setup = new GGBApplet(
+            {
+                id: "geo_b9203194_ffc6_c4d8_be87_aae79578d1db",
+                "appName": 'classic',
+                "width": null || window.innerWidth,
+                "height": 200 || 500,
+                "showToolBar": false,
+                "allowStyleBar": false,
+                "showAlgebraInput": false,
+                "showMenuBar": false,
+                "showScreenshot": false,
+                "showTutorialLink": false,
+                "borderColor": false,
+                "showResetIcon": false,
+                "enableUndoRedo": false,
+                "enableLabelDrags": false,
+                "enableShiftDragZoom": false,
+                "enableRightClick": false,
+                "preventFocus": true,
+                appletOnLoad: (x) => {
+                    for (cmd of ["SetPerspective(\"G\")","y=x^2"]) {
+                        window.geo_b9203194_ffc6_c4d8_be87_aae79578d1db.evalCommand(cmd);
+                    }
+                    if (!null) {
+                        window.geo_b9203194_ffc6_c4d8_be87_aae79578d1db.setWidth(window.innerWidth);
+                    }
+                }
+            },
+            true
+        );
+        window.addEventListener("load", function() {
+            geo_b9203194_ffc6_c4d8_be87_aae79578d1db_setup.inject('geo_b9203194_ffc6_c4d8_be87_aae79578d1db', 'preferHTML5');
+        });
+        window.addEventListener('resize', (event) => {
+            let width = window.innerWidth;
+            if (!null) {
+                window.geo_b9203194_ffc6_c4d8_be87_aae79578d1db.setWidth(width);
+            }
+        });
+        </script>
+        </div>
+    <div height="200" type="suite" block="" geogebra="" style="
+        width: 100%;
+        max-width: unset;
+        margin: 0;
+        ">
+        <div id="geo_d19ae805_7ff6_7339_1fa2_6c94c5a26d2a" style="width: 100%;"></div>
+        <script>
+        var geo_d19ae805_7ff6_7339_1fa2_6c94c5a26d2a_setup = new GGBApplet(
+            {
+                id: "geo_d19ae805_7ff6_7339_1fa2_6c94c5a26d2a",
+                "appName": 'suite',
+                "width": null || window.innerWidth,
+                "height": 200 || 500,
+                "showToolBar": false,
+                "allowStyleBar": false,
+                "showAlgebraInput": false,
+                "showMenuBar": false,
+                "showScreenshot": false,
+                "showTutorialLink": false,
+                "borderColor": false,
+                "showResetIcon": false,
+                "enableUndoRedo": false,
+                "enableLabelDrags": false,
+                "enableShiftDragZoom": false,
+                "enableRightClick": false,
+                "preventFocus": true,
+                appletOnLoad: (x) => {
+                    for (cmd of ["SetPerspective(\"G\")","y=x^2"]) {
+                        window.geo_d19ae805_7ff6_7339_1fa2_6c94c5a26d2a.evalCommand(cmd);
+                    }
+                    if (!null) {
+                        window.geo_d19ae805_7ff6_7339_1fa2_6c94c5a26d2a.setWidth(window.innerWidth);
+                    }
+                }
+            },
+            true
+        );
+        window.addEventListener("load", function() {
+            geo_d19ae805_7ff6_7339_1fa2_6c94c5a26d2a_setup.inject('geo_d19ae805_7ff6_7339_1fa2_6c94c5a26d2a', 'preferHTML5');
+        });
+        window.addEventListener('resize', (event) => {
+            let width = window.innerWidth;
+            if (!null) {
+                window.geo_d19ae805_7ff6_7339_1fa2_6c94c5a26d2a.setWidth(width);
+            }
+        });
+        </script>
+        </div>
 </body>
 </html>
