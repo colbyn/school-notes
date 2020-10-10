@@ -1,0 +1,39 @@
+<h1>Chapter 1</h1><h2>§1.5 | The Limit of a Function</h2><section class="note-block block"><h1>Vertical Asymptote (Definition §1.5.6)</h1><p>The vertical line<span inline="" math-inline="">\(x = a\)</span>is called the **vertical asymptote** of the curve<span inline="" math-inline="">\(y = f(x)\)</span>if at least one of the following statements is true:</p><div block="" math-block="">$$ \begin{equation}
+\begin{split}
+    \lim_{x \to a} f(x) &= \infty \\
+    \lim_{x \to a} f(x) &= -\infty \\
+    \lim_{x \to a^{-}} f(x) &= \infty \\
+    \lim_{x \to a^{-}} f(x) &= -\infty \\
+    \lim_{x \to a^{+}} f(x) &= \infty \\
+    \lim_{x \to a^{+}} f(x) &= -\infty
+\end{split}
+\end{equation} $$</div><p></p></section><h2>§1.6 | Calculating Limits Using the Limit Laws</h2><section class="note-block block"><h1>Limit Laws</h1><p>Suppose that<span inline="" math-inline="">\(c\)</span>is a constant and that the limits<span inline="" math-inline="">\(\lim_{x \to a} f(x)\)</span>and<span inline="" math-inline="">\(\lim_{x \to a} g(x)\)</span>exists, then:</p><div block="" math-block="">$$ \begin{equation}
+\begin{split}
+    \lim_{x \to a} \Big[ f(x) + g(x) \Big] &= \lim_{x \to a} f(x) + \lim_{x \to a} g(x) \\
+    \lim_{x \to a} \Big[ f(x) - g(x) \Big] &= \lim_{x \to a} f(x) - \lim_{x \to a} g(x) \\
+    \lim_{x \to a} \Big[ c \cdot f(x) \Big] &= c \cdot \lim_{x \to a} f(x) \\
+    \lim_{x \to a} \Big[ f(x) \cdot g(x) \Big] &= \lim_{x \to a} f(x) \cdot \lim_{x \to a} g(x) \\
+    \lim_{x \to a} \frac{f(x)}{g(x)} &= \frac{\lim_{x \to a} f(x)}{\lim_{x \to a}g(x)} \; \text{if} \lim_{x \to a}g(x) \neq 0
+\end{split}
+\end{equation} $$</div><p></p></section><section class="note-block block"><h1>Power Law</h1><div block="" math-block="">$$
+        \lim_{x \to a} \Big[ f(x) \Big]^n = \Big[ \lim_{x \to a} f(x) \Big]^n
+    $$</div><section class="note-block block"><p><span inline="" math-inline="">\(n\)</span> must be a positive integer.</p><p></p></section><p></p></section><section class="note-block block"><h1>Root Law</h1><div block="" math-block="">$$
+        \lim_{x \to a} \sqrt[n]{f(x)} = \sqrt[n]{\lim_{x \to a} f(x)}
+    $$</div><section class="note-block block"><p><span inline="" math-inline="">\(n\)</span>must be a positive integer.</p></section><section class="note-block block"><p>If<span inline="" math-inline="">\(n\)</span>is even, we assume that<span inline="" math-inline="">\(\lim_{x \to a} f(x) > 0\)</span>.</p></section><p></p></section><h2>§1.8 | Continuity</h2><section class="note-block block"><h1>The Intermediate Value Theorem (IVT)</h1><p>Suppose that<span inline="" math-inline="">\(f\)</span>is continuous on the closed interval<span inline="" math-inline="">\([a, b]\)</span>, and let N be any number between<span inline="" math-inline="">\(f(a)\)</span>and<span inline="" math-inline="">\(f(b)\)</span>, where<span inline="" math-inline="">\(f(a) \neq f(b)\)</span>, then there exists a number<span inline="" math-inline="">\(c\)</span>in<span inline="" math-inline="">\((a, b)\)</span>such that<span inline="" math-inline="">\(f(c) = N\)</span>.</p><p>Or alternatively, suppose <span inline="" math-inline="">\(f\)</span> is a function that is continuous at every point in the interval <span inline="" math-inline="">\([a, b]:\)</span></p><ul>
+    <li><span inline="" math-inline="">\(f\)</span> will take on every value between <span inline="" math-inline="">\(f(a)\)</span> and <span inline="" math-inline="">\(f(b)\)</span> over the interval.</li>
+    <li>For any L between the values <span inline="" math-inline="">\(f(a)\)</span> and <span inline="" math-inline="">\(f(b)\)</span>, there exists a number <span inline="" math-inline="">\(c\)</span> in <span inline="" math-inline="">\([a, b]\)</span> for which <span inline="" math-inline="">\(f(c) = L\)</span>.</li>
+</ul><section class="note-block block"><ul>
+        <li>The intermediate value theorem states that if a continuous function attains two values, it must also attain all values in between these two values.</li>
+        <li>The Intermediate Value Theorem states that a continuous function takes on every intermediate value between the function values <span inline="" math-inline="">\(f(a)\)</span> and <span inline="" math-inline="">\(f(b)\)</span>.</li>
+        <li>The statement of the theorem has multiple requirements, all of which are necessary for the conclusion to hold.</li>
+    </ul><p></p></section><section class="note-block block"><p>The IVT can be used to show that a root exists, if given some interval between<span inline="" math-inline="">\(a\)</span>and<span inline="" math-inline="">\(b\)</span>:</p><ul>
+        <li><span inline="" math-inline="">\(f(a)\)</span> is negative</li>
+        <li><span inline="" math-inline="">\(f(b)\)</span> is positive</li>
+    </ul><p>or</p><ul>
+        <li><span inline="" math-inline="">\(f(a)\)</span> is positive</li>
+        <li><span inline="" math-inline="">\(f(b)\)</span> is negative</li>
+    </ul><p>then therefore, if the function is continuous, then there must be a value for which some <span inline="" math-inline="">\(x\)</span> in <span inline="" math-inline="">\(f(x) = 0\)</span> exists. I.e. that a root exists. Which should make sense.</p><p>**More generally**, this can be extended to any value between some interval. For instance, if:</p><ul>
+        <li><span inline="" math-inline="">\(f(a) = 3\)</span></li><span inline="" math-inline="">\(f(a) = 9\)</span>
+    </ul><p>Then there must exist some value that we will call <span inline="" math-inline="">\(x\)</span>, for which:</p><ul>
+        <li><span inline="" math-inline="">\(f(x) = 6\)</span></li>
+    </ul><p></p></section><p></p></section>
