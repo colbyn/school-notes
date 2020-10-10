@@ -288,14 +288,13 @@ function desmos(tree) {
     const init = (setup) => `
     <div id="${uid}" style="width: ${setup.width || '100%'}; height: ${setup.height || '400px'};"></div>
     <script>
-    window.addEventListener("load", function() { 
+    window.addEventListener("load", function on_load() { 
         var elt = document.getElementById('${uid}');
         var options = {
             expressionsCollapsed: true,
             lockViewport: true,
         };
         var calculator = Desmos.GraphingCalculator(elt, options);
-        // calculator.setExpression({id: 'graph1', latex: 'y=x^2'});
         for (cmd of ${JSON.stringify(setup.commands)}) {
             calculator.setExpression({id: 'graph1', latex: \`\$\{cmd\}\`});
         }
