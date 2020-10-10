@@ -4,7 +4,8 @@
   "description": "",
   "private": true,
   "scripts": {
-    "start": "parcel serve src/index.html src/**/*.html src/**/**/*.html --port 8000"
+    "start": "parcel serve src/index.html src/**/*.html src/**/**/*.html --port 8000",
+    "release": "parcel build src/index.html src/**/*.html src/**/**/*.html --out-dir docs --public-url https://colbyn.github.io/school-notes/"
   },
   "author": "",
   "license": "ISC",
