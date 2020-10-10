@@ -215,16 +215,12 @@ function geogebra(tree) {
             "enableShiftDragZoom":true,
             "enableRightClick":false,
             "capturingThreshold":null,
-            "showToolBarHelp":false,
             "errorDialogsActive":false,
             "useBrowserForJS":false,
             appletOnLoad: (x) => {
                 for (cmd of ${JSON.stringify(setup.commands)}) {
                     window.${uid}.evalCommand(cmd);
                 }
-                // const graph = window.${uid}.exportSVG(cmd);
-                // const node = document.getElementById("${uid}");
-                // node.innerHTML = graph;
                 window.${uid}.setWidth(window.innerWidth);
             }
         },
@@ -292,7 +288,7 @@ function desmos(tree) {
         var elt = document.getElementById('${uid}');
         var options = {
             expressionsCollapsed: true,
-            lockViewport: true,
+            lockViewport: ${setup.lockViewport || true},
         };
         var calculator = Desmos.GraphingCalculator(elt, options);
         for (cmd of ${JSON.stringify(setup.commands)}) {
@@ -304,7 +300,7 @@ function desmos(tree) {
     return tree.match({ tag: 'desmos' }, (node) => {
         let width = "100%";
         let height = "500px";
-        let lockViewport = false;
+        let lockViewport = true;
         if (!('attrs' in node)) {
             node.attrs = {};
         }
@@ -313,6 +309,9 @@ function desmos(tree) {
         }
         if (node.attrs && 'height' in node.attrs) {
             height = node.attrs.height;
+        }
+        if (node.attrs && ('lock' in node.attrs)) {
+            lockViewport = node.attrs.lock;
         }
 
         let commands = [
@@ -325,8 +324,9 @@ function desmos(tree) {
         }
         let body = init({
             commands: commands,
-            width,
-            height,
+            width: width,
+            height: height,
+            lockViewport: lockViewport,
         });
         node.tag = "div";
         node.attrs['block'] = '';
