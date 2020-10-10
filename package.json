@@ -1,0 +1,18 @@
+{
+  "name": "notes-lab",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start": "parcel serve src/index.html src/**/*.html src/**/**/*.html --port 8000"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "posthtml": "^0.13.3",
+    "posthtml-custom-elements": "file:build/posthtml-custom-elements",
+    "posthtml-include": "^1.4.3",
+    "typescript": "^4.0.3"
+  }
+}

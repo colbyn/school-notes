@@ -1,0 +1,100 @@
+<h1>Chapter 1</h1>
+
+<h2>§1.5 | The Limit of a Function</h2>
+
+<note>
+    <h1>Vertical Asymptote (Definition §1.5.6)</h1>
+    
+    The vertical line <tex>x = a</tex> is called the **vertical asymptote** of the curve <tex>y = f(x)</tex> if at least one of the following statements is true:
+    
+    <tex src="src/calc/assets/vertical-asymptote-cases.tex"></tex>
+</note>
+
+
+<h2>§1.6 | Calculating Limits Using the Limit Laws</h2>
+
+<note>
+    <h1>Limit Laws</h1>
+
+    Suppose that <tex>c</tex> is a constant and that the limits <tex>\lim_{x \to a} f(x)</tex> and <tex>\lim_{x \to a} g(x)</tex> exists, then:
+    
+    <tex src="src/calc/assets/limit-laws.tex"></tex>
+</note>
+
+<note>
+    <h1>Power Law</h1>
+    <tex block>
+        \lim_{x \to a} \Big[ f(x) \Big]^n = \Big[ \lim_{x \to a} f(x) \Big]^n
+    </tex>
+    <note warning>
+        <p><tex>n</tex> must be a positive integer.</p>
+    </note>
+</note>
+
+<note>
+    <h1>Root Law</h1>
+    <tex block>
+        \lim_{x \to a} \sqrt[n]{f(x)} = \sqrt[n]{\lim_{x \to a} f(x)}
+    </tex>
+    <note warning>
+        <tex>n</tex> must be a positive integer.
+    </note>
+    <note>
+        If <tex>n</tex> is even, we assume that <tex>\lim_{x \to a} f(x) > 0</tex>.
+    </note>
+</note>
+
+<h2>§1.8 | Continuity</h2>
+
+<note>
+    <h1>The Intermediate Value Theorem (IVT)</h1>
+
+    Suppose that <tex>f</tex> is continuous on the closed interval <tex>[a, b]</tex>, and let N be any number between <tex>f(a)</tex> and <tex>f(b)</tex>, where <tex>f(a) \neq f(b)</tex>, then there exists a number <tex>c</tex> in <tex>(a, b)</tex> such that <tex>f(c) = N</tex>.
+
+    <p>Or alternatively, suppose <tex>f</tex> is a function that is continuous at every point in the interval <tex>[a, b]:</tex></p>
+
+<ul>
+    <li><tex>f</tex> will take on every value between <tex>f(a)</tex> and <tex>f(b)</tex> over the interval.</li>
+    <li>For any L between the values <tex>f(a)</tex> and <tex>f(b)</tex>, there exists a number <tex>c</tex> in <tex>[a, b]</tex> for which <tex>f(c) = L</tex>.</li>
+</ul>
+
+
+<note>
+    <ul>
+        <li>The intermediate value theorem states that if a continuous function attains two values, it must also attain all values in between these two values.</li>
+        <li>The Intermediate Value Theorem states that a continuous function takes on every intermediate value between the function values <tex>f(a)</tex> and <tex>f(b)</tex>.</li>
+        <li>The statement of the theorem has multiple requirements, all of which are necessary for the conclusion to hold.</li>
+    </ul>
+</note>
+
+<note>
+    The IVT can be used to show that a root exists, if given some interval between <tex>a</tex> and <tex>b</tex>: 
+
+    <ul>
+        <li><tex>f(a)</tex> is negative</li>
+        <li><tex>f(b)</tex> is positive</li>
+    </ul>
+
+    or
+
+    <ul>
+        <li><tex>f(a)</tex> is positive</li>
+        <li><tex>f(b)</tex> is negative</li>
+    </ul>
+
+    <p>then therefore, if the function is continuous, then there must be a value for which some <tex>x</tex> in <tex>f(x) = 0</tex> exists. I.e. that a root exists. Which should make sense.</p>
+
+    <p>**More generally**, this can be extended to any value between some interval. For instance, if:</p>
+
+    <ul>
+        <li><tex>f(a) = 3</tex></li
+        <li><tex>f(a) = 9</tex></li>
+    </ul>
+
+    <p>Then there must exist some value that we will call <tex>x</tex>, for which:</p>
+
+    <ul>
+        <li><tex>f(x) = 6</tex></li>
+    </ul>
+</note>
+</note>

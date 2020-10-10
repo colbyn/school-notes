@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="theme/styling.css">
+    <script src="theme/system.ts"></script>
+    <include src="src/theme/deps.html"></include>
+    <title>Colbyn's Notes</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <include src="src/theme/nav.html"></include>
+    <h2>Old Notes</h2>
+    <ul>
+        <li>Website: <a href="https://colbyn.github.io/colbyns-math-notes-old/">https://colbyn.github.io/colbyns-math-notes-old/</a></li>
+        <li>Code: <a href="https://github.com/colbyn/colbyns-math-notes-old">https://github.com/colbyn/colbyns-math-notes-old</a></li>
+    </ul>
+    <div style="height: 400px;"></div>
+    <!-- <div id="calculator" style="width: 600px; height: 400px;"></div>
+    <script>
+        var node = document.getElementById('calculator');
+        var calculator = Desmos.GraphingCalculator(node);
+        calculator.setExpression({ id: 'graph1', latex: 'y=x^3' });
+    </script> -->
+    <desmos>
+        <cmd>y=x</cmd>
+    </desmos>
+    <div style="height: 400px;"></div>
+</body>
+</html>
