@@ -12,6 +12,7 @@
     "posthtml": "^0.13.3"
   },
   "devDependencies": {
+    "post-sequence": "^0.3.0",
     "posthtml-parser": "^0.5.0"
   }
 }

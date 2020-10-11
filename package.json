@@ -11,9 +11,10 @@
   "license": "ISC",
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
+    "post-sequence": "^0.3.0",
     "posthtml": "^0.13.3",
-    "posthtml-custom-elements": "file:build/posthtml-custom-elements",
     "posthtml-include": "^1.4.3",
+    "posthtml-custom-elements": "file:build/posthtml-custom-elements",
     "typescript": "^4.0.3"
   }
 }

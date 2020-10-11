@@ -1,14 +1,186 @@
 const fs = require('fs');
 const parser = require('posthtml-parser');
 const { types } = require('util');
+const util = require('util')
 
 function $(f) {
     return f();
 }
 
+function inspect(x) {
+    return util.inspect(x, {showHidden: false, depth: null});
+}
+
+function is_header_tag(tag) {
+    let is_header = false;
+    if (tag === 'h1') {return true};
+    if (tag === 'h2') {return true};
+    if (tag === 'h3') {return true};
+    if (tag === 'h4') {return true};
+    if (tag === 'h5') {return true};
+    if (tag === 'h6') {return true};
+    return is_header;
+}
+
+function is_element(node, tag_pred) {
+    let result = false;
+    if (typeof node === "object" && node !== null && 'tag' in node) {
+        if (typeof tag_pred === 'function') {
+            return tag_pred(node.tag);
+        } else {
+            console.assert(typeof tag_pred === 'string');
+            return node.tag === tag_pred;
+        }
+    }
+    return result;
+}
+
+function get_text_contents(node) {
+    if (node === null || node === undefined) {
+        return [];
+    }
+    if (typeof node === 'string') {
+        return [node];
+    }
+    const go = () => {
+        let results = [];
+        if (node.content && Array.isArray(node.content)) {
+            node.content.forEach((child) => {
+                results = results.concat(get_text_contents(child));
+            });
+        } else if (Array.isArray(node)) {
+            node.forEach((child) => {
+                results = results.concat(get_text_contents(child));
+            });
+        }
+        return results;
+    };
+    let results = [];
+    for (let x of go()) {
+        console.assert(typeof x === 'string');
+        x = x.trim();
+        if (x.length > 0) {
+            results.push(x);
+        }
+    }
+    return results;
+}
+
+function text_to_slug(input) {
+    let txt = input.replace(' ', '-').toLowerCase();
+    return encodeURI(txt);
+}
+
+// Ensure that `html` is a copy.
+// Such as VIA `JSON.parse(JSON.stringify(object))`.
+function filter_traverse(node, pred) {
+    if (node === null || node === undefined) {
+        return [];
+    }
+    if (pred(node)) {
+        return [node];
+    }
+    if (node.tag === 'h1') {
+        console.log("H1", node);
+        return [node];
+    }
+    if (typeof node === 'string') {
+        return [];
+    }
+    let results = [];
+    if (node.content && Array.isArray(node.content)) {
+        node.content.forEach((child) => {
+            results = results.concat(filter_traverse(child, pred));
+        });
+    } else if (Array.isArray(node)) {
+        node.forEach((child) => {
+            results = results.concat(filter_traverse(child, pred));
+        });
+    }
+    return results;
+}
+
+function header_ids(tree) {
+    const rewrite = (node) => {
+        let slug = text_to_slug(get_text_contents(node).join('-'));
+        if (!('attrs' in node)) {
+            node.attrs = {};
+        }
+        node.attrs['id'] = slug;
+        return node;
+    };
+    tree.match({tag: 'h1'}, rewrite);
+    tree.match({tag: 'h2'}, rewrite);
+    tree.match({tag: 'h3'}, rewrite);
+    tree.match({tag: 'h4'}, rewrite);
+    tree.match({tag: 'h5'}, rewrite);
+    tree.match({tag: 'h6'}, rewrite);
+    return tree;
+}
+
+function table_of_contents(tree) {
+    const build_toc = (x) => {
+        let headers = filter_traverse(x, (node) => {
+            return is_element(node, is_header_tag)
+        });
+        let children = [];
+        for (head of headers) {
+            let slug = text_to_slug(get_text_contents(head).join('-'));
+            children.push(element(
+                'li',
+                {'entry': head.tag},
+                [element(
+                    'a',
+                    {href: `#${slug}`},
+                    head.content
+                )]
+            ));
+        }
+        return children;
+    };
+
+    const get_body = () => {
+        let body = {};
+        if (Array.isArray(tree)) {
+            tree.match({ tag: 'body' }, (node) => {
+                if (body === null) {
+                    Object.assign(node, body);
+                }
+                return node;
+            });
+        } else {
+            body = tree;
+        }
+        return JSON.parse(JSON.stringify(tree[2]));
+    };
+    
+    return tree.match({ tag: 'toc' }, (node) => {
+        const body = get_body();
+        let toc = build_toc(body);
+        let sub = node.children || [];
+        sub.push(element(
+            'ul',
+            {'toc': ''},
+            toc,
+        ));
+        node = element(
+            'div',
+            {'toc': ''},
+            sub
+        );
+        return node;
+    });
+}
+
 function element(tag, attrs, children) {
+    if (attrs === null || attrs === undefined) {
+        attrs = {};
+    }
+    if (typeof attrs !== 'object') {
+        attrs = {};
+    }
     return {
-        'tag': tag,
+        'tag': tag || 'div',
         'attrs': attrs,
         'content': children
     }
@@ -38,6 +210,11 @@ function is_inline_node(node) {
     // BLOCK MODE
     if (typeof node === 'string') {
         return true;
+    }
+    if (typeof node === 'object') {
+        if (!('attrs' in node)) {
+            node.attrs = {};
+        }
     }
     if (node.attrs && 'block' in node.attrs) {
         return false;
@@ -134,7 +311,6 @@ function note_block(tree) {
             {},
             copy_all(current_paragraph)
         ));
-        node.content = null;
         let new_element = element(
             "section",
             {
@@ -351,9 +527,17 @@ function desmos(tree) {
 
 module.exports = function postHTMLPluginName(options = {}) {
     return (tree) => {
+        tree.match({ tag: 'include' }, (node) => {
+            console.log("WARNING: include tag - this should already be procesed");
+            console.warn("WARNING: include tag - this should already be procesed");
+            return node;
+        });
+        header_ids(tree);
         note_block(tree);
         latex(tree);
         geogebra(tree);
         desmos(tree);
+        table_of_contents(tree);
+        return tree;
     }
 }
