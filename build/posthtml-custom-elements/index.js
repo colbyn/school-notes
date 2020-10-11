@@ -22,6 +22,10 @@ function is_header_tag(tag) {
     return is_header;
 }
 
+function has_attr(node, attr) {
+    return node.attrs && (attr in node.attrs);
+}
+
 function is_element(node, tag_pred) {
     let result = false;
     if (typeof node === "object" && node !== null && 'tag' in node) {
@@ -461,6 +465,9 @@ function geogebra(tree) {
     });
 }
 
+// <desmos>
+//     <expr>y=x^2</expr>
+// </desmos>
 function desmos(tree) {
     const init = (setup) => {
         const uid = `des_${guidGenerator()}`;
@@ -470,7 +477,7 @@ function desmos(tree) {
         window.addEventListener("load", function on_load() {
             var elt = document.getElementById('${uid}');
             var options = {
-                expressionsCollapsed: true,
+                expressionsCollapsed: ${setup.expressionsCollapsed} || true,
                 lockViewport: ${setup.lockViewport || true},
             };
             var calculator = Desmos.GraphingCalculator(elt, options);
@@ -485,38 +492,70 @@ function desmos(tree) {
         let width = "100%";
         let height = "500px";
         let lockViewport = true;
+        let expressionsCollapsed = true;
         if (!('attrs' in node)) {
             node.attrs = {};
         }
-        if (node.attrs && 'width' in node.attrs) {
+        if (has_attr(node, 'width')) {
             width = node.attrs.width;
         }
-        if (node.attrs && 'height' in node.attrs) {
+        if (has_attr(node, 'height')) {
             height = node.attrs.height;
         }
-        if (node.attrs && ('lock' in node.attrs)) {
+        if (has_attr(node, 'lock')) {
             lockViewport = node.attrs.lock;
         }
+        if (has_attr(node, 'controls')) {
+            expressionsCollapsed = node.attrs.controls;
+        }
         let commands = [];
+        let errors = [];
         for (child of node.content) {
+            const get_text = () => {
+                let txts = [];
+                for (let x of get_text_contents(child)) {
+                    let words = []
+                    for (let word of x.split('\n')) {
+                        words.push(word.trim());
+                    }
+                    txts.push(words);
+                }
+                return txts.join(" ");
+            };
             if (child.tag && child.tag === 'cmd') {
-                let txt = get_text_contents(child).join("\n");
-                commands.push(txt);
+                try {
+                    commands.push(
+                        JSON.stringify(JSON.parse(
+                            get_text_contents(child).join("\n")
+                        ))
+                    );
+                }
+                catch(e) {
+                    errors.push(`${e}`);
+                }
             }
             if (child.tag && child.tag === 'expr') {
                 let id = null;
-                let txt = get_text_contents(child).join("\n");
+                let txt = get_text();
                 if (child.attrs && 'id' in child.attrs) {
                     id = child.attrs.id;
                 }
                 commands.push({latex: txt, id: id});
             }
         }
+        const render_errors = () => {
+            let xs = [];
+            for (let x of errors) {
+                xs.push(element("p", {}, x));
+            }
+            return xs;
+        };
         let body = init({
             commands: commands,
             width: width,
             height: height,
             lockViewport: lockViewport,
+            expressionsCollapsed, expressionsCollapsed,
         });
         node.tag = "div";
         node.attrs['block'] = '';
@@ -526,7 +565,9 @@ function desmos(tree) {
         max-width: unset;
         margin: 0;
         `;
-        node.content = [body];
+        node.content = []
+            .concat([element('div', {'error-block': ''}, render_errors())])
+            .concat([body]);
         return node;
     });
 }

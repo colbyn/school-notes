@@ -15,8 +15,14 @@
         <li>Code: <a href="https://github.com/colbyn/colbyns-math-notes-old">https://github.com/colbyn/colbyns-math-notes-old</a></li>
     </ul>
     <h2>Desmos and GeoGebra Preview for <tex>y=x^2</tex></h2>
-    <desmos height="200px">
-        <expr>y=x^2</expr>
+    <desmos height="200px" controls=true>
+        <cmd>
+            {
+                id: "line1",
+                latex: "y=mx",
+                color: "#ff0000"
+            }
+        </cmd>
     </desmos>
     <desmos height="200px">
         <expr>y=x^2</expr>

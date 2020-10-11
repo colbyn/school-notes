@@ -185,3 +185,16 @@ ul[toc] > li[entry='h4'] {margin-left: 160px;}
 ul[toc] > li[entry='h5'] {margin-left: 180px;}
 ul[toc] > li[entry='h6'] {margin-left: 200px;}
 
+div[desmos] > div[error-block] {
+    display: flex;
+    flex-direction: column;
+    color: #f00;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #f00;
+    margin: 12px;
+}
+
+div[desmos] > div[error-block]:empty {
+    display: none;
+}
