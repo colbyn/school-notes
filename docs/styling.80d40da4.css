@@ -185,6 +185,19 @@ ul[toc] > li[entry='h4'] {margin-left: 160px;}
 ul[toc] > li[entry='h5'] {margin-left: 180px;}
 ul[toc] > li[entry='h6'] {margin-left: 200px;}
 
+p[error-block] {
+    display: flex;
+    flex-direction: column;
+    color: #f00;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #f00;
+    margin: 12px;
+}
+
+p[error-block]:empty {
+    display: none;
+}
 
 
-/*# sourceMappingURL=https://colbyn.github.io/school-notes/styling.17dc6a57.css.map */
+/*# sourceMappingURL=https://colbyn.github.io/school-notes/styling.80d40da4.css.map */

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.17dc6a57.css">
+    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.80d40da4.css">
     <script src="https://colbyn.github.io/school-notes/system.f84e1103.js"></script>
     <!-- MATH-JAX -->
 <script>window.MathJax = {
@@ -257,22 +257,22 @@ root_ul_node.appendChild(build_entries(menu));</script>
         <li>Code: <a href="https://github.com/colbyn/colbyns-math-notes-old">https://github.com/colbyn/colbyns-math-notes-old</a></li>
     </ul>
     <h2 id="desmos-and%20geogebra%20preview%20for-y=x%5E2">Desmos and GeoGebra Preview for <span inline="" math-inline="">\(y=x^2\)</span></h2>
-    <div height="200px" block="" desmos="" style="
+    <div height="200px" controls="true" block="" desmos="" style="
         width: 100%;
         max-width: unset;
         margin: 0;
-        ">
-        <div id="des_07db0360_ca24_2568_8876_27016ccd4c2e" style="width: 100%; height: 200px;"></div>
+        "><div></div>
+        <div id="des_db847817_b9fe_458c_8995_65f7a8376f7c" style="width: 100%; height: 200px;"></div>
         <script>
         window.addEventListener("load", function on_load() {
-            var elt = document.getElementById('des_07db0360_ca24_2568_8876_27016ccd4c2e');
+            var elt = document.getElementById('des_db847817_b9fe_458c_8995_65f7a8376f7c');
             var options = {
-                expressionsCollapsed: true,
+                expressionsCollapsed: true || true,
                 lockViewport: true,
             };
             var calculator = Desmos.GraphingCalculator(elt, options);
-            for (cmd of ["y=x^2"]) {
-                calculator.setExpression({id: 'graph1', latex: `${cmd}`});
+            for (cmd of [{"id":"line1","latex":"y=x^2","color":"#ff0000"}]) {
+                calculator.setExpression(cmd);
             }
         });
         </script>
@@ -281,18 +281,18 @@ root_ul_node.appendChild(build_entries(menu));</script>
         width: 100%;
         max-width: unset;
         margin: 0;
-        ">
-        <div id="des_928c8ce6_cc60_b5fe_deea_37e71ba5b8b7" style="width: 100%; height: 200px;"></div>
+        "><div></div>
+        <div id="des_34e67903_e0de_21a4_141e_49cc883c8f19" style="width: 100%; height: 200px;"></div>
         <script>
         window.addEventListener("load", function on_load() {
-            var elt = document.getElementById('des_928c8ce6_cc60_b5fe_deea_37e71ba5b8b7');
+            var elt = document.getElementById('des_34e67903_e0de_21a4_141e_49cc883c8f19');
             var options = {
-                expressionsCollapsed: true,
+                expressionsCollapsed: true || true,
                 lockViewport: true,
             };
             var calculator = Desmos.GraphingCalculator(elt, options);
-            for (cmd of ["y=x^2"]) {
-                calculator.setExpression({id: 'graph1', latex: `${cmd}`});
+            for (cmd of [{"latex":"y=x^2","id":null}]) {
+                calculator.setExpression(cmd);
             }
         });
         </script>
@@ -302,11 +302,11 @@ root_ul_node.appendChild(build_entries(menu));</script>
         max-width: unset;
         margin: 0;
         ">
-        <div id="geo_1387205e_7dfe_6c94_d350_2c870c5e1057" style="width: 100%;"></div>
+        <div id="geo_b930fb91_7cb3_91fe_a457_5156740a1a5b" style="width: 100%;"></div>
         <script>
-        var geo_1387205e_7dfe_6c94_d350_2c870c5e1057_setup = new GGBApplet(
+        var geo_b930fb91_7cb3_91fe_a457_5156740a1a5b_setup = new GGBApplet(
             {
-                id: "geo_1387205e_7dfe_6c94_d350_2c870c5e1057",
+                id: "geo_b930fb91_7cb3_91fe_a457_5156740a1a5b",
                 "appName": 'graphing',
                 "width": null || window.innerWidth,
                 "height": 200 || 500,
@@ -325,22 +325,22 @@ root_ul_node.appendChild(build_entries(menu));</script>
                 "preventFocus": true,
                 appletOnLoad: (x) => {
                     for (cmd of ["SetPerspective(\"G\")","y=x^2"]) {
-                        window.geo_1387205e_7dfe_6c94_d350_2c870c5e1057.evalCommand(cmd);
+                        window.geo_b930fb91_7cb3_91fe_a457_5156740a1a5b.evalCommand(cmd);
                     }
                     if (!null) {
-                        window.geo_1387205e_7dfe_6c94_d350_2c870c5e1057.setWidth(window.innerWidth);
+                        window.geo_b930fb91_7cb3_91fe_a457_5156740a1a5b.setWidth(window.innerWidth);
                     }
                 }
             },
             true
         );
         window.addEventListener("load", function() {
-            geo_1387205e_7dfe_6c94_d350_2c870c5e1057_setup.inject('geo_1387205e_7dfe_6c94_d350_2c870c5e1057', 'preferHTML5');
+            geo_b930fb91_7cb3_91fe_a457_5156740a1a5b_setup.inject('geo_b930fb91_7cb3_91fe_a457_5156740a1a5b', 'preferHTML5');
         });
         window.addEventListener('resize', (event) => {
             let width = window.innerWidth;
             if (!null) {
-                window.geo_1387205e_7dfe_6c94_d350_2c870c5e1057.setWidth(width);
+                window.geo_b930fb91_7cb3_91fe_a457_5156740a1a5b.setWidth(width);
             }
         });
         </script>
@@ -350,11 +350,11 @@ root_ul_node.appendChild(build_entries(menu));</script>
         max-width: unset;
         margin: 0;
         ">
-        <div id="geo_3f9e690e_c8cc_5709_a020_95bc19c360e6" style="width: 100%;"></div>
+        <div id="geo_47f7f429_1ee0_5705_83f7_fd1739539e43" style="width: 100%;"></div>
         <script>
-        var geo_3f9e690e_c8cc_5709_a020_95bc19c360e6_setup = new GGBApplet(
+        var geo_47f7f429_1ee0_5705_83f7_fd1739539e43_setup = new GGBApplet(
             {
-                id: "geo_3f9e690e_c8cc_5709_a020_95bc19c360e6",
+                id: "geo_47f7f429_1ee0_5705_83f7_fd1739539e43",
                 "appName": 'geometry',
                 "width": null || window.innerWidth,
                 "height": 200 || 500,
@@ -373,22 +373,22 @@ root_ul_node.appendChild(build_entries(menu));</script>
                 "preventFocus": true,
                 appletOnLoad: (x) => {
                     for (cmd of ["SetPerspective(\"G\")","y=x^2"]) {
-                        window.geo_3f9e690e_c8cc_5709_a020_95bc19c360e6.evalCommand(cmd);
+                        window.geo_47f7f429_1ee0_5705_83f7_fd1739539e43.evalCommand(cmd);
                     }
                     if (!null) {
-                        window.geo_3f9e690e_c8cc_5709_a020_95bc19c360e6.setWidth(window.innerWidth);
+                        window.geo_47f7f429_1ee0_5705_83f7_fd1739539e43.setWidth(window.innerWidth);
                     }
                 }
             },
             true
         );
         window.addEventListener("load", function() {
-            geo_3f9e690e_c8cc_5709_a020_95bc19c360e6_setup.inject('geo_3f9e690e_c8cc_5709_a020_95bc19c360e6', 'preferHTML5');
+            geo_47f7f429_1ee0_5705_83f7_fd1739539e43_setup.inject('geo_47f7f429_1ee0_5705_83f7_fd1739539e43', 'preferHTML5');
         });
         window.addEventListener('resize', (event) => {
             let width = window.innerWidth;
             if (!null) {
-                window.geo_3f9e690e_c8cc_5709_a020_95bc19c360e6.setWidth(width);
+                window.geo_47f7f429_1ee0_5705_83f7_fd1739539e43.setWidth(width);
             }
         });
         </script>
@@ -398,11 +398,11 @@ root_ul_node.appendChild(build_entries(menu));</script>
         max-width: unset;
         margin: 0;
         ">
-        <div id="geo_5c550bed_288f_be4f_1245_5a62f544c106" style="width: 100%;"></div>
+        <div id="geo_7b665e33_7d0a_1bb9_8b45_a06bfd3ea48d" style="width: 100%;"></div>
         <script>
-        var geo_5c550bed_288f_be4f_1245_5a62f544c106_setup = new GGBApplet(
+        var geo_7b665e33_7d0a_1bb9_8b45_a06bfd3ea48d_setup = new GGBApplet(
             {
-                id: "geo_5c550bed_288f_be4f_1245_5a62f544c106",
+                id: "geo_7b665e33_7d0a_1bb9_8b45_a06bfd3ea48d",
                 "appName": 'classic',
                 "width": null || window.innerWidth,
                 "height": 200 || 500,
@@ -421,22 +421,22 @@ root_ul_node.appendChild(build_entries(menu));</script>
                 "preventFocus": true,
                 appletOnLoad: (x) => {
                     for (cmd of ["SetPerspective(\"G\")","y=x^2"]) {
-                        window.geo_5c550bed_288f_be4f_1245_5a62f544c106.evalCommand(cmd);
+                        window.geo_7b665e33_7d0a_1bb9_8b45_a06bfd3ea48d.evalCommand(cmd);
                     }
                     if (!null) {
-                        window.geo_5c550bed_288f_be4f_1245_5a62f544c106.setWidth(window.innerWidth);
+                        window.geo_7b665e33_7d0a_1bb9_8b45_a06bfd3ea48d.setWidth(window.innerWidth);
                     }
                 }
             },
             true
         );
         window.addEventListener("load", function() {
-            geo_5c550bed_288f_be4f_1245_5a62f544c106_setup.inject('geo_5c550bed_288f_be4f_1245_5a62f544c106', 'preferHTML5');
+            geo_7b665e33_7d0a_1bb9_8b45_a06bfd3ea48d_setup.inject('geo_7b665e33_7d0a_1bb9_8b45_a06bfd3ea48d', 'preferHTML5');
         });
         window.addEventListener('resize', (event) => {
             let width = window.innerWidth;
             if (!null) {
-                window.geo_5c550bed_288f_be4f_1245_5a62f544c106.setWidth(width);
+                window.geo_7b665e33_7d0a_1bb9_8b45_a06bfd3ea48d.setWidth(width);
             }
         });
         </script>
@@ -446,11 +446,11 @@ root_ul_node.appendChild(build_entries(menu));</script>
         max-width: unset;
         margin: 0;
         ">
-        <div id="geo_8c4e1f89_d295_cd86_f2aa_5ae1ea0f8c31" style="width: 100%;"></div>
+        <div id="geo_519ff74f_ced3_f1c1_5eff_ff9803f47637" style="width: 100%;"></div>
         <script>
-        var geo_8c4e1f89_d295_cd86_f2aa_5ae1ea0f8c31_setup = new GGBApplet(
+        var geo_519ff74f_ced3_f1c1_5eff_ff9803f47637_setup = new GGBApplet(
             {
-                id: "geo_8c4e1f89_d295_cd86_f2aa_5ae1ea0f8c31",
+                id: "geo_519ff74f_ced3_f1c1_5eff_ff9803f47637",
                 "appName": 'suite',
                 "width": null || window.innerWidth,
                 "height": 200 || 500,
@@ -469,22 +469,22 @@ root_ul_node.appendChild(build_entries(menu));</script>
                 "preventFocus": true,
                 appletOnLoad: (x) => {
                     for (cmd of ["SetPerspective(\"G\")","y=x^2"]) {
-                        window.geo_8c4e1f89_d295_cd86_f2aa_5ae1ea0f8c31.evalCommand(cmd);
+                        window.geo_519ff74f_ced3_f1c1_5eff_ff9803f47637.evalCommand(cmd);
                     }
                     if (!null) {
-                        window.geo_8c4e1f89_d295_cd86_f2aa_5ae1ea0f8c31.setWidth(window.innerWidth);
+                        window.geo_519ff74f_ced3_f1c1_5eff_ff9803f47637.setWidth(window.innerWidth);
                     }
                 }
             },
             true
         );
         window.addEventListener("load", function() {
-            geo_8c4e1f89_d295_cd86_f2aa_5ae1ea0f8c31_setup.inject('geo_8c4e1f89_d295_cd86_f2aa_5ae1ea0f8c31', 'preferHTML5');
+            geo_519ff74f_ced3_f1c1_5eff_ff9803f47637_setup.inject('geo_519ff74f_ced3_f1c1_5eff_ff9803f47637', 'preferHTML5');
         });
         window.addEventListener('resize', (event) => {
             let width = window.innerWidth;
             if (!null) {
-                window.geo_8c4e1f89_d295_cd86_f2aa_5ae1ea0f8c31.setWidth(width);
+                window.geo_519ff74f_ced3_f1c1_5eff_ff9803f47637.setWidth(width);
             }
         });
         </script>
