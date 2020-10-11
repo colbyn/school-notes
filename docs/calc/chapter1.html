@@ -1,8 +1,8 @@
-<h1>Chapter 1</h1>
+<h1 id="chapter-1">Chapter 1</h1>
 
-<h2>§1.5 | The Limit of a Function</h2>
+<h2 id="%C2%A71.5-%7C%20the%20limit%20of%20a%20function">§1.5 | The Limit of a Function</h2>
 
-<section class="note-block block"><h1>Vertical Asymptote (Definition §1.5.6)</h1><p>The vertical line<span inline="" math-inline="">\(x = a\)</span>is called the **vertical asymptote** of the curve<span inline="" math-inline="">\(y = f(x)\)</span>if at least one of the following statements is true:</p><div block="" math-block="">$$ \begin{equation}
+<section class="note-block block"><h3 id="vertical-asymptote%20(definition%20%C2%A71.5.6)">Vertical Asymptote (Definition §1.5.6)</h3><p>The vertical line<span inline="" math-inline="">\(x = a\)</span>is called the **vertical asymptote** of the curve<span inline="" math-inline="">\(y = f(x)\)</span>if at least one of the following statements is true:</p><div block="" math-block="">$$ \begin{equation}
 \begin{split}
     \lim_{x \to a} f(x) &= \infty \\
     \lim_{x \to a} f(x) &= -\infty \\
@@ -14,9 +14,9 @@
 \end{equation} $$</div><p></p></section>
 
 
-<h2>§1.6 | Calculating Limits Using the Limit Laws</h2>
+<h2 id="%C2%A71.6-%7C%20calculating%20limits%20using%20the%20limit%20laws">§1.6 | Calculating Limits Using the Limit Laws</h2>
 
-<section class="note-block block"><h1>Limit Laws</h1><p>Suppose that<span inline="" math-inline="">\(c\)</span>is a constant and that the limits<span inline="" math-inline="">\(\lim_{x \to a} f(x)\)</span>and<span inline="" math-inline="">\(\lim_{x \to a} g(x)\)</span>exists, then:</p><div block="" math-block="">$$ \begin{equation}
+<section class="note-block block"><h3 id="limit-laws">Limit Laws</h3><p>Suppose that<span inline="" math-inline="">\(c\)</span>is a constant and that the limits<span inline="" math-inline="">\(\lim_{x \to a} f(x)\)</span>and<span inline="" math-inline="">\(\lim_{x \to a} g(x)\)</span>exists, then:</p><div block="" math-block="">$$ \begin{equation}
 \begin{split}
     \lim_{x \to a} \Big[ f(x) + g(x) \Big] &= \lim_{x \to a} f(x) + \lim_{x \to a} g(x) \\
     \lim_{x \to a} \Big[ f(x) - g(x) \Big] &= \lim_{x \to a} f(x) - \lim_{x \to a} g(x) \\
@@ -26,17 +26,17 @@
 \end{split}
 \end{equation} $$</div><p></p></section>
 
-<section class="note-block block"><h1>Power Law</h1><div block="" math-block="">$$
+<section class="note-block block"><h3 id="power-law">Power Law</h3><div block="" math-block="">$$
         \lim_{x \to a} \Big[ f(x) \Big]^n = \Big[ \lim_{x \to a} f(x) \Big]^n
     $$</div><section class="note-block block"><p><span inline="" math-inline="">\(n\)</span> must be a positive integer.</p><p></p></section><p></p></section>
 
-<section class="note-block block"><h1>Root Law</h1><div block="" math-block="">$$
+<section class="note-block block"><h3 id="root-law">Root Law</h3><div block="" math-block="">$$
         \lim_{x \to a} \sqrt[n]{f(x)} = \sqrt[n]{\lim_{x \to a} f(x)}
     $$</div><section class="note-block block"><p><span inline="" math-inline="">\(n\)</span>must be a positive integer.</p></section><section class="note-block block"><p>If<span inline="" math-inline="">\(n\)</span>is even, we assume that<span inline="" math-inline="">\(\lim_{x \to a} f(x) > 0\)</span>.</p></section><p></p></section>
 
-<h2>§1.8 | Continuity</h2>
+<h2 id="%C2%A71.8-%7C%20continuity">§1.8 | Continuity</h2>
 
-<section class="note-block block"><h1>The Intermediate Value Theorem (IVT)</h1><p>Suppose that<span inline="" math-inline="">\(f\)</span>is continuous on the closed interval<span inline="" math-inline="">\([a, b]\)</span>, and let N be any number between<span inline="" math-inline="">\(f(a)\)</span>and<span inline="" math-inline="">\(f(b)\)</span>, where<span inline="" math-inline="">\(f(a) \neq f(b)\)</span>, then there exists a number<span inline="" math-inline="">\(c\)</span>in<span inline="" math-inline="">\((a, b)\)</span>such that<span inline="" math-inline="">\(f(c) = N\)</span>.</p><p>Or alternatively, suppose <span inline="" math-inline="">\(f\)</span> is a function that is continuous at every point in the interval <span inline="" math-inline="">\([a, b]:\)</span></p><ul>
+<section class="note-block block"><h3 id="the-intermediate%20value%20theorem%20(ivt)">The Intermediate Value Theorem (IVT)</h3><p>Suppose that<span inline="" math-inline="">\(f\)</span>is continuous on the closed interval<span inline="" math-inline="">\([a, b]\)</span>, and let N be any number between<span inline="" math-inline="">\(f(a)\)</span>and<span inline="" math-inline="">\(f(b)\)</span>, where<span inline="" math-inline="">\(f(a) \neq f(b)\)</span>, then there exists a number<span inline="" math-inline="">\(c\)</span>in<span inline="" math-inline="">\((a, b)\)</span>such that<span inline="" math-inline="">\(f(c) = N\)</span>.</p><p>Or alternatively, suppose <span inline="" math-inline="">\(f\)</span> is a function that is continuous at every point in the interval <span inline="" math-inline="">\([a, b]:\)</span></p><ul>
     <li><span inline="" math-inline="">\(f\)</span> will take on every value between <span inline="" math-inline="">\(f(a)\)</span> and <span inline="" math-inline="">\(f(b)\)</span> over the interval.</li>
     <li>For any L between the values <span inline="" math-inline="">\(f(a)\)</span> and <span inline="" math-inline="">\(f(b)\)</span>, there exists a number <span inline="" math-inline="">\(c\)</span> in <span inline="" math-inline="">\([a, b]\)</span> for which <span inline="" math-inline="">\(f(c) = L\)</span>.</li>
 </ul><section class="note-block block"><ul>

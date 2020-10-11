@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.6e450e63.css">
+    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.17dc6a57.css">
     <script src="https://colbyn.github.io/school-notes/system.f84e1103.js"></script>
     <!-- MATH-JAX -->
 <script>window.MathJax = {
@@ -30,7 +30,8 @@
 <script src="https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
 </head>
 <body>
-    <!-- WIP NEW NAVIGATION -->
+    <nav side="">
+        <!-- WIP NEW NAVIGATION -->
 
 <style>header#root {
         border: 1px solid #000;
@@ -249,15 +250,17 @@ function build_entries(entries) {
 var root_ul_node = document.querySelector("header#root");
 console.assert(root_ul_node);
 root_ul_node.appendChild(build_entries(menu));</script>
-    <h1>Chapter 1 | Functions and Graphs</h1>
-    <h1>Chapter 2 | Trigonometric Functions</h1>
-    <h1>Chapter 3 | Trigonometric Identities and Equations</h1>
+        <div toc=""><ul toc=""><li entry="h1"><a href="#chapter-1%20%7C%20functions%20and%20graphs">Chapter 1 | Functions and Graphs</a></li><li entry="h1"><a href="#chapter-2%20%7C%20trigonometric%20functions">Chapter 2 | Trigonometric Functions</a></li><li entry="h1"><a href="#chapter-3%20%7C%20trigonometric%20identities%20and%20equations">Chapter 3 | Trigonometric Identities and Equations</a></li><li entry="h2"><a href="#%C2%A73.1-%7C%20verification%20of%20trigonometric%20identities">§3.1 | Verification of Trigonometric Identities</a></li><li entry="h2"><a href="#%C2%A73.2-%7C%20sum,%20difference,%20and%20cofunction%20identities">§3.2 | Sum, Difference, and Cofunction Identities</a></li><li entry="h3"><a href="#sum-and%20difference%20identities">Sum and Difference Identities</a></li><li entry="h3"><a href="#cofunction-identities">Cofunction Identities</a></li><li entry="h2"><a href="#%C2%A73.3-%7C%20double-%20and%20half-angle%20identities">§3.3 | Double- and Half-Angle Identities</a></li><li entry="h3"><a href="#double-angle-identities">Double-Angle Identities</a></li><li entry="h3"><a href="#half-angle-identities">Half-Angle Identities</a></li><li entry="h3"><a href="#power-reducing-identities">Power-Reducing Identities</a></li><li entry="h2"><a href="#%C2%A73.4-%7C%20identities%20involving%20the%20sum%20of%20trigonometric%20functions">§3.4 | Identities Involving the Sum of Trigonometric Functions</a></li><li entry="h3"><a href="#product-to-sum-identities">Product-to-Sum Identities</a></li><li entry="h3"><a href="#sum-to-product-identities">Sum-to-Product-Identities</a></li><li entry="h3"><a href="#miscellaneous">Miscellaneous</a></li><li entry="h2"><a href="#%C2%A73.5-%7C%20inverse%20trigonometric%20functions">§3.5 | Inverse Trigonometric Functions</a></li><li entry="h3"><a href="#definition-of%20stem:%5B%5Carcsin(x)%5D">Definition of stem:[\arcsin(x)]</a></li><li entry="h3"><a href="#definition-of%20stem:%5B%5Carccos(x)%5D">Definition of stem:[\arccos(x)]</a></li><li entry="h3"><a href="#identities-for%20the%20inverse%20secant,%20cosecant,%20and%20cotangent%20functions">Identities for the Inverse Secant, Cosecant, and Cotangent Functions</a></li><li entry="h3"><a href="#composition-of%20trigonometric%20functions%20and%20their%20inverses">Composition of Trigonometric Functions and Their Inverses</a></li><li entry="h2"><a href="#%C2%A73.6-%7C%20trigonometric%20equations">§3.6 | Trigonometric Equations</a></li><li entry="h1"><a href="#chapter-4%20%7C%20applications%20of%20trigonometry">Chapter 4 | Applications of Trigonometry</a></li><li entry="h1"><a href="#chapter-5%20%7C%20complex%20numbers">Chapter 5 | Complex Numbers</a></li><li entry="h1"><a href="#chapter-6%20%7C%20topics%20in%20analytic%20geometry">Chapter 6 | Topics in Analytic Geometry</a></li><li entry="h1"><a href="#chapter-7%20%7C%20exponential%20and%20logarithmic%20functions">Chapter 7 | Exponential and Logarithmic Functions</a></li></ul></div>
+    </nav>
+    <h1 id="chapter-1%20%7C%20functions%20and%20graphs">Chapter 1 | Functions and Graphs</h1>
+    <h1 id="chapter-2%20%7C%20trigonometric%20functions">Chapter 2 | Trigonometric Functions</h1>
+    <h1 id="chapter-3%20%7C%20trigonometric%20identities%20and%20equations">Chapter 3 | Trigonometric Identities and Equations</h1>
 
-<h2>§3.1 | Verification of Trigonometric Identities</h2>
-<h2>§3.2 | Sum, Difference, and Cofunction Identities</h2>
+<h2 id="%C2%A73.1-%7C%20verification%20of%20trigonometric%20identities">§3.1 | Verification of Trigonometric Identities</h2>
+<h2 id="%C2%A73.2-%7C%20sum,%20difference,%20and%20cofunction%20identities">§3.2 | Sum, Difference, and Cofunction Identities</h2>
 
 
-<section class="note-block block"><h1>Sum and Difference Identities</h1><div block="" math-block="">$$ \begin{equation}
+<section class="note-block block"><h3 id="sum-and%20difference%20identities">Sum and Difference Identities</h3><p><small>Sometimes called the angle-sum identities.</small></p><div block="" math-block="">$$ \begin{equation}
 \begin{split}
 
     \cos(\alpha - \beta) &= \cos(\alpha) \cdot \cos(\beta) + \sin(\alpha) \cdot \sin(\beta) \\
@@ -276,7 +279,7 @@ root_ul_node.appendChild(build_entries(menu));</script>
 \end{equation} $$</div><p></p></section>
 
 
-<section class="note-block block"><h1>Cofunction Identities</h1><div block="" math-block="">$$ \begin{equation}
+<section class="note-block block"><h3 id="cofunction-identities">Cofunction Identities</h3><div block="" math-block="">$$ \begin{equation}
 \begin{split}
     \sin(\theta) &= \cos(\frac{1}{4}\tau - \theta) \\
     \cos(\theta) &= \sin(\frac{1}{4}\tau - \theta) \\
@@ -288,10 +291,10 @@ root_ul_node.appendChild(build_entries(menu));</script>
 \end{split}
 \end{equation} $$</div><p></p></section>
 
-<h2>§3.3 | Double- and Half-Angle Identities</h2>
+<h2 id="%C2%A73.3-%7C%20double-%20and%20half-angle%20identities">§3.3 | Double- and Half-Angle Identities</h2>
 
 
-<section class="note-block block"><h1>Double-Angle Identities</h1><ul>
+<section class="note-block block"><h3 id="double-angle-identities">Double-Angle Identities</h3><ul>
         <li>**Remember for Exams.** The professor said this isn't given during the Exam, and that we need to know this, said this in the context of Double-Angle & Half-Angle Identities.</li>
         <li>The **Double-Angle Identities** are easy to derive from the **Sum and Difference Identities**.</li>
     </ul><div block="" math-block="">$$ \begin{equation}
@@ -306,7 +309,7 @@ root_ul_node.appendChild(build_entries(menu));</script>
 \end{equation} $$</div><p></p></section>
 
 
-<section class="note-block block"><h1>Half-Angle Identities</h1><p>**Remember for Exams.** The professor said this isn't given during the Exam, and that we need to know this, said this in the context of Double-Angle & Half-Angle Identities, she may have been talking about just the Double-Angle Identities.</p><div block="" math-block="">$$ \begin{equation}
+<section class="note-block block"><h3 id="half-angle-identities">Half-Angle Identities</h3><p>**Remember for Exams.** The professor said this isn't given during the Exam, and that we need to know this, said this in the context of Double-Angle & Half-Angle Identities, she may have been talking about just the Double-Angle Identities.</p><div block="" math-block="">$$ \begin{equation}
 \begin{split}
     \sin \frac{\alpha}{2} &= \pm \sqrt{\frac{1 - \cos(\alpha)}{2}} \\
     \cos \frac{\alpha}{2} &= \pm \sqrt{\frac{1 + \cos(\alpha)}{2}} \\
@@ -316,7 +319,7 @@ root_ul_node.appendChild(build_entries(menu));</script>
 \end{split}
 \end{equation} $$</div><section class="note-block block"><p>**The choice of the ± sign depends on the quadrant in which stem:[\frac{\alpha}{2}] lies.**</p></section><p></p></section>
 
-<section class="note-block block"><h1>Power-Reducing Identities</h1><div block="" math-block="">$$ \begin{equation}
+<section class="note-block block"><h3 id="power-reducing-identities">Power-Reducing Identities</h3><div block="" math-block="">$$ \begin{equation}
 \begin{split}
     \sin^2(\alpha) &= \frac{1 - \cos(2\alpha)}{2} \\
     &\\
@@ -326,9 +329,9 @@ root_ul_node.appendChild(build_entries(menu));</script>
 \end{split}
 \end{equation} $$</div><p></p></section>
 
-<h2>§3.4 | Identities Involving the Sum of Trigonometric Functions</h2>
+<h2 id="%C2%A73.4-%7C%20identities%20involving%20the%20sum%20of%20trigonometric%20functions">§3.4 | Identities Involving the Sum of Trigonometric Functions</h2>
 
-<section class="note-block block"><h1>Product-to-Sum Identities</h1><div block="" math-block="">$$ \begin{equation}
+<section class="note-block block"><h3 id="product-to-sum-identities">Product-to-Sum Identities</h3><div block="" math-block="">$$ \begin{equation}
 \begin{split}
     \sin(\alpha) \cdot \cos(\beta) &= \frac{1}{2} \Big[ \sin(\alpha + \beta) + \sin(\alpha - \beta) \Big] \\
     \cos(\alpha) \cdot \sin(\beta) &= \frac{1}{2} \Big[ \sin(\alpha + \beta) - \sin(\alpha - \beta) \Big] \\
@@ -337,7 +340,7 @@ root_ul_node.appendChild(build_entries(menu));</script>
 \end{split}
 \end{equation} $$</div><p></p></section>
 
-<section class="note-block block"><h1>Sum-to-Product-Identities</h1><div block="" math-block="">$$ \begin{equation}
+<section class="note-block block"><h3 id="sum-to-product-identities">Sum-to-Product-Identities</h3><div block="" math-block="">$$ \begin{equation}
 \begin{split}
     \sin(x) + \sin(y) &= 2 \cdot \sin\left( \frac{x + y}{2} \right) \cdot \cos\left( \frac{x - y}{2} \right) \\
     \cos(x) + \cos(y) &= 2 \cdot \cos\left( \frac{x + y}{2} \right) \cdot \cos\left( \frac{x - y}{2} \right) \\
@@ -346,18 +349,21 @@ root_ul_node.appendChild(build_entries(menu));</script>
 \end{split}
 \end{equation} $$</div><p></p></section>
 
+<section class="note-block block"><h3 id="miscellaneous">Miscellaneous</h3><div block="" math-block="">$$
+        \cos^2 x - \sin^2 x = \cos (2x)
+    $$</div><p></p></section>
 
-<h2>§3.5 | Inverse Trigonometric Functions</h2>
+<h2 id="%C2%A73.5-%7C%20inverse%20trigonometric%20functions">§3.5 | Inverse Trigonometric Functions</h2>
 
 <img block="" src="https://mathbooks.unl.edu/PreCalculus/images/imagesChap13/range-inverse-trig.png">
 
 
-<section class="note-block block"><h1>Definition of stem:[\arcsin(x)]</h1><p><span inline="" math-inline="">\(y = \arcsin(x)\)</span>if and only if<span inline="" math-inline="">\(x = \sin(y)\)</span>where<span inline="" math-inline="">\(
+<section class="note-block block"><h3 id="definition-of%20stem:%5B%5Carcsin(x)%5D">Definition of stem:[\arcsin(x)]</h3><p><span inline="" math-inline="">\(y = \arcsin(x)\)</span>if and only if<span inline="" math-inline="">\(x = \sin(y)\)</span>where<span inline="" math-inline="">\(
         -1 \leq x \leq 1 \\
         -\frac{1}{4}\tau \leq y \leq \frac{1}{4}\tau
     \)</span>The graph of stem:[y=\sin\;x] with stem:[x] restricted to to stem:[\left\lbrack -\frac{\tau}{4},\frac{\tau}{4} \right\rbrack]:</p><img block="" src="https://colbyn.github.io/colbyns-math-notes/trig-class/inverse-sin-graph.svg"><p></p></section>
 
-<section class="note-block block"><h1>Definition of stem:[\arccos(x)]</h1><p><span inline="" math-inline="">\(y = \arccos(x)\)</span>if and only if<span inline="" math-inline="">\(x = \cos(y)\)</span>where<span inline="" math-inline="">\(
+<section class="note-block block"><h3 id="definition-of%20stem:%5B%5Carccos(x)%5D">Definition of stem:[\arccos(x)]</h3><p><span inline="" math-inline="">\(y = \arccos(x)\)</span>if and only if<span inline="" math-inline="">\(x = \cos(y)\)</span>where<span inline="" math-inline="">\(
         -1 \leq x \leq 1 \\
         0 \leq y \leq \pi
     \)</span>The graph of stem:[y=\cos\;x] with stem:[x] restricted to to stem:[\left\lbrack 0,\frac{1}{2}\tau \right\rbrack]:</p><img block="" src="https://colbyn.github.io/colbyns-math-notes/trig-class/inverse-cos-graph.svg"><p></p></section>
@@ -366,7 +372,7 @@ root_ul_node.appendChild(build_entries(menu));</script>
 <section class="note-block block"><p>The choice of ranges for stem:[\arcsin(x)] and stem:[\arccos(x)] is not universally accepted.</p></section>
 
 
-<section class="note-block block"><h1>Identities for the Inverse Secant, Cosecant, and Cotangent Functions</h1><div block="" math-block="">$$ \begin{equation}
+<section class="note-block block"><h3 id="identities-for%20the%20inverse%20secant,%20cosecant,%20and%20cotangent%20functions">Identities for the Inverse Secant, Cosecant, and Cotangent Functions</h3><div block="" math-block="">$$ \begin{equation}
 \begin{aligned}
     \sin^{-1}\frac{1}{x} &= \csc^{-1}x & \text{if}\; & -1 \leq x \leq 1 \\
     &\\
@@ -376,7 +382,7 @@ root_ul_node.appendChild(build_entries(menu));</script>
 \end{aligned}
 \end{equation} $$</div><p></p></section>
 
-<section class="note-block block"><h1>Composition of Trigonometric Functions and Their Inverses</h1><div block="" math-block="">$$ \begin{equation}
+<section class="note-block block"><h3 id="composition-of%20trigonometric%20functions%20and%20their%20inverses">Composition of Trigonometric Functions and Their Inverses</h3><div block="" math-block="">$$ \begin{equation}
 \begin{aligned}
 \sin \circ \arcsin \triangleleft \; x &= x & \text{if}\; & -1 \leq x \leq 1 \\
 &\\
@@ -393,10 +399,10 @@ root_ul_node.appendChild(build_entries(menu));</script>
 \end{equation} $$</div><p><small>Where stem:[x \in \mathbf{R}] means if x is any real number.</small></p></section>
 
 
-<h2>§3.6 | Trigonometric Equations</h2>
-    <h1>Chapter 4 | Applications of Trigonometry</h1>
-    <h1>Chapter 5 | Complex Numbers</h1>
-    <h1>Chapter 6 | Topics in Analytic Geometry</h1>
-    <h1>Chapter 7 | Exponential and Logarithmic Functions</h1>
+<h2 id="%C2%A73.6-%7C%20trigonometric%20equations">§3.6 | Trigonometric Equations</h2>
+    <h1 id="chapter-4%20%7C%20applications%20of%20trigonometry">Chapter 4 | Applications of Trigonometry</h1>
+    <h1 id="chapter-5%20%7C%20complex%20numbers">Chapter 5 | Complex Numbers</h1>
+    <h1 id="chapter-6%20%7C%20topics%20in%20analytic%20geometry">Chapter 6 | Topics in Analytic Geometry</h1>
+    <h1 id="chapter-7%20%7C%20exponential%20and%20logarithmic%20functions">Chapter 7 | Exponential and Logarithmic Functions</h1>
 </body>
 </html>

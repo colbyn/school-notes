@@ -27,6 +27,12 @@ section.note-block > ul {
 
 section.note-block p {
     margin: 16px;
+    padding-left: 24px;
+    margin-left: 0;
+}
+
+section.note-block > * {
+    padding-left: 24px;
 }
 
 section.note-block section.note-block {
@@ -35,12 +41,17 @@ section.note-block section.note-block {
     margin: 8px;
 }
 
-section.note-block > h1 {
-    font-size: 1.5em;
-    color: #000;
-    padding: 20px 0 20px 0;
-    border-bottom: 1px solid #c1c1c1;
+section.note-block > h1:first-child,
+section.note-block > h2:first-child,
+section.note-block > h3:first-child,
+section.note-block > h4:first-child,
+section.note-block > h5:first-child,
+section.note-block > h6:first-child {
+    border-bottom: 1px solid #bfbfbf;
     padding-left: 12px;
+    margin: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
 section.note-block {
@@ -120,4 +131,60 @@ body > h1 {
 }
 
 
-/*# sourceMappingURL=https://colbyn.github.io/school-notes/styling.6e450e63.css.map */
+div[toc] {
+    width: 100%;
+}
+
+div[toc] > ul[toc] {
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+
+div[toc] > ul[toc] > li[entry=h1] {
+    font-size: 1.3em;
+    border-bottom: 2px solid #cccccc;
+}
+div[toc] > ul[toc] > li[entry=h2] {
+    font-size: 1.1em;
+    border-bottom: 1px solid #dcdcdc;
+}
+div[toc] > ul[toc] > li[entry=h3] {font-size: 1em;}
+div[toc] > ul[toc] > li[entry=h4] {font-size: 0.9em;}
+div[toc] > ul[toc] > li[entry=h5] {font-size: 0.8em;}
+div[toc] > ul[toc] > li[entry=h6] {font-size: 0.7em;}
+
+div[toc] > ul[toc] a {
+    text-decoration: none;
+    font-size: inherit;
+}
+
+body > nav[side] {
+    max-width: unset;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    border-bottom: 1px solid #c3c3c3;
+    box-shadow: 0px 3px 4px #d8d8d8;
+}
+
+body > nav[side] > * {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+ul[toc] > li[entry='h1'] {margin-left: 0;}
+ul[toc] > li[entry='h2'] {margin-left: 50px;}
+ul[toc] > li[entry='h3'] {margin-left: 140px;}
+ul[toc] > li[entry='h4'] {margin-left: 160px;}
+ul[toc] > li[entry='h5'] {margin-left: 180px;}
+ul[toc] > li[entry='h6'] {margin-left: 200px;}
+
+
+
+/*# sourceMappingURL=https://colbyn.github.io/school-notes/styling.17dc6a57.css.map */

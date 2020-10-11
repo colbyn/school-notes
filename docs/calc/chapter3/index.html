@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.6e450e63.css">
+    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.17dc6a57.css">
     <script src="https://colbyn.github.io/school-notes/system.f84e1103.js"></script>
     <!-- MATH-JAX -->
 <script>window.MathJax = {
@@ -30,7 +30,8 @@
 <script src="https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
 </head>
 <body>
-    <!-- WIP NEW NAVIGATION -->
+    <nav side="">
+        <!-- WIP NEW NAVIGATION -->
 
 <style>header#root {
         border: 1px solid #000;
@@ -249,11 +250,13 @@ function build_entries(entries) {
 var root_ul_node = document.querySelector("header#root");
 console.assert(root_ul_node);
 root_ul_node.appendChild(build_entries(menu));</script>
-    <h1>Chapter 3 | Applications of Differentiation </h1>
+        <div toc=""><ul toc=""><li entry="h1"><a href="#chapter-3%20%7C%20applications%20of%20differentiation">Chapter 3 | Applications of Differentiation </a></li><li entry="h2"><a href="#3.1-%7C%20maximum%20and%20minimum%20values">3.1 | Maximum and Minimum Values</a></li><li entry="h3"><a href="#the-extreme%20value%20theorem">The extreme Value Theorem</a></li><li entry="h3"><a href="#the-extreme%20value%20theorem">The extreme Value Theorem</a></li><li entry="h3"><a href="#fermat%E2%80%99s-theorem">Fermat’s Theorem</a></li><li entry="h3"><a href="#fermat%E2%80%99s-theorem">Fermat’s Theorem</a></li><li entry="h3"><a href="#fermat%E2%80%99s-theorem%20(in%20terms%20of%20critical%20numbers)">Fermat’s Theorem (in terms of critical numbers)</a></li><li entry="h3"><a href="#critical-number">Critical Number</a></li><li entry="h3"><a href="#the-closed%20interval%20method">The Closed Interval Method</a></li><li entry="h3"><a href="#the-closed%20interval%20method">The Closed Interval Method</a></li><li entry="h2"><a href="#3.2-%7C%20the%20mean%20value%20theorem">3.2 | The Mean Value Theorem</a></li><li entry="h3"><a href="#rolle%E2%80%99s-theorem">Rolle’s Theorem</a></li><li entry="h3"><a href="#the-mean%20value%20theorem">The Mean Value Theorem</a></li><li entry="h3"><a href="#miscellaneous">Miscellaneous</a></li><li entry="h3"><a href="#theorem-(%C2%A73.2.5)">Theorem (§3.2.5)</a></li><li entry="h3"><a href="#corollary-(%C2%A73.2.7)">Corollary (§3.2.7)</a></li><li entry="h2"><a href="#3.3-%7C%20how%20derivatives%20affect%20the%20shape%20of%20a%20graph">3.3 | How Derivatives Affect the Shape of a Graph</a></li><li entry="h3"><a href="#what-does%20stem:%5Bf%5E%5Cprime%5D%20say%20about-%5C(-f-%5C)-?">What Does stem:[f^\prime] Say about <span inline="" math-inline="">\(f\)</span>?</a></li><li entry="h3"><a href="#increasing/decreasing-test">Increasing/Decreasing Test</a></li><li entry="h3"><a href="#the-first%20derivative%20test">The First Derivative Test</a></li><li entry="h3"><a href="#what-does-%5C(-f%5E%7B%5Cprime%5Cprime%7D-%5C)-say%20about-%5C(-f-%5C)-?">What Does <span inline="" math-inline="">\(f^{\prime\prime}\)</span> Say about <span inline="" math-inline="">\(f\)</span>?</a></li><li entry="h3"><a href="#concavity-test">Concavity Test</a></li><li entry="h3"><a href="#the-second%20derivative%20test">The Second Derivative Test</a></li><li entry="h2"><a href="#3.4-%7C%20limits%20at%20infinity;%20horizontal%20asymptotes">3.4 | Limits at Infinity; Horizontal Asymptotes</a></li><li entry="h2"><a href="#3.5-%7C%20summary%20curve%20sketching">3.5 | Summary Curve Sketching</a></li><li entry="h2"><a href="#3.6-%7C%20calculus%20with%20graphing%20calculators%20(skipped)">3.6 | Calculus with Graphing Calculators (Skipped)</a></li><li entry="h2"><a href="#3.7-%7C%20optimization%20problems">3.7 | Optimization Problems</a></li><li entry="h2"><a href="#3.8-%7C%20newtons%20method">3.8 | Newtons Method</a></li><li entry="h2"><a href="#3.9-%7C%20anti-derivatives">3.9 | Anti-Derivatives</a></li></ul></div>
+    </nav>
+    <h1 id="chapter-3%20%7C%20applications%20of%20differentiation">Chapter 3 | Applications of Differentiation </h1>
 
 
 
-<h2>3.1 | Maximum and Minimum Values</h2>
+<h2 id="3.1-%7C%20maximum%20and%20minimum%20values">3.1 | Maximum and Minimum Values</h2>
 
 <section class="note-block block"><p>- An **extremum** (or extreme value) of a function is a point at which a **maximum** or **minimum** value of the function is obtained in some interval.</p></section>
 
@@ -273,19 +276,19 @@ root_ul_node.appendChild(build_entries(menu));</script>
 </ul>
 
 
-<h3>The extreme Value Theorem</h3>
+<h3 id="the-extreme%20value%20theorem">The extreme Value Theorem</h3>
 
-<section class="note-block block"><h1>The extreme Value Theorem</h1><p>If<span inline="" math-inline="">\(f\)</span>is continuous on a closed interval<span inline="" math-inline="">\([a, b]\)</span>, then<span inline="" math-inline="">\(f\)</span>attains an absolute maximum value stem:[f(c)] and an absolute minimum value<span inline="" math-inline="">\(f(d)\)</span>at some numbers<span inline="" math-inline="">\(c\)</span>and<span inline="" math-inline="">\(d\)</span>in<span inline="" math-inline="">\([a, b]\)</span>.</p><section class="note-block block"><p>Functions continuous on a closed interval always attain extreme values.</p></section><p></p></section>
+<section class="note-block block"><h3 id="the-extreme%20value%20theorem">The extreme Value Theorem</h3><p>If<span inline="" math-inline="">\(f\)</span>is continuous on a closed interval<span inline="" math-inline="">\([a, b]\)</span>, then<span inline="" math-inline="">\(f\)</span>attains an absolute maximum value stem:[f(c)] and an absolute minimum value<span inline="" math-inline="">\(f(d)\)</span>at some numbers<span inline="" math-inline="">\(c\)</span>and<span inline="" math-inline="">\(d\)</span>in<span inline="" math-inline="">\([a, b]\)</span>.</p><section class="note-block block"><p>Functions continuous on a closed interval always attain extreme values.</p></section><p></p></section>
 
-<h3>Fermat’s Theorem</h3>
+<h3 id="fermat%E2%80%99s-theorem">Fermat’s Theorem</h3>
 
-<section class="note-block block"><h1>Fermat’s Theorem</h1><p>If<span inline="" math-inline="">\(f\)</span>has a local maximum or minimum at<span inline="" math-inline="">\(c\)</span>, and if<span inline="" math-inline="">\(f^\prime(c)\)</span>exists, then<span inline="" math-inline="">\(f^\prime(c) = 0\)</span>.</p></section>
+<section class="note-block block"><h3 id="fermat%E2%80%99s-theorem">Fermat’s Theorem</h3><p>If<span inline="" math-inline="">\(f\)</span>has a local maximum or minimum at<span inline="" math-inline="">\(c\)</span>, and if<span inline="" math-inline="">\(f^\prime(c)\)</span>exists, then<span inline="" math-inline="">\(f^\prime(c) = 0\)</span>.</p></section>
 
 <p><b>In terms of critical numbers, Fermat’s Theorem can be rephrased as follows:</b></p>
 
-<section class="note-block block"><h1>Fermat’s Theorem (in terms of critical numbers)</h1><p>If f has a local maximum or minimum at c, then c is a critical number of f.</p></section>
+<section class="note-block block"><h3 id="fermat%E2%80%99s-theorem%20(in%20terms%20of%20critical%20numbers)">Fermat’s Theorem (in terms of critical numbers)</h3><p>If f has a local maximum or minimum at c, then c is a critical number of f.</p></section>
 
-<h3>Critical Number</h3>
+<h3 id="critical-number">Critical Number</h3>
 
 <p>A critical number of a function <span inline="" math-inline="">\(f\)</span> is a number <span inline="" math-inline="">\(c\)</span> in the domain of <span inline="" math-inline="">\(f\)</span> such that either <texf^\prime(c) 0="" ==""> or <span inline="" math-inline="">\(f^\prime(c)\)</span> does not exist.</texf^\prime(c)></p>
 
@@ -295,10 +298,10 @@ root_ul_node.appendChild(build_entries(menu));</script>
 
 <p>To find an absolute maximum or minimum of a continuous function on a closed interval, we note that either it is local [in which case it occurs at a critical number by (7)] or it occurs at an endpoint of the interval, as we see from the examples in Figure 8. Thus the following three-step procedure always works. **See The Closed Interval Method.**</p>
 
-<h3>The Closed Interval Method</h3>
+<h3 id="the-closed%20interval%20method">The Closed Interval Method</h3>
 
 
-<section class="note-block block"><h1>The Closed Interval Method</h1><p>To find the absolute maximum and minimum values of a continuous function<span inline="" math-inline="">\(f\)</span>on a closed interval<span inline="" math-inline="">\([a, b]\)</span>:</p><ul>
+<section class="note-block block"><h3 id="the-closed%20interval%20method">The Closed Interval Method</h3><p>To find the absolute maximum and minimum values of a continuous function<span inline="" math-inline="">\(f\)</span>on a closed interval<span inline="" math-inline="">\([a, b]\)</span>:</p><ul>
         <li>Find the values of <span inline="" math-inline="">\(f\)</span> at the critical numbers of <span inline="" math-inline="">\(f\)</span> in <span inline="" math-inline="">\((a, b)\)</span>. I.e. *critical numbers* of <span inline="" math-inline="">\(f\)</span> occur when <span inline="" math-inline="">\(f^\prime(c) = 0\)</span>, or when stem:[f^\prime(c) = \mathrm{undefined}]</li>
         <li>Find the values of <span inline="" math-inline="">\(f\)</span> at the endpoints of the interval. I.e. <span inline="" math-inline="">\(f(a)\)</span> and <span inline="" math-inline="">\(f(b)\)</span>.</li>
         <li>The **largest** of the values from **Steps 1 and 2** is the absolute maximum value; the **smallest** of these values is the absolute minimum value.</li>
@@ -316,7 +319,7 @@ root_ul_node.appendChild(build_entries(menu));</script>
 \end{equation}
 $$</div>
 
-<h2>3.2 | The Mean Value Theorem</h2>
+<h2 id="3.2-%7C%20the%20mean%20value%20theorem">3.2 | The Mean Value Theorem</h2>
 
 <ul>
     <li><a href="https://www.dpmms.cam.ac.uk/~wtg10/meanvalue.html">What is the point of the mean value theorem?</a></li>
@@ -338,7 +341,7 @@ f attains the slope of the secant between a and b as the derivative at the point
 
 <p>We will see that many of the results of this chapter depend on one central fact, which is called the Mean Value Theorem. But to arrive at the Mean Value Theorem we first need the following result.</p>
 
-<section class="note-block block"><h1>Rolle’s Theorem</h1><p>Let f be a function that satisfies the following three hypotheses:</p><ol>
+<section class="note-block block"><h3 id="rolle%E2%80%99s-theorem">Rolle’s Theorem</h3><p>Let f be a function that satisfies the following three hypotheses:</p><ol>
         <li><span inline="" math-inline="">\(f\)</span> is continuous on the closed interval <span inline="" math-inline="">\([a, b]\)</span>.</li>
         <li><span inline="" math-inline="">\(f\)</span> is differentiable on the open interval <span inline="" math-inline="">\((a, b)\)</span>.</li>
         <li><span inline="" math-inline="">\(f(a) = f(b)\)</span><br>I.e. the x_1 and x_2 map to the same y value.</li>
@@ -347,7 +350,7 @@ f attains the slope of the secant between a and b as the derivative at the point
 
 
 
-<section class="note-block block"><h1>The Mean Value Theorem</h1><p>Let<span inline="" math-inline="">\(f\)</span>be a function that satisfies the following hypotheses:</p><ol>
+<section class="note-block block"><h3 id="the-mean%20value%20theorem">The Mean Value Theorem</h3><p>Let<span inline="" math-inline="">\(f\)</span>be a function that satisfies the following hypotheses:</p><ol>
         <li><span inline="" math-inline="">\(f\)</span> is continuous on the closed interval <span inline="" math-inline="">\([a, b]\)</span>.</li>
         <li><span inline="" math-inline="">\(f\)</span> is differentiable on the open interval <span inline="" math-inline="">\((a, b)\)</span>.</li>
     </ol><p>Then there is a number<span inline="" math-inline="">\(c\)</span>in<span inline="" math-inline="">\((a, b)\)</span>, such that:<span inline="" math-inline="">\(
@@ -367,25 +370,25 @@ f attains the slope of the secant between a and b as the derivative at the point
 
 <section class="note-block block"><p>The Mean Value Theorem is an example of what is called an existence theorem. Like the Intermediate Value Theorem, the Extreme Value Theorem, and Rolle’s Theorem, it guarantees that there exists a number with a certain property, but it doesn’t tell us how to find the number.</p></section>
 
-<h3>Miscellaneous</h3>
+<h3 id="miscellaneous">Miscellaneous</h3>
 
-<section class="note-block block"><h1>Theorem (§3.2.5)</h1><p>If stem:[f^\prime(x) = 0] for all x in an interval<span inline="" math-inline="">\((a, b)\)</span>, then f is constant on<span inline="" math-inline="">\((a, b)\)</span>.</p></section>
-
-
-<section class="note-block block"><h1>Corollary (§3.2.7)</h1><p>if stem:[f^\prime(x) = g^\prime(x)] for all stem:[x] in an interval<span inline="" math-inline="">\((a, b)\)</span>, then stem:[f - g] is constant on<span inline="" math-inline="">\((a, b)\)</span>; that is, stem:[f(x) = g(x) + c] where<span inline="" math-inline="">\(c\)</span>is a constant.</p><section class="note-block block"><p>Corollary 7 says that if two functions have the same derivatives on an interval, then their graphs must be vertical translations of each other there. In other words, the graphs have the same shape, but could be shifted up or down.</p></section><p></p></section>
+<section class="note-block block"><h3 id="theorem-(%C2%A73.2.5)">Theorem (§3.2.5)</h3><p>If stem:[f^\prime(x) = 0] for all x in an interval<span inline="" math-inline="">\((a, b)\)</span>, then f is constant on<span inline="" math-inline="">\((a, b)\)</span>.</p></section>
 
 
-<h2>3.3 | How Derivatives Affect the Shape of a Graph</h2>
+<section class="note-block block"><h3 id="corollary-(%C2%A73.2.7)">Corollary (§3.2.7)</h3><p>if stem:[f^\prime(x) = g^\prime(x)] for all stem:[x] in an interval<span inline="" math-inline="">\((a, b)\)</span>, then stem:[f - g] is constant on<span inline="" math-inline="">\((a, b)\)</span>; that is, stem:[f(x) = g(x) + c] where<span inline="" math-inline="">\(c\)</span>is a constant.</p><section class="note-block block"><p>Corollary 7 says that if two functions have the same derivatives on an interval, then their graphs must be vertical translations of each other there. In other words, the graphs have the same shape, but could be shifted up or down.</p></section><p></p></section>
+
+
+<h2 id="3.3-%7C%20how%20derivatives%20affect%20the%20shape%20of%20a%20graph">3.3 | How Derivatives Affect the Shape of a Graph</h2>
 
 <p>Many of the applications of calculus depend on our ability to deduce facts about a function f from information concerning its derivatives.
 </p>
 
 <p>Because stem:[f^\prime(x)] represents the slope of the curve stem:[y = f(x)] at the point stem:[(x, f(x))], it tells us the direction in which the curve proceeds at each point. So it is reasonable to expect that information about stem:[f^\prime(x)] will provide us with information about stem:[f(x)].</p>
 
-<h3>What Does stem:[f^\prime] Say about <span inline="" math-inline="">\(f\)</span>?</h3>
+<h3 id="what-does%20stem:%5Bf%5E%5Cprime%5D%20say%20about-f-?">What Does stem:[f^\prime] Say about <span inline="" math-inline="">\(f\)</span>?</h3>
 
 
-<section class="note-block block"><h1>Increasing/Decreasing Test</h1><ul>
+<section class="note-block block"><h3 id="increasing/decreasing-test">Increasing/Decreasing Test</h3><ul>
         <li>If stem:[f^\prime(x) > 0] on an interval, then stem:[f(x)] is increasing on that interval.>
             <br>
             I.e. the tangent lines (in the stem:[f(x)] interval) have positive slope.
@@ -397,7 +400,7 @@ f attains the slope of the secant between a and b as the derivative at the point
     </ul><p></p></section>
 
 
-<section class="note-block block"><h1>The First Derivative Test</h1><p>Suppose that c is a critical number of a continuous function f:</p><ul>
+<section class="note-block block"><h3 id="the-first%20derivative%20test">The First Derivative Test</h3><p>Suppose that c is a critical number of a continuous function f:</p><ul>
         <li>
             If stem:[f^\prime] changes from positive to negative at <span inline="" math-inline="">\(c\)</span>, then <span inline="" math-inline="">\(f\)</span> has a local maximum at <span inline="" math-inline="">\(c\)</span>.
         </li>
@@ -409,13 +412,13 @@ f attains the slope of the secant between a and b as the derivative at the point
         </li>
     </ul><p></p></section>
 
-<h3>What Does <span inline="" math-inline="">\(f^{\prime\prime}\)</span> Say about <span inline="" math-inline="">\(f\)</span>?</h3>
+<h3 id="what-does-f%5E%7B%5Cprime%5Cprime%7D-say%20about-f-?">What Does <span inline="" math-inline="">\(f^{\prime\prime}\)</span> Say about <span inline="" math-inline="">\(f\)</span>?</h3>
 
 <section class="note-block block"><p>If the graph of f lies above all of its tangents on an interval I, then it is called concave upward on I. If the graph of f lies below all of its tangents on I, it is called concave downward on I.</p></section>
 
 
 
-<section class="note-block block"><h1>Concavity Test</h1><ul>
+<section class="note-block block"><h3 id="concavity-test">Concavity Test</h3><ul>
         <li>If <span inline="" math-inline="">\(f^{\prime\prime}(x) > 0\)</span> for all x in I, then the graph of <span inline="" math-inline="">\(f\)</span> is concave upward on I.</li>
         <li>If <span inline="" math-inline="">\(f^{\prime\prime}(x) < 0\)</span> for all x in I, then the graph of <span inline="" math-inline="">\(f\)</span> is concave downward on I.</li>
     </ul><p></p></section>
@@ -425,24 +428,24 @@ f attains the slope of the secant between a and b as the derivative at the point
 
 
 
-<section class="note-block block"><h1>The Second Derivative Test</h1><p>Suppose<span inline="" math-inline="">\(f^{\prime\prime}\)</span>is continuous near c:</p><ul>
+<section class="note-block block"><h3 id="the-second%20derivative%20test">The Second Derivative Test</h3><p>Suppose<span inline="" math-inline="">\(f^{\prime\prime}\)</span>is continuous near c:</p><ul>
         <li>If <texf^\prime(c) 0="" ==""> and stem:[f^{\prime\prime}(c) > 0], then <span inline="" math-inline="">\(f\)</span> has a local minimum at <span inline="" math-inline="">\(c\)</span>.</texf^\prime(c)></li>
         <li>If <texf^\prime(c) 0="" ==""> and stem:[f^{\prime\prime}(c) < 0], then <span inline="" math-inline="">\(f\)</span> has a local maximum at <span inline="" math-inline="">\(c\)</span>.</texf^\prime(c)></li>
     </ul><section class="note-block block"><p>The Second Derivative Test is inconclusive when stem:[f^{\prime\prime}(c) = 0]. In other words, at such a point there might be a maximum, there might be a minimum, or there might be neither (as in Example 6). This test also fails when stem:[f^{\prime\prime}(c)] does not exist. In such cases the First Derivative Test must be used. In fact, even when both tests apply, the First Derivative Test is often the easier one to use.</p></section><p></p></section>
 
 
-<h2>3.4 | Limits at Infinity; Horizontal Asymptotes</h2>
+<h2 id="3.4-%7C%20limits%20at%20infinity;%20horizontal%20asymptotes">3.4 | Limits at Infinity; Horizontal Asymptotes</h2>
 
 <section class="note-block block"><p>**The professor said:** you can't just apply the limit laws,
     such as for:</p><div block="" math-block="">$$
     \lim_{x \to \infty} \frac{x^2 + 3x + 5}{x^3 + 3x + 5}
     $$</div><p>Because we don't know if it is continuous.</p></section>
 
-<h2>3.5 | Summary Curve Sketching</h2>
-<h2>3.6 | Calculus with Graphing Calculators (Skipped)</h2>
-<h2>3.7 | Optimization Problems</h2>
-<h2>3.8 | Newtons Method</h2>
-<h2>3.9 | Anti-Derivatives</h2>
+<h2 id="3.5-%7C%20summary%20curve%20sketching">3.5 | Summary Curve Sketching</h2>
+<h2 id="3.6-%7C%20calculus%20with%20graphing%20calculators%20(skipped)">3.6 | Calculus with Graphing Calculators (Skipped)</h2>
+<h2 id="3.7-%7C%20optimization%20problems">3.7 | Optimization Problems</h2>
+<h2 id="3.8-%7C%20newtons%20method">3.8 | Newtons Method</h2>
+<h2 id="3.9-%7C%20anti-derivatives">3.9 | Anti-Derivatives</h2>
 
 
 </body>
