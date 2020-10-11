@@ -438,7 +438,7 @@ function geogebra(tree) {
             'SetPerspective("G")'
         ];
         for (child of node.content) {
-            if (child.tag && child.tag === 'cmd') {
+            if (child.tag && child.tag === 'expr') {
                 commands.push(child.content.join("\n"));
             }
         }
@@ -475,7 +475,7 @@ function desmos(tree) {
             };
             var calculator = Desmos.GraphingCalculator(elt, options);
             for (cmd of ${JSON.stringify(setup.commands)}) {
-                calculator.setExpression({id: 'graph1', latex: \`\$\{cmd\}\`});
+                calculator.setExpression(cmd);
             }
         });
         </script>
@@ -497,13 +497,19 @@ function desmos(tree) {
         if (node.attrs && ('lock' in node.attrs)) {
             lockViewport = node.attrs.lock;
         }
-
-        let commands = [
-
-        ];
+        let commands = [];
         for (child of node.content) {
             if (child.tag && child.tag === 'cmd') {
-                commands.push(child.content.join("\n"));
+                let txt = get_text_contents(child).join("\n");
+                commands.push(txt);
+            }
+            if (child.tag && child.tag === 'expr') {
+                let id = null;
+                let txt = get_text_contents(child).join("\n");
+                if (child.attrs && 'id' in child.attrs) {
+                    id = child.attrs.id;
+                }
+                commands.push({latex: txt, id: id});
             }
         }
         let body = init({
