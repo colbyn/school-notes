@@ -524,13 +524,10 @@ function desmos(tree) {
             };
             if (child.tag && child.tag === 'cmd') {
                 try {
-                    commands.push(
-                        JSON.stringify(JSON.parse(
-                            get_text_contents(child).join("\n")
-                        ))
-                    );
+                    commands.push(JSON.parse(get_text_contents(child).join("\n")));
                 }
                 catch(e) {
+                    console.error('Invalid Desmos CMD JSON:', e);
                     errors.push(`${e}`);
                 }
             }
@@ -546,7 +543,7 @@ function desmos(tree) {
         const render_errors = () => {
             let xs = [];
             for (let x of errors) {
-                xs.push(element("p", {}, x));
+                xs.push(element("p", {'error-block': ''}, x));
             }
             return xs;
         };
@@ -566,7 +563,7 @@ function desmos(tree) {
         margin: 0;
         `;
         node.content = []
-            .concat([element('div', {'error-block': ''}, render_errors())])
+            .concat([element('div', {}, render_errors())])
             .concat([body]);
         return node;
     });

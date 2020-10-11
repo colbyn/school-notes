@@ -185,7 +185,7 @@ ul[toc] > li[entry='h4'] {margin-left: 160px;}
 ul[toc] > li[entry='h5'] {margin-left: 180px;}
 ul[toc] > li[entry='h6'] {margin-left: 200px;}
 
-div[desmos] > div[error-block] {
+p[error-block] {
     display: flex;
     flex-direction: column;
     color: #f00;
@@ -195,6 +195,6 @@ div[desmos] > div[error-block] {
     margin: 12px;
 }
 
-div[desmos] > div[error-block]:empty {
+p[error-block]:empty {
     display: none;
 }
