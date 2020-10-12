@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.80d40da4.css">
+    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.63a103e5.css">
     <script src="https://colbyn.github.io/school-notes/system.f84e1103.js"></script>
     <!-- MATH-JAX -->
 <script>window.MathJax = {
@@ -9,7 +9,8 @@
     inlineMath: [['\\(', '\\)'], ['stem:[', ']']]
   },
   svg: {
-    fontCache: 'global'
+    fontCache: 'global',
+    minScale: 0.2
   },
   processEscapes: true
 };</script>
@@ -168,6 +169,15 @@ var menu = [{
     chapter: '7',
     path: 'trig/chapter6/index.html'
   }]
+}, {
+  name: 'Music',
+  suffix: 'Class Notes',
+  path: 'music/index.html',
+  sub: [{
+    name: 'Glyphs Reference',
+    chapter: '0',
+    path: 'music/glyphs/index.html'
+  }]
 }];
 var host = window.location.host;
 
@@ -254,8 +264,7 @@ root_ul_node.appendChild(build_entries(menu));</script>
     </nav>
     <h1 id="chapter-1">Chapter 1</h1>
 
-<img src="https://cdn.kastatic.org/ka-perseus-images/a193121287b64721de28fcbfaec9f5919a367dd2.png">
-
+<img style="max-width: 800px;" src="https://cdn.kastatic.org/ka-perseus-images/a193121287b64721de28fcbfaec9f5919a367dd2.png">
 <h2 id="%C2%A71.5-%7C%20the%20limit%20of%20a%20function">§1.5 | The Limit of a Function</h2>
 
 <section class="note-block block"><h3 id="vertical-asymptote%20(definition%20%C2%A71.5.6)">Vertical Asymptote (Definition §1.5.6)</h3><p>The vertical line<span inline="" math-inline="">\(x = a\)</span>is called the **vertical asymptote** of the curve<span inline="" math-inline="">\(y = f(x)\)</span>if at least one of the following statements is true:</p><div block="" math-block="">$$ \begin{equation}
@@ -284,11 +293,11 @@ root_ul_node.appendChild(build_entries(menu));</script>
 
 <section class="note-block block"><h3 id="power-law">Power Law</h3><div block="" math-block="">$$
         \lim_{x \to a} \Big[ f(x) \Big]^n = \Big[ \lim_{x \to a} f(x) \Big]^n
-    $$</div><section class="note-block block"><p><span inline="" math-inline="">\(n\)</span> must be a positive integer.</p><p></p></section><p></p></section>
+    $$</div><section warning="" class="note-block block"><p><span inline="" math-inline="">\(n\)</span> must be a positive integer.</p><p></p></section><p></p></section>
 
 <section class="note-block block"><h3 id="root-law">Root Law</h3><div block="" math-block="">$$
         \lim_{x \to a} \sqrt[n]{f(x)} = \sqrt[n]{\lim_{x \to a} f(x)}
-    $$</div><section class="note-block block"><p><span inline="" math-inline="">\(n\)</span>must be a positive integer.</p></section><section class="note-block block"><p>If<span inline="" math-inline="">\(n\)</span>is even, we assume that<span inline="" math-inline="">\(\lim_{x \to a} f(x) > 0\)</span>.</p></section><p></p></section>
+    $$</div><section warning="" class="note-block block"><p><span inline="" math-inline="">\(n\)</span>must be a positive integer.</p></section><section class="note-block block"><p>If<span inline="" math-inline="">\(n\)</span>is even, we assume that<span inline="" math-inline="">\(\lim_{x \to a} f(x) > 0\)</span>.</p></section><p></p></section>
 
 <h2 id="%C2%A71.8-%7C%20continuity">§1.8 | Continuity</h2>
 

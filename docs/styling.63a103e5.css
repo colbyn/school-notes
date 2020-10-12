@@ -35,18 +35,24 @@ section.note-block > * {
     padding-left: 24px;
 }
 
+section.note-block img[block] {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 section.note-block section.note-block {
     border: 1px solid #ababab;
     padding: 8px;
     margin: 8px;
 }
 
-section.note-block > h1:first-child,
-section.note-block > h2:first-child,
-section.note-block > h3:first-child,
-section.note-block > h4:first-child,
-section.note-block > h5:first-child,
-section.note-block > h6:first-child {
+section.note-block:not([no-title]) > h1:first-child,
+section.note-block:not([no-title]) > h2:first-child,
+section.note-block:not([no-title]) > h3:first-child,
+section.note-block:not([no-title]) > h4:first-child,
+section.note-block:not([no-title]) > h5:first-child,
+section.note-block:not([no-title]) > h6:first-child {
     border-bottom: 1px solid #bfbfbf;
     padding-left: 12px;
     margin: 0;
@@ -76,20 +82,11 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
     line-height: 2em;
 }
 
-body > * {
-    text-align: left;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
 body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-}
-body > img {
-    align-self: center;
 }
 
 li {
@@ -112,14 +109,6 @@ blockquote {
     color: #424242;
     font-weight: 200;
     font-size: 1em;
-}
-
-body > section.note-block {
-    max-width: 900px;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 100%;
 }
 
 body > h1 {
@@ -173,11 +162,6 @@ body > nav[side] {
     box-shadow: 0px 3px 4px #d8d8d8;
 }
 
-body > nav[side] > * {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
 ul[toc] > li[entry='h1'] {margin-left: 0;}
 ul[toc] > li[entry='h2'] {margin-left: 50px;}
 ul[toc] > li[entry='h3'] {margin-left: 140px;}
@@ -200,4 +184,54 @@ p[error-block]:empty {
 }
 
 
-/*# sourceMappingURL=https://colbyn.github.io/school-notes/styling.80d40da4.css.map */
+body > nav[side] > * {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+body > section.note-block {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+body > * {
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+body > table {
+    width: 100%;
+}
+
+body > table > tbody > tr > td > div[row] {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+body > img {
+    align-self: center;
+}
+
+
+[img-row] {
+    display: block;
+}
+img {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* @media (max-width: 800px) {
+    body > * {
+        max-width: unset;
+    }
+} */
+
+/*# sourceMappingURL=https://colbyn.github.io/school-notes/styling.63a103e5.css.map */

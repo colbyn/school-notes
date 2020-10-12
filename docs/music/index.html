@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.63a103e5.css">
+    <script src="https://colbyn.github.io/school-notes/system.f84e1103.js"></script>
+    <!-- MATH-JAX -->
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(', '\\)'], ['stem:[', ']']]
+  },
+  svg: {
+    fontCache: 'global',
+    minScale: 0.2
+  },
+  processEscapes: true
+};</script>
+<script type="text/javascript" id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+<!--FONTS (TODO SMALLER)-->
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+
+<!-- MISC -->
+<meta name="viewport" content="width=device-width,initial-scale=1">  
+<meta charset="utf-8">
+
+<!-- GEOGEBRA -->
+<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+
+<!-- DESMOS -->
+<script src="https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <!-- MUSIC -->
+<style>@font-face {
+        font-family: 'Bravura Text';
+        src: url('https://w3c.github.io/smufl/gitbook/media/BravuraText.woff');
+    }
+    span[music] {
+        font-family: "Bravura Text";
+        font-size: 1.5em;
+    }
+    table th {
+        text-align: left;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        padding: 6px;
+    }
+    table td {
+        padding: 4px 12px;
+    }
+    table td span[music] {
+        font-size: 2.5em;
+        min-height: 100px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    code {
+        padding: 2px 4px;
+        background-color: #f3f3f3;
+        border-radius: 3px;
+    }</style>
+</head>
+<body>
+    <nav side="">
+        <!-- WIP NEW NAVIGATION -->
+
+<style>header#root {
+        border: 1px solid #000;
+        border-radius: 3px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        margin: 25px;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+    header#root > span {
+        border-bottom: 1px solid #000;
+        margin-bottom: 4px;
+        padding: 4px;
+    }
+
+    header#root ul {
+        display: flex;
+        flex-direction: column;
+        color: #000;
+
+        margin-left: 4px;
+        border-left: 1px solid #e0e0e0;
+        padding-left: 10px;
+    }
+    header#root ul > li {
+        display: flex;
+        color: inherit;
+        flex-direction: column;
+    }
+    header#root ul > li > a {
+        color: inherit;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+    header#root ul > li > a > span.suffix {
+        margin-right: 10px;
+        font-size: 0.8em;
+        font-weight: 100;
+
+        padding: 3px;
+        font-size: 0.3em;
+        text-decoration: none;
+        border: 1px solid #e0e0e0;
+        color: #191919;
+    }
+    header#root ul > li > a > span.chapter {
+        margin-right: 10px;
+        text-decoration: underline;
+    }
+    header#root ul > li > a > span.name {
+        text-decoration: underline;
+    }</style>
+
+<header id="root">
+    <span>Navigation</span>
+</header>
+
+<script>function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function $(f) {
+  return f();
+}
+
+var menu = [{
+  name: 'Homepage',
+  path: 'index.html'
+}, {
+  name: 'Calculus 1',
+  suffix: 'Class Notes',
+  path: 'calc/index.html',
+  sub: [{
+    name: 'Functions and Limits',
+    chapter: '1',
+    path: 'calc/chapter1/index.html'
+  }, {
+    name: 'Derivatives',
+    chapter: '2',
+    path: 'calc/chapter2/index.html'
+  }, {
+    name: 'Applications of Differentiation ',
+    chapter: '3',
+    path: 'calc/chapter3/index.html'
+  }, {
+    name: 'Integrals',
+    chapter: '4',
+    path: 'calc/chapter4/index.html'
+  }, {
+    name: 'Applications of Integration',
+    chapter: '5',
+    path: 'calc/chapter5/index.html'
+  }, {
+    name: 'Inverse Functions',
+    chapter: '6',
+    path: 'calc/chapter6/index.html'
+  }]
+}, {
+  name: 'Trigonometry',
+  suffix: 'Class Notes',
+  path: 'trig/index.html',
+  sub: [{
+    name: 'Functions and Graphs',
+    chapter: '1',
+    path: 'trig/chapter1/index.html'
+  }, {
+    name: 'Trigonometric Functions',
+    chapter: '2',
+    path: 'trig/chapter2/index.html'
+  }, {
+    name: 'Trigonometric Identities and Equations',
+    chapter: '3',
+    path: 'trig/chapter3/index.html'
+  }, {
+    name: 'Applications of Trigonometry',
+    chapter: '4',
+    path: 'trig/chapter4/index.html'
+  }, {
+    name: 'Complex Numbers',
+    chapter: '5',
+    path: 'trig/chapter5/index.html'
+  }, {
+    name: 'Topics in Analytic Geometry',
+    chapter: '6',
+    path: 'trig/chapter6/index.html'
+  }, {
+    name: 'Exponential and Logarithmic Functions',
+    chapter: '7',
+    path: 'trig/chapter6/index.html'
+  }]
+}, {
+  name: 'Music',
+  suffix: 'Class Notes',
+  path: 'music/index.html',
+  sub: [{
+    name: 'Glyphs Reference',
+    chapter: '0',
+    path: 'music/glyphs/index.html'
+  }]
+}];
+var host = window.location.host;
+
+function get_link(ref_ref) {
+  var href = "";
+
+  if (host === "colbyn.github.io") {
+    href = "https://colbyn.github.io/school-notes/".concat(ref_ref);
+  } else {
+    href = "/".concat(ref_ref);
+  }
+
+  return href;
+}
+
+function build_entry(entry) {
+  var host = window.location.host;
+  var node = document.createElement("li"); // LINK NODE
+
+  $(function () {
+    var link_node = document.createElement('a');
+    link_node.href = get_link(entry.path); // SUFFIX
+
+    if ('suffix' in entry) {
+      var span_node = document.createElement('span');
+      span_node.className = "suffix";
+      span_node.textContent = entry.suffix;
+      link_node.appendChild(span_node);
+    } // CHAPTER
+
+
+    if ('chapter' in entry) {
+      var span = document.createElement("span");
+      span.className = "chapter";
+      span.textContent = "Chapter ".concat(entry.chapter);
+      link_node.appendChild(span);
+    } // NAME
+
+
+    if ('name' in entry) {
+      var _span = document.createElement("span");
+
+      _span.className = "name";
+      _span.textContent = entry.name;
+      link_node.appendChild(_span);
+    }
+
+    node.appendChild(link_node);
+  }); // CHILD NODES
+
+  if ('sub' in entry) {
+    node.appendChild(build_entries(entry.sub));
+  } // DONE
+
+
+  return node;
+}
+
+function build_entries(entries) {
+  var ul_node = document.createElement("ul");
+
+  var _iterator = _createForOfIteratorHelper(entries),
+      _step;
+
+  try {
+    for (_iterator.s(); !(_step = _iterator.n()).done;) {
+      entry = _step.value;
+      ul_node.appendChild(build_entry(entry));
+    }
+  } catch (err) {
+    _iterator.e(err);
+  } finally {
+    _iterator.f();
+  }
+
+  return ul_node;
+} // BUILD ROOT MENU
+
+
+var root_ul_node = document.querySelector("header#root");
+console.assert(root_ul_node);
+root_ul_node.appendChild(build_entries(menu));</script>
+        <div toc=""><ul toc=""><li entry="h1"><a href="#dynamic-marks">Dynamic Marks</a></li><li entry="h2"><a href="#piano">Piano</a></li><li entry="h2"><a href="#forte">Forte</a></li><li entry="h2"><a href="#mezzo-piano">Mezzo-piano</a></li><li entry="h2"><a href="#mezzo-forte">Mezzo-forte</a></li><li entry="h2"><a href="#pianissimo">Pianissimo</a></li><li entry="h2"><a href="#fortissimo">Fortissimo</a></li><li entry="h1"><a href="#intervals">Intervals</a></li><li entry="h2"><a href="#unison">Unison</a></li><li entry="h2"><a href="#2nd(s)">2nd(s)</a></li><li entry="h2"><a href="#3rds">3rds</a></li><li entry="h2"><a href="#4ths">4ths</a></li><li entry="h2"><a href="#5ths">5ths</a></li><li entry="h2"><a href="#6ths">6ths</a></li><li entry="h2"><a href="#7ths">7ths</a></li><li entry="h2"><a href="#octaves">octaves</a></li><li entry="h1"><a href="#rhythm-identification">Rhythm Identification</a></li><li entry="h2"><a href="#whole">Whole</a></li><li entry="h2"><a href="#half">Half</a></li><li entry="h2"><a href="#quarter">Quarter</a></li><li entry="h2"><a href="#eighth-notes%20and%20rests">Eighth Notes and Rests</a></li><li entry="h1"><a href="#dotted-rhythms">Dotted Rhythms</a></li><li entry="h2"><a href="#dotted-whole">Dotted Whole</a></li><li entry="h2"><a href="#half">Half</a></li><li entry="h2"><a href="#quarter-eighth%20notes%20and%20rests">Quarter Eighth Notes and Rests</a></li><li entry="h1"><a href="#tempo-marks">Tempo Marks</a></li><li entry="h2"><a href="#metronome-markings">Metronome Markings</a></li><li entry="h2"><a href="#tempo-terms">Tempo Terms</a></li><li entry="h2"><a href="#gradual-tempo%20changes">Gradual Tempo Changes</a></li><li entry="h3"><a href="#gradual-tempo%20changes">Gradual Tempo Changes</a></li><li entry="h2"><a href="#largo">Largo</a></li><li entry="h2"><a href="#adagio">Adagio</a></li><li entry="h2"><a href="#andante">Andante</a></li><li entry="h2"><a href="#moderato">Moderato</a></li><li entry="h2"><a href="#allegretto">Allegretto</a></li><li entry="h2"><a href="#allegro">Allegro</a></li><li entry="h2"><a href="#vivace">Vivace</a></li><li entry="h2"><a href="#presto">Presto</a></li><li entry="h1"><a href="#items-on%20the%20grand%20staff">Items on the Grand Staff</a></li><li entry="h1"><a href="#articulation">Articulation</a></li><li entry="h2"><a href="#tied-note">Tied note</a></li><li entry="h2"><a href="#slur">Slur</a></li><li entry="h2"><a href="#legato">Legato</a></li><li entry="h2"><a href="#staccato">Staccato</a></li><li entry="h2"><a href="#fermata">Fermata</a></li><li entry="h2"><a href="#accent">Accent</a></li><li entry="h1"><a href="#notes-on%20the%20grand%20staff">Notes on the Grand Staff</a></li><li entry="h2"><a href="#bar">bar</a></li><li entry="h2"><a href="#measure">measure</a></li><li entry="h2"><a href="#bar-line">bar line</a></li><li entry="h2"><a href="#double-bar%20line">double bar line</a></li><li entry="h2"><a href="#treble-clef">Treble Clef</a></li><li entry="h2"><a href="#bass-clef">Bass Clef</a></li><li entry="h2"><a href="#bracket">bracket</a></li><li entry="h2"><a href="#time-signature%20(and%20what%20each%20number%20means)">time signature (and what each number means)</a></li><li entry="h2"><a href="#repeat-sign">repeat sign</a></li><li entry="h2"><a href="#key-signature">key signature</a></li><li entry="h2"><a href="#ledger-line">ledger line</a></li><li entry="h2"><a href="#middle-c">Middle C</a></li><li entry="h1"><a href="#concepts">Concepts</a></li></ul></div>
+    </nav>
+    <h1 id="dynamic-marks">Dynamic Marks</h1>
+
+<p>The two basic dynamic indications in music are:</p>
+
+<ul>
+    <li><span music="">&#xE520;</span> or piano, meaning "soft"</li>
+    <li><span music="">&#xE522;</span> or forte, meaning "loud or strong"</li>
+</ul>
+
+<p>More subtle degrees of loudness or softness are indicated by:</p>
+
+<ul>
+    <li><span music="">&#xE52C;</span> standing for mezzo-piano, meaning "moderately soft"</li>
+    <li><span music="">&#xE52D;</span> standing for mezzo-forte, meaning "moderately loud"</li>
+</ul>
+
+<p>Use of up to three consecutive fs or ps is also common:</p>
+
+<ul>
+    <li><span music="">&#xE52B;</span> standing for pianissimo and meaning "very soft"</li>
+    <li><span music="">&#xE52F;</span> standing for fortissimo and meaning "very loud"</li>
+</ul>
+
+<section no-title="" class="note-block block"><section class="note-block block"><h2 id="piano">Piano</h2><p><span music="">&#xE520;</span> or piano, meaning "soft"</p><p></p></section><section class="note-block block"><h2 id="forte">Forte</h2><p><span music="">&#xE522;</span> or forte, meaning "loud or strong"</p><p></p></section><section class="note-block block"><h2 id="mezzo-piano">Mezzo-piano</h2><p><span music="">&#xE52D;</span> standing for mezzo-forte, meaning "moderately loud"</p><p></p></section><section class="note-block block"><h2 id="mezzo-forte">Mezzo-forte</h2><p><span music="">&#xE52C;</span> standing for mezzo-piano, meaning "moderately soft"</p><p></p></section><section class="note-block block"><h2 id="pianissimo">Pianissimo</h2><p><span music="">&#xE52B;</span> standing for pianissimo and meaning "very soft"</p><p></p></section><section class="note-block block"><h2 id="fortissimo">Fortissimo</h2><p><span music="">&#xE52F;</span>standing for fortissimo and meaning "very loud"</p></section><p></p></section>
+
+
+<h1 id="intervals">Intervals</h1>
+<ul>
+    <li>Intervals are the spacing between notes.</li>
+</ul>
+
+<p>Why do major and minor scales sound the way they do? It’s all in the intervals, and this chart shows you how.</p>
+<img style="max-width: 500px" loading="lazy" class="aligncenter wp-image-8894" src="https://www.musicnotes.com/now/wp-content/uploads/Guides-Distance-Between-Notes-Scales.png" alt="" width="500" height="647" srcset="https://www.musicnotes.com/now/wp-content/uploads/Guides-Distance-Between-Notes-Scales.png 1275w,https://www.musicnotes.com/now/wp-content/uploads/Guides-Distance-Between-Notes-Scales-232x300.png 232w,https://www.musicnotes.com/now/wp-content/uploads/Guides-Distance-Between-Notes-Scales-768x994.png 768w,https://www.musicnotes.com/now/wp-content/uploads/Guides-Distance-Between-Notes-Scales-791x1024.png 791w,https://www.musicnotes.com/now/wp-content/uploads/Guides-Distance-Between-Notes-Scales-325x420.png 325w,https://www.musicnotes.com/now/wp-content/uploads/Guides-Distance-Between-Notes-Scales-313x405.png 313w" sizes="(max-width: 500px) 100vw, 500px">
+
+<section no-title="" class="note-block block"><section class="note-block block"><h2 id="unison">Unison</h2><p></p></section><section class="note-block block"><h2 id="2nd(s)">2nd(s)</h2><p></p></section><section class="note-block block"><h2 id="3rds">3rds</h2><p></p></section><section class="note-block block"><h2 id="4ths">4ths</h2><p></p></section><section class="note-block block"><h2 id="5ths">5ths</h2><p></p></section><section class="note-block block"><h2 id="6ths">6ths</h2><p></p></section><section class="note-block block"><h2 id="7ths">7ths</h2><p></p></section><section class="note-block block"><h2 id="octaves">octaves</h2><p></p></section><p></p></section>
+
+
+
+<h1 id="rhythm-identification">Rhythm Identification</h1>
+<h2 id="whole">Whole</h2>
+<h2 id="half">Half</h2>
+<h2 id="quarter">Quarter</h2>
+<h2 id="eighth-notes%20and%20rests">Eighth Notes and Rests</h2>
+
+<h1 id="dotted-rhythms">Dotted Rhythms</h1>
+
+<p>Dotted notes and their equivalent durations. The curved lines, called ties, add the note values together:</p>
+<p><img syle="width: 200px !important" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Dotted_notes3.svg/289px-Dotted_notes3.svg.png"></p>
+
+<h2 id="dotted-whole">Dotted Whole</h2>
+<h2 id="half">Half</h2>
+<h2 id="quarter-eighth%20notes%20and%20rests">Quarter Eighth Notes and Rests</h2>
+
+<h1 id="tempo-marks">Tempo Marks</h1>
+
+<p>The tempo of a piece of music is its speed.</p>
+
+<p>The tempo of a piece of music is its speed. There are two ways to specify a tempo. Metronome markings are absolute and specific. Markings usually appear above the staff, at the beginning of the piece, and then at any spot where the tempo changes. Markings that ask the player to deviate slightly from the main tempo, such as ritardando may appear either above or below the staff.</p>
+
+<h2 id="metronome-markings">Metronome Markings</h2>
+
+<p>Metronome markings are given in beats per minute. They can be estimated using a clock with a second hand, but the easiest way to find them is with a metronome, which is a tool that can give a beat-per-minute tempo as a clicking sound or a pulse of light. Figure shows some examples of metronome markings.</p>
+
+<p><img style="max-width: 500px" src="https://cnx.org/resources/5a8209d773fa3b65be50ec156c652a8d8389e5c1/metronomemarks.png"></p>
+
+<h2 id="tempo-terms">Tempo Terms</h2>
+<p>Traditionally, tempo instructions are given in Italian.</p>
+<section class="note-block block"><p><b>Some Common Tempo Markings:</b></p><ul>
+        <li>Grave - very slow and solemn (pronounced "GRAH-vay")</li>
+        <li>Largo - slow and broad ("LAR-go")</li>
+        <li>Larghetto - not quite as slow as largo ("lar-GET-oh")</li>
+        <li>Adagio - slow ("uh-DAH-jee-oh")</li>
+        <li>Lento - slow ("LEN-toe")</li>
+        <li>Andante - literally "walking", a medium slow tempo ("on-DON-tay")</li>
+        <li>Moderato - moderate, or medium ("MOD-er-AH-toe")</li>
+        <li>Allegretto - Not as fast as allegro ("AL-luh-GRET-oh")</li>
+        <li>Allegro - fast ("uh-LAY-grow")</li>
+        <li>Vivo, or Vivace - lively and brisk ("VEE-voh")</li>
+        <li>Presto - very fast ("PRESS-toe")</li>
+        <li>Prestissimo - very, very fast ("press-TEE-see-moe")</li>
+    </ul><p>These terms, along with a little more Italian, will help you decipher most tempo instructions.<b>More useful Italian:</b></p><ul>
+        <li>(un) poco - a little ("oon-POH-koe")</li>
+        <li>molto - a lot ("MOLE-toe")</li>
+        <li>piu - more ("pew")</li>
+        <li>meno - less ("MAY-no")</li>
+        <li>mosso - literally "moved"; motion or movement ("MOE-so")</li>
+    </ul><p></p></section>
+
+<h2 id="gradual-tempo%20changes">Gradual Tempo Changes</h2>
+
+<p>If the tempo of a piece of music suddenly changes into a completely different tempo, there will be a new tempo given, usually marked in the same way (metronome tempo, Italian term, etc.) as the original tempo. Gradual changes in the basic tempo are also common in music, though, and these have their own set of terms. These terms often appear below the staff, although writing them above the staff is also allowed. These terms can also appear with modifiers like molto or un poco. You may notice that there are quite a few terms for slowing down. Again, the use of these terms will vary from one composer to the next; unless beginning and ending tempo markings are included, the performer must simply use good musical judgement to decide how much to slow down in a particular ritardando or rallentando.
+</p>
+
+
+<section class="note-block block"><h3 id="gradual-tempo%20changes">Gradual Tempo Changes</h3><ul>
+        <li>accelerando - (abbreviated accel.) accelerating; getting faster</li>
+        <li>ritardando - (abbrev. rit.) slowing down</li>
+        <li>ritenuto - (abbrev. riten.) slower</li>
+        <li>rallentando - (abbrev. rall.) gradually slower</li>
+        <li>rubato - don't be too strict with the rhythm; while keeping the basic tempo, allow the music to gently speed up and relax in ways that emphasize the phrasing</li>
+        <li>poco a poco - little by little; gradually</li>
+        <li>Tempo I - ("tempo one" or "tempo primo") back to the original tempo (this instruction usually appears above the staff)</li>
+    </ul><p></p></section>
+
+<h2 id="largo">Largo</h2>
+<h2 id="adagio">Adagio</h2>
+<h2 id="andante">Andante</h2>
+<h2 id="moderato">Moderato</h2>
+<h2 id="allegretto">Allegretto</h2>
+<h2 id="allegro">Allegro</h2>
+<h2 id="vivace">Vivace</h2>
+<h2 id="presto">Presto</h2>
+
+<h1 id="items-on%20the%20grand%20staff">Items on the Grand Staff</h1>
+
+<h1 id="articulation">Articulation</h1>
+
+<img style="max-width: 500px" src="https://i.pinimg.com/originals/96/91/a6/9691a6537b19c635a3b019fcdc65583f.png">
+<img style="max-width: 500px" loading="lazy" class="aligncenter wp-image-9266" src="https://www.musicnotes.com/now/wp-content/uploads/Guides-Articulation-Marks.png" alt="" width="500" height="647" srcset="https://www.musicnotes.com/now/wp-content/uploads/Guides-Articulation-Marks.png 1275w,https://www.musicnotes.com/now/wp-content/uploads/Guides-Articulation-Marks-232x300.png 232w,https://www.musicnotes.com/now/wp-content/uploads/Guides-Articulation-Marks-768x994.png 768w,https://www.musicnotes.com/now/wp-content/uploads/Guides-Articulation-Marks-791x1024.png 791w,https://www.musicnotes.com/now/wp-content/uploads/Guides-Articulation-Marks-325x420.png 325w,https://www.musicnotes.com/now/wp-content/uploads/Guides-Articulation-Marks-313x405.png 313w" sizes="(max-width: 500px) 100vw, 500px">
+
+<h2 id="tied-note">Tied note</h2>
+<h2 id="slur">Slur</h2>
+<h2 id="legato">Legato</h2>
+<h2 id="staccato">Staccato</h2>
+<h2 id="fermata">Fermata</h2>
+<h2 id="accent">Accent</h2>
+
+
+
+<h1 id="notes-on%20the%20grand%20staff">Notes on the Grand Staff</h1>
+<img style="max-width: 500px" loading="lazy" src="https://www.musicnotes.com/now/wp-content/uploads/Guides-Lines-Spaces.png" alt="" width="500" height="647" srcset="https://www.musicnotes.com/now/wp-content/uploads/Guides-Lines-Spaces.png 1275w,https://www.musicnotes.com/now/wp-content/uploads/Guides-Lines-Spaces-232x300.png 232w,https://www.musicnotes.com/now/wp-content/uploads/Guides-Lines-Spaces-768x994.png 768w,https://www.musicnotes.com/now/wp-content/uploads/Guides-Lines-Spaces-791x1024.png 791w,https://www.musicnotes.com/now/wp-content/uploads/Guides-Lines-Spaces-325x420.png 325w,https://www.musicnotes.com/now/wp-content/uploads/Guides-Lines-Spaces-313x405.png 313w" sizes="(max-width: 500px) 100vw, 500px">
+
+<h2 id="bar">bar</h2>
+<h2 id="measure">measure</h2>
+<h2 id="bar-line">bar line</h2>
+<h2 id="double-bar%20line">double bar line</h2>
+<h2 id="treble-clef">Treble Clef</h2>
+<h2 id="bass-clef">Bass Clef</h2>
+<h2 id="bracket">bracket</h2>
+<h2 id="time-signature%20(and%20what%20each%20number%20means)">time signature (and what each number means)</h2>
+<h2 id="repeat-sign">repeat sign</h2>
+<h2 id="key-signature">key signature</h2>
+<img style="max-width: 500px" loading="lazy" class="aligncenter wp-image-8888" src="https://www.musicnotes.com/now/wp-content/uploads/Guides-Key-Signatures.png" alt="" width="500" height="647" srcset="https://www.musicnotes.com/now/wp-content/uploads/Guides-Key-Signatures.png 1275w,https://www.musicnotes.com/now/wp-content/uploads/Guides-Key-Signatures-232x300.png 232w,https://www.musicnotes.com/now/wp-content/uploads/Guides-Key-Signatures-768x994.png 768w,https://www.musicnotes.com/now/wp-content/uploads/Guides-Key-Signatures-791x1024.png 791w,https://www.musicnotes.com/now/wp-content/uploads/Guides-Key-Signatures-325x420.png 325w,https://www.musicnotes.com/now/wp-content/uploads/Guides-Key-Signatures-313x405.png 313w" sizes="(max-width: 500px) 100vw, 500px">
+<p>Another great tool for keeping track of your key signatures, the circle of fifths is an excellent guide to have nearby.</p>
+<img style="max-width: 500px" loading="lazy" class="aligncenter wp-image-9715" src="https://www.musicnotes.com/now/wp-content/uploads/Guides-Circle-of-Fifths-New.png" alt="" width="500" height="647" srcset="https://www.musicnotes.com/now/wp-content/uploads/Guides-Circle-of-Fifths-New.png 1275w,https://www.musicnotes.com/now/wp-content/uploads/Guides-Circle-of-Fifths-New-232x300.png 232w,https://www.musicnotes.com/now/wp-content/uploads/Guides-Circle-of-Fifths-New-768x994.png 768w,https://www.musicnotes.com/now/wp-content/uploads/Guides-Circle-of-Fifths-New-791x1024.png 791w,https://www.musicnotes.com/now/wp-content/uploads/Guides-Circle-of-Fifths-New-325x420.png 325w,https://www.musicnotes.com/now/wp-content/uploads/Guides-Circle-of-Fifths-New-253x328.png 253w,https://www.musicnotes.com/now/wp-content/uploads/Guides-Circle-of-Fifths-New-313x405.png 313w" sizes="(max-width: 500px) 100vw, 500px">
+<h2 id="ledger-line">ledger line</h2>
+<h2 id="middle-c">Middle C</h2>
+
+<h1 id="concepts">Concepts</h1>
+<p><b>Make sure you understand the following concepts:</b></p>
+
+<ul>
+    <li nested="">
+        <span>Dynamic Marks</span>
+        <ul>
+            <li>pianissimo</li>
+            <li>piano</li>
+            <li>mezzo-piano</li>
+            <li>mezzo-forte</li>
+            <li>forte</li>
+            <li>fortissimo</li>
+        </ul>
+    </li>
+
+    <li nested="">
+        <span>Intervals</span>
+        <ul>
+            <li>Unison</li>
+            <li>2nd(s)</li>
+            <li>3rds</li>
+            <li>4ths</li>
+            <li>5ths</li>
+            <li>6ths</li>
+            <li>7ths</li>
+            <li>octaves</li>
+        </ul>
+    </li>
+
+    <li nested="">
+        <span>Rhythm Identification</span>
+        <ul>
+            <li>Whole</li>
+            <li>Half</li>
+            <li>Quarter</li>
+            <li>Eighth Notes and Rests</li>
+        </ul>
+    </li>
+
+    <li nested="">
+        <span>Dotted Rhythms</span>
+        <ul>
+            <li>Dotted Whole</li>
+            <li>Half</li>
+            <li>Quarter Eighth Notes and Rests</li>
+        </ul>
+    </li>
+
+
+    <li nested="">
+        <span>Tempo Marks</span>
+        <ul>
+            <li>Largo</li>
+            <li>Adagio</li>
+            <li>Andante</li>
+            <li>Moderato</li>
+            <li>Allegretto</li>
+            <li>Allegro</li>
+            <li>Vivace</li>
+            <li>Presto</li>
+        </ul>
+    </li>
+
+    <li nested="">
+        <span>Items on the Grand Staff</span>
+        <ul>
+            <li>bar</li>
+            <li>measure</li>
+            <li>bar line</li>
+            <li>double bar line</li>
+            <li>Treble Clef</li>
+            <li>Bass Clef</li>
+            <li>bracket</li>
+            <li>time signature (and what each number means)</li>
+            <li>repeat sign</li>
+            <li>key signature</li>
+            <li>ledger line</li>
+            <li>Middle C</li>
+        </ul>
+    </li>
+
+    <li nested="">
+        <span>Articulation</span>
+        <ul>
+            <li>tied note</li>
+            <li>slur</li>
+            <li>legato</li>
+            <li>staccato</li>
+            <li>fermata</li>
+            <li>accent</li>
+        </ul>
+    </li>
+
+    <li>
+        <span>Notes on the Grand Staff**: Part of the test will be note identification</span>
+    </li>
+</ul>
+</body>
+</html>

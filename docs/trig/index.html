@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.80d40da4.css">
+    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.63a103e5.css">
     <script src="https://colbyn.github.io/school-notes/system.f84e1103.js"></script>
     <!-- MATH-JAX -->
 <script>window.MathJax = {
@@ -9,7 +9,8 @@
     inlineMath: [['\\(', '\\)'], ['stem:[', ']']]
   },
   svg: {
-    fontCache: 'global'
+    fontCache: 'global',
+    minScale: 0.2
   },
   processEscapes: true
 };</script>
@@ -168,6 +169,15 @@ var menu = [{
     chapter: '7',
     path: 'trig/chapter6/index.html'
   }]
+}, {
+  name: 'Music',
+  suffix: 'Class Notes',
+  path: 'music/index.html',
+  sub: [{
+    name: 'Glyphs Reference',
+    chapter: '0',
+    path: 'music/glyphs/index.html'
+  }]
 }];
 var host = window.location.host;
 
@@ -317,7 +327,7 @@ root_ul_node.appendChild(build_entries(menu));</script>
         = \frac{sin(\alpha)}{1 + \cos(\alpha)}
         = \frac{1 - \cos(\alpha)}{sin(\alpha)}
 \end{split}
-\end{equation} $$</div><section class="note-block block"><p>**The choice of the ± sign depends on the quadrant in which stem:[\frac{\alpha}{2}] lies.**</p></section><p></p></section>
+\end{equation} $$</div><section warning="" class="note-block block"><p>**The choice of the ± sign depends on the quadrant in which stem:[\frac{\alpha}{2}] lies.**</p></section><p></p></section>
 
 <section class="note-block block"><h3 id="power-reducing-identities">Power-Reducing Identities</h3><div block="" math-block="">$$ \begin{equation}
 \begin{split}
@@ -368,7 +378,7 @@ root_ul_node.appendChild(build_entries(menu));</script>
         0 \leq y \leq \pi
     \)</span>The graph of stem:[y=\cos\;x] with stem:[x] restricted to to stem:[\left\lbrack 0,\frac{1}{2}\tau \right\rbrack]:</p><img block="" src="https://colbyn.github.io/colbyns-math-notes/trig-class/inverse-cos-graph.svg"><p></p></section>
 
-<section class="note-block block"><p>The choice of ranges for stem:[\arcsin(x)] and stem:[\arccos(x)] is not universally accepted.</p></section>
+<section warning="" class="note-block block"><p>The choice of ranges for stem:[\arcsin(x)] and stem:[\arccos(x)] is not universally accepted.</p></section>
 
 <section class="note-block block"><h3 id="inverse-reciprocal%20trigonometric%20functions">Inverse Reciprocal Trigonometric Functions</h3><div block="" math-block="">$$
         \csc^{-1}x = \sin^{-1} \left( \frac{1}{x} \right)
