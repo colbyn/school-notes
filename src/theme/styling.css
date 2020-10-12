@@ -76,12 +76,6 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
     line-height: 2em;
 }
 
-body > * {
-    text-align: left;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
 body {
     display: flex;
     flex-direction: column;
@@ -112,14 +106,6 @@ blockquote {
     color: #424242;
     font-weight: 200;
     font-size: 1em;
-}
-
-body > section.note-block {
-    max-width: 900px;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 100%;
 }
 
 body > h1 {
@@ -173,11 +159,6 @@ body > nav[side] {
     box-shadow: 0px 3px 4px #d8d8d8;
 }
 
-body > nav[side] > * {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
 ul[toc] > li[entry='h1'] {margin-left: 0;}
 ul[toc] > li[entry='h2'] {margin-left: 50px;}
 ul[toc] > li[entry='h3'] {margin-left: 140px;}
@@ -197,4 +178,43 @@ p[error-block] {
 
 p[error-block]:empty {
     display: none;
+}
+
+
+body > nav[side] > * {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+body > section.note-block {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+body > * {
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+body > table {
+    width: 100%;
+}
+
+body > img {
+    max-width: 100%;
+    width: fit-content;
+}
+
+body > [img-row] {
+    display: block;
+}
+
+@media (max-width: 800px) {
+    body > * {
+        max-width: unset;
+    }
 }
