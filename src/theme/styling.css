@@ -35,18 +35,24 @@ section.note-block > * {
     padding-left: 24px;
 }
 
+section.note-block img[block] {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 section.note-block section.note-block {
     border: 1px solid #ababab;
     padding: 8px;
     margin: 8px;
 }
 
-section.note-block > h1:first-child,
-section.note-block > h2:first-child,
-section.note-block > h3:first-child,
-section.note-block > h4:first-child,
-section.note-block > h5:first-child,
-section.note-block > h6:first-child {
+section.note-block:not([no-title]) > h1:first-child,
+section.note-block:not([no-title]) > h2:first-child,
+section.note-block:not([no-title]) > h3:first-child,
+section.note-block:not([no-title]) > h4:first-child,
+section.note-block:not([no-title]) > h5:first-child,
+section.note-block:not([no-title]) > h6:first-child {
     border-bottom: 1px solid #bfbfbf;
     padding-left: 12px;
     margin: 0;
@@ -81,9 +87,6 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-}
-body > img {
-    align-self: center;
 }
 
 li {
@@ -198,23 +201,35 @@ body > * {
     text-align: left;
     max-width: 900px;
     margin: 0 auto;
+    width: 100%;
 }
 
 body > table {
     width: 100%;
 }
 
-body > img {
-    max-width: 100%;
-    width: fit-content;
+body > table > tbody > tr > td > div[row] {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-body > [img-row] {
+body > img {
+    align-self: center;
+}
+
+
+[img-row] {
     display: block;
 }
+img {
+    margin: 0;
+    padding: 0;
+}
 
-@media (max-width: 800px) {
+
+/* @media (max-width: 800px) {
     body > * {
         max-width: unset;
     }
-}
+} */

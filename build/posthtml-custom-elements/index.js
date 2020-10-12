@@ -315,15 +315,9 @@ function note_block(tree) {
             {},
             copy_all(current_paragraph)
         ));
-        let new_element = element(
-            "section",
-            {
-                'class': 'note-block block',
-            },
-            [
-                children
-            ]
-        );
+        let attrs = node.attrs || {};
+        attrs.class = 'note-block block';
+        let new_element = element("section", attrs, [children]);
         node = new_element;
         // Object.assign(node, new_element);
         return node
