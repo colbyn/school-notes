@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.63a103e5.css">
+    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.a0aa60b6.css">
     <script src="https://colbyn.github.io/school-notes/system.f84e1103.js"></script>
     <!-- MATH-JAX -->
 <script>window.MathJax = {
@@ -260,28 +260,46 @@ function build_entries(entries) {
 var root_ul_node = document.querySelector("header#root");
 console.assert(root_ul_node);
 root_ul_node.appendChild(build_entries(menu));</script>
-        <div toc=""><ul toc=""><li entry="h1"><a href="#chapter-1">Chapter 1</a></li><li entry="h2"><a href="#%C2%A71.5-%7C%20the%20limit%20of%20a%20function">§1.5 | The Limit of a Function</a></li><li entry="h3"><a href="#vertical-asymptote%20(definition%20%C2%A71.5.6)">Vertical Asymptote (Definition §1.5.6)</a></li><li entry="h2"><a href="#%C2%A71.6-%7C%20calculating%20limits%20using%20the%20limit%20laws">§1.6 | Calculating Limits Using the Limit Laws</a></li><li entry="h3"><a href="#limit-laws">Limit Laws</a></li><li entry="h3"><a href="#power-law">Power Law</a></li><li entry="h3"><a href="#root-law">Root Law</a></li><li entry="h2"><a href="#%C2%A71.8-%7C%20continuity">§1.8 | Continuity</a></li><li entry="h3"><a href="#the-intermediate%20value%20theorem%20(ivt)">The Intermediate Value Theorem (IVT)</a></li></ul></div>
+        <div toc=""><ul toc=""><li entry="h1"><a href="#chapter-1">Chapter 1</a></li><li entry="h2"><a href="#%C2%A71.5-%7C%20the%20limit%20of%20a%20function">§1.5 | The Limit of a Function</a></li><li entry="h3"><a href="#vertical-asymptote-def">Vertical Asymptote (Definition §1.5.6)</a></li><li entry="h2"><a href="#%C2%A71.6-%7C%20calculating%20limits%20using%20the%20limit%20laws">§1.6 | Calculating Limits Using the Limit Laws</a></li><li entry="h3"><a href="#limit-laws">Limit Laws</a></li><li entry="h3"><a href="#power-law">Power Law</a></li><li entry="h3"><a href="#root-law">Root Law</a></li><li entry="h2"><a href="#%C2%A71.8-%7C%20continuity">§1.8 | Continuity</a></li><li entry="h3"><a href="#the-intermediate%20value%20theorem%20(ivt)">The Intermediate Value Theorem (IVT)</a></li></ul></div>
     </nav>
     <h1 id="chapter-1">Chapter 1</h1>
 
 <img style="max-width: 800px;" src="https://cdn.kastatic.org/ka-perseus-images/a193121287b64721de28fcbfaec9f5919a367dd2.png">
 <h2 id="%C2%A71.5-%7C%20the%20limit%20of%20a%20function">§1.5 | The Limit of a Function</h2>
 
-<section class="note-block block"><h3 id="vertical-asymptote%20(definition%20%C2%A71.5.6)">Vertical Asymptote (Definition §1.5.6)</h3><p>The vertical line<span inline="" math-inline="">\(x = a\)</span>is called the **vertical asymptote** of the curve<span inline="" math-inline="">\(y = f(x)\)</span>if at least one of the following statements is true:</p><div block="" math-block="">$$ \begin{equation}
+<section class="note-block block"><h3 id="vertical-asymptote-def">Vertical Asymptote (Definition §1.5.6)</h3><p>
+    
+    The vertical line <span inline="" math-inline="">\(x = a\)</span> is called the <b>vertical asymptote</b> of the curve <span inline="" math-inline="">\(y = f(x)\)</span> if at least one of the following statements is true:
+    
+    </p><div block="" math-block="">$$ \begin{equation}
 \begin{split}
-    \lim_{x \to a} f(x) &= \infty \\
-    \lim_{x \to a} f(x) &= -\infty \\
     \lim_{x \to a^{-}} f(x) &= \infty \\
     \lim_{x \to a^{-}} f(x) &= -\infty \\
     \lim_{x \to a^{+}} f(x) &= \infty \\
     \lim_{x \to a^{+}} f(x) &= -\infty
 \end{split}
-\end{equation} $$</div><p></p></section>
+\end{equation} $$</div><p>
+
+
+    Also:
+    </p><div block="" math-block="">$$\begin{equation}
+\begin{split}
+\lim_{x \to a} f(x) &= \lim_{x \to a^{-}} f(x) = \lim_{x \to a^{+}} f(x) = \infty \\
+\lim_{x \to a} f(x) &= \lim_{x \to a^{-}} f(x) = \lim_{x \to a^{+}} f(x) = -\infty
+\end{split}
+\end{equation}$$</div><p>
+
+    To my understanding, if there is a vertical asymptote at <span inline="" math-inline="">\(x = a\)</span>, then <span inline="" math-inline="">\(\lim_{x \to a}f(x)\)</span> is technically undefined. But instead, of saying undefined, we say <span inline="" math-inline="">\(\pm \infty\)</span> since it gives more information. I.e. this is a special case of being undefined.
+</p></section>
 
 
 <h2 id="%C2%A71.6-%7C%20calculating%20limits%20using%20the%20limit%20laws">§1.6 | Calculating Limits Using the Limit Laws</h2>
 
-<section class="note-block block"><h3 id="limit-laws">Limit Laws</h3><p>Suppose that<span inline="" math-inline="">\(c\)</span>is a constant and that the limits<span inline="" math-inline="">\(\lim_{x \to a} f(x)\)</span>and<span inline="" math-inline="">\(\lim_{x \to a} g(x)\)</span>exists, then:</p><div block="" math-block="">$$ \begin{equation}
+<section class="note-block block"><h3 id="limit-laws">Limit Laws</h3><p>
+
+    Suppose that <span inline="" math-inline="">\(c\)</span> is a constant and that the limits <span inline="" math-inline="">\(\lim_{x \to a} f(x)\)</span> and <span inline="" math-inline="">\(\lim_{x \to a} g(x)\)</span> exists, then:
+    
+    </p><div block="" math-block="">$$ \begin{equation}
 \begin{split}
     \lim_{x \to a} \Big[ f(x) + g(x) \Big] &= \lim_{x \to a} f(x) + \lim_{x \to a} g(x) \\
     \lim_{x \to a} \Big[ f(x) - g(x) \Big] &= \lim_{x \to a} f(x) - \lim_{x \to a} g(x) \\
@@ -289,35 +307,45 @@ root_ul_node.appendChild(build_entries(menu));</script>
     \lim_{x \to a} \Big[ f(x) \cdot g(x) \Big] &= \lim_{x \to a} f(x) \cdot \lim_{x \to a} g(x) \\
     \lim_{x \to a} \frac{f(x)}{g(x)} &= \frac{\lim_{x \to a} f(x)}{\lim_{x \to a}g(x)} \; \text{if} \lim_{x \to a}g(x) \neq 0
 \end{split}
-\end{equation} $$</div><p></p></section>
+\end{equation} $$</div></section>
 
-<section class="note-block block"><h3 id="power-law">Power Law</h3><div block="" math-block="">$$
-        \lim_{x \to a} \Big[ f(x) \Big]^n = \Big[ \lim_{x \to a} f(x) \Big]^n
-    $$</div><section warning="" class="note-block block"><p><span inline="" math-inline="">\(n\)</span> must be a positive integer.</p><p></p></section><p></p></section>
+<section class="note-block block"><h3 id="power-law">Power Law</h3><div block="" math-block="">$$\lim_{x \to a} \Big[ f(x) \Big]^n = \Big[ \lim_{x \to a} f(x) \Big]^n$$</div><section warning="" class="note-block block"><p><span inline="" math-inline="">\(n\)</span> must be a positive integer.</p></section></section>
 
-<section class="note-block block"><h3 id="root-law">Root Law</h3><div block="" math-block="">$$
-        \lim_{x \to a} \sqrt[n]{f(x)} = \sqrt[n]{\lim_{x \to a} f(x)}
-    $$</div><section warning="" class="note-block block"><p><span inline="" math-inline="">\(n\)</span>must be a positive integer.</p></section><section class="note-block block"><p>If<span inline="" math-inline="">\(n\)</span>is even, we assume that<span inline="" math-inline="">\(\lim_{x \to a} f(x) > 0\)</span>.</p></section><p></p></section>
+<section class="note-block block"><h3 id="root-law">Root Law</h3><div block="" math-block="">$$\lim_{x \to a} \sqrt[n]{f(x)} = \sqrt[n]{\lim_{x \to a} f(x)}$$</div><section warning="" class="note-block block"><p><span inline="" math-inline="">\(n\)</span> must be a positive integer.
+    </p></section><section class="note-block block"><p>
+        If <span inline="" math-inline="">\(n\)</span> is even, we assume that <span inline="" math-inline="">\(\lim_{x \to a} f(x) > 0\)</span>.
+    </p></section></section>
 
 <h2 id="%C2%A71.8-%7C%20continuity">§1.8 | Continuity</h2>
 
-<section class="note-block block"><h3 id="the-intermediate%20value%20theorem%20(ivt)">The Intermediate Value Theorem (IVT)</h3><p>Suppose that<span inline="" math-inline="">\(f\)</span>is continuous on the closed interval<span inline="" math-inline="">\([a, b]\)</span>, and let N be any number between<span inline="" math-inline="">\(f(a)\)</span>and<span inline="" math-inline="">\(f(b)\)</span>, where<span inline="" math-inline="">\(f(a) \neq f(b)\)</span>, then there exists a number<span inline="" math-inline="">\(c\)</span>in<span inline="" math-inline="">\((a, b)\)</span>such that<span inline="" math-inline="">\(f(c) = N\)</span>.</p><p>Or alternatively, suppose <span inline="" math-inline="">\(f\)</span> is a function that is continuous at every point in the interval <span inline="" math-inline="">\([a, b]:\)</span></p><ul>
+<section class="note-block block"><h3 id="the-intermediate%20value%20theorem%20(ivt)">The Intermediate Value Theorem (IVT)</h3><p>
+
+    Suppose that <span inline="" math-inline="">\(f\)</span> is continuous on the closed interval <span inline="" math-inline="">\([a, b]\)</span>, and let N be any number between <span inline="" math-inline="">\(f(a)\)</span> and <span inline="" math-inline="">\(f(b)\)</span>, where <span inline="" math-inline="">\(f(a) \neq f(b)\)</span>, then there exists a number <span inline="" math-inline="">\(c\)</span> in <span inline="" math-inline="">\((a, b)\)</span> such that <span inline="" math-inline="">\(f(c) = N\)</span>.
+
+    </p><p>Or alternatively, suppose <span inline="" math-inline="">\(f\)</span> is a function that is continuous at every point in the interval <span inline="" math-inline="">\([a, b]:\)</span></p><ul>
     <li><span inline="" math-inline="">\(f\)</span> will take on every value between <span inline="" math-inline="">\(f(a)\)</span> and <span inline="" math-inline="">\(f(b)\)</span> over the interval.</li>
     <li>For any L between the values <span inline="" math-inline="">\(f(a)\)</span> and <span inline="" math-inline="">\(f(b)\)</span>, there exists a number <span inline="" math-inline="">\(c\)</span> in <span inline="" math-inline="">\([a, b]\)</span> for which <span inline="" math-inline="">\(f(c) = L\)</span>.</li>
 </ul><section class="note-block block"><ul>
         <li>The intermediate value theorem states that if a continuous function attains two values, it must also attain all values in between these two values.</li>
         <li>The Intermediate Value Theorem states that a continuous function takes on every intermediate value between the function values <span inline="" math-inline="">\(f(a)\)</span> and <span inline="" math-inline="">\(f(b)\)</span>.</li>
         <li>The statement of the theorem has multiple requirements, all of which are necessary for the conclusion to hold.</li>
-    </ul><p></p></section><section class="note-block block"><p>The IVT can be used to show that a root exists, if given some interval between<span inline="" math-inline="">\(a\)</span>and<span inline="" math-inline="">\(b\)</span>:</p><ul>
+    </ul></section><section class="note-block block"><p>
+    The IVT can be used to show that a root exists, if given some interval between <span inline="" math-inline="">\(a\)</span> and <span inline="" math-inline="">\(b\)</span>: 
+
+    </p><ul>
         <li><span inline="" math-inline="">\(f(a)\)</span> is negative</li>
         <li><span inline="" math-inline="">\(f(b)\)</span> is positive</li>
-    </ul><p>or</p><ul>
+    </ul><p>
+
+    or
+
+    </p><ul>
         <li><span inline="" math-inline="">\(f(a)\)</span> is positive</li>
         <li><span inline="" math-inline="">\(f(b)\)</span> is negative</li>
     </ul><p>then therefore, if the function is continuous, then there must be a value for which some <span inline="" math-inline="">\(x\)</span> in <span inline="" math-inline="">\(f(x) = 0\)</span> exists. I.e. that a root exists. Which should make sense.</p><p>**More generally**, this can be extended to any value between some interval. For instance, if:</p><ul>
         <li><span inline="" math-inline="">\(f(a) = 3\)</span></li><span inline="" math-inline="">\(f(a) = 9\)</span>
     </ul><p>Then there must exist some value that we will call <span inline="" math-inline="">\(x\)</span>, for which:</p><ul>
         <li><span inline="" math-inline="">\(f(x) = 6\)</span></li>
-    </ul><p></p></section><p></p></section>
+    </ul></section></section>
 </body>
 </html>

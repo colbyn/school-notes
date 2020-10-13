@@ -7,11 +7,6 @@ h1, h2, h3, h4, h5, h6, p, a, li, dd {
 }
 
 
-span[math-inline] {
-    margin-left: 8px;
-    margin-right: 8px;
-}
-
 div[math-block] {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -29,6 +24,11 @@ section.note-block p {
     margin: 16px;
     padding-left: 24px;
     margin-left: 0;
+}
+
+section.note-block ul li p {
+    padding-left: 0;
+    margin: 0;
 }
 
 section.note-block > * {
@@ -71,10 +71,10 @@ section.note-block {
 
 body > h1,body > h2,body > h3,body > h4,body > h5,body > h6 {
     width: 100%;
-    padding: 16px 0 16px 0;
+    padding: 8px 0 8px 0;
     border-bottom: 1px solid #c1c1c1;
     margin-top: 28px;
-    margin-bottom: 50px;
+    margin-bottom: 28px;
 }
 
 h1, h2, h3, h4, h5, h6, p, blockquote {
@@ -234,4 +234,10 @@ img {
     }
 } */
 
-/*# sourceMappingURL=https://colbyn.github.io/school-notes/styling.63a103e5.css.map */
+
+b, em {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+/*# sourceMappingURL=https://colbyn.github.io/school-notes/styling.a0aa60b6.css.map */
