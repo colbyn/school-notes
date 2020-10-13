@@ -198,15 +198,15 @@ The Mean Value Theorem is an example of what is called an existence theorem. Lik
 
 
 <note>
-    <h3>Increasing/Decreasing Test</h3>
+    <h3>Increasing/Decreasing (I/D) Test</h3>
     <ul>
-        <li>If stem:[f^\prime(x) > 0] on an interval, then stem:[f(x)] is increasing on that interval.>
-            <br>
-            I.e. the tangent lines (in the stem:[f(x)] interval) have positive slope.
+        <li>
+            <p>If <tex>f^\prime(x) > 0</tex> on an interval, then <tex>f(x)</tex> is increasing on that interval.</p>
+            <small>I.e. the tangent lines (in the <tex>f(x)</tex> interval) have positive slope.<small>
         </li>
-        <li>If stem:[f^\prime(x) < 0] on an interval, then stem:[f(x)] is decreasing on that interval.
-            <br>
-            I.e. the tangent lines (in the stem:[f(x)] interval) have negative slope.
+        <li>
+            <p>If <tex>f^\prime(x) < 0</tex> on an interval, then <tex>f(x)</tex> is decreasing on that interval.</p>
+            <small>I.e. the tangent lines (in the <tex>f(x)</tex> interval) have negative slope.</small>
         </li>
     </ul>
 </note>
@@ -217,16 +217,12 @@ The Mean Value Theorem is an example of what is called an existence theorem. Lik
     Suppose that c is a critical number of a continuous function f:
 
     <ul>
-        <li>
-            If stem:[f^\prime] changes from positive to negative at <tex>c</tex>, then <tex>f</tex> has a local maximum at <tex>c</tex>.
-        </li>
-        <li>
-            If stem:[f^\prime] changes from negative to positive at <tex>c</tex>, then <tex>f</tex> has a local minimum at <tex>c</tex>.
-        </li>
-        <li>
-            If stem:[f^\prime] is positive to the left and right of <tex>c</tex>, or negative to the left and right of <tex>c</tex>, then <tex>f</tex> has no local maximum or minimum at <tex>c</tex>.
-        </li>
+        <li>If <tex>f^\prime</tex> changes from <b>positive to negative</b> at <tex>c</tex><sup>†</sup>, then <tex>f</tex> has a local <b>maximum</b> at <tex>c</tex>.</li>
+        <li>If <tex>f^\prime</tex> changes from <b>negative to positive</b> at <tex>c</tex>, then <tex>f</tex> has a local <b>minimum</b> at <tex>c</tex>.</li>
+        <li>If <tex>f^\prime</tex> is <b>positive to the left and right</b> of <tex>c</tex>, or <b>negative to the left and right</b> of <tex>c</tex>, then <tex>f</tex> has <b>no local maximum or minimum</b> at <tex>c</tex>.</li>
     </ul>
+
+    <note>[†]: 'at <tex>c</tex>' means from the left and right of the given point.</note>
 </note>
 
 <h3>What Does <tex>f^{\prime\prime}</tex> Say about <tex>f</tex>?</h3>
@@ -243,18 +239,133 @@ If the graph of f lies above all of its tangents on an interval I, then it is ca
         <li>If <tex>f^{\prime\prime}(x) > 0</tex> for all x in I, then the graph of <tex>f</tex> is concave upward on I.</li>
         <li>If <tex>f^{\prime\prime}(x) < 0</tex> for all x in I, then the graph of <tex>f</tex> is concave downward on I.</li>
     </ul>
+    <div style="display: flex; justify-content: space-around;">
+        <img block style="max-width: 400px;" src="https://qph.fs.quoracdn.net/main-qimg-4e6db5cc9fb301df3daae9f6c99ccb22">
+    </div>
 
-    <img block style="max-width: 400px;" src="https://qph.fs.quoracdn.net/main-qimg-4e6db5cc9fb301df3daae9f6c99ccb22">
+    <h4>Concavity Test (Alternative)</h4>
+    
+    For a function <tex>f(x)</tex> with derivatives <tex>f^\prime</tex> and <tex>f^{\prime\prime}</tex> on an interval the following holds:
+    <ul>
+        <li><tex>f</tex> is concave up ⇔ <tex>f^\prime</tex> is increasing ⇔ <tex>f^{\prime\prime}(x)</tex> is positive</li>
+        <li><tex>f</tex> is concave down ⇔ <tex>f^\prime</tex> is decreasing ⇔ <tex>f^{\prime\prime}(x)</tex> is negative</li>
+    </ul>
+</note>
+
+<note>
+    <h3>Regarding Concavity and Extrema</h3>
+    
+    <h4>The following three scenarios are possible:</h4>
+
+    <note>
+        <h5>The sign of <tex>f^{\prime\prime}</tex> is changing from negative to positive</h5>
+        <p>This means that the function is concave down before <tex>c</tex>, concave up after <tex>c</tex> and has an inflection point at <tex>x = c</tex>.</p>
+        <p>For Example:</p>
+        <div style="display: flex; justify-content: space-around;">
+            <img block width="300px" src="~/../static/images/calc1/concavity-and-extrema/image--014.png" />
+        </div>
+    </note>
+    <note>
+        <h5>The sign of <tex>f^{\prime\prime}</tex> is changing from positive to negative.</h5>
+        <p>This means that the function is concave up before <tex>c</tex>, concave down after <tex>c</tex>, and has an inflection point at <tex>x = c</tex>.</p>
+        <p>For Example:</p>
+        <div style="display: flex; justify-content: space-around;">
+            <img block width="300px" src="~/../static/images/calc1/concavity-and-extrema/image--016.png" />
+        </div>
+    </note>
+    <note>
+        <h5>The sign of <tex>f^{\prime\prime}</tex> is not changing at <tex>x = c</tex></h5>
+        <p>(I.e. it is either positive both before or after <tex>c</tex> or negative both before or after <tex>c</tex>)</p>
+        <p>In this case, f does not have an inflection point at <tex>x = c</tex>.</p>
+        <p>For Example:</p>
+        <div style="display: flex; justify-content: space-around;">
+            <img block width="300px" src="~/../static/images/calc1/concavity-and-extrema/image--018.png" />
+            <img block width="300px" src="~/../static/images/calc1/concavity-and-extrema/image--020.png" />
+        </div>
+
+        <note>
+            The existence of the third case demonstrates that a function does not necessarily have an inflection point at a critical point of <tex>f^\prime</tex>.
+        </note>
+    </note>
+
+    <p>Using the number line test for <tex>f^{\prime\prime}</tex> one can both determine the intervals on which <tex>f</tex> is concave up/down as well as classify the critical point of <tex>f^{\prime}</tex> into three categories matching the three cases above and determine the inflection points.</p>
+
+    <note>
+        <h4>The Inflection Points Test</h4>
+        To determine the inflection points a differentiable function <tex>f(x)</tex>
+        <ol>
+            <li>Find <tex>f^{\prime\prime}</tex>.</li>
+            <li>Set it to zero and find all the critical points of <tex>f^{\prime}(x)</tex></li>
+            <li>
+                <span>Use the number line to classify the critical points of <tex>f^{\prime}</tex> into the three cases</span>
+                <ul>
+                    <li>if <tex>f^{\prime\prime}</tex> changes sign at <tex>c</tex>, <tex>f</tex> has an inflection point at c</li>
+                    <li>if <tex>f^{\prime\prime}</tex> does not change the sign at <tex>c</tex>, <tex>f</tex> does not have an inflection point at <tex>c</tex></li>
+                </ul>
+            </li>
+        </ol>
+    </note>
+
+    <note>
+        <h4>What <tex>f^{\prime\prime}</tex> says about <tex>f^{\prime}</tex> <small>(Alternative)</small></h4>
+        
+        <p>Concavity of the function can also be used to determine if there is an <b>extreme value</b> or not at a <b>critical point</b> of <tex>f</tex>.</p>
+
+        <ul>
+            <li>a function with a relative <b>minimum</b> is <b>concave up</b> on an interval around it</li>
+            <li>a function with a relative <b>maximum</b> is <b>concave down</b> on an interval around it</li>
+        </ul>
+
+        Remember:
+        <div style="display: flex; justify-content: space-around;">
+            <img block style="max-width: 400px;" src="https://qph.fs.quoracdn.net/main-qimg-4e6db5cc9fb301df3daae9f6c99ccb22">
+        </div>
+
+        <note>
+            <p>Thus, if <tex>c</tex> is a critical point and the second derivative at <tex>c</tex> is <b>positive</b>, that means that the function is <b>concave up</b> around <tex>c</tex>. Thus, there is a relative <b>minimum</b> at <tex>c</tex>.</p>
+            
+            <p>Conversely, if <tex>c</tex> is a critical point and the second derivative at <tex>c</tex> is <b>negative</b>, that means that the function is <b>concave down</b> around <tex>c</tex>. Thus, there is a relative <b>maximum</b> at <tex>c</tex>.</p> 
+            
+            <note>If <tex>f^{\prime\prime} = 0</tex> this test is inconclusive (i.e. probably an inflection point).</note>
+
+            <div style="display: flex; justify-content: space-around;">
+                <img block style="max-width: 400px;" src="~/../static/images/calc1/concavity-and-extrema/image--030.png">
+            </div>
+
+            <small>This procedure of determining the extreme values is known as the Second Derivative Test.</small>
+        </note>
+
+    </note>
 </note>
 
 <note>
     <h3>Inflection Points</h3>
 
+    <note>When the second derivative is zero, it corresponds to a possible inflection point.</note>
+
     A point stem:[P] on a curve stem:[y = f(x)] is called an inflection point if <tex>f</tex> is continuous there and the curve changes from concave upward to concave downward or from concave downward to concave upward at stem:[P].
+
+    <h3>Inflection Points (Alternative)</h3>
+
+    <note>
+        If <tex>f(x)</tex> has an inflection point at <tex>x = c</tex>, then <tex>f^{\prime\prime}(c) = 0</tex> or <tex>f^{\prime\prime}(c)</tex> does not exist.
+    </note>
+
+    <note>
+        Example: Determine the intervals on which the function with the graph on the right defined on interval (a, ∞) is concave up/down.
+        <div style="display: flex; justify-content: space-around;">
+            <img block width="300px" src="~/../static/images/calc1/concavity-and-extrema/image--012.png">
+        </div>
+        <note>Solution: The function is concave up on the interval (a,b) and concave down on the interval (b, ∞).</note>
+    </note>
+
+    <h3>Miscellaneous</h3>
 
     <note>
         <p>Quadratic functions have no points of inflection:</p>
-        <img style="width: 200px;" src="~/../static/images/common/x-square.png"/>
+        <div style="display: flex; justify-content: space-around;">
+            <img style="width: 200px;" src="~/../static/images/common/x-square.png"/>
+        </div>
     </note>
 </note>
 
@@ -277,7 +388,24 @@ If the graph of f lies above all of its tangents on an interval I, then it is ca
 </note>
 
 
-<h2>3.4 | Limits at Infinity; Horizontal Asymptotes</h2>
+<h2 id='horizontal-asymptotes-section'>3.4 | Limits at Infinity; Horizontal Asymptotes</h2>
+
+<note>
+    <tex block>
+\begin{equation}
+\begin{split}
+    \lim_{x \to \infty} f(x) &= \lim_{x \to \infty^{+}} f(x) = A \\
+    \lim_{x \to -\infty} f(x) &= B
+\end{split}
+\end{equation}
+    </tex>
+    Which makes sense, because <tex>-\infty \not\equiv \infty</tex>. Since, in the case of horizontal asymptotes:
+    <ul>
+        <li><tex>\infty</tex> implies going to the <em>right</em></li>
+        <li><tex>-\infty</tex> implies going to the <em>left</em></li>
+    </ul>
+    Or rather is unbounded in the given direction.
+</note>
 
 <note>
     **The professor said:** you can't just apply the limit laws,
@@ -290,11 +418,154 @@ If the graph of f lies above all of its tangents on an interval I, then it is ca
     Because we don't know if it is continuous.
 </note>
 
+<note>
+    <h3>Miscellaneous</h3>
+
+    <note>
+        <ul>
+            <tex block>\infty \cdot -\infty = -\infty</tex>
+            <tex block>\lim_{x \to 0} \left( \frac{\sin(x)}{x} \right) = 1 </tex>
+            <tex block>\lim_{x \to \infty} \left( \frac{\sin(x)}{x} \right) = 0 </tex>
+            <tex block>\lim_{x \to \infty} \sin(x) = 0 </tex>
+        </ul>
+    </note>
+
+    <h4><tex>\lim_{x \to \infty} \sin\left(\frac{1}{x}\right)</tex></h4>
+
+    <tex block>
+\begin{equation}
+\begin{split}
+    -1 \leq \sin \left( \frac{1}{x} \right) \leq 1 \\
+    -\frac{1}{\frac{1}{|x|}} \leq \frac{\sin\left(\frac{1}{x}\right)}{\frac{1}{x}} \leq \frac{1}{\frac{1}{|x|}} \\
+    -|x| \leq \frac{\sin\left(\frac{1}{x}\right)}{\frac{1}{x}} \leq |x|
+\end{split}
+\end{equation}
+    </tex>
+    <tex></tex>
+</note>
+
+<note>
+    <h3>Theorem (3.4) #4</h3>
+    <tex src="src/calc/assets/lim-x-to-infty.tex"></tex>
+</note>
+
 <h2>3.5 | Summary Curve Sketching</h2>
 
-<ul>
-    <li>For e.g. horizontal asymptotes, don't forgot to add <tex>y = x</tex>, don't just say <tex>x</tex></li>
-</ul>
+<note>For e.g. horizontal asymptotes, don't forgot to add <tex>y = x</tex>, don't just say <tex>x</tex></note>
+
+<note>
+    <h3>Curve Sketching Steps:</h3>
+    <ol>
+        <li>Domain</li>
+        <li>Intercepts</li>
+        <li>Symmetry</li>
+        <li>Asymptotes</li>
+        <li>The First Derivative</li>
+        <li>The Second Derivative</li>
+        <li>Sketch the Curve</li>
+    </ol>
+    <note no-title>
+        <h4>Domain</h4>
+        <note>
+            Check that there is no division with 0, or even roots of negative numbers.
+        </note>
+    </note>
+    <note no-title>
+        <h4>Intercepts</h4>
+        <ol>
+            <li>Find the y-intercepts</li>
+            <li>Find the x-intercepts</li>
+        </ol>
+    </note>
+    <note no-title>
+        <h4>Symmetry</h4>
+        <img src="https://cdn.kastatic.org/googleusercontent/qoY4fIGSlPFLX3i61ama3uehSPpmWGLa_ksk11D-W8hFG_tezdylgH68l_kyjNwEa0CMaN4iIVkeMjMAPPmcK8LFgw">
+        <note>If <tex>f(-x) = f(x)</tex> then <tex>f</tex> is even and will be symmetric about the y-axis.</note>
+        <note>If <tex>f(x) = f(x + p)</tex> where <tex>p</tex> is a positive constant, then <tex>f</tex> is a periodic function, and it's graph will be repeated every <tex>p</tex> units (i.e. the period).</note>
+    </note>
+    <note no-title>
+        <h4>Asymptotes</h4>
+        <p>Steps:</p>
+        <ol>
+            <li>Horizontal Asymptotes</li>
+            <li>Vertical Asymptotes</li>
+            <li>Slant Asymptotes</li>
+        </ol>
+        <note no-title>
+            <h5>Vertical Asymptotes</h5>
+            
+            See <a href="~/calc/chapter1/index.html#vertical-asymptote-def">§1.5 | The Limit of a Function</a>.
+
+            <note>Usually (but not always) this will involve checking to see where the denominator equals zero.</note>
+
+            <p>The vertical asymptotes occur only when the denominator is zero (If both the numerator and denominator are zero, the multiplicities of the zero are compared).</p>
+
+            <p>For example, the following function has vertical asymptotes at <tex>x = 0</tex>, and <tex>x = 1</tex>, but not at <tex>x = 2</tex>.</p>
+            <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7135afaabb8d69e5fd041757ef7938d45609a6f7"/>
+        </note>
+        <note no-title>
+            <h5>Horizontal Asymptotes</h5>
+            See <a href="#horizontal-asymptotes-section">3.4 | Limits at Infinity; Horizontal Asymptotes</a>.
+
+            <note>
+                <h6>To find horizontal asymptotes</h6>
+                <ul>
+                    <li>If the degree of the <b>denominator</b> is <b>bigger</b> than the degree of the <b>numerator</b>, the horizontal asymptote is the x-axis (i.e. <tex>y = 0</tex>).</li>
+                    <li>If the degree of the <b>numerator</b> is <b>bigger</b> than the <b>denominator</b>, there is <b>no horizontal asymptote</b>.</li>
+                </ul>
+            </note>
+        </note>
+        <note no-title>
+            <h5>Slant Asymptotes</h5>
+
+            <note>A slant (oblique) asymptote occurs when the polynomial in the <b>numerator</b> is a <b>higher degree</b> than the polynomial in the denominator.</note>
+
+            Can be found using polynomial long division, where the quotient <tex>mx + b</tex> is your slant asymptotes, then set <tex>y = mx + b</tex>.
+            
+            <p>The above result can be confirmed using limits. Given some <tex>y = mx + b</tex>, if:</p>
+            <tex block>
+                \lim_{x \to \infty} \left( f(x) -  (mx + b)\right) = 0
+            </tex>
+        </note>
+    </note>
+    <note no-title>
+        <h4>The First Derivative</h4>
+        <note no-title>
+            <h5>Intervals of Increase or Decrease</h5>
+            Find the intervals where:
+            <ul>
+                <li><tex>f^\prime(x)</tex> is positive (<tex>f</tex> is increasing)</li>
+                <li><tex>f^\prime(x)</tex> is negative (<tex>f</tex> is decreasing)</li>
+            </ul>
+            <note>Use the I/D Test.</note>
+        </note>
+        <note no-title>
+            <h5>Local Maximum and Minimum Values:</h5>
+            <ol>
+                <li>Find all critical numbers (numbers <tex>c</tex> where <tex>f^\prime(c) = 0</tex> or <tex>f^\prime(c)</tex> does not exist)</li>
+                <li>Then use the First Derivative Test to check if these are local maxima or local minima.</li>
+            </ol>
+        </note>
+    </note>
+    <note no-title>
+        <h4>The Second Derivative</h4>
+        <note no-title>
+            <h5>Concavity and Points of Inflection</h5>
+            Find the intervals where:
+            <ul>
+                <li><tex>f^{\prime\prime}</tex> is positive (<tex>f</tex> is concave up)</li>
+                <li><tex>f^{\prime\prime}</tex> is negative (f is concave down).</li>
+            </ul>
+            Check for points of inflection(points where <tex>f^{\prime\prime}</tex> changes sign).
+        </note>
+        <note>In some cases you can also use Second Derivative Test to test for local maximum and minimum values.</note>
+    </note>
+
+    <note no-title>
+        <h4>Sketch the Curve</h4>
+        Sketch asymptotes as dashed lines. Plot intercepts, critical points, and inflection points. Draw a curve through these points which is consistent with the information found in the previous parts.
+    </note>
+</note>
 
 <h2>3.6 | Calculus with Graphing Calculators (Skipped)</h2>
 <h2>3.7 | Optimization Problems</h2>

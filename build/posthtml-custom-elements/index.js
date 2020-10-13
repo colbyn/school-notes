@@ -23,11 +23,13 @@ function is_header_tag(tag) {
 }
 
 function has_attr(node, attr) {
+    if (typeof node !== 'object') {return false};
     return node.attrs && (attr in node.attrs);
 }
 
 function is_element(node, tag_pred) {
     let result = false;
+    if (typeof node !== 'object') {return false};
     if (typeof node === "object" && node !== null && 'tag' in node) {
         if (typeof tag_pred === 'function') {
             return tag_pred(node.tag);
@@ -84,10 +86,10 @@ function filter_traverse(node, pred) {
     if (pred(node)) {
         return [node];
     }
-    if (node.tag === 'h1') {
-        console.log("H1", node);
-        return [node];
-    }
+    // if (node.tag === 'h1') {
+    //     console.log("H1", node);
+    //     return [node];
+    // }
     if (typeof node === 'string') {
         return [];
     }
@@ -110,7 +112,9 @@ function header_ids(tree) {
         if (!('attrs' in node)) {
             node.attrs = {};
         }
-        node.attrs['id'] = slug;
+        if (!('id' in node.attrs)) {
+            node.attrs['id'] = slug;
+        }
         return node;
     };
     tree.match({tag: 'h1'}, rewrite);
@@ -129,13 +133,16 @@ function table_of_contents(tree) {
         });
         let children = [];
         for (head of headers) {
-            let slug = text_to_slug(get_text_contents(head).join('-'));
+            let href = text_to_slug(get_text_contents(head).join('-'));
+            if (head.attrs && ('id' in head.attrs)) {
+                href = head.attrs['id'];
+            }
             children.push(element(
                 'li',
                 {'entry': head.tag},
                 [element(
                     'a',
-                    {href: `#${slug}`},
+                    {href: `#${href}`},
                     head.content
                 )]
             ));
@@ -185,13 +192,14 @@ function element(tag, attrs, children) {
     }
     return {
         'tag': tag || 'div',
-        'attrs': attrs,
+        'attrs': attrs || {},
         'content': children
     }
 }
 
 function is_block_node(node) {
     let is_block = false;
+    if (typeof node !== 'object') {return false};
     if (node.tag === 'note') {
         return true;
     }
@@ -226,6 +234,7 @@ function is_inline_node(node) {
     if (node.tag === 'tex') {
         return !is_block_node(node);
     }
+    if (node.tag === 'a') {return true;}
     if (node.tag === 'abbr') {return true;}
     if (node.tag === 'audio') {return true;}
     if (node.tag === 'b') {return true;}
@@ -283,19 +292,33 @@ function copy_all(xs) {
     return ys;
 }
 
+function is_punctuation_mark(txt_input) {
+    if (txt_input === undefined || txt_input === null) {return false}
+    if (typeof txt_input !== 'string') {return false}
+    let value = txt_input.trim();
+    let result = false;
+    if (value === '.') {return true}
+    if (value === '?') {return true}
+    if (value === '!') {return true}
+    if (value === ':') {return true}
+    if (value === ',') {return true}
+    return result;
+}
+
 function note_block(tree) {
     return tree.match({ tag: 'note' }, (node) => {
         let children = [];
         let current_paragraph = [];
-        for (child of node.content) {
-            if (typeof child === 'string') {
-                // TRIM
-                child = child.trim();
-                // FILTER EMPTY
-                if (!child.length) {continue;}
-            }
+        for (ix in node.content) {
+            let child = node.content[ix];
             if (is_inline_node(child)) {
-                current_paragraph.push(child);
+                let is_empty = false;
+                if (typeof child === 'string' && child.trim().length === 0) {
+                    is_empty = true;
+                }
+                if (!is_empty) {
+                    current_paragraph.push(child);
+                }
             } else {
                 if (current_paragraph.length > 0) {
                     let paragraph = element(
@@ -310,15 +333,16 @@ function note_block(tree) {
                 children.push(child);
             }
         }
-        children.push(element(
-            "p",
-            {},
-            copy_all(current_paragraph)
-        ));
+        if (current_paragraph.length > 0) {
+            children.push(element(
+                "p",
+                {},
+                copy_all(current_paragraph)
+            ));
+        }
         let attrs = node.attrs || {};
         attrs.class = 'note-block block';
-        let new_element = element("section", attrs, [children]);
-        node = new_element;
+        node = element("section", attrs, [children]);
         // Object.assign(node, new_element);
         return node
     })
@@ -326,13 +350,11 @@ function note_block(tree) {
 
 function latex(tree) {
     return tree.match({ tag: 'tex' }, (node) => {
-        let is_inline = true;
         let start_token = '\\(';
         let end_token = '\\)';
         let tag = 'span';
         let attrs = {};
         if (is_block_node(node)) {
-            is_inline = false;
             start_token = '$$';
             end_token = '$$';
             tag = 'div';
@@ -340,22 +362,26 @@ function latex(tree) {
         } else {
             attrs = {'inline': '', 'math-inline': ''};
         }
-        // RUN
+        // // RUN
+        // // if (!node.attrs || !('attrs' in node)) {
+        // //     node.attrs = {};
+        // // }
         if (node.attrs && 'src' in node.attrs) {
             const file_path = node.attrs.src;
             const data = fs.readFileSync(file_path, 'utf8');
-            let new_element = element(tag, attrs, [
+            node = element(tag, attrs, [
                 `${start_token} ${data} ${end_token}`
             ]);
-            Object.assign(node, new_element);
         } else {
             const data = [];
             data.push(start_token);
-            data.push(node.content);
+            data.push(get_text_contents(node.content).join(' ') || '');
             data.push(end_token);
-            let new_element = element(tag, attrs, data);
-            Object.assign(node, new_element);
+            node = element(tag, attrs || {}, data);
         }
+        console.assert('attrs' in node);
+        console.assert(node.attrs !== undefined);
+        console.assert(node.attrs !== null);
         return node
     })
 }
@@ -563,6 +589,16 @@ function desmos(tree) {
     });
 }
 
+function image_max_width_helper(tree) {
+    tree.match({ tag: 'img' }, (node) => {
+        if (has_attr(node, 'width')) {
+            const prop = `min-width: 0; max-width: ${node.attrs.width};`;
+            node.attrs.style = prop;
+        }
+        return node;
+    });
+}
+
 module.exports = function postHTMLPluginName(options = {}) {
     return (tree) => {
         tree.match({ tag: 'include' }, (node) => {
@@ -572,10 +608,11 @@ module.exports = function postHTMLPluginName(options = {}) {
         });
         header_ids(tree);
         note_block(tree);
+        table_of_contents(tree);
         latex(tree);
         geogebra(tree);
         desmos(tree);
-        table_of_contents(tree);
+        image_max_width_helper(tree);
         return tree;
     }
 }

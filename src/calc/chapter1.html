@@ -4,11 +4,24 @@
 <h2>§1.5 | The Limit of a Function</h2>
 
 <note>
-    <h3>Vertical Asymptote (Definition §1.5.6)</h3>
+    <h3 id="vertical-asymptote-def">Vertical Asymptote (Definition §1.5.6)</h3>
     
-    The vertical line <tex>x = a</tex> is called the **vertical asymptote** of the curve <tex>y = f(x)</tex> if at least one of the following statements is true:
+    The vertical line <tex>x = a</tex> is called the <b>vertical asymptote</b> of the curve <tex>y = f(x)</tex> if at least one of the following statements is true:
     
     <tex src="src/calc/assets/vertical-asymptote-cases.tex"></tex>
+
+
+    Also:
+    <tex block>
+\begin{equation}
+\begin{split}
+\lim_{x \to a} f(x) &= \lim_{x \to a^{-}} f(x) = \lim_{x \to a^{+}} f(x) = \infty \\
+\lim_{x \to a} f(x) &= \lim_{x \to a^{-}} f(x) = \lim_{x \to a^{+}} f(x) = -\infty
+\end{split}
+\end{equation}
+    </tex>
+
+    To my understanding, if there is a vertical asymptote at <tex>x = a</tex>, then <tex>\lim_{x \to a}f(x)</tex> is technically undefined. But instead, of saying undefined, we say <tex>\pm \infty</tex> since it gives more information. I.e. this is a special case of being undefined.
 </note>
 
 
