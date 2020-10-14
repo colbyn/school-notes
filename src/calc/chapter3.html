@@ -370,10 +370,16 @@ If the graph of f lies above all of its tangents on an interval I, then it is ca
         <h4>Symmetry</h4>
         <img src="https://cdn.kastatic.org/googleusercontent/qoY4fIGSlPFLX3i61ama3uehSPpmWGLa_ksk11D-W8hFG_tezdylgH68l_kyjNwEa0CMaN4iIVkeMjMAPPmcK8LFgw">
         <note>If <tex>f(-x) = f(x)</tex> then <tex>f</tex> is even and will be symmetric about the y-axis.</note>
-        <note>If <tex>f(x) = f(x + p)</tex> where <tex>p</tex> is a positive constant, then <tex>f</tex> is a periodic function, and it's graph will be repeated every <tex>p</tex> units (i.e. the period).</note>
+        <note>
+            If <tex>f(x) = f(x + p)</tex> where <tex>p</tex> is a positive constant, then <tex>f</tex> is a periodic function, and it's graph will be repeated every <tex>p</tex> units (i.e. the period).
+            <note><tex>p</tex> is the period I believe, such as <tex>\pi</tex></note>
+        </note>
     </note>
     <note no-title>
         <h4>Asymptotes</h4>
+        <note>
+            <p>Asymptotes of e.g. rational functions can be found using the first and second derivatives, instead of using vertical and horizontal limits.</p>
+        </note>
         <p>Steps:</p>
         <ol>
             <li>Horizontal Asymptotes</li>
@@ -395,7 +401,6 @@ If the graph of f lies above all of its tangents on an interval I, then it is ca
         <note no-title>
             <h5>Horizontal Asymptotes</h5>
             See <a href="#horizontal-asymptotes-section">3.4 | Limits at Infinity; Horizontal Asymptotes</a>.
-
             <note>
                 <h6>To find horizontal asymptotes</h6>
                 <ul>
@@ -406,11 +411,8 @@ If the graph of f lies above all of its tangents on an interval I, then it is ca
         </note>
         <note no-title>
             <h5>Slant Asymptotes</h5>
-
             <note>A slant (oblique) asymptote occurs when the polynomial in the <b>numerator</b> is a <b>higher degree</b> than the polynomial in the denominator.</note>
-
             Can be found using polynomial long division, where the quotient <tex>mx + b</tex> is your slant asymptotes, then set <tex>y = mx + b</tex>.
-            
             <p>The above result can be confirmed using limits. Given some <tex>y = mx + b</tex>, if:</p>
             <tex block>
                 \lim_{x \to \infty} \left( f(x) -  (mx + b)\right) = 0
@@ -453,6 +455,25 @@ If the graph of f lies above all of its tangents on an interval I, then it is ca
     <note no-title>
         <h4>Sketch the Curve</h4>
         Sketch asymptotes as dashed lines. Plot intercepts, critical points, and inflection points. Draw a curve through these points which is consistent with the information found in the previous parts.
+    </note>
+</note>
+
+<h3>Miscellaneous</h3>
+
+<note>
+    <h4>First and second derivative for curve shape</h4>
+    <note>
+        <p>For instance, given <tex>y = x^3</tex>, the number line for the first and second derivatives will look like:</p>
+        <img block src="https://understandingcalculus.com/chapters/08/understanding_derivative_files/image121.gif" />
+        <p>On the negative (left) side, since <tex>f^\prime</tex> is positive, and <tex>f^{\prime\prime}</tex> is negative, it is increasing at a decreasing rate. So the curve will look like this</p>
+        <img block width='100px' src="~/../static/images/calc1/concavity-and-extrema/image--002.png" />
+        <p>Whereas on the positive (right) side of x, since the first derivative is positive and the second derivative is likewise positive, it will be increasing at an increasing rate. So therefore, the curve will look like this:</p>
+        <img block width='100px' src='~/../static/images/calc1/concavity-and-extrema/image--000.png'>
+        <p>Which matches the (compressed) curve of:</p>
+        <desmos width=200px height='200px' lock=true controls=false>
+            <expr>y = x^3</expr>
+        </desmos>
+        <note>This process works for asymptotes as well, such as those from rational functions.</note>
     </note>
 </note>
 

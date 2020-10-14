@@ -492,13 +492,15 @@ function desmos(tree) {
     const init = (setup) => {
         const uid = `des_${guidGenerator()}`;
         return `
-        <div id="${uid}" style="width: ${setup.width || '100%'}; height: ${setup.height || '400px'};"></div>
+        <div id="${uid}" style="width: ${setup.width || '100%'}; height: ${setup.height || '400px'}; margin: 0 auto;"></div>
         <script>
         window.addEventListener("load", function on_load() {
             var elt = document.getElementById('${uid}');
             var options = {
-                expressionsCollapsed: ${setup.expressionsCollapsed} || true,
-                lockViewport: ${setup.lockViewport || true},
+                expressionsCollapsed: true,
+                expressions: ${setup.show_expressions},
+                lockViewport: ${setup.lockViewport},
+                settingsMenu: false,
             };
             var calculator = Desmos.GraphingCalculator(elt, options);
             for (cmd of ${JSON.stringify(setup.commands)}) {
@@ -512,7 +514,7 @@ function desmos(tree) {
         let width = "100%";
         let height = "500px";
         let lockViewport = true;
-        let expressionsCollapsed = true;
+        let show_expressions = true;
         if (!('attrs' in node)) {
             node.attrs = {};
         }
@@ -526,7 +528,7 @@ function desmos(tree) {
             lockViewport = node.attrs.lock;
         }
         if (has_attr(node, 'controls')) {
-            expressionsCollapsed = node.attrs.controls;
+            show_expressions = node.attrs.controls;
         }
         let commands = [];
         let errors = [];
@@ -572,7 +574,7 @@ function desmos(tree) {
             width: width,
             height: height,
             lockViewport: lockViewport,
-            expressionsCollapsed, expressionsCollapsed,
+            show_expressions, show_expressions,
         });
         node.tag = "div";
         node.attrs['block'] = '';
