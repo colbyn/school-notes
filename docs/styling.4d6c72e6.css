@@ -164,10 +164,10 @@ body > nav[side] {
 
 ul[toc] > li[entry='h1'] {margin-left: 0;}
 ul[toc] > li[entry='h2'] {margin-left: 50px;}
-ul[toc] > li[entry='h3'] {margin-left: 140px;}
-ul[toc] > li[entry='h4'] {margin-left: 160px;}
-ul[toc] > li[entry='h5'] {margin-left: 180px;}
-ul[toc] > li[entry='h6'] {margin-left: 200px;}
+ul[toc] > li[entry='h3'] {margin-left: 100px;}
+ul[toc] > li[entry='h4'] {margin-left: 130px;}
+ul[toc] > li[entry='h5'] {margin-left: 160px;}
+ul[toc] > li[entry='h6'] {margin-left: 190px;}
 
 p[error-block] {
     display: flex;
@@ -240,4 +240,4 @@ b, em {
     margin-right: 4px;
 }
 
-/*# sourceMappingURL=https://colbyn.github.io/school-notes/styling.a0aa60b6.css.map */
+/*# sourceMappingURL=https://colbyn.github.io/school-notes/styling.4d6c72e6.css.map */
