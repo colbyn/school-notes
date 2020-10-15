@@ -102,16 +102,34 @@
     The choice of ranges for stem:[\arcsin(x)] and stem:[\arccos(x)] is not universally accepted.
 </note>
 
-<note>
-    <h3>Inverse Reciprocal Trigonometric Functions</h3>
-    <tex block>
-        \csc^{-1}x = \sin^{-1} \left( \frac{1}{x} \right)
-    </tex>
-</note>
 
 <note>
-    <h3>Identities for the Inverse Secant, Cosecant, and Cotangent Functions</h3>
-    <tex src="src/trig/assets/co-inverse-idents.tex"></tex>
+    <h3>Inverse Reciprocal Identities</h3>
+    <note>
+        <tex src="src/trig/assets/co-inverse-idents.tex"></tex>
+        <hr/>
+        <tex block>
+            \begin{equation}
+            \begin{split}
+                \csc^{-1}(x) &= \sin^{-1} \left( \frac{1}{x} \right) &\;\;\; \text{if}\; & -1 \leq x \leq 1 \\
+                &\\
+                \sec^{-1}(x) &= \cos^{-1} \left( \frac{1}{x} \right) &\;\;\; \text{if}\; & -1 \leq x \leq 1 \\
+                &\\
+                \cot^{-1}(x) &= \frac{\pi}{2} - \tan^{-1}(x) &\;\;\; \text{if}\; &  x \in \mathbf{R} \\
+            \end{split}
+            \end{equation}
+        </tex>
+    </note>
+    <note>
+        <h3>Other Inverse Co-Tangent Identities</h3>
+        <tex block>
+            \begin{equation}
+            \begin{split}
+                \cot^{-1}(x) = \tan^{-1}\left(\frac{1}{x}\right) &\;\;\; \text{if}\; & x \gt 0
+            \end{split}
+            \end{equation}
+        </tex>
+    </note>
 </note>
 
 <note>
@@ -122,3 +140,24 @@
 
 
 <h2>§3.6 | Trigonometric Equations</h2>
+
+<p>It's just like solving for quadratic equations:</p>
+
+<tex block>
+\begin{equation}
+\begin{split}
+    4\sin x \cdot \cos x - 2\sqrt{3}\sin x - 2\sqrt{2}\cos x + \sqrt{6} &= 0 \\
+    2\sin x \left( 2\cos x - \sqrt{3} \right) - \sqrt{2} \left( 2\cos x - \sqrt{3} \right) &= 0 \\
+    \left(2\sin x-\sqrt{2} \right) \left(2\cos x - \sqrt{3}\right) &= 0 \\
+    &\\
+    2\sin x - \sqrt{2} &= 0 \\
+    2\cos x - \sqrt{3} &= 0 \\
+    &\\
+    x &= \frac{3}{4}\pi, \frac{1}{4}\pi, \frac{1}{6}\pi, \frac{11}{6}\pi
+\end{split}
+\end{equation}
+</tex>
+
+
+
+<div style="height: 400px"></div>
