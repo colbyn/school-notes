@@ -1,7 +1,7 @@
 <!-- WIP NEW NAVIGATION -->
 
 <style>
-    header#root {
+    nav#side-nav {
         border: 1px solid #000;
         border-radius: 3px;
         overflow: hidden;
@@ -12,13 +12,12 @@
         margin: 0 auto;
         margin-top: 10px;
     }
-    header#root > span {
+    nav#side-nav > span {
         border-bottom: 1px solid #000;
         margin-bottom: 4px;
         padding: 4px;
     }
-
-    header#root ul {
+    nav#side-nav ul {
         display: flex;
         flex-direction: column;
         color: #000;
@@ -27,18 +26,18 @@
         border-left: 1px solid #e0e0e0;
         padding-left: 10px;
     }
-    header#root ul > li {
+    nav#side-nav ul > li {
         display: flex;
         color: inherit;
         flex-direction: column;
     }
-    header#root ul > li > a {
+    nav#side-nav ul > li > a {
         color: inherit;
         display: flex;
         align-items: center;
         text-decoration: none;
     }
-    header#root ul > li > a > span.suffix {
+    nav#side-nav ul > li > a > span.suffix {
         margin-right: 10px;
         font-size: 0.8em;
         font-weight: 100;
@@ -49,18 +48,18 @@
         border: 1px solid #e0e0e0;
         color: #191919;
     }
-    header#root ul > li > a > span.chapter {
+    nav#side-nav ul > li > a > span.chapter {
         margin-right: 10px;
         text-decoration: underline;
     }
-    header#root ul > li > a > span.name {
+    nav#side-nav ul > li > a > span.name {
         text-decoration: underline;
     }
 </style>
 
-<header id=root>
+<nav id=side-nav>
     <span>Navigation</span>
-</header>
+</nav>
 
 <script>
     function $(f) {
@@ -113,6 +112,11 @@
             suffix: 'Class Notes',
             path: 'trig/index.html',
             sub: [
+                {
+                    name: 'Miscellaneous',
+                    chapter: '0',
+                    path: 'trig/misc/index.html'
+                },
                 {
                     name: 'Functions and Graphs',
                     chapter: '1',
@@ -218,7 +222,7 @@
         return ul_node;
     }
     // BUILD ROOT MENU
-    let root_ul_node = document.querySelector("header#root");
+    let root_ul_node = document.querySelector("nav#side-nav");
     console.assert(root_ul_node);
     root_ul_node.appendChild(build_entries(menu));
 </script>

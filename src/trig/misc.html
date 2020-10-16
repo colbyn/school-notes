@@ -1,0 +1,247 @@
+<h1>Miscellaneous</h1>
+
+<note>
+    <h2>Functional Utilities</h2>
+    <tex block>
+        \begin{equation}
+        \begin{split}
+        f \triangleleft x &= f(x) \\
+        x \triangleright f &= f(x)
+        \end{split}
+        \end{equation}
+    </tex>
+
+    <p>Think of the arrows as denoting the order of evaluation E.g. pass this term to the function on the left, or pass this term to the function on the right of the arrow. Essentially, this is useful for reducing parentheses.</p>
+
+    <p>For Example:</p>
+    <tex block>
+        \begin{equation}
+        \begin{split}
+        \sin \triangleleft \frac{4}{12}\tau \;\displaystyle{\text{rad}} &= -\frac{\sqrt{3}}{3} \\
+        \sin \left(\frac{4}{12}\tau \;\displaystyle{\text{rad}} \right) &= -\frac{\sqrt{3}}{3}
+        \end{split}
+        \end{equation}
+    </tex>
+</note>
+
+
+<note>
+    <h2>Unit Conversion</h2>
+    <tex block>
+        \begin{equation}
+        \begin{split}
+        \tau &= 2\pi = 360^{\circ} \\
+        \pi &= \frac{1}{2}\tau = 180^{\circ}
+        \end{split}
+        \end{equation}
+    </tex>
+    <tex block>
+        \begin{equation}
+        \begin{split}
+        1^{\circ} = \frac{1}{360} \tau \; {\displaystyle {\text{rad}}} \\
+        1 \; rad = \frac{1}{\tau} \cdot 360^{\circ}
+        \end{split}
+        \end{equation}
+    </tex>
+    <p>So therefore:</p>
+    <tex block>
+        \begin{equation}
+        \begin{split}
+        x^{\circ} = \frac{x}{360} \tau \; {\displaystyle {\text{rad}}} \\
+        x \; rad = \frac{x}{\tau} \cdot 360^{\circ}
+        \end{split}
+        \end{equation}
+    </tex>
+    <p>Take special note of the above. It essentially gives you a simple relation for conversion.</p>
+    <note>
+        <h3>Or Alternatively</h3>
+        <tex block>
+            \begin{equation}
+            \begin{split}
+            x^{\circ} = x \cdot \frac{\tau}{360} \; {\displaystyle {\text{rad}}} \\
+            x \; rad = x \cdot \frac{360^{\circ}}{\tau}
+            \end{split}
+            \end{equation}
+        </tex>
+    </note>
+    <note>
+        <h3>For example</h3>
+        <tex block>29^{\circ} = \frac{29}{360} \tau \; {\displaystyle {\text{rad}}}</tex>
+        <p>Now you don't need to compute a degree to radian measure.</p>
+        <hr/>
+        <p>Or when expressed in terms of <tex>\pi</tex>:</p>
+        <tex block>
+            \begin{equation}
+            \begin{split}
+            29^{\circ} &= \frac{29}{360} \tau \; {\displaystyle {\text{rad}}} \\
+                &= \frac{29}{360} (2\pi) \; {\displaystyle {\text{rad}}} \\
+                &= \frac{29}{180} \pi \; {\displaystyle {\text{rad}}}
+            \end{split}
+            \end{equation}
+        </tex>
+    </note>
+</note>
+
+
+
+<note>
+    <h2>Identities</h2>
+</note>
+
+
+<note>
+    <h2>Tricks using modular arithmetic</h2>
+    <p>TODO</p>
+</note>
+
+
+<note>
+    <h2>Pythagorean Identity Notes</h2>
+
+    <h3>Given</h3>
+    <tex block>
+        \begin{equation}
+        \begin{split}
+        \cos^2(\theta) + \sin^2(\theta) &= 1
+        \end{split}
+        \end{equation}
+    </tex>
+    <h3>Then Therefore</h3>
+    <tex block>
+        \begin{equation}
+        \begin{split}
+        \cos^2(\theta) + \sin^2(\theta) &= 1 \\
+        \sin^2(\theta) &= 1 - \cos^2(\theta) \\
+        \cos^2(\theta) &= 1 - \sin^2(\theta)
+        \end{split}
+        \end{equation} 
+    </tex>
+    <h3>Likewise</h3>
+    <p>**From here the other two "Pythagorean Identities" can be easily derived:**</p>
+    <tex block>
+        \begin{equation}
+        \begin{split}
+        \frac{\sin^2(\theta)}{\sin^2(\theta)} &= 1 \\
+            &= \frac{1 - \cos^2(\theta)}{\sin^2(\theta)} \\
+            &= \frac{1}{\sin^2(\theta)} - \frac{\cos^2(\theta)}{\sin^2(\theta)} \\
+            &= \csc^2(\theta) - \cot^2(\theta)
+        \end{split}
+        \end{equation}
+    </tex>
+    <tex block>
+        \begin{equation}
+        \begin{split}
+        \frac{\cos^2(\theta)}{\cos^2(\theta)} &= 1 \\
+            &= \frac{1 - \sin^2(\theta)}{\cos^2(\theta)} \\
+            &= \frac{1}{\cos^2(\theta)} - \frac{\sin^2(\theta)}{\cos^2(\theta)} \\
+            &= \sec^2(\theta) - \tan^2(\theta)
+        \end{split}
+        \end{equation}
+    </tex>
+</note>
+
+<note>
+   <h2>Trigonometric Identities Reference</h2>
+   <note>
+       <h3>Pythagorean Identities</h3>
+       <tex block>
+            \begin{equation}
+            \begin{split}
+            \cos^2(\theta) + \sin^2(\theta) &= 1 \\
+            \sec^2(\theta) - \tan^2(\theta) &= 1 \\
+            \csc^2(\theta) - \cot^2(\theta) &= 1
+            \end{split}
+            \end{equation}
+       </tex>
+   </note>
+   <note>
+       <h3>Sum and Difference Identities</h3>
+       <tex src='src/trig/assets/sum-diff-ident.tex'></tex>
+   </note>
+   <note>
+        <h3>Cofunction Identities</h3>
+        <tex src='src/trig/assets/cofunction-ident.tex'></tex>
+    </note>
+    <note>
+        <h3>Double-Angle Identities</h3>
+        <tex src='src/trig/assets/double-angle-ident.tex'></tex>
+    </note>
+    <note>
+        <h3>Half-Angle Identities</h3>
+        <tex src='src/trig/assets/half-angle-ident.tex'></tex>
+        <note>The choice of the plus or minus sign depends on the quadrant in which latexmath:[\frac{\alpha}{2}] lies.</note>
+    </note>
+    <note>
+        <h3>Power-Reducing Identities</h3>
+        <tex src='src/trig/assets/power-reducing-ident.tex'></tex>
+    </note>
+    <note>
+        <h3>Product-to-Sum Identities</h3>
+        <tex src='src/trig/assets/product-to-sum-ident.tex'></tex>
+    </note>
+    <note>
+        <h3>Sum-to-Product-Identities</h3>
+        <tex src='src/trig/assets/sum-to-product-ident.tex'></tex>
+    </note>
+</note>
+
+<note>
+    <h2>Properties of Trigonometric Functions</h2>
+    <note>
+        <h3>Domain and Range of Trigonometric Functions</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Function</th>
+                    <th>Domain</th>
+                    <th>Range</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><tex>\sin</tex></td>
+                    <td><tex>(-\infty,\infty)</tex></td>
+                    <td><tex>\lbrack -1, 1 \rbrack</tex></td>
+                </tr>
+                <tr>
+                    <td><tex>\cos</tex></td>
+                    <td><tex>(-\infty,\infty)</tex></td>
+                    <td><tex>\lbrack -1, 1 \rbrack</tex></td>
+                </tr>
+                <tr>
+                    <td><tex>\tan</tex></td>
+                    <td></td>
+                    <td><tex>(-\infty,\infty)</tex></td>
+                </tr>
+            </tbody>
+        </table>
+    </note>
+</note>
+
+<!-- .Domain and Range of Trigonometric Functions
+|===
+|Function|Domain|Range
+
+|latexmath:[\sin]|latexmath:[(-\infty,\infty)]|latexmath:[\lbrack -1, 1 \rbrack]
+|latexmath:[\cos]|latexmath:[(-\infty,\infty)]|latexmath:[\lbrack -1, 1 \rbrack]
+|latexmath:[\tan]||latexmath:[(-\infty,\infty)]
+|===
+
+.Domain and Range of Reciprocal Trigonometric Functions
+|===
+|Function|Domain|Range
+
+|latexmath:[\csc] | | latexmath:[(-\infty,-1\rbrack\cup\lbrack 1, \infty)]
+|latexmath:[\sec] | | latexmath:[(-\infty,-1\rbrack\cup\lbrack 1, \infty)]
+|latexmath:[\cot]| | latexmath:[(-\infty,\infty)]
+|===
+
+.Period of Trigonometric Functions
+|===
+|Function|Period|Reciprocal Function|Period
+
+|latexmath:[\sin]|latexmath:[\tau]|latexmath:[\csc]|latexmath:[\tau]
+|latexmath:[\cos]|latexmath:[\tau]|latexmath:[\sec]|latexmath:[\tau]
+|latexmath:[\tan]|latexmath:[\frac{1}{2}\tau]|latexmath:[\cot]|latexmath:[\frac{1}{2}\tau]
+|===
+ -->
