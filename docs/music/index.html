@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.4d6c72e6.css">
+    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.fe1cf077.css">
     <script src="https://colbyn.github.io/school-notes/system.f84e1103.js"></script>
     <!-- MATH-JAX -->
 <script>window.MathJax = {
@@ -65,10 +65,10 @@
     }</style>
 </head>
 <body>
-    <nav side="">
+    <header root="">
         <!-- WIP NEW NAVIGATION -->
 
-<style>header#root {
+<style>nav#side-nav {
         border: 1px solid #000;
         border-radius: 3px;
         overflow: hidden;
@@ -79,13 +79,12 @@
         margin: 0 auto;
         margin-top: 10px;
     }
-    header#root > span {
+    nav#side-nav > span {
         border-bottom: 1px solid #000;
         margin-bottom: 4px;
         padding: 4px;
     }
-
-    header#root ul {
+    nav#side-nav ul {
         display: flex;
         flex-direction: column;
         color: #000;
@@ -94,18 +93,18 @@
         border-left: 1px solid #e0e0e0;
         padding-left: 10px;
     }
-    header#root ul > li {
+    nav#side-nav ul > li {
         display: flex;
         color: inherit;
         flex-direction: column;
     }
-    header#root ul > li > a {
+    nav#side-nav ul > li > a {
         color: inherit;
         display: flex;
         align-items: center;
         text-decoration: none;
     }
-    header#root ul > li > a > span.suffix {
+    nav#side-nav ul > li > a > span.suffix {
         margin-right: 10px;
         font-size: 0.8em;
         font-weight: 100;
@@ -116,17 +115,17 @@
         border: 1px solid #e0e0e0;
         color: #191919;
     }
-    header#root ul > li > a > span.chapter {
+    nav#side-nav ul > li > a > span.chapter {
         margin-right: 10px;
         text-decoration: underline;
     }
-    header#root ul > li > a > span.name {
+    nav#side-nav ul > li > a > span.name {
         text-decoration: underline;
     }</style>
 
-<header id="root">
+<nav id="side-nav">
     <span>Navigation</span>
-</header>
+</nav>
 
 <script>function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
 
@@ -175,6 +174,10 @@ var menu = [{
   suffix: 'Class Notes',
   path: 'trig/index.html',
   sub: [{
+    name: 'Miscellaneous',
+    chapter: '0',
+    path: 'trig/misc/index.html'
+  }, {
     name: 'Functions and Graphs',
     chapter: '1',
     path: 'trig/chapter1/index.html'
@@ -291,11 +294,11 @@ function build_entries(entries) {
 } // BUILD ROOT MENU
 
 
-var root_ul_node = document.querySelector("header#root");
+var root_ul_node = document.querySelector("nav#side-nav");
 console.assert(root_ul_node);
 root_ul_node.appendChild(build_entries(menu));</script>
         <div toc=""><ul toc=""><li entry="h1"><a href="#reference">Reference</a></li><li entry="h1"><a href="#dynamic-marks">Dynamic Marks</a></li><li entry="h2"><a href="#piano">Piano</a></li><li entry="h2"><a href="#forte">Forte</a></li><li entry="h2"><a href="#mezzo-piano">Mezzo-piano</a></li><li entry="h2"><a href="#mezzo-forte">Mezzo-forte</a></li><li entry="h2"><a href="#pianissimo">Pianissimo</a></li><li entry="h2"><a href="#fortissimo">Fortissimo</a></li><li entry="h1"><a href="#intervals">Intervals</a></li><li entry="h2"><a href="#unison">Unison</a></li><li entry="h2"><a href="#2nd(s)">2nd(s)</a></li><li entry="h2"><a href="#3rds">3rds</a></li><li entry="h2"><a href="#4ths">4ths</a></li><li entry="h2"><a href="#5ths">5ths</a></li><li entry="h2"><a href="#6ths">6ths</a></li><li entry="h2"><a href="#7ths">7ths</a></li><li entry="h2"><a href="#octaves">octaves</a></li><li entry="h1"><a href="#rhythm-identification">Rhythm Identification</a></li><li entry="h2"><a href="#whole">Whole</a></li><li entry="h2"><a href="#half">Half</a></li><li entry="h2"><a href="#quarter">Quarter</a></li><li entry="h2"><a href="#eighth-notes%20and%20rests">Eighth Notes and Rests</a></li><li entry="h1"><a href="#dotted-rhythms">Dotted Rhythms</a></li><li entry="h2"><a href="#dotted-whole">Dotted Whole</a></li><li entry="h2"><a href="#half">Half</a></li><li entry="h2"><a href="#quarter-eighth%20notes%20and%20rests">Quarter Eighth Notes and Rests</a></li><li entry="h1"><a href="#tempo-marks">Tempo Marks</a></li><li entry="h2"><a href="#metronome-markings">Metronome Markings</a></li><li entry="h2"><a href="#tempo-terms">Tempo Terms</a></li><li entry="h2"><a href="#gradual-tempo%20changes">Gradual Tempo Changes</a></li><li entry="h3"><a href="#gradual-tempo%20changes">Gradual Tempo Changes</a></li><li entry="h2"><a href="#largo">Largo</a></li><li entry="h2"><a href="#adagio">Adagio</a></li><li entry="h2"><a href="#andante">Andante</a></li><li entry="h2"><a href="#moderato">Moderato</a></li><li entry="h2"><a href="#allegretto">Allegretto</a></li><li entry="h2"><a href="#allegro">Allegro</a></li><li entry="h2"><a href="#vivace">Vivace</a></li><li entry="h2"><a href="#presto">Presto</a></li><li entry="h1"><a href="#items-on%20the%20grand%20staff">Items on the Grand Staff</a></li><li entry="h1"><a href="#articulation">Articulation</a></li><li entry="h2"><a href="#tied-note">Tied note</a></li><li entry="h2"><a href="#slur">Slur</a></li><li entry="h2"><a href="#legato">Legato</a></li><li entry="h2"><a href="#staccato">Staccato</a></li><li entry="h2"><a href="#fermata">Fermata</a></li><li entry="h2"><a href="#accent">Accent</a></li><li entry="h1"><a href="#notes-on%20the%20grand%20staff">Notes on the Grand Staff</a></li><li entry="h2"><a href="#bar">bar</a></li><li entry="h2"><a href="#measure">measure</a></li><li entry="h2"><a href="#bar-line">bar line</a></li><li entry="h2"><a href="#double-bar%20line">double bar line</a></li><li entry="h2"><a href="#treble-clef">Treble Clef</a></li><li entry="h2"><a href="#bass-clef">Bass Clef</a></li><li entry="h2"><a href="#bracket">bracket</a></li><li entry="h2"><a href="#time-signature%20(and%20what%20each%20number%20means)">time signature (and what each number means)</a></li><li entry="h2"><a href="#repeat-sign">repeat sign</a></li><li entry="h2"><a href="#key-signature">key signature</a></li><li entry="h2"><a href="#ledger-line">ledger line</a></li><li entry="h2"><a href="#middle-c">Middle C</a></li><li entry="h1"><a href="#concepts">Concepts</a></li></ul></div>
-    </nav>
+    </header>
     <h1 id="reference">Reference</h1>
 
 <img width="400px" src="https://images.squarespace-cdn.com/content/v1/52099be2e4b083fb58bbda2f/1507313534758-AQXAVDDLYUCBPAW7P8H0/ke17ZwdGBToddI8pDm48kECgdi3I47WjmvcA3dssH4RZw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVFRmf7El5RfBR8rWp1xaOJWsMu_Z-fvxO_qETZB3KhsBs5EFx2kUt2Ib7tL1eibdQA/metro+9+-+1.jpg" style="min-width: 0; max-width: 400px;">

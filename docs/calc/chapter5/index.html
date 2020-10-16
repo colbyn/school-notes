@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.4d6c72e6.css">
+    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.fe1cf077.css">
     <script src="https://colbyn.github.io/school-notes/system.f84e1103.js"></script>
     <!-- MATH-JAX -->
 <script>window.MathJax = {
@@ -31,10 +31,10 @@
 <script src="https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
 </head>
 <body>
-    <nav side="">
+    <header root="">
         <!-- WIP NEW NAVIGATION -->
 
-<style>header#root {
+<style>nav#side-nav {
         border: 1px solid #000;
         border-radius: 3px;
         overflow: hidden;
@@ -45,13 +45,12 @@
         margin: 0 auto;
         margin-top: 10px;
     }
-    header#root > span {
+    nav#side-nav > span {
         border-bottom: 1px solid #000;
         margin-bottom: 4px;
         padding: 4px;
     }
-
-    header#root ul {
+    nav#side-nav ul {
         display: flex;
         flex-direction: column;
         color: #000;
@@ -60,18 +59,18 @@
         border-left: 1px solid #e0e0e0;
         padding-left: 10px;
     }
-    header#root ul > li {
+    nav#side-nav ul > li {
         display: flex;
         color: inherit;
         flex-direction: column;
     }
-    header#root ul > li > a {
+    nav#side-nav ul > li > a {
         color: inherit;
         display: flex;
         align-items: center;
         text-decoration: none;
     }
-    header#root ul > li > a > span.suffix {
+    nav#side-nav ul > li > a > span.suffix {
         margin-right: 10px;
         font-size: 0.8em;
         font-weight: 100;
@@ -82,17 +81,17 @@
         border: 1px solid #e0e0e0;
         color: #191919;
     }
-    header#root ul > li > a > span.chapter {
+    nav#side-nav ul > li > a > span.chapter {
         margin-right: 10px;
         text-decoration: underline;
     }
-    header#root ul > li > a > span.name {
+    nav#side-nav ul > li > a > span.name {
         text-decoration: underline;
     }</style>
 
-<header id="root">
+<nav id="side-nav">
     <span>Navigation</span>
-</header>
+</nav>
 
 <script>function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
 
@@ -141,6 +140,10 @@ var menu = [{
   suffix: 'Class Notes',
   path: 'trig/index.html',
   sub: [{
+    name: 'Miscellaneous',
+    chapter: '0',
+    path: 'trig/misc/index.html'
+  }, {
     name: 'Functions and Graphs',
     chapter: '1',
     path: 'trig/chapter1/index.html'
@@ -257,11 +260,11 @@ function build_entries(entries) {
 } // BUILD ROOT MENU
 
 
-var root_ul_node = document.querySelector("header#root");
+var root_ul_node = document.querySelector("nav#side-nav");
 console.assert(root_ul_node);
 root_ul_node.appendChild(build_entries(menu));</script>
         <div toc=""><ul toc=""><li entry="h1"><a href="#chapter-5%20%7C%20applications%20of%20integration">Chapter 5 | Applications of Integration</a></li><li entry="h2"><a href="#5.1-%7C%20areas%20between%20curves">5.1 | Areas Between Curves</a></li><li entry="h2"><a href="#5.2-%7C%20volumes">5.2 | Volumes</a></li><li entry="h2"><a href="#5.3-%7C%20volumes%20by%20cylindrical%20shells">5.3 | Volumes by Cylindrical Shells</a></li><li entry="h2"><a href="#5.4-%7C%20work">5.4 | Work</a></li><li entry="h2"><a href="#5.5-%7C%20average%20value%20of%20a%20function">5.5 | Average Value of a Function</a></li></ul></div>
-    </nav>
+    </header>
     <h1 id="chapter-5%20%7C%20applications%20of%20integration">Chapter 5 | Applications of Integration</h1>
 
 

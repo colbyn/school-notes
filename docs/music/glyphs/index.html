@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.4d6c72e6.css">
+    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.fe1cf077.css">
     <script src="https://colbyn.github.io/school-notes/system.f84e1103.js"></script>
     <!-- MATH-JAX -->
 <script>window.MathJax = {
@@ -65,10 +65,10 @@
     }</style>
 </head>
 <body>
-    <nav side="">
+    <header root="">
         <!-- WIP NEW NAVIGATION -->
 
-<style>header#root {
+<style>nav#side-nav {
         border: 1px solid #000;
         border-radius: 3px;
         overflow: hidden;
@@ -79,13 +79,12 @@
         margin: 0 auto;
         margin-top: 10px;
     }
-    header#root > span {
+    nav#side-nav > span {
         border-bottom: 1px solid #000;
         margin-bottom: 4px;
         padding: 4px;
     }
-
-    header#root ul {
+    nav#side-nav ul {
         display: flex;
         flex-direction: column;
         color: #000;
@@ -94,18 +93,18 @@
         border-left: 1px solid #e0e0e0;
         padding-left: 10px;
     }
-    header#root ul > li {
+    nav#side-nav ul > li {
         display: flex;
         color: inherit;
         flex-direction: column;
     }
-    header#root ul > li > a {
+    nav#side-nav ul > li > a {
         color: inherit;
         display: flex;
         align-items: center;
         text-decoration: none;
     }
-    header#root ul > li > a > span.suffix {
+    nav#side-nav ul > li > a > span.suffix {
         margin-right: 10px;
         font-size: 0.8em;
         font-weight: 100;
@@ -116,17 +115,17 @@
         border: 1px solid #e0e0e0;
         color: #191919;
     }
-    header#root ul > li > a > span.chapter {
+    nav#side-nav ul > li > a > span.chapter {
         margin-right: 10px;
         text-decoration: underline;
     }
-    header#root ul > li > a > span.name {
+    nav#side-nav ul > li > a > span.name {
         text-decoration: underline;
     }</style>
 
-<header id="root">
+<nav id="side-nav">
     <span>Navigation</span>
-</header>
+</nav>
 
 <script>function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
 
@@ -175,6 +174,10 @@ var menu = [{
   suffix: 'Class Notes',
   path: 'trig/index.html',
   sub: [{
+    name: 'Miscellaneous',
+    chapter: '0',
+    path: 'trig/misc/index.html'
+  }, {
     name: 'Functions and Graphs',
     chapter: '1',
     path: 'trig/chapter1/index.html'
@@ -291,11 +294,11 @@ function build_entries(entries) {
 } // BUILD ROOT MENU
 
 
-var root_ul_node = document.querySelector("header#root");
+var root_ul_node = document.querySelector("nav#side-nav");
 console.assert(root_ul_node);
 root_ul_node.appendChild(build_entries(menu));</script>
         <div toc=""><ul toc=""><li entry="h1"><a href="#glyphs">Glyphs</a></li><li entry="h2"><a href="#staff-brackets%20and%20dividers%20(u+e000%20%E2%80%92%20u+e00f)">Staff brackets and dividers (U+E000 ‒ U+E00F)</a></li><li entry="h2"><a href="#staves-(u+e010%20%E2%80%92%20u+e02f)">Staves (U+E010 ‒ U+E02F)</a></li><li entry="h2"><a href="#barlines-(u+e030%20%E2%80%92%20u+e03f)">Barlines (U+E030 ‒ U+E03F)</a></li><li entry="h2"><a href="#repeats-(u+e040%20%E2%80%92%20u+e04f)">Repeats (U+E040 ‒ U+E04F)</a></li><li entry="h2"><a href="#clefs-(u+e050%20%E2%80%92%20u+e07f)">Clefs (U+E050 ‒ U+E07F)</a></li><li entry="h2"><a href="#time-signatures%20(u+e080%20%E2%80%92%20u+e09f)">Time signatures (U+E080 ‒ U+E09F)</a></li><li entry="h2"><a href="#noteheads-(u+e0a0%20%E2%80%92%20u+e0ff)">Noteheads (U+E0A0 ‒ U+E0FF)</a></li><li entry="h2"><a href="#slash-noteheads%20(u+e100%20%E2%80%92%20u+e10f)">Slash noteheads (U+E100 ‒ U+E10F)</a></li><li entry="h2"><a href="#round-and%20square%20noteheads%20(u+e110%20%E2%80%92%20u+e11f)">Round and square noteheads (U+E110 ‒ U+E11F)</a></li><li entry="h2"><a href="#note-clusters%20(u+e120%20%E2%80%92%20u+e14f)">Note clusters (U+E120 ‒ U+E14F)</a></li><li entry="h2"><a href="#note-name%20noteheads%20(u+e150%20%E2%80%92%20u+e1af)">Note name noteheads (U+E150 ‒ U+E1AF)</a></li><li entry="h2"><a href="#shape-note%20noteheads%20(u+e1b0%20%E2%80%92%20u+e1cf)">Shape note noteheads (U+E1B0 ‒ U+E1CF)</a></li><li entry="h2"><a href="#individual-notes%20(u+e1d0%20%E2%80%92%20u+e1ef)">Individual notes (U+E1D0 ‒ U+E1EF)</a></li><li entry="h2"><a href="#beamed-groups%20of%20notes%20(u+e1f0%20%E2%80%92%20u+e20f)">Beamed groups of notes (U+E1F0 ‒ U+E20F)</a></li><li entry="h2"><a href="#stems-(u+e210%20%E2%80%92%20u+e21f)">Stems (U+E210 ‒ U+E21F)</a></li><li entry="h2"><a href="#tremolos-(u+e220%20%E2%80%92%20u+e23f)">Tremolos (U+E220 ‒ U+E23F)</a></li><li entry="h2"><a href="#flags-(u+e240%20%E2%80%92%20u+e25f)">Flags (U+E240 ‒ U+E25F)</a></li><li entry="h2"><a href="#standard-accidentals%20(12-edo)%20(u+e260%20%E2%80%92%20u+e26f)">Standard accidentals (12-EDO) (U+E260 ‒ U+E26F)</a></li><li entry="h2"><a href="#gould-arrow%20quartertone%20accidentals%20(24-edo)%20(u+e270%20%E2%80%92%20u+e27f)">Gould arrow quartertone accidentals (24-EDO) (U+E270 ‒ U+E27F)</a></li><li entry="h2"><a href="#stein-zimmermann-accidentals%20(24-edo)%20(u+e280%20%E2%80%92%20u+e28f)">Stein-Zimmermann accidentals (24-EDO) (U+E280 ‒ U+E28F)</a></li><li entry="h2"><a href="#extended-stein-zimmermann%20accidentals%20(u+e290%20%E2%80%92%20u+e29f)">Extended Stein-Zimmermann accidentals (U+E290 ‒ U+E29F)</a></li><li entry="h2"><a href="#sims-accidentals%20(72-edo)%20(u+e2a0%20%E2%80%92%20u+e2af)">Sims accidentals (72-EDO) (U+E2A0 ‒ U+E2AF)</a></li><li entry="h2"><a href="#johnston-accidentals%20(just%20intonation)%20(u+e2b0%20%E2%80%92%20u+e2bf)">Johnston accidentals (just intonation) (U+E2B0 ‒ U+E2BF)</a></li><li entry="h2"><a href="#extended-helmholtz-ellis%20accidentals%20(just%20intonation)%20(u+e2c0%20%E2%80%92%20u+e2ff)">Extended Helmholtz-Ellis accidentals (just intonation) (U+E2C0 ‒ U+E2FF)</a></li><li entry="h2"><a href="#spartan-sagittal%20single-shaft%20accidentals%20(u+e300%20%E2%80%92%20u+e30f)">Spartan Sagittal single-shaft accidentals (U+E300 ‒ U+E30F)</a></li><li entry="h2"><a href="#spartan-sagittal%20multi-shaft%20accidentals%20(u+e310%20%E2%80%92%20u+e33f)">Spartan Sagittal multi-shaft accidentals (U+E310 ‒ U+E33F)</a></li><li entry="h2"><a href="#athenian-sagittal%20extension%20(medium%20precision)%20accidentals%20(u+e340%20%E2%80%92%20u+e36f)">Athenian Sagittal extension (medium precision) accidentals (U+E340 ‒ U+E36F)</a></li><li entry="h2"><a href="#trojan-sagittal%20extension%20(12-edo%20relative)%20accidentals%20(u+e370%20%E2%80%92%20u+e38f)">Trojan Sagittal extension (12-EDO relative) accidentals (U+E370 ‒ U+E38F)</a></li><li entry="h2"><a href="#promethean-sagittal%20extension%20(high%20precision)%20single-shaft%20accidentals%20(u+e390%20%E2%80%92%20u+e3af)">Promethean Sagittal extension (high precision) single-shaft accidentals (U+E390 ‒ U+E3AF)</a></li><li entry="h2"><a href="#promethean-sagittal%20extension%20(high%20precision)%20multi-shaft%20accidentals%20(u+e3b0%20%E2%80%92%20u+e3ef)">Promethean Sagittal extension (high precision) multi-shaft accidentals (U+E3B0 ‒ U+E3EF)</a></li><li entry="h2"><a href="#herculean-sagittal%20extension%20(very%20high%20precision)%20accidental%20diacritics%20(u+e3f0%20%E2%80%92%20u+e3ff)">Herculean Sagittal extension (very high precision) accidental diacritics (U+E3F0 ‒ U+E3FF)</a></li><li entry="h2"><a href="#olympian-sagittal%20extension%20(extreme%20precision)%20accidental%20diacritics%20(u+e400%20%E2%80%92%20u+e40f)">Olympian Sagittal extension (extreme precision) accidental diacritics (U+E400 ‒ U+E40F)</a></li><li entry="h2"><a href="#magrathean-sagittal%20extension%20(insane%20precision)%20accidental%20diacritics%20(u+e410%20%E2%80%92%20u+e41f)">Magrathean Sagittal extension (insane precision) accidental diacritics (U+E410 ‒ U+E41F)</a></li><li entry="h2"><a href="#wyschnegradsky-accidentals%20(72-edo)%20(u+e420%20%E2%80%92%20u+e43f)">Wyschnegradsky accidentals (72-EDO) (U+E420 ‒ U+E43F)</a></li><li entry="h2"><a href="#arel-ezgi-uzdilek-(aeu)%20accidentals%20(u+e440%20%E2%80%92%20u+e44f)">Arel-Ezgi-Uzdilek (AEU) accidentals (U+E440 ‒ U+E44F)</a></li><li entry="h2"><a href="#turkish-folk%20music%20accidentals%20(u+e450%20%E2%80%92%20u+e45f)">Turkish folk music accidentals (U+E450 ‒ U+E45F)</a></li><li entry="h2"><a href="#persian-accidentals%20(u+e460%20%E2%80%92%20u+e46f)">Persian accidentals (U+E460 ‒ U+E46F)</a></li><li entry="h2"><a href="#other-accidentals%20(u+e470%20%E2%80%92%20u+e49f)">Other accidentals (U+E470 ‒ U+E49F)</a></li><li entry="h2"><a href="#articulation-(u+e4a0%20%E2%80%92%20u+e4bf)">Articulation (U+E4A0 ‒ U+E4BF)</a></li><li entry="h2"><a href="#holds-and%20pauses%20(u+e4c0%20%E2%80%92%20u+e4df)">Holds and pauses (U+E4C0 ‒ U+E4DF)</a></li><li entry="h2"><a href="#rests-(u+e4e0%20%E2%80%92%20u+e4ff)">Rests (U+E4E0 ‒ U+E4FF)</a></li><li entry="h2"><a href="#bar-repeats%20(u+e500%20%E2%80%92%20u+e50f)">Bar repeats (U+E500 ‒ U+E50F)</a></li><li entry="h2"><a href="#octaves-(u+e510%20%E2%80%92%20u+e51f)">Octaves (U+E510 ‒ U+E51F)</a></li><li entry="h2"><a href="#dynamics-(u+e520%20%E2%80%92%20u+e54f)">Dynamics (U+E520 ‒ U+E54F)</a></li><li entry="h2"><a href="#lyrics-(u+e550%20%E2%80%92%20u+e55f)">Lyrics (U+E550 ‒ U+E55F)</a></li><li entry="h2"><a href="#common-ornaments%20(u+e560%20%E2%80%92%20u+e56f)">Common ornaments (U+E560 ‒ U+E56F)</a></li><li entry="h2"><a href="#other-baroque%20ornaments%20(u+e570%20%E2%80%92%20u+e58f)">Other baroque ornaments (U+E570 ‒ U+E58F)</a></li><li entry="h2"><a href="#combining-strokes%20for%20trills%20and%20mordents%20(u+e590%20%E2%80%92%20u+e5af)">Combining strokes for trills and mordents (U+E590 ‒ U+E5AF)</a></li><li entry="h2"><a href="#precomposed-trills%20and%20mordents%20(u+e5b0%20%E2%80%92%20u+e5cf)">Precomposed trills and mordents (U+E5B0 ‒ U+E5CF)</a></li><li entry="h2"><a href="#brass-techniques%20(u+e5d0%20%E2%80%92%20u+e5ef)">Brass techniques (U+E5D0 ‒ U+E5EF)</a></li><li entry="h2"><a href="#wind-techniques%20(u+e5f0%20%E2%80%92%20u+e60f)">Wind techniques (U+E5F0 ‒ U+E60F)</a></li><li entry="h2"><a href="#string-techniques%20(u+e610%20%E2%80%92%20u+e62f)">String techniques (U+E610 ‒ U+E62F)</a></li><li entry="h2"><a href="#plucked-techniques%20(u+e630%20%E2%80%92%20u+e63f)">Plucked techniques (U+E630 ‒ U+E63F)</a></li><li entry="h2"><a href="#vocal-techniques%20(u+e640%20%E2%80%92%20u+e64f)">Vocal techniques (U+E640 ‒ U+E64F)</a></li><li entry="h2"><a href="#keyboard-techniques%20(u+e650%20%E2%80%92%20u+e67f)">Keyboard techniques (U+E650 ‒ U+E67F)</a></li><li entry="h2"><a href="#harp-techniques%20(u+e680%20%E2%80%92%20u+e69f)">Harp techniques (U+E680 ‒ U+E69F)</a></li><li entry="h2"><a href="#tuned-mallet%20percussion%20pictograms%20(u+e6a0%20%E2%80%92%20u+e6bf)">Tuned mallet percussion pictograms (U+E6A0 ‒ U+E6BF)</a></li><li entry="h2"><a href="#chimes-pictograms%20(u+e6c0%20%E2%80%92%20u+e6cf)">Chimes pictograms (U+E6C0 ‒ U+E6CF)</a></li><li entry="h2"><a href="#drums-pictograms%20(u+e6d0%20%E2%80%92%20u+e6ef)">Drums pictograms (U+E6D0 ‒ U+E6EF)</a></li><li entry="h2"><a href="#wooden-struck%20or%20scraped%20percussion%20pictograms%20(u+e6f0%20%E2%80%92%20u+e6ff)">Wooden struck or scraped percussion pictograms (U+E6F0 ‒ U+E6FF)</a></li><li entry="h2"><a href="#metallic-struck%20percussion%20pictograms%20(u+e700%20%E2%80%92%20u+e70f)">Metallic struck percussion pictograms (U+E700 ‒ U+E70F)</a></li><li entry="h2"><a href="#bells-pictograms%20(u+e710%20%E2%80%92%20u+e71f)">Bells pictograms (U+E710 ‒ U+E71F)</a></li><li entry="h2"><a href="#cymbals-pictograms%20(u+e720%20%E2%80%92%20u+e72f)">Cymbals pictograms (U+E720 ‒ U+E72F)</a></li><li entry="h2"><a href="#gongs-pictograms%20(u+e730%20%E2%80%92%20u+e73f)">Gongs pictograms (U+E730 ‒ U+E73F)</a></li><li entry="h2"><a href="#shakers-or%20rattles%20pictograms%20(u+e740%20%E2%80%92%20u+e74f)">Shakers or rattles pictograms (U+E740 ‒ U+E74F)</a></li><li entry="h2"><a href="#whistles-and%20aerophones%20pictograms%20(u+e750%20%E2%80%92%20u+e75f)">Whistles and aerophones pictograms (U+E750 ‒ U+E75F)</a></li><li entry="h2"><a href="#miscellaneous-percussion%20instrument%20pictograms%20(u+e760%20%E2%80%92%20u+e76f)">Miscellaneous percussion instrument pictograms (U+E760 ‒ U+E76F)</a></li><li entry="h2"><a href="#beaters-pictograms%20(u+e770%20%E2%80%92%20u+e7ef)">Beaters pictograms (U+E770 ‒ U+E7EF)</a></li><li entry="h2"><a href="#percussion-playing%20technique%20pictograms%20(u+e7f0%20%E2%80%92%20u+e80f)">Percussion playing technique pictograms (U+E7F0 ‒ U+E80F)</a></li><li entry="h2"><a href="#handbells-(u+e810%20%E2%80%92%20u+e82f)">Handbells (U+E810 ‒ U+E82F)</a></li><li entry="h2"><a href="#guitar-(u+e830%20%E2%80%92%20u+e84f)">Guitar (U+E830 ‒ U+E84F)</a></li><li entry="h2"><a href="#chord-diagrams%20(u+e850%20%E2%80%92%20u+e85f)">Chord diagrams (U+E850 ‒ U+E85F)</a></li><li entry="h2"><a href="#analytics-(u+e860%20%E2%80%92%20u+e86f)">Analytics (U+E860 ‒ U+E86F)</a></li><li entry="h2"><a href="#chord-symbols%20(u+e870%20%E2%80%92%20u+e87f)">Chord symbols (U+E870 ‒ U+E87F)</a></li><li entry="h2"><a href="#tuplets-(u+e880%20%E2%80%92%20u+e88f)">Tuplets (U+E880 ‒ U+E88F)</a></li><li entry="h2"><a href="#conductor-symbols%20(u+e890%20%E2%80%92%20u+e89f)">Conductor symbols (U+E890 ‒ U+E89F)</a></li><li entry="h2"><a href="#accordion-(u+e8a0%20%E2%80%92%20u+e8df)">Accordion (U+E8A0 ‒ U+E8DF)</a></li><li entry="h2"><a href="#beams-and%20slurs%20(u+e8e0%20%E2%80%92%20u+e8ef)">Beams and slurs (U+E8E0 ‒ U+E8EF)</a></li><li entry="h2"><a href="#medieval-and%20renaissance%20staves%20(u+e8f0%20%E2%80%92%20u+e8ff)">Medieval and Renaissance staves (U+E8F0 ‒ U+E8FF)</a></li><li entry="h2"><a href="#medieval-and%20renaissance%20clefs%20(u+e900%20%E2%80%92%20u+e90f)">Medieval and Renaissance clefs (U+E900 ‒ U+E90F)</a></li><li entry="h2"><a href="#medieval-and%20renaissance%20prolations%20(u+e910%20%E2%80%92%20u+e92f)">Medieval and Renaissance prolations (U+E910 ‒ U+E92F)</a></li><li entry="h2"><a href="#medieval-and%20renaissance%20noteheads%20and%20stems%20(u+e930%20%E2%80%92%20u+e94f)">Medieval and Renaissance noteheads and stems (U+E930 ‒ U+E94F)</a></li><li entry="h2"><a href="#medieval-and%20renaissance%20individual%20notes%20(u+e950%20%E2%80%92%20u+e96f)">Medieval and Renaissance individual notes (U+E950 ‒ U+E96F)</a></li><li entry="h2"><a href="#medieval-and%20renaissance%20oblique%20forms%20(u+e970%20%E2%80%92%20u+e98f)">Medieval and Renaissance oblique forms (U+E970 ‒ U+E98F)</a></li><li entry="h2"><a href="#medieval-and%20renaissance%20plainchant%20single-note%20forms%20(u+e990%20%E2%80%92%20u+e9af)">Medieval and Renaissance plainchant single-note forms (U+E990 ‒ U+E9AF)</a></li><li entry="h2"><a href="#medieval-and%20renaissance%20plainchant%20multiple-note%20forms%20(u+e9b0%20%E2%80%92%20u+e9cf)">Medieval and Renaissance plainchant multiple-note forms (U+E9B0 ‒ U+E9CF)</a></li><li entry="h2"><a href="#medieval-and%20renaissance%20plainchant%20articulations%20(u+e9d0%20%E2%80%92%20u+e9df)">Medieval and Renaissance plainchant articulations (U+E9D0 ‒ U+E9DF)</a></li><li entry="h2"><a href="#medieval-and%20renaissance%20accidentals%20(u+e9e0%20%E2%80%92%20u+e9ef)">Medieval and Renaissance accidentals (U+E9E0 ‒ U+E9EF)</a></li><li entry="h2"><a href="#medieval-and%20renaissance%20rests%20(u+e9f0%20%E2%80%92%20u+e9ff)">Medieval and Renaissance rests (U+E9F0 ‒ U+E9FF)</a></li><li entry="h2"><a href="#medieval-and%20renaissance%20miscellany%20(u+ea00%20%E2%80%92%20u+ea1f)">Medieval and Renaissance miscellany (U+EA00 ‒ U+EA1F)</a></li><li entry="h2"><a href="#medieval-and%20renaissance%20symbols%20in%20cmn%20(u+ea20%20%E2%80%92%20u+ea2f)">Medieval and Renaissance symbols in CMN (U+EA20 ‒ U+EA2F)</a></li><li entry="h2"><a href="#daseian-notation%20(u+ea30%20%E2%80%92%20u+ea4f)">Daseian notation (U+EA30 ‒ U+EA4F)</a></li><li entry="h2"><a href="#figured-bass%20(u+ea50%20%E2%80%92%20u+ea6f)">Figured bass (U+EA50 ‒ U+EA6F)</a></li><li entry="h2"><a href="#function-theory%20symbols%20(u+ea70%20%E2%80%92%20u+ea9f)">Function theory symbols (U+EA70 ‒ U+EA9F)</a></li><li entry="h2"><a href="#multi-segment-lines%20(u+eaa0%20%E2%80%92%20u+eb0f)">Multi-segment lines (U+EAA0 ‒ U+EB0F)</a></li><li entry="h2"><a href="#electronic-music%20pictograms%20(u+eb10%20%E2%80%92%20u+eb5f)">Electronic music pictograms (U+EB10 ‒ U+EB5F)</a></li><li entry="h2"><a href="#arrows-and%20arrowheads%20(u+eb60%20%E2%80%92%20u+eb8f)">Arrows and arrowheads (U+EB60 ‒ U+EB8F)</a></li><li entry="h2"><a href="#combining-staff%20positions%20(u+eb90%20%E2%80%92%20u+eb9f)">Combining staff positions (U+EB90 ‒ U+EB9F)</a></li><li entry="h2"><a href="#renaissance-lute%20tablature%20(u+eba0%20%E2%80%92%20u+ebbf)">Renaissance lute tablature (U+EBA0 ‒ U+EBBF)</a></li><li entry="h2"><a href="#french-and%20english%20renaissance%20lute%20tablature%20(u+ebc0%20%E2%80%92%20u+ebdf)">French and English Renaissance lute tablature (U+EBC0 ‒ U+EBDF)</a></li><li entry="h2"><a href="#italian-and%20spanish%20renaissance%20lute%20tablature%20(u+ebe0%20%E2%80%92%20u+ebff)">Italian and Spanish Renaissance lute tablature (U+EBE0 ‒ U+EBFF)</a></li><li entry="h2"><a href="#german-renaissance%20lute%20tablature%20(u+ec00%20%E2%80%92%20u+ec2f)">German Renaissance lute tablature (U+EC00 ‒ U+EC2F)</a></li><li entry="h2"><a href="#kievan-square%20notation%20(u+ec30%20%E2%80%92%20u+ec3f)">Kievan square notation (U+EC30 ‒ U+EC3F)</a></li><li entry="h2"><a href="#kod%C3%A1ly-hand%20signs%20(u+ec40%20%E2%80%92%20u+ec4f)">Kodály hand signs (U+EC40 ‒ U+EC4F)</a></li><li entry="h2"><a href="#simplified-music%20notation%20(u+ec50%20%E2%80%92%20u+ec5f)">Simplified Music Notation (U+EC50 ‒ U+EC5F)</a></li><li entry="h2"><a href="#miscellaneous-symbols%20(u+ec60%20%E2%80%92%20u+ec7f)">Miscellaneous symbols (U+EC60 ‒ U+EC7F)</a></li><li entry="h2"><a href="#time-signatures%20supplement%20(u+ec80%20%E2%80%92%20u+ec8f)">Time signatures supplement (U+EC80 ‒ U+EC8F)</a></li><li entry="h2"><a href="#octaves-supplement%20(u+ec90%20%E2%80%92%20u+ec9f)">Octaves supplement (U+EC90 ‒ U+EC9F)</a></li><li entry="h2"><a href="#metronome-marks%20(u+eca0%20%E2%80%92%20u+ecbf)">Metronome marks (U+ECA0 ‒ U+ECBF)</a></li><li entry="h2"><a href="#figured-bass%20supplement%20(u+ecc0%20%E2%80%92%20u+eccf)">Figured bass supplement (U+ECC0 ‒ U+ECCF)</a></li><li entry="h2"><a href="#shape-note%20noteheads%20supplement%20(u+ecd0%20%E2%80%92%20u+ecdf)">Shape note noteheads supplement (U+ECD0 ‒ U+ECDF)</a></li><li entry="h2"><a href="#turned-time%20signatures%20(u+ece0%20%E2%80%92%20u+ecef)">Turned time signatures (U+ECE0 ‒ U+ECEF)</a></li><li entry="h2"><a href="#reversed-time%20signatures%20(u+ecf0%20%E2%80%92%20u+ecff)">Reversed time signatures (U+ECF0 ‒ U+ECFF)</a></li><li entry="h2"><a href="#function-theory%20symbols%20supplement%20(u+ed00%20%E2%80%92%20u+ed0f)">Function theory symbols supplement (U+ED00 ‒ U+ED0F)</a></li><li entry="h2"><a href="#fingering-(u+ed10%20%E2%80%92%20u+ed2f)">Fingering (U+ED10 ‒ U+ED2F)</a></li><li entry="h2"><a href="#arabic-accidentals%20(u+ed30%20%E2%80%92%20u+ed3f)">Arabic accidentals (U+ED30 ‒ U+ED3F)</a></li><li entry="h2"><a href="#articulation-supplement%20(u+ed40%20%E2%80%92%20u+ed4f)">Articulation supplement (U+ED40 ‒ U+ED4F)</a></li><li entry="h2"><a href="#stockhausen-accidentals%20(24-edo)%20(u+ed50%20%E2%80%93%20u+ed5f)">Stockhausen accidentals (24-EDO) (U+ED50 – U+ED5F)</a></li></ul></div>
-    </nav>
+    </header>
     <h1 id="glyphs">Glyphs</h1>
 <h2 id="staff-brackets%20and%20dividers%20(u+e000%20%E2%80%92%20u+e00f)">Staff brackets and dividers (U+E000 ‒ U+E00F)</h2>
 <table>

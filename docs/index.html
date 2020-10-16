@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.4d6c72e6.css">
+    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.fe1cf077.css">
     <script src="https://colbyn.github.io/school-notes/system.f84e1103.js"></script>
     <!-- MATH-JAX -->
 <script>window.MathJax = {
@@ -35,7 +35,7 @@
     <h1 id="colbyn's-school%20notes">Colbyn's School Notes</h1>
     <!-- WIP NEW NAVIGATION -->
 
-<style>header#root {
+<style>nav#side-nav {
         border: 1px solid #000;
         border-radius: 3px;
         overflow: hidden;
@@ -46,13 +46,12 @@
         margin: 0 auto;
         margin-top: 10px;
     }
-    header#root > span {
+    nav#side-nav > span {
         border-bottom: 1px solid #000;
         margin-bottom: 4px;
         padding: 4px;
     }
-
-    header#root ul {
+    nav#side-nav ul {
         display: flex;
         flex-direction: column;
         color: #000;
@@ -61,18 +60,18 @@
         border-left: 1px solid #e0e0e0;
         padding-left: 10px;
     }
-    header#root ul > li {
+    nav#side-nav ul > li {
         display: flex;
         color: inherit;
         flex-direction: column;
     }
-    header#root ul > li > a {
+    nav#side-nav ul > li > a {
         color: inherit;
         display: flex;
         align-items: center;
         text-decoration: none;
     }
-    header#root ul > li > a > span.suffix {
+    nav#side-nav ul > li > a > span.suffix {
         margin-right: 10px;
         font-size: 0.8em;
         font-weight: 100;
@@ -83,17 +82,17 @@
         border: 1px solid #e0e0e0;
         color: #191919;
     }
-    header#root ul > li > a > span.chapter {
+    nav#side-nav ul > li > a > span.chapter {
         margin-right: 10px;
         text-decoration: underline;
     }
-    header#root ul > li > a > span.name {
+    nav#side-nav ul > li > a > span.name {
         text-decoration: underline;
     }</style>
 
-<header id="root">
+<nav id="side-nav">
     <span>Navigation</span>
-</header>
+</nav>
 
 <script>function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
 
@@ -142,6 +141,10 @@ var menu = [{
   suffix: 'Class Notes',
   path: 'trig/index.html',
   sub: [{
+    name: 'Miscellaneous',
+    chapter: '0',
+    path: 'trig/misc/index.html'
+  }, {
     name: 'Functions and Graphs',
     chapter: '1',
     path: 'trig/chapter1/index.html'
@@ -258,7 +261,7 @@ function build_entries(entries) {
 } // BUILD ROOT MENU
 
 
-var root_ul_node = document.querySelector("header#root");
+var root_ul_node = document.querySelector("nav#side-nav");
 console.assert(root_ul_node);
 root_ul_node.appendChild(build_entries(menu));</script>
     <h2 id="old-notes">Old Notes</h2>
@@ -272,10 +275,10 @@ root_ul_node.appendChild(build_entries(menu));</script>
         max-width: unset;
         margin: 0;
         "><div></div>
-        <div id="des_3ddbf74b_923e_6732_6fd6_97340e290310" style="width: 100%; height: 200px; margin: 0 auto;"></div>
+        <div id="des_1f6579f8_893d_2bd8_c420_d43d4bfa3be8" style="width: 100%; height: 200px; margin: 0 auto;"></div>
         <script>
         window.addEventListener("load", function on_load() {
-            var elt = document.getElementById('des_3ddbf74b_923e_6732_6fd6_97340e290310');
+            var elt = document.getElementById('des_1f6579f8_893d_2bd8_c420_d43d4bfa3be8');
             var options = {
                 expressionsCollapsed: true,
                 expressions: true,
@@ -294,10 +297,10 @@ root_ul_node.appendChild(build_entries(menu));</script>
         max-width: unset;
         margin: 0;
         "><div></div>
-        <div id="des_2cabfc96_f993_9c0e_5ea2_b28156cb1711" style="width: 100%; height: 200px; margin: 0 auto;"></div>
+        <div id="des_f5c47b8d_7355_8955_2cc5_d76163c04a31" style="width: 100%; height: 200px; margin: 0 auto;"></div>
         <script>
         window.addEventListener("load", function on_load() {
-            var elt = document.getElementById('des_2cabfc96_f993_9c0e_5ea2_b28156cb1711');
+            var elt = document.getElementById('des_f5c47b8d_7355_8955_2cc5_d76163c04a31');
             var options = {
                 expressionsCollapsed: true,
                 expressions: true,
@@ -316,11 +319,11 @@ root_ul_node.appendChild(build_entries(menu));</script>
         max-width: unset;
         margin: 0;
         ">
-        <div id="geo_63dbc37b_aa6c_48c5_30ab_f1b1d38063bf" style="width: 100%;"></div>
+        <div id="geo_87d25b68_70d9_9029_ecd0_9660e63454f4" style="width: 100%;"></div>
         <script>
-        var geo_63dbc37b_aa6c_48c5_30ab_f1b1d38063bf_setup = new GGBApplet(
+        var geo_87d25b68_70d9_9029_ecd0_9660e63454f4_setup = new GGBApplet(
             {
-                id: "geo_63dbc37b_aa6c_48c5_30ab_f1b1d38063bf",
+                id: "geo_87d25b68_70d9_9029_ecd0_9660e63454f4",
                 "appName": 'graphing',
                 "width": null || window.innerWidth,
                 "height": 200 || 500,
@@ -339,22 +342,22 @@ root_ul_node.appendChild(build_entries(menu));</script>
                 "preventFocus": true,
                 appletOnLoad: (x) => {
                     for (cmd of ["SetPerspective(\"G\")","y=x^2"]) {
-                        window.geo_63dbc37b_aa6c_48c5_30ab_f1b1d38063bf.evalCommand(cmd);
+                        window.geo_87d25b68_70d9_9029_ecd0_9660e63454f4.evalCommand(cmd);
                     }
                     if (!null) {
-                        window.geo_63dbc37b_aa6c_48c5_30ab_f1b1d38063bf.setWidth(window.innerWidth);
+                        window.geo_87d25b68_70d9_9029_ecd0_9660e63454f4.setWidth(window.innerWidth);
                     }
                 }
             },
             true
         );
         window.addEventListener("load", function() {
-            geo_63dbc37b_aa6c_48c5_30ab_f1b1d38063bf_setup.inject('geo_63dbc37b_aa6c_48c5_30ab_f1b1d38063bf', 'preferHTML5');
+            geo_87d25b68_70d9_9029_ecd0_9660e63454f4_setup.inject('geo_87d25b68_70d9_9029_ecd0_9660e63454f4', 'preferHTML5');
         });
         window.addEventListener('resize', (event) => {
             let width = window.innerWidth;
             if (!null) {
-                window.geo_63dbc37b_aa6c_48c5_30ab_f1b1d38063bf.setWidth(width);
+                window.geo_87d25b68_70d9_9029_ecd0_9660e63454f4.setWidth(width);
             }
         });
         </script>
@@ -364,11 +367,11 @@ root_ul_node.appendChild(build_entries(menu));</script>
         max-width: unset;
         margin: 0;
         ">
-        <div id="geo_dde75ad5_02a2_5765_bc12_b0c2e5d550aa" style="width: 100%;"></div>
+        <div id="geo_e83670b1_cbbc_b4e3_6656_725719fedb90" style="width: 100%;"></div>
         <script>
-        var geo_dde75ad5_02a2_5765_bc12_b0c2e5d550aa_setup = new GGBApplet(
+        var geo_e83670b1_cbbc_b4e3_6656_725719fedb90_setup = new GGBApplet(
             {
-                id: "geo_dde75ad5_02a2_5765_bc12_b0c2e5d550aa",
+                id: "geo_e83670b1_cbbc_b4e3_6656_725719fedb90",
                 "appName": 'geometry',
                 "width": null || window.innerWidth,
                 "height": 200 || 500,
@@ -387,22 +390,22 @@ root_ul_node.appendChild(build_entries(menu));</script>
                 "preventFocus": true,
                 appletOnLoad: (x) => {
                     for (cmd of ["SetPerspective(\"G\")","y=x^2"]) {
-                        window.geo_dde75ad5_02a2_5765_bc12_b0c2e5d550aa.evalCommand(cmd);
+                        window.geo_e83670b1_cbbc_b4e3_6656_725719fedb90.evalCommand(cmd);
                     }
                     if (!null) {
-                        window.geo_dde75ad5_02a2_5765_bc12_b0c2e5d550aa.setWidth(window.innerWidth);
+                        window.geo_e83670b1_cbbc_b4e3_6656_725719fedb90.setWidth(window.innerWidth);
                     }
                 }
             },
             true
         );
         window.addEventListener("load", function() {
-            geo_dde75ad5_02a2_5765_bc12_b0c2e5d550aa_setup.inject('geo_dde75ad5_02a2_5765_bc12_b0c2e5d550aa', 'preferHTML5');
+            geo_e83670b1_cbbc_b4e3_6656_725719fedb90_setup.inject('geo_e83670b1_cbbc_b4e3_6656_725719fedb90', 'preferHTML5');
         });
         window.addEventListener('resize', (event) => {
             let width = window.innerWidth;
             if (!null) {
-                window.geo_dde75ad5_02a2_5765_bc12_b0c2e5d550aa.setWidth(width);
+                window.geo_e83670b1_cbbc_b4e3_6656_725719fedb90.setWidth(width);
             }
         });
         </script>
@@ -412,11 +415,11 @@ root_ul_node.appendChild(build_entries(menu));</script>
         max-width: unset;
         margin: 0;
         ">
-        <div id="geo_861a1623_e5e9_1519_b203_3c59388bb0dd" style="width: 100%;"></div>
+        <div id="geo_00a13a29_0460_9f60_d6fc_13304aab245d" style="width: 100%;"></div>
         <script>
-        var geo_861a1623_e5e9_1519_b203_3c59388bb0dd_setup = new GGBApplet(
+        var geo_00a13a29_0460_9f60_d6fc_13304aab245d_setup = new GGBApplet(
             {
-                id: "geo_861a1623_e5e9_1519_b203_3c59388bb0dd",
+                id: "geo_00a13a29_0460_9f60_d6fc_13304aab245d",
                 "appName": 'classic',
                 "width": null || window.innerWidth,
                 "height": 200 || 500,
@@ -435,22 +438,22 @@ root_ul_node.appendChild(build_entries(menu));</script>
                 "preventFocus": true,
                 appletOnLoad: (x) => {
                     for (cmd of ["SetPerspective(\"G\")","y=x^2"]) {
-                        window.geo_861a1623_e5e9_1519_b203_3c59388bb0dd.evalCommand(cmd);
+                        window.geo_00a13a29_0460_9f60_d6fc_13304aab245d.evalCommand(cmd);
                     }
                     if (!null) {
-                        window.geo_861a1623_e5e9_1519_b203_3c59388bb0dd.setWidth(window.innerWidth);
+                        window.geo_00a13a29_0460_9f60_d6fc_13304aab245d.setWidth(window.innerWidth);
                     }
                 }
             },
             true
         );
         window.addEventListener("load", function() {
-            geo_861a1623_e5e9_1519_b203_3c59388bb0dd_setup.inject('geo_861a1623_e5e9_1519_b203_3c59388bb0dd', 'preferHTML5');
+            geo_00a13a29_0460_9f60_d6fc_13304aab245d_setup.inject('geo_00a13a29_0460_9f60_d6fc_13304aab245d', 'preferHTML5');
         });
         window.addEventListener('resize', (event) => {
             let width = window.innerWidth;
             if (!null) {
-                window.geo_861a1623_e5e9_1519_b203_3c59388bb0dd.setWidth(width);
+                window.geo_00a13a29_0460_9f60_d6fc_13304aab245d.setWidth(width);
             }
         });
         </script>
@@ -460,11 +463,11 @@ root_ul_node.appendChild(build_entries(menu));</script>
         max-width: unset;
         margin: 0;
         ">
-        <div id="geo_5a2b7761_dd0a_f54d_1aa0_875444c30fc3" style="width: 100%;"></div>
+        <div id="geo_8ee7179b_2be1_e031_f21a_537a34716eb2" style="width: 100%;"></div>
         <script>
-        var geo_5a2b7761_dd0a_f54d_1aa0_875444c30fc3_setup = new GGBApplet(
+        var geo_8ee7179b_2be1_e031_f21a_537a34716eb2_setup = new GGBApplet(
             {
-                id: "geo_5a2b7761_dd0a_f54d_1aa0_875444c30fc3",
+                id: "geo_8ee7179b_2be1_e031_f21a_537a34716eb2",
                 "appName": 'suite',
                 "width": null || window.innerWidth,
                 "height": 200 || 500,
@@ -483,22 +486,22 @@ root_ul_node.appendChild(build_entries(menu));</script>
                 "preventFocus": true,
                 appletOnLoad: (x) => {
                     for (cmd of ["SetPerspective(\"G\")","y=x^2"]) {
-                        window.geo_5a2b7761_dd0a_f54d_1aa0_875444c30fc3.evalCommand(cmd);
+                        window.geo_8ee7179b_2be1_e031_f21a_537a34716eb2.evalCommand(cmd);
                     }
                     if (!null) {
-                        window.geo_5a2b7761_dd0a_f54d_1aa0_875444c30fc3.setWidth(window.innerWidth);
+                        window.geo_8ee7179b_2be1_e031_f21a_537a34716eb2.setWidth(window.innerWidth);
                     }
                 }
             },
             true
         );
         window.addEventListener("load", function() {
-            geo_5a2b7761_dd0a_f54d_1aa0_875444c30fc3_setup.inject('geo_5a2b7761_dd0a_f54d_1aa0_875444c30fc3', 'preferHTML5');
+            geo_8ee7179b_2be1_e031_f21a_537a34716eb2_setup.inject('geo_8ee7179b_2be1_e031_f21a_537a34716eb2', 'preferHTML5');
         });
         window.addEventListener('resize', (event) => {
             let width = window.innerWidth;
             if (!null) {
-                window.geo_5a2b7761_dd0a_f54d_1aa0_875444c30fc3.setWidth(width);
+                window.geo_8ee7179b_2be1_e031_f21a_537a34716eb2.setWidth(width);
             }
         });
         </script>

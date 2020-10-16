@@ -1,7 +1,10 @@
+* {
+    box-sizing: border-box;
+}
 body {
     margin: 0;
 }
-h1, h2, h3, h4, h5, h6, p, a, li, dd {
+h1, h2, h3, h4, h5, h6, p, a, li, dd, span {
     font-family: 'Source Sans Pro', sans-serif;
     text-rendering: optimizeLegibility;
 }
@@ -130,12 +133,12 @@ div[toc] > ul[toc] {
     margin-bottom: 50px;
     list-style: none;
     width: 100%;
-    padding: 0;
+    padding-left: 0;
 }
 
 div[toc] > ul[toc] > li[entry=h1] {
     font-size: 1.3em;
-    border-bottom: 2px solid #cccccc;
+    border-bottom: 2px solid #676767;
 }
 div[toc] > ul[toc] > li[entry=h2] {
     font-size: 1.1em;
@@ -149,17 +152,6 @@ div[toc] > ul[toc] > li[entry=h6] {font-size: 0.7em;}
 div[toc] > ul[toc] a {
     text-decoration: none;
     font-size: inherit;
-}
-
-body > nav[side] {
-    max-width: unset;
-    margin: 0 auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    border-bottom: 1px solid #c3c3c3;
-    box-shadow: 0px 3px 4px #d8d8d8;
 }
 
 ul[toc] > li[entry='h1'] {margin-left: 0;}
@@ -181,12 +173,6 @@ p[error-block] {
 
 p[error-block]:empty {
     display: none;
-}
-
-
-body > nav[side] > * {
-    max-width: 900px;
-    margin: 0 auto;
 }
 
 body > section.note-block {
@@ -227,17 +213,102 @@ img {
     padding: 0;
 }
 
-
-/* @media (max-width: 800px) {
-    body > * {
-        max-width: unset;
-    }
-} */
-
-
 b, em {
     margin-left: 4px;
     margin-right: 4px;
 }
 
-/*# sourceMappingURL=https://colbyn.github.io/school-notes/styling.4d6c72e6.css.map */
+
+body > header[root] {
+    max-width: unset;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    border-bottom: 1px solid #c3c3c3;
+    box-shadow: 0px 3px 4px #d8d8d8;
+    padding: 20px;
+}
+
+
+body > header[root] > * {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+    body > header[root] {
+        flex-direction: row;
+        padding: 0;
+    }
+    body > header[root] > nav#side-nav {
+        width: 100%;
+        width: fit-content;
+        min-width: 400px;
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+        font-size: 1em;
+        background-color: #0c0c0c;
+        color: #fff;
+    }
+    body > header[root] > nav#side-nav > span {
+        border-bottom: 0;
+        border-bottom: 2px solid #333333;
+        padding: 20px;
+        font-size: 20px;
+        font-weight: 600;
+        font-family: monospace;
+        text-transform: uppercase;
+    }
+    body > header[root] > nav#side-nav * {
+        color: #fff;
+        border-color: #333333;
+        text-decoration: none;
+        font-family: monospace;
+        text-transform: uppercase;
+    }
+    body > header[root] > nav#side-nav span.suffix {
+        color: #fff;
+        font-weight: 700;
+        font-size: 0.6em;
+        border-color: #333333;
+    }
+    body > header[root] > nav#side-nav ul {
+        padding: 10px;
+    }
+    body > header[root] > nav#side-nav ul > li > a {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        align-items: flex-start;
+    }
+    body > header[root] > nav#side-nav ul > li > a:hover {
+        color: #00ffe9;
+    }
+    body > header[root] > nav#side-nav ul > li > a:hover * {
+        color: #00ffe9;
+    }
+    body > header[root] > nav#side-nav ul > li > a > span.chapter,
+    body > header[root] > nav#side-nav ul > li > a > span.name {
+        text-decoration: none;
+    }
+    body > header[root] > nav#side-nav ul > li > a > span.name {
+        align-self: center;
+    }
+    body > header[root] > div[toc] {
+        margin: 0;
+        width: 100%;
+    }
+    body > header[root] > div[toc] > ul[toc] {
+        margin-top: 0;
+        padding: 10px;
+    }
+    body > header[root] > div[toc] > ul[toc] > li[entry=h1] {
+        padding: 20px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
+
+/*# sourceMappingURL=https://colbyn.github.io/school-notes/styling.fe1cf077.css.map */

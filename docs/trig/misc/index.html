@@ -263,15 +263,92 @@ function build_entries(entries) {
 var root_ul_node = document.querySelector("nav#side-nav");
 console.assert(root_ul_node);
 root_ul_node.appendChild(build_entries(menu));</script>
-        <div toc=""><ul toc=""><li entry="h1"><a href="#chapter-3%20%7C%20trigonometric%20identities%20and%20equations">Chapter 3 | Trigonometric Identities and Equations</a></li><li entry="h2"><a href="#%C2%A73.1-%7C%20verification%20of%20trigonometric%20identities">§3.1 | Verification of Trigonometric Identities</a></li><li entry="h2"><a href="#%C2%A73.2-%7C%20sum,%20difference,%20and%20cofunction%20identities">§3.2 | Sum, Difference, and Cofunction Identities</a></li><li entry="h3"><a href="#sum-and%20difference%20identities">Sum and Difference Identities</a></li><li entry="h3"><a href="#cofunction-identities">Cofunction Identities</a></li><li entry="h2"><a href="#%C2%A73.3-%7C%20double-%20and%20half-angle%20identities">§3.3 | Double- and Half-Angle Identities</a></li><li entry="h3"><a href="#double-angle-identities">Double-Angle Identities</a></li><li entry="h3"><a href="#half-angle-identities">Half-Angle Identities</a></li><li entry="h3"><a href="#power-reducing-identities">Power-Reducing Identities</a></li><li entry="h2"><a href="#%C2%A73.4-%7C%20identities%20involving%20the%20sum%20of%20trigonometric%20functions">§3.4 | Identities Involving the Sum of Trigonometric Functions</a></li><li entry="h3"><a href="#product-to-sum-identities">Product-to-Sum Identities</a></li><li entry="h3"><a href="#sum-to-product-identities">Sum-to-Product-Identities</a></li><li entry="h3"><a href="#miscellaneous">Miscellaneous</a></li><li entry="h2"><a href="#%C2%A73.5-%7C%20inverse%20trigonometric%20functions">§3.5 | Inverse Trigonometric Functions</a></li><li entry="h3"><a href="#definition-of%20stem:%5B%5Carcsin(x)%5D">Definition of stem:[\arcsin(x)]</a></li><li entry="h3"><a href="#definition-of%20stem:%5B%5Carccos(x)%5D">Definition of stem:[\arccos(x)]</a></li><li entry="h3"><a href="#inverse-reciprocal%20identities">Inverse Reciprocal Identities</a></li><li entry="h3"><a href="#other-inverse%20co-tangent%20identities">Other Inverse Co-Tangent Identities</a></li><li entry="h3"><a href="#composition-of%20trigonometric%20functions%20and%20their%20inverses">Composition of Trigonometric Functions and Their Inverses</a></li><li entry="h2"><a href="#%C2%A73.6-%7C%20trigonometric%20equations">§3.6 | Trigonometric Equations</a></li></ul></div>
+        <div toc=""><ul toc=""><li entry="h1"><a href="#miscellaneous">Miscellaneous</a></li><li entry="h2"><a href="#functional-utilities">Functional Utilities</a></li><li entry="h2"><a href="#unit-conversion">Unit Conversion</a></li><li entry="h3"><a href="#or-alternatively">Or Alternatively</a></li><li entry="h3"><a href="#for-example">For example</a></li><li entry="h2"><a href="#identities">Identities</a></li><li entry="h2"><a href="#tricks-using%20modular%20arithmetic">Tricks using modular arithmetic</a></li><li entry="h2"><a href="#pythagorean-identity%20notes">Pythagorean Identity Notes</a></li><li entry="h3"><a href="#given">Given</a></li><li entry="h3"><a href="#then-therefore">Then Therefore</a></li><li entry="h3"><a href="#likewise">Likewise</a></li><li entry="h2"><a href="#trigonometric-identities%20reference">Trigonometric Identities Reference</a></li><li entry="h3"><a href="#pythagorean-identities">Pythagorean Identities</a></li><li entry="h3"><a href="#sum-and%20difference%20identities">Sum and Difference Identities</a></li><li entry="h3"><a href="#cofunction-identities">Cofunction Identities</a></li><li entry="h3"><a href="#double-angle-identities">Double-Angle Identities</a></li><li entry="h3"><a href="#half-angle-identities">Half-Angle Identities</a></li><li entry="h3"><a href="#power-reducing-identities">Power-Reducing Identities</a></li><li entry="h3"><a href="#product-to-sum-identities">Product-to-Sum Identities</a></li><li entry="h3"><a href="#sum-to-product-identities">Sum-to-Product-Identities</a></li><li entry="h2"><a href="#properties-of%20trigonometric%20functions">Properties of Trigonometric Functions</a></li><li entry="h3"><a href="#domain-and%20range%20of%20trigonometric%20functions">Domain and Range of Trigonometric Functions</a></li></ul></div>
     </header>
-    <h1 id="chapter-3%20%7C%20trigonometric%20identities%20and%20equations">Chapter 3 | Trigonometric Identities and Equations</h1>
+    <h1 id="miscellaneous">Miscellaneous</h1>
 
-<h2 id="%C2%A73.1-%7C%20verification%20of%20trigonometric%20identities">§3.1 | Verification of Trigonometric Identities</h2>
-<h2 id="%C2%A73.2-%7C%20sum,%20difference,%20and%20cofunction%20identities">§3.2 | Sum, Difference, and Cofunction Identities</h2>
+<section class="note-block block"><h2 id="functional-utilities">Functional Utilities</h2><div block="" math-block="">$$\begin{equation}
+        \begin{split}
+        f \triangleleft x &= f(x) \\
+        x \triangleright f &= f(x)
+        \end{split}
+        \end{equation}$$</div><p>Think of the arrows as denoting the order of evaluation E.g. pass this term to the function on the left, or pass this term to the function on the right of the arrow. Essentially, this is useful for reducing parentheses.</p><p>For Example:</p><div block="" math-block="">$$\begin{equation}
+        \begin{split}
+        \sin \triangleleft \frac{4}{12}\tau \;\displaystyle{\text{rad}} &= -\frac{\sqrt{3}}{3} \\
+        \sin \left(\frac{4}{12}\tau \;\displaystyle{\text{rad}} \right) &= -\frac{\sqrt{3}}{3}
+        \end{split}
+        \end{equation}$$</div></section>
 
 
-<section class="note-block block"><h3 id="sum-and%20difference%20identities">Sum and Difference Identities</h3><p><small>Sometimes called the angle-sum identities.</small></p><div block="" math-block="">$$ \begin{equation}
+<section class="note-block block"><h2 id="unit-conversion">Unit Conversion</h2><div block="" math-block="">$$\begin{equation}
+        \begin{split}
+        \tau &= 2\pi = 360^{\circ} \\
+        \pi &= \frac{1}{2}\tau = 180^{\circ}
+        \end{split}
+        \end{equation}$$</div><div block="" math-block="">$$\begin{equation}
+        \begin{split}
+        1^{\circ} = \frac{1}{360} \tau \; {\displaystyle {\text{rad}}} \\
+        1 \; rad = \frac{1}{\tau} \cdot 360^{\circ}
+        \end{split}
+        \end{equation}$$</div><p>So therefore:</p><div block="" math-block="">$$\begin{equation}
+        \begin{split}
+        x^{\circ} = \frac{x}{360} \tau \; {\displaystyle {\text{rad}}} \\
+        x \; rad = \frac{x}{\tau} \cdot 360^{\circ}
+        \end{split}
+        \end{equation}$$</div><p>Take special note of the above. It essentially gives you a simple relation for conversion.</p><section class="note-block block"><h3 id="or-alternatively">Or Alternatively</h3><div block="" math-block="">$$\begin{equation}
+            \begin{split}
+            x^{\circ} = x \cdot \frac{\tau}{360} \; {\displaystyle {\text{rad}}} \\
+            x \; rad = x \cdot \frac{360^{\circ}}{\tau}
+            \end{split}
+            \end{equation}$$</div></section><section class="note-block block"><h3 id="for-example">For example</h3><div block="" math-block="">$$29^{\circ} = \frac{29}{360} \tau \; {\displaystyle {\text{rad}}}$$</div><p>Now you don't need to compute a degree to radian measure.</p><hr><p>Or when expressed in terms of <span inline="" math-inline="">\(\pi\)</span>:</p><div block="" math-block="">$$\begin{equation}
+            \begin{split}
+            29^{\circ} &= \frac{29}{360} \tau \; {\displaystyle {\text{rad}}} \\
+                &= \frac{29}{360} (2\pi) \; {\displaystyle {\text{rad}}} \\
+                &= \frac{29}{180} \pi \; {\displaystyle {\text{rad}}}
+            \end{split}
+            \end{equation}$$</div></section></section>
+
+
+
+<section class="note-block block"><h2 id="identities">Identities</h2></section>
+
+
+<section class="note-block block"><h2 id="tricks-using%20modular%20arithmetic">Tricks using modular arithmetic</h2><p>TODO</p></section>
+
+
+<section class="note-block block"><h2 id="pythagorean-identity%20notes">Pythagorean Identity Notes</h2><h3 id="given">Given</h3><div block="" math-block="">$$\begin{equation}
+        \begin{split}
+        \cos^2(\theta) + \sin^2(\theta) &= 1
+        \end{split}
+        \end{equation}$$</div><h3 id="then-therefore">Then Therefore</h3><div block="" math-block="">$$\begin{equation}
+        \begin{split}
+        \cos^2(\theta) + \sin^2(\theta) &= 1 \\
+        \sin^2(\theta) &= 1 - \cos^2(\theta) \\
+        \cos^2(\theta) &= 1 - \sin^2(\theta)
+        \end{split}
+        \end{equation}$$</div><h3 id="likewise">Likewise</h3><p>**From here the other two "Pythagorean Identities" can be easily derived:**</p><div block="" math-block="">$$\begin{equation}
+        \begin{split}
+        \frac{\sin^2(\theta)}{\sin^2(\theta)} &= 1 \\
+            &= \frac{1 - \cos^2(\theta)}{\sin^2(\theta)} \\
+            &= \frac{1}{\sin^2(\theta)} - \frac{\cos^2(\theta)}{\sin^2(\theta)} \\
+            &= \csc^2(\theta) - \cot^2(\theta)
+        \end{split}
+        \end{equation}$$</div><div block="" math-block="">$$\begin{equation}
+        \begin{split}
+        \frac{\cos^2(\theta)}{\cos^2(\theta)} &= 1 \\
+            &= \frac{1 - \sin^2(\theta)}{\cos^2(\theta)} \\
+            &= \frac{1}{\cos^2(\theta)} - \frac{\sin^2(\theta)}{\cos^2(\theta)} \\
+            &= \sec^2(\theta) - \tan^2(\theta)
+        \end{split}
+        \end{equation}$$</div></section>
+
+<section class="note-block block"><h2 id="trigonometric-identities%20reference">Trigonometric Identities Reference</h2><section class="note-block block"><h3 id="pythagorean-identities">Pythagorean Identities</h3><div block="" math-block="">$$\begin{equation}
+            \begin{split}
+            \cos^2(\theta) + \sin^2(\theta) &= 1 \\
+            \sec^2(\theta) - \tan^2(\theta) &= 1 \\
+            \csc^2(\theta) - \cot^2(\theta) &= 1
+            \end{split}
+            \end{equation}$$</div></section><section class="note-block block"><h3 id="sum-and%20difference%20identities">Sum and Difference Identities</h3><div block="" math-block="">$$ \begin{equation}
 \begin{split}
 
     \cos(\alpha - \beta) &= \cos(\alpha) \cdot \cos(\beta) + \sin(\alpha) \cdot \sin(\beta) \\
@@ -287,10 +364,7 @@ root_ul_node.appendChild(build_entries(menu));</script>
     \tan(\alpha + \beta) &= \frac{\tan(\alpha) + \tan(\beta)}{1 - \tan(\alpha) \cdot \tan(\beta)} \\
     \tan(\alpha - \beta) &= \frac{\tan(\alpha) - \tan(\beta)}{1 + \tan(\alpha) \cdot \tan(\beta)}
 \end{split}
-\end{equation} $$</div></section>
-
-
-<section class="note-block block"><h3 id="cofunction-identities">Cofunction Identities</h3><div block="" math-block="">$$ \begin{equation}
+\end{equation} $$</div></section><section class="note-block block"><h3 id="cofunction-identities">Cofunction Identities</h3><div block="" math-block="">$$ \begin{equation}
 \begin{split}
     \sin(\theta) &= \cos(\frac{1}{4}\tau - \theta) \\
     \cos(\theta) &= \sin(\frac{1}{4}\tau - \theta) \\
@@ -300,15 +374,7 @@ root_ul_node.appendChild(build_entries(menu));</script>
     \csc(\theta) &= \sec(\frac{1}{4}\tau - \theta) \\
     \sec(\theta) &= \csc(\frac{1}{4}\tau - \theta)
 \end{split}
-\end{equation} $$</div></section>
-
-<h2 id="%C2%A73.3-%7C%20double-%20and%20half-angle%20identities">§3.3 | Double- and Half-Angle Identities</h2>
-
-
-<section class="note-block block"><h3 id="double-angle-identities">Double-Angle Identities</h3><ul>
-        <li>**Remember for Exams.** The professor said this isn't given during the Exam, and that we need to know this, said this in the context of Double-Angle & Half-Angle Identities.</li>
-        <li>The **Double-Angle Identities** are easy to derive from the **Sum and Difference Identities**.</li>
-    </ul><div block="" math-block="">$$ \begin{equation}
+\end{equation} $$</div></section><section class="note-block block"><h3 id="double-angle-identities">Double-Angle Identities</h3><div block="" math-block="">$$ \begin{equation}
 \begin{split}
     \sin(2\alpha) &= 2\sin(\alpha)\cos(\alpha) \\
     \cos(2\alpha) &= \cos^2(\alpha) - \sin^2(\alpha) \\
@@ -317,12 +383,7 @@ root_ul_node.appendChild(build_entries(menu));</script>
     &\\
     \tan(2\alpha) &= \frac{2\tan(\alpha)}{1 - \tan^2(\alpha)}
 \end{split}
-\end{equation} $$</div></section>
-
-
-<section class="note-block block"><h3 id="half-angle-identities">Half-Angle Identities</h3><p>
-    **Remember for Exams.** The professor said this isn't given during the Exam, and that we need to know this, said this in the context of Double-Angle & Half-Angle Identities, she may have been talking about just the Double-Angle Identities.
-    </p><div block="" math-block="">$$ \begin{equation}
+\end{equation} $$</div></section><section class="note-block block"><h3 id="half-angle-identities">Half-Angle Identities</h3><div block="" math-block="">$$ \begin{equation}
 \begin{split}
     \sin \frac{\alpha}{2} &= \pm \sqrt{\frac{1 - \cos(\alpha)}{2}} \\
     \cos \frac{\alpha}{2} &= \pm \sqrt{\frac{1 + \cos(\alpha)}{2}} \\
@@ -330,11 +391,7 @@ root_ul_node.appendChild(build_entries(menu));</script>
         = \frac{sin(\alpha)}{1 + \cos(\alpha)}
         = \frac{1 - \cos(\alpha)}{sin(\alpha)}
 \end{split}
-\end{equation} $$</div><section warning="" class="note-block block"><p>
-    **The choice of the ± sign depends on the quadrant in which stem:[\frac{\alpha}{2}] lies.**
-    </p></section></section>
-
-<section class="note-block block"><h3 id="power-reducing-identities">Power-Reducing Identities</h3><div block="" math-block="">$$ \begin{equation}
+\end{equation} $$</div><section class="note-block block"><p>The choice of the plus or minus sign depends on the quadrant in which latexmath:[\frac{\alpha}{2}] lies.</p></section></section><section class="note-block block"><h3 id="power-reducing-identities">Power-Reducing Identities</h3><div block="" math-block="">$$ \begin{equation}
 \begin{split}
     \sin^2(\alpha) &= \frac{1 - \cos(2\alpha)}{2} \\
     &\\
@@ -342,119 +399,76 @@ root_ul_node.appendChild(build_entries(menu));</script>
     &\\
     \tan^2(\alpha) &= \frac{1 - \cos(2\alpha)}{1 + \cos(2\alpha)}
 \end{split}
-\end{equation} $$</div></section>
-
-<h2 id="%C2%A73.4-%7C%20identities%20involving%20the%20sum%20of%20trigonometric%20functions">§3.4 | Identities Involving the Sum of Trigonometric Functions</h2>
-
-<section class="note-block block"><h3 id="product-to-sum-identities">Product-to-Sum Identities</h3><div block="" math-block="">$$ \begin{equation}
+\end{equation} $$</div></section><section class="note-block block"><h3 id="product-to-sum-identities">Product-to-Sum Identities</h3><div block="" math-block="">$$ \begin{equation}
 \begin{split}
     \sin(\alpha) \cdot \cos(\beta) &= \frac{1}{2} \Big[ \sin(\alpha + \beta) + \sin(\alpha - \beta) \Big] \\
     \cos(\alpha) \cdot \sin(\beta) &= \frac{1}{2} \Big[ \sin(\alpha + \beta) - \sin(\alpha - \beta) \Big] \\
     \cos(\alpha) \cdot \cos(\beta) &= \frac{1}{2} \Big[ \cos(\alpha + \beta) + \cos(\alpha - \beta) \Big] \\
     \sin(\alpha) \cdot \sin(\beta) &= \frac{1}{2} \Big[ \cos(\alpha - \beta) - \cos(\alpha + \beta) \Big]
 \end{split}
-\end{equation} $$</div></section>
-
-<section class="note-block block"><h3 id="sum-to-product-identities">Sum-to-Product-Identities</h3><div block="" math-block="">$$ \begin{equation}
+\end{equation} $$</div></section><section class="note-block block"><h3 id="sum-to-product-identities">Sum-to-Product-Identities</h3><div block="" math-block="">$$ \begin{equation}
 \begin{split}
     \sin(x) + \sin(y) &= 2 \cdot \sin\left( \frac{x + y}{2} \right) \cdot \cos\left( \frac{x - y}{2} \right) \\
     \cos(x) + \cos(y) &= 2 \cdot \cos\left( \frac{x + y}{2} \right) \cdot \cos\left( \frac{x - y}{2} \right) \\
     \sin(x) - \sin(y) &= 2 \cdot \cos\left( \frac{x + y}{2} \right) \cdot \sin\left( \frac{x - y}{2} \right) \\
     \cos(x) - \cos(y) &= -2 \sin \cos\left( \frac{x + y}{2} \right) \cdot \sin\left( \frac{x - y}{2} \right)
 \end{split}
-\end{equation} $$</div></section>
+\end{equation} $$</div></section></section>
 
-<section class="note-block block"><h3 id="miscellaneous">Miscellaneous</h3><div block="" math-block="">$$\cos^2 x - \sin^2 x = \cos (2x)$$</div></section>
+<section class="note-block block"><h2 id="properties-of%20trigonometric%20functions">Properties of Trigonometric Functions</h2><section class="note-block block"><h3 id="domain-and%20range%20of%20trigonometric%20functions">Domain and Range of Trigonometric Functions</h3><table>
+            <thead>
+                <tr>
+                    <th>Function</th>
+                    <th>Domain</th>
+                    <th>Range</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span inline="" math-inline="">\(\sin\)</span></td>
+                    <td><span inline="" math-inline="">\((-\infty,\infty)\)</span></td>
+                    <td><span inline="" math-inline="">\(\lbrack -1, 1 \rbrack\)</span></td>
+                </tr>
+                <tr>
+                    <td><span inline="" math-inline="">\(\cos\)</span></td>
+                    <td><span inline="" math-inline="">\((-\infty,\infty)\)</span></td>
+                    <td><span inline="" math-inline="">\(\lbrack -1, 1 \rbrack\)</span></td>
+                </tr>
+                <tr>
+                    <td><span inline="" math-inline="">\(\tan\)</span></td>
+                    <td></td>
+                    <td><span inline="" math-inline="">\((-\infty,\infty)\)</span></td>
+                </tr>
+            </tbody>
+        </table></section></section>
 
-<h2 id="%C2%A73.5-%7C%20inverse%20trigonometric%20functions">§3.5 | Inverse Trigonometric Functions</h2>
+<!-- .Domain and Range of Trigonometric Functions
+|===
+|Function|Domain|Range
 
-<img block="" src="https://mathbooks.unl.edu/PreCalculus/images/imagesChap13/range-inverse-trig.png">
+|latexmath:[\sin]|latexmath:[(-\infty,\infty)]|latexmath:[\lbrack -1, 1 \rbrack]
+|latexmath:[\cos]|latexmath:[(-\infty,\infty)]|latexmath:[\lbrack -1, 1 \rbrack]
+|latexmath:[\tan]||latexmath:[(-\infty,\infty)]
+|===
 
+.Domain and Range of Reciprocal Trigonometric Functions
+|===
+|Function|Domain|Range
 
-<section class="note-block block"><h3 id="definition-of%20stem:%5B%5Carcsin(x)%5D">Definition of stem:[\arcsin(x)]</h3><p><span inline="" math-inline="">\(y = \arcsin(x)\)</span>
-    if and only if
-    <span inline="" math-inline="">\(x = \sin(y)\)</span>
-    where
-    <span inline="" math-inline="">\(-1 \leq x \leq 1 \\
-        -\frac{1}{4}\tau \leq y \leq \frac{1}{4}\tau\)</span>
+|latexmath:[\csc] | | latexmath:[(-\infty,-1\rbrack\cup\lbrack 1, \infty)]
+|latexmath:[\sec] | | latexmath:[(-\infty,-1\rbrack\cup\lbrack 1, \infty)]
+|latexmath:[\cot]| | latexmath:[(-\infty,\infty)]
+|===
 
-    The graph of stem:[y=\sin\;x] with stem:[x] restricted to to stem:[\left\lbrack -\frac{\tau}{4},\frac{\tau}{4} \right\rbrack]:
-    </p><img block="" src="https://colbyn.github.io/colbyns-math-notes/trig-class/inverse-sin-graph.svg"></section>
+.Period of Trigonometric Functions
+|===
+|Function|Period|Reciprocal Function|Period
 
-<section class="note-block block"><h3 id="definition-of%20stem:%5B%5Carccos(x)%5D">Definition of stem:[\arccos(x)]</h3><p><span inline="" math-inline="">\(y = \arccos(x)\)</span>
-    if and only if
-    <span inline="" math-inline="">\(x = \cos(y)\)</span>
-    where
-    <span inline="" math-inline="">\(-1 \leq x \leq 1 \\
-        0 \leq y \leq \pi\)</span>
+|latexmath:[\sin]|latexmath:[\tau]|latexmath:[\csc]|latexmath:[\tau]
+|latexmath:[\cos]|latexmath:[\tau]|latexmath:[\sec]|latexmath:[\tau]
+|latexmath:[\tan]|latexmath:[\frac{1}{2}\tau]|latexmath:[\cot]|latexmath:[\frac{1}{2}\tau]
+|===
+ -->
 
-    The graph of stem:[y=\cos\;x] with stem:[x] restricted to to stem:[\left\lbrack 0,\frac{1}{2}\tau \right\rbrack]:
-
-    </p><img block="" src="https://colbyn.github.io/colbyns-math-notes/trig-class/inverse-cos-graph.svg"></section>
-
-<section warning="" class="note-block block"><p>
-    The choice of ranges for stem:[\arcsin(x)] and stem:[\arccos(x)] is not universally accepted.
-</p></section>
-
-
-<section class="note-block block"><h3 id="inverse-reciprocal%20identities">Inverse Reciprocal Identities</h3><section class="note-block block"><div block="" math-block="">$$ \begin{equation}
-\begin{aligned}
-    \sin^{-1} \left(\frac{1}{x}\right) &= \csc^{-1}(x) & \text{if}\; & -1 \leq x \leq 1 \\
-    &\\
-    \cos^{-1} \left(\frac{1}{x}\right) &= \sec^{-1}(x) & \text{if}\; & -1 \leq x \leq 1 \\
-    &\\
-    \frac{\pi}{2} - \tan^{-1}(x) &= \cot^{-1}(x) & \text{if}\; & x \in \mathbf{R} \\
-\end{aligned}
-\end{equation} $$</div><hr><div block="" math-block="">$$\begin{equation}
-            \begin{split}
-                \csc^{-1}(x) &= \sin^{-1} \left( \frac{1}{x} \right) &\;\;\; \text{if}\; & -1 \leq x \leq 1 \\
-                &\\
-                \sec^{-1}(x) &= \cos^{-1} \left( \frac{1}{x} \right) &\;\;\; \text{if}\; & -1 \leq x \leq 1 \\
-                &\\
-                \cot^{-1}(x) &= \frac{\pi}{2} - \tan^{-1}(x) &\;\;\; \text{if}\; &  x \in \mathbf{R} \\
-            \end{split}
-            \end{equation}$$</div></section><section class="note-block block"><h3 id="other-inverse%20co-tangent%20identities">Other Inverse Co-Tangent Identities</h3><div block="" math-block="">$$\begin{equation}
-            \begin{split}
-                \cot^{-1}(x) = \tan^{-1}\left(\frac{1}{x}\right) &\;\;\; \text{if}\; & x \gt 0
-            \end{split}
-            \end{equation}$$</div></section></section>
-
-<section class="note-block block"><h3 id="composition-of%20trigonometric%20functions%20and%20their%20inverses">Composition of Trigonometric Functions and Their Inverses</h3><div block="" math-block="">$$ \begin{equation}
-\begin{aligned}
-\sin \circ \arcsin \triangleleft \; x &= x & \text{if}\; & -1 \leq x \leq 1 \\
-&\\
-\cos \circ \arccos \triangleleft \; x &= x & \text{if}\; & -1 \leq x \leq 1 \\
-&\\
-\tan \circ \arctan \triangleleft \; x &= x & \text{if}\; & x \in \mathbf{R} \\
-&\\
-\arcsin \circ \sin \triangleleft \; x &= x & \text{if}\; & -\frac{1}{4}\tau \leq x \leq \frac{1}{4}\tau \\
-&\\
-\arccos \circ \cos \triangleleft \; x &= x & \text{if}\; & 0 \leq x \leq \pi \\
-&\\
-\arctan \circ \tan \triangleleft \; x &= x & \text{if}\; & -\frac{1}{4}\tau \leq x \leq \frac{1}{4}\tau
-\end{aligned}
-\end{equation} $$</div><p><small>Where stem:[x \in \mathbf{R}] means if x is any real number.</small></p></section>
-
-
-<h2 id="%C2%A73.6-%7C%20trigonometric%20equations">§3.6 | Trigonometric Equations</h2>
-
-<p>It's just like solving for quadratic equations:</p>
-
-<div block="" math-block="">$$\begin{equation}
-\begin{split}
-    4\sin x \cdot \cos x - 2\sqrt{3}\sin x - 2\sqrt{2}\cos x + \sqrt{6} &= 0 \\
-    2\sin x \left( 2\cos x - \sqrt{3} \right) - \sqrt{2} \left( 2\cos x - \sqrt{3} \right) &= 0 \\
-    \left(2\sin x-\sqrt{2} \right) \left(2\cos x - \sqrt{3}\right) &= 0 \\
-    &\\
-    2\sin x - \sqrt{2} &= 0 \\
-    2\cos x - \sqrt{3} &= 0 \\
-    &\\
-    x &= \frac{3}{4}\pi, \frac{1}{4}\pi, \frac{1}{6}\pi, \frac{11}{6}\pi
-\end{split}
-\end{equation}$$</div>
-
-
-
-<div style="height: 400px"></div>
 </body>
 </html>

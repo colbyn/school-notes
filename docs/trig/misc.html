@@ -1,0 +1,204 @@
+<h1 id="miscellaneous">Miscellaneous</h1>
+
+<section class="note-block block"><h2 id="functional-utilities">Functional Utilities</h2><div block="" math-block="">$$\begin{equation}
+        \begin{split}
+        f \triangleleft x &= f(x) \\
+        x \triangleright f &= f(x)
+        \end{split}
+        \end{equation}$$</div><p>Think of the arrows as denoting the order of evaluation E.g. pass this term to the function on the left, or pass this term to the function on the right of the arrow. Essentially, this is useful for reducing parentheses.</p><p>For Example:</p><div block="" math-block="">$$\begin{equation}
+        \begin{split}
+        \sin \triangleleft \frac{4}{12}\tau \;\displaystyle{\text{rad}} &= -\frac{\sqrt{3}}{3} \\
+        \sin \left(\frac{4}{12}\tau \;\displaystyle{\text{rad}} \right) &= -\frac{\sqrt{3}}{3}
+        \end{split}
+        \end{equation}$$</div></section>
+
+
+<section class="note-block block"><h2 id="unit-conversion">Unit Conversion</h2><div block="" math-block="">$$\begin{equation}
+        \begin{split}
+        \tau &= 2\pi = 360^{\circ} \\
+        \pi &= \frac{1}{2}\tau = 180^{\circ}
+        \end{split}
+        \end{equation}$$</div><div block="" math-block="">$$\begin{equation}
+        \begin{split}
+        1^{\circ} = \frac{1}{360} \tau \; {\displaystyle {\text{rad}}} \\
+        1 \; rad = \frac{1}{\tau} \cdot 360^{\circ}
+        \end{split}
+        \end{equation}$$</div><p>So therefore:</p><div block="" math-block="">$$\begin{equation}
+        \begin{split}
+        x^{\circ} = \frac{x}{360} \tau \; {\displaystyle {\text{rad}}} \\
+        x \; rad = \frac{x}{\tau} \cdot 360^{\circ}
+        \end{split}
+        \end{equation}$$</div><p>Take special note of the above. It essentially gives you a simple relation for conversion.</p><section class="note-block block"><h3 id="or-alternatively">Or Alternatively</h3><div block="" math-block="">$$\begin{equation}
+            \begin{split}
+            x^{\circ} = x \cdot \frac{\tau}{360} \; {\displaystyle {\text{rad}}} \\
+            x \; rad = x \cdot \frac{360^{\circ}}{\tau}
+            \end{split}
+            \end{equation}$$</div></section><section class="note-block block"><h3 id="for-example">For example</h3><div block="" math-block="">$$29^{\circ} = \frac{29}{360} \tau \; {\displaystyle {\text{rad}}}$$</div><p>Now you don't need to compute a degree to radian measure.</p><hr><p>Or when expressed in terms of <span inline="" math-inline="">\(\pi\)</span>:</p><div block="" math-block="">$$\begin{equation}
+            \begin{split}
+            29^{\circ} &= \frac{29}{360} \tau \; {\displaystyle {\text{rad}}} \\
+                &= \frac{29}{360} (2\pi) \; {\displaystyle {\text{rad}}} \\
+                &= \frac{29}{180} \pi \; {\displaystyle {\text{rad}}}
+            \end{split}
+            \end{equation}$$</div></section></section>
+
+
+
+<section class="note-block block"><h2 id="identities">Identities</h2></section>
+
+
+<section class="note-block block"><h2 id="tricks-using%20modular%20arithmetic">Tricks using modular arithmetic</h2><p>TODO</p></section>
+
+
+<section class="note-block block"><h2 id="pythagorean-identity%20notes">Pythagorean Identity Notes</h2><h3 id="given">Given</h3><div block="" math-block="">$$\begin{equation}
+        \begin{split}
+        \cos^2(\theta) + \sin^2(\theta) &= 1
+        \end{split}
+        \end{equation}$$</div><h3 id="then-therefore">Then Therefore</h3><div block="" math-block="">$$\begin{equation}
+        \begin{split}
+        \cos^2(\theta) + \sin^2(\theta) &= 1 \\
+        \sin^2(\theta) &= 1 - \cos^2(\theta) \\
+        \cos^2(\theta) &= 1 - \sin^2(\theta)
+        \end{split}
+        \end{equation}$$</div><h3 id="likewise">Likewise</h3><p>**From here the other two "Pythagorean Identities" can be easily derived:**</p><div block="" math-block="">$$\begin{equation}
+        \begin{split}
+        \frac{\sin^2(\theta)}{\sin^2(\theta)} &= 1 \\
+            &= \frac{1 - \cos^2(\theta)}{\sin^2(\theta)} \\
+            &= \frac{1}{\sin^2(\theta)} - \frac{\cos^2(\theta)}{\sin^2(\theta)} \\
+            &= \csc^2(\theta) - \cot^2(\theta)
+        \end{split}
+        \end{equation}$$</div><div block="" math-block="">$$\begin{equation}
+        \begin{split}
+        \frac{\cos^2(\theta)}{\cos^2(\theta)} &= 1 \\
+            &= \frac{1 - \sin^2(\theta)}{\cos^2(\theta)} \\
+            &= \frac{1}{\cos^2(\theta)} - \frac{\sin^2(\theta)}{\cos^2(\theta)} \\
+            &= \sec^2(\theta) - \tan^2(\theta)
+        \end{split}
+        \end{equation}$$</div></section>
+
+<section class="note-block block"><h2 id="trigonometric-identities%20reference">Trigonometric Identities Reference</h2><section class="note-block block"><h3 id="pythagorean-identities">Pythagorean Identities</h3><div block="" math-block="">$$\begin{equation}
+            \begin{split}
+            \cos^2(\theta) + \sin^2(\theta) &= 1 \\
+            \sec^2(\theta) - \tan^2(\theta) &= 1 \\
+            \csc^2(\theta) - \cot^2(\theta) &= 1
+            \end{split}
+            \end{equation}$$</div></section><section class="note-block block"><h3 id="sum-and%20difference%20identities">Sum and Difference Identities</h3><div block="" math-block="">$$ \begin{equation}
+\begin{split}
+
+    \cos(\alpha - \beta) &= \cos(\alpha) \cdot \cos(\beta) + \sin(\alpha) \cdot \sin(\beta) \\
+    \cos(\alpha + \beta) &= \cos(\alpha) \cdot \cos(\beta) - \sin(\alpha) \cdot \sin(\beta) \\
+
+    &\\
+
+    \sin(\alpha - \beta) &= \sin(\alpha) \cdot \cos(\beta) - \cos(\alpha) \cdot \sin(\beta) \\
+    \sin(\alpha + \beta) &= \sin(\alpha) \cdot \cos(\beta) + \cos(\alpha) \cdot \sin(\beta) \\
+
+    &\\
+
+    \tan(\alpha + \beta) &= \frac{\tan(\alpha) + \tan(\beta)}{1 - \tan(\alpha) \cdot \tan(\beta)} \\
+    \tan(\alpha - \beta) &= \frac{\tan(\alpha) - \tan(\beta)}{1 + \tan(\alpha) \cdot \tan(\beta)}
+\end{split}
+\end{equation} $$</div></section><section class="note-block block"><h3 id="cofunction-identities">Cofunction Identities</h3><div block="" math-block="">$$ \begin{equation}
+\begin{split}
+    \sin(\theta) &= \cos(\frac{1}{4}\tau - \theta) \\
+    \cos(\theta) &= \sin(\frac{1}{4}\tau - \theta) \\
+    \tan(\theta) &= \cot(\frac{1}{4}\tau - \theta) \\
+    &\\
+    \cot(\theta) &= \tan(\frac{1}{4}\tau - \theta) \\
+    \csc(\theta) &= \sec(\frac{1}{4}\tau - \theta) \\
+    \sec(\theta) &= \csc(\frac{1}{4}\tau - \theta)
+\end{split}
+\end{equation} $$</div></section><section class="note-block block"><h3 id="double-angle-identities">Double-Angle Identities</h3><div block="" math-block="">$$ \begin{equation}
+\begin{split}
+    \sin(2\alpha) &= 2\sin(\alpha)\cos(\alpha) \\
+    \cos(2\alpha) &= \cos^2(\alpha) - \sin^2(\alpha) \\
+                  &= 1 - 2\sin^2(\alpha) \\
+                  &= 2\cos^2(\alpha) - 1 \\
+    &\\
+    \tan(2\alpha) &= \frac{2\tan(\alpha)}{1 - \tan^2(\alpha)}
+\end{split}
+\end{equation} $$</div></section><section class="note-block block"><h3 id="half-angle-identities">Half-Angle Identities</h3><div block="" math-block="">$$ \begin{equation}
+\begin{split}
+    \sin \frac{\alpha}{2} &= \pm \sqrt{\frac{1 - \cos(\alpha)}{2}} \\
+    \cos \frac{\alpha}{2} &= \pm \sqrt{\frac{1 + \cos(\alpha)}{2}} \\
+    \tan \frac{\alpha}{2} &= \pm \sqrt{\frac{1 - \cos(\alpha)}{1 + \cos(\alpha)}}
+        = \frac{sin(\alpha)}{1 + \cos(\alpha)}
+        = \frac{1 - \cos(\alpha)}{sin(\alpha)}
+\end{split}
+\end{equation} $$</div><section class="note-block block"><p>The choice of the plus or minus sign depends on the quadrant in which latexmath:[\frac{\alpha}{2}] lies.</p></section></section><section class="note-block block"><h3 id="power-reducing-identities">Power-Reducing Identities</h3><div block="" math-block="">$$ \begin{equation}
+\begin{split}
+    \sin^2(\alpha) &= \frac{1 - \cos(2\alpha)}{2} \\
+    &\\
+    \cos^2(\alpha) &= \frac{1 + \cos(2\alpha)}{2} \\
+    &\\
+    \tan^2(\alpha) &= \frac{1 - \cos(2\alpha)}{1 + \cos(2\alpha)}
+\end{split}
+\end{equation} $$</div></section><section class="note-block block"><h3 id="product-to-sum-identities">Product-to-Sum Identities</h3><div block="" math-block="">$$ \begin{equation}
+\begin{split}
+    \sin(\alpha) \cdot \cos(\beta) &= \frac{1}{2} \Big[ \sin(\alpha + \beta) + \sin(\alpha - \beta) \Big] \\
+    \cos(\alpha) \cdot \sin(\beta) &= \frac{1}{2} \Big[ \sin(\alpha + \beta) - \sin(\alpha - \beta) \Big] \\
+    \cos(\alpha) \cdot \cos(\beta) &= \frac{1}{2} \Big[ \cos(\alpha + \beta) + \cos(\alpha - \beta) \Big] \\
+    \sin(\alpha) \cdot \sin(\beta) &= \frac{1}{2} \Big[ \cos(\alpha - \beta) - \cos(\alpha + \beta) \Big]
+\end{split}
+\end{equation} $$</div></section><section class="note-block block"><h3 id="sum-to-product-identities">Sum-to-Product-Identities</h3><div block="" math-block="">$$ \begin{equation}
+\begin{split}
+    \sin(x) + \sin(y) &= 2 \cdot \sin\left( \frac{x + y}{2} \right) \cdot \cos\left( \frac{x - y}{2} \right) \\
+    \cos(x) + \cos(y) &= 2 \cdot \cos\left( \frac{x + y}{2} \right) \cdot \cos\left( \frac{x - y}{2} \right) \\
+    \sin(x) - \sin(y) &= 2 \cdot \cos\left( \frac{x + y}{2} \right) \cdot \sin\left( \frac{x - y}{2} \right) \\
+    \cos(x) - \cos(y) &= -2 \sin \cos\left( \frac{x + y}{2} \right) \cdot \sin\left( \frac{x - y}{2} \right)
+\end{split}
+\end{equation} $$</div></section></section>
+
+<section class="note-block block"><h2 id="properties-of%20trigonometric%20functions">Properties of Trigonometric Functions</h2><section class="note-block block"><h3 id="domain-and%20range%20of%20trigonometric%20functions">Domain and Range of Trigonometric Functions</h3><table>
+            <thead>
+                <tr>
+                    <th>Function</th>
+                    <th>Domain</th>
+                    <th>Range</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span inline="" math-inline="">\(\sin\)</span></td>
+                    <td><span inline="" math-inline="">\((-\infty,\infty)\)</span></td>
+                    <td><span inline="" math-inline="">\(\lbrack -1, 1 \rbrack\)</span></td>
+                </tr>
+                <tr>
+                    <td><span inline="" math-inline="">\(\cos\)</span></td>
+                    <td><span inline="" math-inline="">\((-\infty,\infty)\)</span></td>
+                    <td><span inline="" math-inline="">\(\lbrack -1, 1 \rbrack\)</span></td>
+                </tr>
+                <tr>
+                    <td><span inline="" math-inline="">\(\tan\)</span></td>
+                    <td></td>
+                    <td><span inline="" math-inline="">\((-\infty,\infty)\)</span></td>
+                </tr>
+            </tbody>
+        </table></section></section>
+
+<!-- .Domain and Range of Trigonometric Functions
+|===
+|Function|Domain|Range
+
+|latexmath:[\sin]|latexmath:[(-\infty,\infty)]|latexmath:[\lbrack -1, 1 \rbrack]
+|latexmath:[\cos]|latexmath:[(-\infty,\infty)]|latexmath:[\lbrack -1, 1 \rbrack]
+|latexmath:[\tan]||latexmath:[(-\infty,\infty)]
+|===
+
+.Domain and Range of Reciprocal Trigonometric Functions
+|===
+|Function|Domain|Range
+
+|latexmath:[\csc] | | latexmath:[(-\infty,-1\rbrack\cup\lbrack 1, \infty)]
+|latexmath:[\sec] | | latexmath:[(-\infty,-1\rbrack\cup\lbrack 1, \infty)]
+|latexmath:[\cot]| | latexmath:[(-\infty,\infty)]
+|===
+
+.Period of Trigonometric Functions
+|===
+|Function|Period|Reciprocal Function|Period
+
+|latexmath:[\sin]|latexmath:[\tau]|latexmath:[\csc]|latexmath:[\tau]
+|latexmath:[\cos]|latexmath:[\tau]|latexmath:[\sec]|latexmath:[\tau]
+|latexmath:[\tan]|latexmath:[\frac{1}{2}\tau]|latexmath:[\cot]|latexmath:[\frac{1}{2}\tau]
+|===
+ -->
