@@ -138,7 +138,7 @@ div[toc] > ul[toc] {
 
 div[toc] > ul[toc] > li[entry=h1] {
     font-size: 1.3em;
-    border-bottom: 2px solid #676767;
+    border-bottom: 2px solid #cccccc;
 }
 div[toc] > ul[toc] > li[entry=h2] {
     font-size: 1.1em;
@@ -241,6 +241,8 @@ body > header[root] > * {
     body > header[root] {
         flex-direction: row;
         padding: 0;
+        border-bottom: none;
+        box-shadow: 0px 3px 4px #d8d8d8;
     }
     body > header[root] > nav#side-nav {
         width: 100%;
@@ -305,10 +307,9 @@ body > header[root] > * {
         padding: 10px;
     }
     body > header[root] > div[toc] > ul[toc] > li[entry=h1] {
-        padding: 20px;
         font-weight: 600;
         font-size: 20px;
     }
 }
 
-/*# sourceMappingURL=https://colbyn.github.io/school-notes/styling.fe1cf077.css.map */
+/*# sourceMappingURL=https://colbyn.github.io/school-notes/styling.567a0a18.css.map */
