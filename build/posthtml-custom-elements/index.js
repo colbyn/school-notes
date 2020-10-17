@@ -411,7 +411,7 @@ function geogebra(tree) {
                 "showMenuBar": false,
                 "showScreenshot": false,
                 "showTutorialLink": false,
-                "borderColor": false,
+                "borderColor": "#FFFFFF",
                 "showResetIcon": false,
                 "enableUndoRedo": false,
                 "enableLabelDrags": false,
@@ -501,8 +501,13 @@ function desmos(tree) {
                 expressions: ${setup.show_expressions},
                 lockViewport: ${setup.lockViewport},
                 settingsMenu: false,
+                border: false,
+                xAxisNumbers: ${setup.xAxisNumbers},
+                yAxisNumbers: ${setup.yAxisNumbers},
+                showGrid: ${setup.showGrid},
             };
             var calculator = Desmos.GraphingCalculator(elt, options);
+            ${setup.math_bounds}
             for (cmd of ${JSON.stringify(setup.commands)}) {
                 calculator.setExpression(cmd);
             }
@@ -515,6 +520,11 @@ function desmos(tree) {
         let height = "500px";
         let lockViewport = true;
         let show_expressions = true;
+        let math_bounds = null;
+        let errors = [];
+        let xAxisNumbers = true;
+        let yAxisNumbers = true;
+        let showGrid = true;
         if (!('attrs' in node)) {
             node.attrs = {};
         }
@@ -530,8 +540,30 @@ function desmos(tree) {
         if (has_attr(node, 'controls')) {
             show_expressions = node.attrs.controls;
         }
+        if (has_attr(node, 'math-bounds') && node.attrs['math-bounds'] !== undefined) {
+            const bounds = node.attrs['math-bounds'];
+            try {
+                math_bounds = `calculator.setMathBounds(${inspect(JSON.parse(bounds))});`;
+            }
+            catch(e) {
+                console.error('DESMOS HELPER: invalid math-bounds:', bounds);
+                console.error(e);
+                errors.push(`${e}`);
+                math_bounds = `let _ = null;`;
+            }
+        } else {
+            math_bounds = `let _ = undefined;`;
+        }
+        if (has_attr(node, 'x-axis-numbers') && node.attrs['x-axis-numbers'] !== undefined) {
+            xAxisNumbers = node.attrs['x-axis-numbers'];
+        }
+        if (has_attr(node, 'y-axis-numbers') && node.attrs['y-axis-numbers'] !== undefined) {
+            yAxisNumbers = node.attrs['y-axis-numbers'];
+        }
+        if (has_attr(node, 'show-grid') && node.attrs['show-grid'] !== undefined) {
+            showGrid = node.attrs['show-grid'];
+        }
         let commands = [];
-        let errors = [];
         for (child of node.content) {
             const get_text = () => {
                 let txts = [];
@@ -554,12 +586,25 @@ function desmos(tree) {
                 }
             }
             if (child.tag && child.tag === 'expr') {
-                let id = null;
-                let txt = get_text();
+                let config = {};
+                config.latex = get_text();
                 if (child.attrs && 'id' in child.attrs) {
-                    id = child.attrs.id;
+                    config.id = child.attrs.id;
                 }
-                commands.push({latex: txt, id: id});
+                if (has_attr(child, 'label') && (child.attrs.label !== undefined)) {
+                    let label = child.attrs.label;
+                    config.label = label;
+                    config.showLabel = true;
+                }
+                if (has_attr(child, 'label-orientations') && (child.attrs['label-orientations'] !== undefined)) {
+                    let label_orientations = child.attrs['label-orientations'];
+                    config['labelOrientation'] = label_orientations;
+                }
+                if (has_attr(child, 'label-size') && (child.attrs['label-size'] !== undefined)) {
+                    let labelSize = child.attrs['label-size'];
+                    config['labelSize'] = labelSize;
+                }
+                commands.push(config);
             }
         }
         const render_errors = () => {
@@ -575,6 +620,10 @@ function desmos(tree) {
             height: height,
             lockViewport: lockViewport,
             show_expressions, show_expressions,
+            math_bounds: math_bounds,
+            xAxisNumbers: xAxisNumbers,
+            yAxisNumbers: yAxisNumbers,
+            showGrid: showGrid,
         });
         node.tag = "div";
         node.attrs['block'] = '';
