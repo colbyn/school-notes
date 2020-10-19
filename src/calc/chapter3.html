@@ -33,11 +33,26 @@
     If f has a local maximum or minimum at c, then c is a critical number of f.
 </note>
 <h3>Critical Number</h3>
-<p>A critical number of a function <tex>f</tex> is a number <tex>c</tex> in the domain of <tex>f</tex> such that either <texf^\prime(c) = 0></tex> or <tex>f^\prime(c)</tex> does not exist.</p>
-<note>
-* *Critical numbers* of <tex>f</tex> occur when <tex>f^\prime(c) = 0</tex>, or when <tex>f^\prime(c) = \mathrm{undefined}</tex>.
-* Not every critical number gives rise to a maximum or a minimum.
+<ul>
+    <li>Critical numbers of <tex>f</tex> occur when <tex>f^\prime(c) = 0</tex>, or when <tex>f^\prime(c) = \mathrm{undefined}</tex>.</li>
+    <li>Not every critical number gives rise to a maximum or a minimum.</li>
+</ul>
+<note no-title>
+    <p>Critical numbers include when <tex>f^\prime(x) = \text{undefined}</tex>, <b>but, <tex>f(c)</tex> must be defined</b>.</p>
+        <p>For example, consider the following function:</p>
+        <tex block>
+            \begin{equation}
+            \begin{split}
+                f(x) &= \frac{x + 1}{x - 3} \\
+                f^\prime(x) &= -4 \cdot \frac{}{(x - 3)^2} \\
+            \end{split}
+            \end{equation}
+        </tex>
+        <p><b>While <tex>f^\prime(x)</tex> is undefined at <tex>x = 3</tex>, <tex>f(3)</tex> is likewise undefined, therefore, <tex>x = 3</tex> is not a critical number.</b></p>
+        <p>TODO: double check this...</p>
+        <p>Also points where <tex>f(x) = \text{undefined}</tex> and where <tex>f^\prime(x) = \text{undefined}</tex> is still useful for calculating other details such as intervals of increase or decrease.</p>
 </note>
+<p>A critical number of a function <tex>f</tex> is a number <tex>c</tex> in the domain of <tex>f</tex> such that either <texf^\prime(c) = 0></tex> or <tex>f^\prime(c)</tex> does not exist.</p>
 <p>To find an absolute maximum or minimum of a continuous function on a closed interval, we note that either it is local [in which case it occurs at a critical number by (7)] or it occurs at an endpoint of the interval, as we see from the examples in Figure 8. Thus the following three-step procedure always works. **See The Closed Interval Method.**</p>
 <h3>The Closed Interval Method</h3>
 <note>
@@ -457,9 +472,7 @@ If the graph of f lies above all of its tangents on an interval I, then it is ca
         Sketch asymptotes as dashed lines. Plot intercepts, critical points, and inflection points. Draw a curve through these points which is consistent with the information found in the previous parts.
     </note>
 </note>
-
 <h3>Miscellaneous</h3>
-
 <note>
     <h4>First and second derivative for curve shape</h4>
     <note>
@@ -476,6 +489,119 @@ If the graph of f lies above all of its tangents on an interval I, then it is ca
         <note>This process works for asymptotes as well, such as those from rational functions.</note>
     </note>
 </note>
+<note>
+    <h4>Are the following graphs a function of <tex>x^2</tex>?</h4>
+    <note no-title>
+        <desmos
+            height='200px'
+            width='200px'
+            math-bounds='{"left": -3, "right": 3, "top": 3, "bottom": -3}'
+            controls='false'
+            lock='true'
+            x-axis-numbers='false'
+            y-axis-numbers='false'
+            show-grid='false'>
+            <expr>y = x^4-3x^2+1</expr>
+        </desmos>
+        <p>Well we know that the derivative of <tex>x^2</tex> is <tex>2x</tex>, so therefore:</p>
+        <ul>
+            <li>The curve of <b>always falling</b> for <b>negative values</b> of <tex>x</tex>.</li>
+            <li>The curve of <b>always rising</b> for <b>positive values</b> of <tex>x</tex>.</li>
+        </ul>
+        <p>So therefore, the above graph is not a function of <tex>x^2</tex>.</p>
+    </note>
+    <note no-title>
+        <desmos
+            height='200px'
+            width='200px'
+            math-bounds='{"left": -1, "right": 1, "top": 1, "bottom": -1}'
+            controls='false'
+            lock='true'
+            x-axis-numbers='false'
+            y-axis-numbers='false'
+            show-grid='false'>
+            <expr>y = -\frac{\cos(3x)+2}{2}+1.5</expr>
+        </desmos>
+        <p>This graph satisfies the aforementioned constraints of:</p>
+        <ul>
+            <li>The curve of <b>always falling</b> for <b>negative values</b> of <tex>x</tex>.</li>
+            <li>The curve of <b>always rising</b> for <b>positive values</b> of <tex>x</tex>.</li>
+        </ul>
+        <p>But for the same reasons, it is not a function of <tex>x^2</tex>.</p>
+    </note>
+</note>
+<h3>Summary to the 'Summary of Curve Sketching'</h3>
+<h4>Functions</h4>
+<dl>
+    <dt><tex>f(x)</tex></dt>
+    <dd>Defines: position</dd>
+    <dd><tex>\pm</tex> signs denote negative/positive y values.</dd>
+    <dd>Zeros (or roots) denote intercepts (on the x-axis).</dd>
+    <dd>If <tex>f(x)</tex> is positive, we are above the x axis</dd>
+    <dd>If <tex>f(x)</tex> is negative, we are below the x axis</dd>
+    
+    <dt><tex>f^{\prime}(x)</tex></dt>
+    <dd>Defines: gradient or speed</dd>
+    <dd><tex>\pm</tex> signs denote negative/positive slope.</dd>
+    <dd>Zeros (or roots) denote stationary points.</dd>
+    <dd><b>If <tex>f^{\prime}(x)</tex> is positive, the slope of <tex>f(x)</tex> is positive (i.e. upward)</b></dd>
+    <dd><b>If <tex>f^{\prime}(x)</tex> is negative, the slope of <tex>f(x)</tex> is negative (i.e. downward)</b></dd>
+    <dd>
+        <note>
+            <h5>If <tex>x = a</tex> is a root of <tex>f^\prime</tex></h5>
+            <p>See <a href='#the-first%20derivative%20test'>The First Derivative Test</a></p>
+            <p>Given two additional points left of <tex>a</tex>, and right of <tex>a</tex></p>
+            <ul>
+                <li><tex>a_{l}</tex> is left of <tex>a</tex></li>
+                <li><tex>a_{r}</tex> is right of <tex>a</tex></li>
+            </ul>
+            <dl>
+                <dt><tex>f^\prime(a_{l})</tex> is negative</dt>
+                <dt><tex>f^\prime(a_{r})</tex> is positive</dt>
+                <dd><tex>f(a)</tex> is a local minima</dd>
+                
+                <dt><tex>f^\prime(a_{l})</tex> is positive</dt>
+                <dt><tex>f^\prime(a_{r})</tex> is negative</dt>
+                <dd><tex>f(a)</tex> is a local maxima</dd>
+            </dl>
+            <p>It's easier to use <tex>f^{\prime\prime}(a)</tex> instead.</p>
+        </note>
+    </dd>
+    <dd>
+        <p>Use the first derivative to find increasing & decreasing intervals (by testing the left and right sides of <tex>f^\prime(a)</tex>).</p>
+    </dd>
+    <dd>
+        <note>The first derivative can yield concavity information (by testing the left and right points of <tex>f^\prime(a)</tex>), but only for extrema points.</note>
+    </dd>
+    
+    <dt><tex>f^{\prime\prime}(x)</tex></dt>
+    <dd>Defines: concavity</dd>
+    <dd><tex>\pm</tex> signs denote concavity.</dd>
+    <dd>Zeros (or roots) denote inflection points.</dd>
+    <dd><b>If <tex>f^{\prime\prime}</tex> is positive, <tex>f</tex> is concave up</b></dd>
+    <dd><b>If <tex>f^{\prime\prime}</tex> is negative, <tex>f</tex> is concave down</b></dd>
+    <dd>
+        <note>
+            <h5>If <tex>x = a</tex> is a root of <tex>f^\prime</tex>:</h5>
+            <dl>
+                <dt><tex>f^{\prime\prime}(a)</tex> is positive</dt>
+                <dd><tex>a</tex> is a local minima of <tex>f(x)</tex></dd>
+                <dd>concave up on an interval around it</dd>
+                <dt><tex>f^{\prime\prime}(a)</tex> is negative</dt>
+                <dd><tex>a</tex> is a local maxima of <tex>f(x)</tex></dd>
+                <dd>concave down on an interval around it</dd>
+            </dl>
+        </note>
+    </dd>
+</dl>
+<h4>General</h4>
+<ul>
+    <li>The <b>maximum</b> is <b>concave down</b></li>
+    <li>The <b>minimum</b> is <b>concave up</b></li>
+</ul>
+<note>
+</note>
+
 
 <h2>3.6 | Calculus with Graphing Calculators (Skipped)</h2>
 

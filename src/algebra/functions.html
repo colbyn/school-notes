@@ -1,0 +1,158 @@
+<h1>Functions</h1>
+
+<h2>Function Symmetry</h2>
+
+<note>
+    <h3>Odd Functions <tex>f(-x) = -f(x)</tex></h3>
+    <ul>
+        <li>
+            <dl>
+                <dt>Defined by (both are the same)</dt>
+                <dd><tex>f(-x) = -f(x)</tex></dd>
+                <dd><tex>f(x) = -f(-x)</tex></dd>
+            </dl>
+        </li>
+        <li>
+            <p>Odd functions are <b>symmetric</b> with respect to the <b>origin</b>.</p>
+            <p>The positive and negative sides have <b>equal magnitude</b>; going in <b>opposite directions</b>.</p>
+        </li>
+    </ul>
+    <note>
+        <h4>Example graph of <tex>y = x^3</tex></h4>
+        <p>The following is a graph of <tex>y = x^3</tex>, notice how the left and right sides have <b>equal magnitude</b>, but in <b>opposite directions</b>.</p>
+        <desmos
+            height='200px'
+            width='200px'
+            math-bounds='{"left": -3, "right": 3, "top": 3, "bottom": -3}'
+            controls='false'
+            lock='true'
+            x-axis-numbers='false'
+            y-axis-numbers='false'
+            show-grid='false'>
+            <expr>y = x^3</expr>
+        </desmos>
+        <note>
+            <h5>Be aware of transformations to the original function of <tex>f(x) = x^3</tex></h5>
+            <style>
+                #functions-odd-trans-examples {
+                    padding: 0;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-row-gap: 20px;
+                    grid-column-gap: 20px;
+                    justify-content: center;
+                    align-items: center;
+                }
+                #functions-odd-trans-examples > * {
+                    margin: 0;
+                }
+                #functions-odd-trans-examples > h6 {
+                    justify-self: flex-end;
+                }
+                #functions-odd-trans-examples > div[desmos] {
+                    justify-self: flex-start;
+                }
+                #functions-odd-trans-examples > div[desmos] > [desmos-embed] {
+                    margin: 0;
+                    border: 1px solid #dadada;
+                    border-radius: 3px;
+                    padding: 3px;
+                }
+            </style>
+            <p>(<b>Note</b> that these functions are <b>not odd</b>.)</p>
+            <div id="functions-odd-trans-examples">
+                <h6>Graph of <tex>y = (x - 1)^3</tex></h6>
+                <desmos
+                    height='200px'
+                    width='200px'
+                    math-bounds='{"left": -3, "right": 3, "top": 3, "bottom": -3}'
+                    controls='false'
+                    lock='true'
+                    x-axis-numbers='false'
+                    y-axis-numbers='false'
+                    show-grid='false'>
+                    <expr>y = (x - 1)^3</expr>
+                    <expr line-style='DASHED'>x = 1</expr>
+                </desmos>
+                <h6>Graph of <tex>y = (x + 1)^3</tex></h6>
+                <desmos
+                    height='200px'
+                    width='200px'
+                    math-bounds='{"left": -3, "right": 3, "top": 3, "bottom": -3}'
+                    controls='false'
+                    lock='true'
+                    x-axis-numbers='false'
+                    y-axis-numbers='false'
+                    show-grid='false'>
+                    <expr>y = (x + 1)^3</expr>
+                    <expr line-style='DASHED'>x = -1</expr>
+                </desmos>
+                <h6>Graph of <tex>y = x^3 - 1</tex></h6>
+                <desmos
+                    height='200px'
+                    width='200px'
+                    math-bounds='{"left": -3, "right": 3, "top": 3, "bottom": -3}'
+                    controls='false'
+                    lock='true'
+                    x-axis-numbers='false'
+                    y-axis-numbers='false'
+                    show-grid='false'>
+                    <expr>y = x^3 - 1</expr>
+                    <expr line-style='DASHED'>y = -1</expr>
+                </desmos>
+                <h6>Graph of <tex>y = x^3 + 1</tex></h6>
+                <desmos
+                    height='200px'
+                    width='200px'
+                    math-bounds='{"left": -3, "right": 3, "top": 3, "bottom": -3}'
+                    controls='false'
+                    lock='true'
+                    x-axis-numbers='false'
+                    y-axis-numbers='false'
+                    show-grid='false'>
+                    <expr>y = x^3 + 1</expr>
+                    <expr line-style='DASHED'>y = 1</expr>
+                </desmos>
+            </div>
+        </note>
+    </note>
+</note>
+
+
+<note>
+    <h3>Functions that are neither even nor odd</h3>
+    <note>
+        <h4>Example</h4>
+        <p>The following is a graph of <tex>f(x) = x^2 - 2x</tex>.</p>
+        <desmos
+            height='200px'
+            width='200px'
+            math-bounds='{"left": -3, "right": 3, "top": 3, "bottom": -3}'
+            controls='false'
+            lock='true'
+            x-axis-numbers='false'
+            y-axis-numbers='false'
+            show-grid='false'>
+            <expr>f(x) = x^2 + 2x</expr>
+            <expr line-style='DASHED' color='#6042a6'>y = -1</expr>
+            <expr line-style='DASHED' color='#6042a6'>x = -1</expr>
+        </desmos>
+        <p>Since</p>
+        <ul>
+            <li><tex>f(-1) = 1 - 1 = 0</tex></li>
+            <li><tex>f(1) = 1 + 1 = 2</tex></li>
+        </ul>
+        <p>Therefore</p>
+        <dl>
+            <dt>Not even</dt>
+            <dd><tex>f(-x) \neq f(x)</tex></dd>
+            <dt>Not odd</dt>
+            <dd><tex>f(-x) \neq -f(x)</tex></dd>
+            <dt>Therefore</dt>
+            <dd>This function is neither even nor odd.</dd>
+        </dl>
+    </note>
+</note>
+
+
+<div style="height: 400px;"></div>

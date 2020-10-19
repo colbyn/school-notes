@@ -24,7 +24,10 @@ function is_header_tag(tag) {
 
 function has_attr(node, attr) {
     if (typeof node !== 'object') {return false};
-    return node.attrs && (attr in node.attrs);
+    if (node.attrs && (attr in node.attrs) && (node.attrs[attr] !== undefined)) {
+        return true;
+    }
+    return false;
 }
 
 function is_element(node, tag_pred) {
@@ -492,7 +495,7 @@ function desmos(tree) {
     const init = (setup) => {
         const uid = `des_${guidGenerator()}`;
         return `
-        <div id="${uid}" style="width: ${setup.width || '100%'}; height: ${setup.height || '400px'}; margin: 0 auto;"></div>
+        <div id="${uid}" style="width: ${setup.width || '100%'}; height: ${setup.height || '400px'};" desmos-embed></div>
         <script>
         window.addEventListener("load", function on_load() {
             var elt = document.getElementById('${uid}');
@@ -591,18 +594,27 @@ function desmos(tree) {
                 if (child.attrs && 'id' in child.attrs) {
                     config.id = child.attrs.id;
                 }
-                if (has_attr(child, 'label') && (child.attrs.label !== undefined)) {
-                    let label = child.attrs.label;
-                    config.label = label;
+                if (has_attr(child, 'label')) {
+                    config.label = child.attrs.label;
                     config.showLabel = true;
                 }
-                if (has_attr(child, 'label-orientations') && (child.attrs['label-orientations'] !== undefined)) {
-                    let label_orientations = child.attrs['label-orientations'];
-                    config['labelOrientation'] = label_orientations;
+                if (has_attr(child, 'label-orientations')) {
+                    config['labelOrientation'] = child.attrs['label-orientations'];
                 }
-                if (has_attr(child, 'label-size') && (child.attrs['label-size'] !== undefined)) {
-                    let labelSize = child.attrs['label-size'];
-                    config['labelSize'] = labelSize;
+                if (has_attr(child, 'label-size')) {
+                    config['labelSize'] = child.attrs['label-size'];
+                }
+                if (has_attr(child, 'line-style')) {
+                    config['lineStyle'] = child.attrs['line-style'];
+                }
+                if (has_attr(child, 'point-style')) {
+                    config['pointStyle'] = child.attrs['point-style'];
+                }
+                if (has_attr(child, 'drag-mode')) {
+                    config['dragMode'] = child.attrs['drag-mode'];
+                }
+                if (has_attr(child, 'color')) {
+                    config['color'] = child.attrs['color'];
                 }
                 commands.push(config);
             }
@@ -628,6 +640,7 @@ function desmos(tree) {
         node.tag = "div";
         node.attrs['block'] = '';
         node.attrs['desmos'] = '';
+        node.attrs['desmos-wrapper'] = '';
         node.attrs['style'] = `
         width: 100%;
         max-width: unset;

@@ -13,8 +13,9 @@
     "parcel-bundler": "^1.12.4",
     "post-sequence": "^0.3.0",
     "posthtml": "^0.13.3",
-    "posthtml-include": "^1.4.3",
     "posthtml-custom-elements": "file:build/posthtml-custom-elements",
+    "posthtml-include": "^1.4.3",
+    "posthtml-modules": "^0.6.2",
     "typescript": "^4.0.3"
   }
 }
