@@ -2,15 +2,11 @@
 
 <h2>§3.1 | Verification of Trigonometric Identities</h2>
 <h2>§3.2 | Sum, Difference, and Cofunction Identities</h2>
-
-
 <note>
     <h3>Sum and Difference Identities</h3>
     <small>Sometimes called the angle-sum identities.</small>
     <tex src="src/trig/assets/sum-diff-ident.tex"></tex>
 </note>
-
-
 <note>
     <h3>Cofunction Identities</h3>
     <tex src="src/trig/assets/cofunction-ident.tex"></tex>
@@ -160,6 +156,8 @@
 
 <p>Example 2:</p>
 
+<p>(Note: the following is a <b>very inefficient method</b>.)</p>
+
 <tex block>
     \begin{equation}
     \begin{split}
@@ -198,6 +196,39 @@
     <expr label-size='small' label-orientations='left' label='`\pi`'>F=\left(\cos\left(\pi\right), \sin\left(\pi\right)\right)</expr>
 </desmos>
 
+<p>Alternative method:</p>
+
+<tex block>
+    \begin{equation}
+    \begin{split}
+
+    \sin(2x)\cos(x) + \cos(2x)\sin(x) &= 0\;\; \text{for all $x$ in $0 \leq x \lt 2\pi$}\\
+    \\
+    \sin(2x + x) &= 0\\
+    \sin(3x) &= 0\\
+    \\
+    \text{given:} & \\
+    3x &= \arcsin(0) = a \;\; \text{where $0 \in a, \; \pi \in a$} \\
+    3x &= \pi \cdot n \;\; \text{for all $n \in \mathbb{Z}^{+}$ in $0 \leq n \lt 6\pi$} \\
+    \\
+    3x &= \pi \cdot n \;\; \text{for all} \; n \in \mathbb{Z}^{+} \; \text{in} \; \overbrace{0 \leq n \lt 6\pi}^{
+        \begin{split}
+        \text{from $0 \leq x \lt 2\pi$}\\
+        0 \leq 3x \lt 6\pi
+        \end{split}
+    } \\
+    \\
+    \text{therefore:} & \\
+    3x &= \pi(0),\; \pi(1),\; \pi(2),\; \pi(3),\; \pi(4),\; \pi(5),\; \\
+    3x &= 0,\; \pi,\; 2\pi,\; 3\pi,\; 4\pi,\; 5\pi,\; \\
+    x &= 0,\; \frac{1}{3}\pi,\; \frac{2}{3}\pi,\; \pi,\; \frac{4}{3}\pi,\; \frac{5}{3}\pi
+
+
+
+    \end{split}
+    \end{equation}
+</tex>
+
 
 <h2>Concepts</h2>
 
@@ -212,6 +243,8 @@
             <li>Reciprocal</li>
             <li>Ratio Identities</li>
         </ul>
+        <p>You will need to know the basic or fundamental identities and the double angle identities. You don’t really need the cofunction identities.</p>
+        <img width='400px' src="~/../static/images/trig/Exam 2 identities.jpg" />
     </li>
 </ul>
 

@@ -1,0 +1,78 @@
+<h1>Reference - Miscellaneous</h1>
+
+<h2>Derivatives</h2>
+
+<note>
+    <tex block>
+        \newcommand{\derivative}{\frac{\mathrm{d}}{\mathrm{d}x}\;} 
+        \begin{equation}
+        \begin{split}
+            \derivative \ln(x) = \frac{1}{x}
+        \end{split}
+        \end{equation}
+    </tex>
+</note>
+
+<note>
+    <h4>Tricks for Quotients <small>(Using Natural Logarithm Properties)</small></h4>
+    <note>
+        <h5>Preliminary</h5>
+        <tex block>
+            \begin{equation}
+            \begin{split}
+                \ln(ab) &= \ln(a) \cdot \ln(b) \\
+                \ln\left(\frac{a}{b}\right) &= \ln(a) - \ln(b) \\
+                \ln(a^r) &= r \cdot \ln(a) \\
+            \end{split}
+            \end{equation}
+        </tex>
+        <tex block>
+            \newcommand{\derivative}{\frac{\mathrm{d}}{\mathrm{d}x}\;} 
+            \begin{equation}
+            \begin{split}
+                \derivative \ln(x) &= \frac{1}{x} \\
+                \derivative \ln(x) &= \frac{\derivative x}{x} \\
+            \end{split}
+            \end{equation}
+        </tex>
+    </note>
+    <hr>
+    <h5>Example</h5>
+    <tex block>
+        \begin{align*}
+        \newcommand{\derivative}{\frac{\mathrm{d}}{\mathrm{d}x}\;} 
+        \overbrace{y = \frac{(x + 1)^5}{(x - 3)^{\frac{1}{2}}}}^{\text{multiply by $\ln$}} \\\\
+        \overbrace{
+            \begin{align*}
+            \ln(y) &= \ln \left( \frac{(x + 1)^5}{(x - 3)^{\frac{1}{2}}} \right) \\
+            \\
+            \ln(y) &= \ln \left((x + 1)^5\right) - \ln\left((x - 3)^{\frac{1}{2}}\right) \\
+            \\
+            \ln(y) &= 5\ln(x + 1) - \frac{1}{2}\ln(x - 3)
+            \end{align*}
+        }^{\text{apply log properties}} \\\\
+        \overbrace{
+            \begin{align*}
+            \frac{y^{\prime}}{y} &= 5 \frac{1}{x + 1} - \frac{1}{2}\frac{1}{x - 3} \\
+            \\
+            \frac{y^{\prime}}{y} &= \frac{5}{x + 1} - \frac{1}{2x - 6} \\
+            \end{align*}
+        }^{\text{simplification}} \\\\
+        \overbrace{y^{\prime} = \left(\frac{5}{x + 1} - \frac{1}{2x - 6}\right) \cdot y}^{\text{multiplied by $y$}} \\\\
+        \overbrace{y^{\prime} = \left(\frac{5}{x + 1} - \frac{1}{2x - 6}\right) \cdot \frac{(x + 1)^5}{(x - 3)^{\frac{1}{2}}}}^{\text{substituted the expression for $y$}}
+        \end{align*}
+    </tex>
+    Therefore:
+    <tex block>
+        \begin{equation}
+        \begin{split}
+            f(x) &= \frac{(x + 1)^5}{(x - 3)^{\frac{1}{2}}} \\
+            f^\prime(x) &= \left(\frac{5}{x + 1} - \frac{1}{2x - 6}\right) \cdot \frac{(x + 1)^5}{(x - 3)^{\frac{1}{2}}} \\
+        \end{split}
+        \end{equation}
+    </tex>
+</note>
+
+
+
+<div style="height: 400px;"></div>
