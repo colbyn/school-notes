@@ -29,11 +29,17 @@
     If f has a local maximum or minimum at c, then c is a critical number of f.
 </p></section>
 <h3 id="critical-number">Critical Number</h3>
+<ul>
+    <li>Critical numbers of <span inline="" math-inline="">\(f\)</span> occur when <span inline="" math-inline="">\(f^\prime(c) = 0\)</span>, or when <span inline="" math-inline="">\(f^\prime(c) = \mathrm{undefined}\)</span>.</li>
+    <li>Not every critical number gives rise to a maximum or a minimum.</li>
+</ul>
+<section no-title="" class="note-block block"><p>Critical numbers include when <span inline="" math-inline="">\(f^\prime(x) = \text{undefined}\)</span>, <b>but, <span inline="" math-inline="">\(f(c)\)</span> must be defined</b>.</p><p>For example, consider the following function:</p><div block="" math-block="">$$\begin{equation}
+            \begin{split}
+                f(x) &= \frac{x + 1}{x - 3} \\
+                f^\prime(x) &= -4 \cdot \frac{}{(x - 3)^2} \\
+            \end{split}
+            \end{equation}$$</div><p><b>While <span inline="" math-inline="">\(f^\prime(x)\)</span> is undefined at <span inline="" math-inline="">\(x = 3\)</span>, <span inline="" math-inline="">\(f(3)\)</span> is likewise undefined, therefore, <span inline="" math-inline="">\(x = 3\)</span> is not a critical number.</b></p><p>TODO: double check this...</p><p>Also points where <span inline="" math-inline="">\(f(x) = \text{undefined}\)</span> and where <span inline="" math-inline="">\(f^\prime(x) = \text{undefined}\)</span> is still useful for calculating other details such as intervals of increase or decrease.</p></section>
 <p>A critical number of a function <span inline="" math-inline="">\(f\)</span> is a number <span inline="" math-inline="">\(c\)</span> in the domain of <span inline="" math-inline="">\(f\)</span> such that either <texf^\prime(c) 0="" ==""> or <span inline="" math-inline="">\(f^\prime(c)\)</span> does not exist.</texf^\prime(c)></p>
-<section class="note-block block"><p>
-* *Critical numbers* of <span inline="" math-inline="">\(f\)</span> occur when <span inline="" math-inline="">\(f^\prime(c) = 0\)</span>, or when <span inline="" math-inline="">\(f^\prime(c) = \mathrm{undefined}\)</span>.
-* Not every critical number gives rise to a maximum or a minimum.
-</p></section>
 <p>To find an absolute maximum or minimum of a continuous function on a closed interval, we note that either it is local [in which case it occurs at a critical number by (7)] or it occurs at an endpoint of the interval, as we see from the examples in Figure 8. Thus the following three-step procedure always works. **See The Closed Interval Method.**</p>
 <h3 id="the-closed%20interval%20method">The Closed Interval Method</h3>
 <section class="note-block block"><h3 id="the-closed%20interval%20method">The Closed Interval Method</h3><p>
@@ -292,36 +298,159 @@ If the graph of f lies above all of its tangents on an interval I, then it is ca
         </p></section><section class="note-block block"><p>In some cases you can also use Second Derivative Test to test for local maximum and minimum values.</p></section></section><section no-title="" class="note-block block"><h4 id="sketch-the%20curve">Sketch the Curve</h4><p>
         Sketch asymptotes as dashed lines. Plot intercepts, critical points, and inflection points. Draw a curve through these points which is consistent with the information found in the previous parts.
     </p></section></section>
-
 <h3 id="miscellaneous">Miscellaneous</h3>
-
-<section class="note-block block"><h4 id="first-and%20second%20derivative%20for%20curve%20shape">First and second derivative for curve shape</h4><section class="note-block block"><p>For instance, given <span inline="" math-inline="">\(y = x^3\)</span>, the number line for the first and second derivatives will look like:</p><img block="" src="https://understandingcalculus.com/chapters/08/understanding_derivative_files/image121.gif"><p>On the negative (left) side, since <span inline="" math-inline="">\(f^\prime\)</span> is positive, and <span inline="" math-inline="">\(f^{\prime\prime}\)</span> is negative, it is increasing at a decreasing rate. So the curve will look like this</p><img block="" width="100px" src="https://colbyn.github.io/school-notes/image--002.370bad78.png" style="min-width: 0; max-width: 100px;"><p>Whereas on the positive (right) side of x, since the first derivative is positive and the second derivative is likewise positive, it will be increasing at an increasing rate. So therefore, the curve will look like this:</p><img block="" width="100px" src="https://colbyn.github.io/school-notes/image--000.dd643015.png" style="min-width: 0; max-width: 100px;"><p>Which matches the (compressed) curve of:</p><div width="200px" height="200px" lock="true" controls="false" block="" desmos="" style="
+<section class="note-block block"><h4 id="first-and%20second%20derivative%20for%20curve%20shape">First and second derivative for curve shape</h4><section class="note-block block"><p>For instance, given <span inline="" math-inline="">\(y = x^3\)</span>, the number line for the first and second derivatives will look like:</p><img block="" src="https://understandingcalculus.com/chapters/08/understanding_derivative_files/image121.gif"><p>On the negative (left) side, since <span inline="" math-inline="">\(f^\prime\)</span> is positive, and <span inline="" math-inline="">\(f^{\prime\prime}\)</span> is negative, it is increasing at a decreasing rate. So the curve will look like this</p><img block="" width="100px" src="https://colbyn.github.io/school-notes/image--002.370bad78.png" style="min-width: 0; max-width: 100px;"><p>Whereas on the positive (right) side of x, since the first derivative is positive and the second derivative is likewise positive, it will be increasing at an increasing rate. So therefore, the curve will look like this:</p><img block="" width="100px" src="https://colbyn.github.io/school-notes/image--000.dd643015.png" style="min-width: 0; max-width: 100px;"><p>Which matches the (compressed) curve of:</p><div width="200px" height="200px" lock="true" controls="false" block="" desmos="" desmos-wrapper="" style="
         width: 100%;
         max-width: unset;
         margin: 0;
         "><div></div>
-        <div id="des_dc8abb56_9e9a_fd17_5887_111da75ee6e4" style="width: 200px; height: 200px; margin: 0 auto;"></div>
+        <div id="des_0db8a6f9_0211_05c9_144f_3c5390e146cc" style="width: 200px; height: 200px;" desmos-embed></div>
         <script>
         window.addEventListener("load", function on_load() {
-            var elt = document.getElementById('des_dc8abb56_9e9a_fd17_5887_111da75ee6e4');
+            var elt = document.getElementById('des_0db8a6f9_0211_05c9_144f_3c5390e146cc');
             var options = {
                 expressionsCollapsed: true,
                 expressions: false,
                 lockViewport: true,
                 settingsMenu: false,
+                border: false,
+                xAxisNumbers: true,
+                yAxisNumbers: true,
+                showGrid: true,
             };
             var calculator = Desmos.GraphingCalculator(elt, options);
-            for (cmd of [{"latex":"y = x^3","id":null}]) {
+            let _ = undefined;
+            for (cmd of [{"latex":"y = x^3"}]) {
                 calculator.setExpression(cmd);
             }
         });
         </script>
         </div><section class="note-block block"><p>This process works for asymptotes as well, such as those from rational functions.</p></section></section></section>
+<section class="note-block block"><h4 id="are-the%20following%20graphs%20a%20function%20of-x%5E2-?">Are the following graphs a function of <span inline="" math-inline="">\(x^2\)</span>?</h4><section no-title="" class="note-block block"><div height="200px" width="200px" math-bounds="{&quot;left&quot;: -3, &quot;right&quot;: 3, &quot;top&quot;: 3, &quot;bottom&quot;: -3}" controls="false" lock="true" x-axis-numbers="false" y-axis-numbers="false" show-grid="false" block="" desmos="" desmos-wrapper="" style="
+        width: 100%;
+        max-width: unset;
+        margin: 0;
+        "><div></div>
+        <div id="des_f92705eb_cfce_5cd0_472d_7ad36c8e1786" style="width: 200px; height: 200px;" desmos-embed></div>
+        <script>
+        window.addEventListener("load", function on_load() {
+            var elt = document.getElementById('des_f92705eb_cfce_5cd0_472d_7ad36c8e1786');
+            var options = {
+                expressionsCollapsed: true,
+                expressions: false,
+                lockViewport: true,
+                settingsMenu: false,
+                border: false,
+                xAxisNumbers: false,
+                yAxisNumbers: false,
+                showGrid: false,
+            };
+            var calculator = Desmos.GraphingCalculator(elt, options);
+            calculator.setMathBounds({ left: -3, right: 3, top: 3, bottom: -3 });
+            for (cmd of [{"latex":"y = x^4-3x^2+1"}]) {
+                calculator.setExpression(cmd);
+            }
+        });
+        </script>
+        </div><p>Well we know that the derivative of <span inline="" math-inline="">\(x^2\)</span> is <span inline="" math-inline="">\(2x\)</span>, so therefore:</p><ul>
+            <li>The curve of <b>always falling</b> for <b>negative values</b> of <span inline="" math-inline="">\(x\)</span>.</li>
+            <li>The curve of <b>always rising</b> for <b>positive values</b> of <span inline="" math-inline="">\(x\)</span>.</li>
+        </ul><p>So therefore, the above graph is not a function of <span inline="" math-inline="">\(x^2\)</span>.</p></section><section no-title="" class="note-block block"><div height="200px" width="200px" math-bounds="{&quot;left&quot;: -1, &quot;right&quot;: 1, &quot;top&quot;: 1, &quot;bottom&quot;: -1}" controls="false" lock="true" x-axis-numbers="false" y-axis-numbers="false" show-grid="false" block="" desmos="" desmos-wrapper="" style="
+        width: 100%;
+        max-width: unset;
+        margin: 0;
+        "><div></div>
+        <div id="des_8fa66489_34bb_20b4_e1a2_eedcbe7aba6e" style="width: 200px; height: 200px;" desmos-embed></div>
+        <script>
+        window.addEventListener("load", function on_load() {
+            var elt = document.getElementById('des_8fa66489_34bb_20b4_e1a2_eedcbe7aba6e');
+            var options = {
+                expressionsCollapsed: true,
+                expressions: false,
+                lockViewport: true,
+                settingsMenu: false,
+                border: false,
+                xAxisNumbers: false,
+                yAxisNumbers: false,
+                showGrid: false,
+            };
+            var calculator = Desmos.GraphingCalculator(elt, options);
+            calculator.setMathBounds({ left: -1, right: 1, top: 1, bottom: -1 });
+            for (cmd of [{"latex":"y = -\\frac{\\cos(3x)+2}{2}+1.5"}]) {
+                calculator.setExpression(cmd);
+            }
+        });
+        </script>
+        </div><p>This graph satisfies the aforementioned constraints of:</p><ul>
+            <li>The curve of <b>always falling</b> for <b>negative values</b> of <span inline="" math-inline="">\(x\)</span>.</li>
+            <li>The curve of <b>always rising</b> for <b>positive values</b> of <span inline="" math-inline="">\(x\)</span>.</li>
+        </ul><p>But for the same reasons, it is not a function of <span inline="" math-inline="">\(x^2\)</span>.</p></section></section>
+<h3 id="summary-to%20the%20'summary%20of%20curve%20sketching'">Summary to the 'Summary of Curve Sketching'</h3>
+<h4 id="functions">Functions</h4>
+<dl>
+    <dt><span inline="" math-inline="">\(f(x)\)</span></dt>
+    <dd>Defines: position</dd>
+    <dd><span inline="" math-inline="">\(\pm\)</span> signs denote negative/positive y values.</dd>
+    <dd>Zeros (or roots) denote intercepts (on the x-axis).</dd>
+    <dd>If <span inline="" math-inline="">\(f(x)\)</span> is positive, we are above the x axis</dd>
+    <dd>If <span inline="" math-inline="">\(f(x)\)</span> is negative, we are below the x axis</dd>
+    
+    <dt><span inline="" math-inline="">\(f^{\prime}(x)\)</span></dt>
+    <dd>Defines: gradient or speed</dd>
+    <dd><span inline="" math-inline="">\(\pm\)</span> signs denote negative/positive slope.</dd>
+    <dd>Zeros (or roots) denote stationary points.</dd>
+    <dd><b>If <span inline="" math-inline="">\(f^{\prime}(x)\)</span> is positive, the slope of <span inline="" math-inline="">\(f(x)\)</span> is positive (i.e. upward)</b></dd>
+    <dd><b>If <span inline="" math-inline="">\(f^{\prime}(x)\)</span> is negative, the slope of <span inline="" math-inline="">\(f(x)\)</span> is negative (i.e. downward)</b></dd>
+    <dd>
+        <section class="note-block block"><h5 id="if-x-=%20a-is%20a%20root%20of-f%5E%5Cprime">If <span inline="" math-inline="">\(x = a\)</span> is a root of <span inline="" math-inline="">\(f^\prime\)</span></h5><p>See <a href="#the-first%20derivative%20test">The First Derivative Test</a></p><p>Given two additional points left of <span inline="" math-inline="">\(a\)</span>, and right of <span inline="" math-inline="">\(a\)</span></p><ul>
+                <li><span inline="" math-inline="">\(a_{l}\)</span> is left of <span inline="" math-inline="">\(a\)</span></li>
+                <li><span inline="" math-inline="">\(a_{r}\)</span> is right of <span inline="" math-inline="">\(a\)</span></li>
+            </ul><dl>
+                <dt><span inline="" math-inline="">\(f^\prime(a_{l})\)</span> is negative</dt>
+                <dt><span inline="" math-inline="">\(f^\prime(a_{r})\)</span> is positive</dt>
+                <dd><span inline="" math-inline="">\(f(a)\)</span> is a local minima</dd>
+                
+                <dt><span inline="" math-inline="">\(f^\prime(a_{l})\)</span> is positive</dt>
+                <dt><span inline="" math-inline="">\(f^\prime(a_{r})\)</span> is negative</dt>
+                <dd><span inline="" math-inline="">\(f(a)\)</span> is a local maxima</dd>
+            </dl><p>It's easier to use <span inline="" math-inline="">\(f^{\prime\prime}(a)\)</span> instead.</p></section>
+    </dd>
+    <dd>
+        <p>Use the first derivative to find increasing & decreasing intervals (by testing the left and right sides of <span inline="" math-inline="">\(f^\prime(a)\)</span>).</p>
+    </dd>
+    <dd>
+        <section class="note-block block"><p>The first derivative can yield concavity information (by testing the left and right points of <span inline="" math-inline="">\(f^\prime(a)\)</span>), but only for extrema points.</p></section>
+    </dd>
+    
+    <dt><span inline="" math-inline="">\(f^{\prime\prime}(x)\)</span></dt>
+    <dd>Defines: concavity</dd>
+    <dd><span inline="" math-inline="">\(\pm\)</span> signs denote concavity.</dd>
+    <dd>Zeros (or roots) denote inflection points.</dd>
+    <dd><b>If <span inline="" math-inline="">\(f^{\prime\prime}\)</span> is positive, <span inline="" math-inline="">\(f\)</span> is concave up</b></dd>
+    <dd><b>If <span inline="" math-inline="">\(f^{\prime\prime}\)</span> is negative, <span inline="" math-inline="">\(f\)</span> is concave down</b></dd>
+    <dd>
+        <section class="note-block block"><h5 id="if-x-=%20a-is%20a%20root%20of-f%5E%5Cprime-:">If <span inline="" math-inline="">\(x = a\)</span> is a root of <span inline="" math-inline="">\(f^\prime\)</span>:</h5><dl>
+                <dt><span inline="" math-inline="">\(f^{\prime\prime}(a)\)</span> is positive</dt>
+                <dd><span inline="" math-inline="">\(a\)</span> is a local minima of <span inline="" math-inline="">\(f(x)\)</span></dd>
+                <dd>concave up on an interval around it</dd>
+                <dt><span inline="" math-inline="">\(f^{\prime\prime}(a)\)</span> is negative</dt>
+                <dd><span inline="" math-inline="">\(a\)</span> is a local maxima of <span inline="" math-inline="">\(f(x)\)</span></dd>
+                <dd>concave down on an interval around it</dd>
+            </dl></section>
+    </dd>
+</dl>
+<h4 id="general">General</h4>
+<ul>
+    <li>The <b>maximum</b> is <b>concave down</b></li>
+    <li>The <b>minimum</b> is <b>concave up</b></li>
+</ul>
+<section class="note-block block"></section>
+
 
 <h2 id="3.6-%7C%20calculus%20with%20graphing%20calculators%20(skipped)">3.6 | Calculus with Graphing Calculators (Skipped)</h2>
 
 <h2 id="3.7-%7C%20optimization%20problems">3.7 | Optimization Problems</h2>
-<section class="note-block block"><h3 id="first-derivative%20test%20for%20absolute%20extreme%20values">First Derivative Test for Absolute Extreme Values</h3><p>
+<section class="note-block block"><h3 id="first-derivative%20test%20for%20absolute%20extreme%20values">First Derivative Test for Absolute Extreme Values</h3><section class="note-block block"><p>Can also use the <a href="#the-closed-interval-method">The Closed Interval Method</a></p></section><p>
 
     Suppose that <span inline="" math-inline="">\(c\)</span> is a critical number of a continuous function <span inline="" math-inline="">\(f\)</span> defined on an interval.
     </p><section class="note-block block"><p>

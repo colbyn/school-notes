@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.567a0a18.css">
+    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.4933f710.css">
     <script src="https://colbyn.github.io/school-notes/system.f84e1103.js"></script>
     <!-- MATH-JAX -->
 <script>window.MathJax = {
@@ -107,10 +107,18 @@ var menu = [{
   name: 'Homepage',
   path: 'index.html'
 }, {
+  name: 'Algebra',
+  suffix: 'Reference',
+  path: 'algebra/index.html'
+}, {
   name: 'Calculus 1',
   suffix: 'Class Notes',
   path: 'calc/index.html',
   sub: [{
+    name: 'Reference',
+    chapter: '0',
+    path: 'calc/reference/index.html'
+  }, {
     name: 'Functions and Limits',
     chapter: '1',
     path: 'calc/chapter1/index.html'
@@ -263,14 +271,12 @@ function build_entries(entries) {
 var root_ul_node = document.querySelector("nav#side-nav");
 console.assert(root_ul_node);
 root_ul_node.appendChild(build_entries(menu));</script>
-        <div toc=""><ul toc=""><li entry="h1"><a href="#chapter-3%20%7C%20trigonometric%20identities%20and%20equations">Chapter 3 | Trigonometric Identities and Equations</a></li><li entry="h2"><a href="#%C2%A73.1-%7C%20verification%20of%20trigonometric%20identities">§3.1 | Verification of Trigonometric Identities</a></li><li entry="h2"><a href="#%C2%A73.2-%7C%20sum,%20difference,%20and%20cofunction%20identities">§3.2 | Sum, Difference, and Cofunction Identities</a></li><li entry="h3"><a href="#sum-and%20difference%20identities">Sum and Difference Identities</a></li><li entry="h3"><a href="#cofunction-identities">Cofunction Identities</a></li><li entry="h2"><a href="#%C2%A73.3-%7C%20double-%20and%20half-angle%20identities">§3.3 | Double- and Half-Angle Identities</a></li><li entry="h3"><a href="#double-angle-identities">Double-Angle Identities</a></li><li entry="h3"><a href="#half-angle-identities">Half-Angle Identities</a></li><li entry="h3"><a href="#power-reducing-identities">Power-Reducing Identities</a></li><li entry="h2"><a href="#%C2%A73.4-%7C%20identities%20involving%20the%20sum%20of%20trigonometric%20functions">§3.4 | Identities Involving the Sum of Trigonometric Functions</a></li><li entry="h3"><a href="#product-to-sum-identities">Product-to-Sum Identities</a></li><li entry="h3"><a href="#sum-to-product-identities">Sum-to-Product-Identities</a></li><li entry="h3"><a href="#miscellaneous">Miscellaneous</a></li><li entry="h2"><a href="#%C2%A73.5-%7C%20inverse%20trigonometric%20functions">§3.5 | Inverse Trigonometric Functions</a></li><li entry="h3"><a href="#definition-of%20stem:%5B%5Carcsin(x)%5D">Definition of stem:[\arcsin(x)]</a></li><li entry="h3"><a href="#definition-of%20stem:%5B%5Carccos(x)%5D">Definition of stem:[\arccos(x)]</a></li><li entry="h3"><a href="#inverse-reciprocal%20identities">Inverse Reciprocal Identities</a></li><li entry="h3"><a href="#other-inverse%20co-tangent%20identities">Other Inverse Co-Tangent Identities</a></li><li entry="h3"><a href="#composition-of%20trigonometric%20functions%20and%20their%20inverses">Composition of Trigonometric Functions and Their Inverses</a></li><li entry="h2"><a href="#%C2%A73.6-%7C%20trigonometric%20equations">§3.6 | Trigonometric Equations</a></li></ul></div>
+        <div toc=""><ul toc=""><li entry="h1"><a href="#chapter-3%20%7C%20trigonometric%20identities%20and%20equations">Chapter 3 | Trigonometric Identities and Equations</a></li><li entry="h2"><a href="#%C2%A73.1-%7C%20verification%20of%20trigonometric%20identities">§3.1 | Verification of Trigonometric Identities</a></li><li entry="h2"><a href="#%C2%A73.2-%7C%20sum,%20difference,%20and%20cofunction%20identities">§3.2 | Sum, Difference, and Cofunction Identities</a></li><li entry="h3"><a href="#sum-and%20difference%20identities">Sum and Difference Identities</a></li><li entry="h3"><a href="#cofunction-identities">Cofunction Identities</a></li><li entry="h2"><a href="#%C2%A73.3-%7C%20double-%20and%20half-angle%20identities">§3.3 | Double- and Half-Angle Identities</a></li><li entry="h3"><a href="#double-angle-identities">Double-Angle Identities</a></li><li entry="h3"><a href="#half-angle-identities">Half-Angle Identities</a></li><li entry="h3"><a href="#power-reducing-identities">Power-Reducing Identities</a></li><li entry="h2"><a href="#%C2%A73.4-%7C%20identities%20involving%20the%20sum%20of%20trigonometric%20functions">§3.4 | Identities Involving the Sum of Trigonometric Functions</a></li><li entry="h3"><a href="#product-to-sum-identities">Product-to-Sum Identities</a></li><li entry="h3"><a href="#sum-to-product-identities">Sum-to-Product-Identities</a></li><li entry="h3"><a href="#miscellaneous">Miscellaneous</a></li><li entry="h2"><a href="#%C2%A73.5-%7C%20inverse%20trigonometric%20functions">§3.5 | Inverse Trigonometric Functions</a></li><li entry="h3"><a href="#definition-of%20stem:%5B%5Carcsin(x)%5D">Definition of stem:[\arcsin(x)]</a></li><li entry="h3"><a href="#definition-of%20stem:%5B%5Carccos(x)%5D">Definition of stem:[\arccos(x)]</a></li><li entry="h3"><a href="#inverse-reciprocal%20identities">Inverse Reciprocal Identities</a></li><li entry="h3"><a href="#other-inverse%20co-tangent%20identities">Other Inverse Co-Tangent Identities</a></li><li entry="h3"><a href="#composition-of%20trigonometric%20functions%20and%20their%20inverses">Composition of Trigonometric Functions and Their Inverses</a></li><li entry="h2"><a href="#%C2%A73.6-%7C%20trigonometric%20equations">§3.6 | Trigonometric Equations</a></li><li entry="h2"><a href="#concepts">Concepts</a></li></ul></div>
     </header>
     <h1 id="chapter-3%20%7C%20trigonometric%20identities%20and%20equations">Chapter 3 | Trigonometric Identities and Equations</h1>
 
 <h2 id="%C2%A73.1-%7C%20verification%20of%20trigonometric%20identities">§3.1 | Verification of Trigonometric Identities</h2>
 <h2 id="%C2%A73.2-%7C%20sum,%20difference,%20and%20cofunction%20identities">§3.2 | Sum, Difference, and Cofunction Identities</h2>
-
-
 <section class="note-block block"><h3 id="sum-and%20difference%20identities">Sum and Difference Identities</h3><p><small>Sometimes called the angle-sum identities.</small></p><div block="" math-block="">$$ \begin{equation}
 \begin{split}
 
@@ -288,8 +294,6 @@ root_ul_node.appendChild(build_entries(menu));</script>
     \tan(\alpha - \beta) &= \frac{\tan(\alpha) - \tan(\beta)}{1 + \tan(\alpha) \cdot \tan(\beta)}
 \end{split}
 \end{equation} $$</div></section>
-
-
 <section class="note-block block"><h3 id="cofunction-identities">Cofunction Identities</h3><div block="" math-block="">$$ \begin{equation}
 \begin{split}
     \sin(\theta) &= \cos(\frac{1}{4}\tau - \theta) \\
@@ -452,6 +456,114 @@ root_ul_node.appendChild(build_entries(menu));</script>
     x &= \frac{3}{4}\pi, \frac{1}{4}\pi, \frac{1}{6}\pi, \frac{11}{6}\pi
 \end{split}
 \end{equation}$$</div>
+
+<p>Example 2:</p>
+
+<p>(Note: the following is a <b>very inefficient method</b>.)</p>
+
+<div block="" math-block="">$$\begin{equation}
+    \begin{split}
+        \sin(2x)\cos(x) + \cos(2x)\sin(x) & = 0 \\
+        &\\
+        \overbrace{\left(2\sin(x)\cos(x)\right)}^{sin(2x) = 2\sin(x)\cos(x)}\cos(x) + \overbrace{\left(1 - \cos^2(x)\right)}^{\cos(2x)=1- 2\sin^2(x)}\sin(x) &= 0 \\
+        &\\
+        2\sin(x)\cos^2(x) + \sin(x) - 2\sin^3(x) &= 0 \\
+        &\\
+        2\sin(x)\overbrace{(1-\sin^2(x))}^{\sin^2(x)+\cos^2(x)=1} + \sin(x) - 2\sin^3(x) &= 0 \\
+        &\\
+        2\sin(x) - 2\sin^3(x) + \sin(x) - 2\sin^3(x) &= 0 \\
+        3\sin(x) - 4\sin^3(x) &= 0 \\
+        (\sin x)(3 - 4\sin^2x) &= 0 \\ 
+        &\\
+        \sin x &= 0 \\
+        x &= 0, \pi \\
+        &\\
+        3 - 4\sin^2x &= 0 \\
+        - 4\sin^2x &= -3 \\
+        4\sin^2x &= 3 \\
+        \sin^2x &= \frac{3}{4} \\
+        \sin x &= \pm \sqrt{\frac{3}{4}} = \pm \frac{\sqrt{3}}{2} \\
+        x &= \frac{2}{12}\tau, \frac{4}{12}\tau, \frac{8}{12}\tau, \frac{10}{12}\tau
+    \end{split}
+    \end{equation}$$</div>
+
+<div height="200px" width="200px" math-bounds="{&quot;left&quot;: -1.9, &quot;right&quot;: 1.9, &quot;top&quot;: 1.9, &quot;bottom&quot;: -1.9}" controls="false" lock="true" x-axis-numbers="false" y-axis-numbers="false" show-grid="false" block="" desmos="" desmos-wrapper="" style="
+        width: 100%;
+        max-width: unset;
+        margin: 0;
+        "><div></div>
+        <div id="des_268ccc79_fb89_b083_86f7_fd02905754ab" style="width: 200px; height: 200px;" desmos-embed></div>
+        <script>
+        window.addEventListener("load", function on_load() {
+            var elt = document.getElementById('des_268ccc79_fb89_b083_86f7_fd02905754ab');
+            var options = {
+                expressionsCollapsed: true,
+                expressions: false,
+                lockViewport: true,
+                settingsMenu: false,
+                border: false,
+                xAxisNumbers: false,
+                yAxisNumbers: false,
+                showGrid: false,
+            };
+            var calculator = Desmos.GraphingCalculator(elt, options);
+            calculator.setMathBounds({ left: -1.9, right: 1.9, top: 1.9, bottom: -1.9 });
+            for (cmd of [{"latex":"x^2 + y^2 = 1"},{"latex":"A=\\left(\\cos\\left(\\frac{1}{3}\\pi\\right), \\sin\\left(\\frac{1}{3}\\pi\\right)\\right)","label":"`\\frac{2}{12}\\tau`","showLabel":true,"labelOrientation":"above","labelSize":"small"},{"latex":"B=\\left(\\cos\\left(\\frac{2}{3}\\pi\\right), \\sin\\left(\\frac{2}{3}\\pi\\right)\\right)","label":"`\\frac{4}{12}\\tau`","showLabel":true,"labelOrientation":"above","labelSize":"small"},{"latex":"C=\\left(\\cos\\left(\\frac{4}{3}\\pi\\right), \\sin\\left(\\frac{4}{3}\\pi\\right)\\right)","label":"`\\frac{8}{12}\\tau`","showLabel":true,"labelOrientation":"below","labelSize":"small"},{"latex":"D=\\left(\\cos\\left(\\frac{5}{3}\\pi\\right), \\sin\\left(\\frac{5}{3}\\pi\\right)\\right)","label":"`\\frac{10}{12}\\tau`","showLabel":true,"labelOrientation":"below","labelSize":"small"},{"latex":"E=\\left(\\cos\\left(0\\right), \\sin\\left(0\\right)\\right)","label":"0","showLabel":true,"labelOrientation":"right","labelSize":"small"},{"latex":"F=\\left(\\cos\\left(\\pi\\right), \\sin\\left(\\pi\\right)\\right)","label":"`\\pi`","showLabel":true,"labelOrientation":"left","labelSize":"small"}]) {
+                calculator.setExpression(cmd);
+            }
+        });
+        </script>
+        </div>
+
+<p>Alternative method:</p>
+
+<div block="" math-block="">$$\begin{equation}
+    \begin{split}
+
+    \sin(2x)\cos(x) + \cos(2x)\sin(x) &= 0\;\; \text{for all $x$ in $0 \leq x \lt 2\pi$}\\
+    \\
+    \sin(2x + x) &= 0\\
+    \sin(3x) &= 0\\
+    \\
+    \text{given:} & \\
+    3x &= \arcsin(0) = a \;\; \text{where $0 \in a, \; \pi \in a$} \\
+    3x &= \pi \cdot n \;\; \text{for all $n \in \mathbb{Z}^{+}$ in $0 \leq n \lt 6\pi$} \\
+    \\
+    3x &= \pi \cdot n \;\; \text{for all} \; n \in \mathbb{Z}^{+} \; \text{in} \; \overbrace{0 \leq n \lt 6\pi}^{
+        \begin{split}
+        \text{from $0 \leq x \lt 2\pi$}\\
+        0 \leq 3x \lt 6\pi
+        \end{split}
+    } \\
+    \\
+    \text{therefore:} & \\
+    3x &= \pi(0),\; \pi(1),\; \pi(2),\; \pi(3),\; \pi(4),\; \pi(5),\; \\
+    3x &= 0,\; \pi,\; 2\pi,\; 3\pi,\; 4\pi,\; 5\pi,\; \\
+    x &= 0,\; \frac{1}{3}\pi,\; \frac{2}{3}\pi,\; \pi,\; \frac{4}{3}\pi,\; \frac{5}{3}\pi
+
+
+
+    \end{split}
+    \end{equation}$$</div>
+
+
+<h2 id="concepts">Concepts</h2>
+
+<ul>
+    <li>
+        <p>Identities:</p>
+        <ul>
+            <li>Pythagorean Identities</li>
+            <li>Sum and Difference Identities</li>
+            <li>Double-Angle Identities</li>
+            <li>Half-Angle Identities</li>
+            <li>Reciprocal</li>
+            <li>Ratio Identities</li>
+        </ul>
+        <p>You will need to know the basic or fundamental identities and the double angle identities. You don’t really need the cofunction identities.</p>
+        <img width="400px" src="https://colbyn.github.io/school-notes/Exam 2 identities.3b60010e.jpg" style="min-width: 0; max-width: 400px;">
+    </li>
+</ul>
 
 
 

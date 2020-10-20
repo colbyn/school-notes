@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.4933f710.css">
+    <script src="https://colbyn.github.io/school-notes/system.f84e1103.js"></script>
+    <!-- MATH-JAX -->
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(', '\\)'], ['stem:[', ']']]
+  },
+  svg: {
+    fontCache: 'global',
+    minScale: 0.2
+  },
+  processEscapes: true
+};</script>
+<script type="text/javascript" id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+<!--FONTS (TODO SMALLER)-->
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+
+<!-- MISC -->
+<meta name="viewport" content="width=device-width,initial-scale=1">  
+<meta charset="utf-8">
+
+<!-- GEOGEBRA -->
+<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+
+<!-- DESMOS -->
+<script src="https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+</head>
+<body>
+    <header root="">
+        <!-- WIP NEW NAVIGATION -->
+
+<style>nav#side-nav {
+        border: 1px solid #000;
+        border-radius: 3px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        margin: 25px;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+    nav#side-nav > span {
+        border-bottom: 1px solid #000;
+        margin-bottom: 4px;
+        padding: 4px;
+    }
+    nav#side-nav ul {
+        display: flex;
+        flex-direction: column;
+        color: #000;
+
+        margin-left: 4px;
+        border-left: 1px solid #e0e0e0;
+        padding-left: 10px;
+    }
+    nav#side-nav ul > li {
+        display: flex;
+        color: inherit;
+        flex-direction: column;
+    }
+    nav#side-nav ul > li > a {
+        color: inherit;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+    nav#side-nav ul > li > a > span.suffix {
+        margin-right: 10px;
+        font-size: 0.8em;
+        font-weight: 100;
+
+        padding: 3px;
+        font-size: 0.3em;
+        text-decoration: none;
+        border: 1px solid #e0e0e0;
+        color: #191919;
+    }
+    nav#side-nav ul > li > a > span.chapter {
+        margin-right: 10px;
+        text-decoration: underline;
+    }
+    nav#side-nav ul > li > a > span.name {
+        text-decoration: underline;
+    }</style>
+
+<nav id="side-nav">
+    <span>Navigation</span>
+</nav>
+
+<script>function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function $(f) {
+  return f();
+}
+
+var menu = [{
+  name: 'Homepage',
+  path: 'index.html'
+}, {
+  name: 'Algebra',
+  suffix: 'Reference',
+  path: 'algebra/index.html'
+}, {
+  name: 'Calculus 1',
+  suffix: 'Class Notes',
+  path: 'calc/index.html',
+  sub: [{
+    name: 'Reference',
+    chapter: '0',
+    path: 'calc/reference/index.html'
+  }, {
+    name: 'Functions and Limits',
+    chapter: '1',
+    path: 'calc/chapter1/index.html'
+  }, {
+    name: 'Derivatives',
+    chapter: '2',
+    path: 'calc/chapter2/index.html'
+  }, {
+    name: 'Applications of Differentiation ',
+    chapter: '3',
+    path: 'calc/chapter3/index.html'
+  }, {
+    name: 'Integrals',
+    chapter: '4',
+    path: 'calc/chapter4/index.html'
+  }, {
+    name: 'Applications of Integration',
+    chapter: '5',
+    path: 'calc/chapter5/index.html'
+  }, {
+    name: 'Inverse Functions',
+    chapter: '6',
+    path: 'calc/chapter6/index.html'
+  }]
+}, {
+  name: 'Trigonometry',
+  suffix: 'Class Notes',
+  path: 'trig/index.html',
+  sub: [{
+    name: 'Miscellaneous',
+    chapter: '0',
+    path: 'trig/misc/index.html'
+  }, {
+    name: 'Functions and Graphs',
+    chapter: '1',
+    path: 'trig/chapter1/index.html'
+  }, {
+    name: 'Trigonometric Functions',
+    chapter: '2',
+    path: 'trig/chapter2/index.html'
+  }, {
+    name: 'Trigonometric Identities and Equations',
+    chapter: '3',
+    path: 'trig/chapter3/index.html'
+  }, {
+    name: 'Applications of Trigonometry',
+    chapter: '4',
+    path: 'trig/chapter4/index.html'
+  }, {
+    name: 'Complex Numbers',
+    chapter: '5',
+    path: 'trig/chapter5/index.html'
+  }, {
+    name: 'Topics in Analytic Geometry',
+    chapter: '6',
+    path: 'trig/chapter6/index.html'
+  }, {
+    name: 'Exponential and Logarithmic Functions',
+    chapter: '7',
+    path: 'trig/chapter6/index.html'
+  }]
+}, {
+  name: 'Music',
+  suffix: 'Class Notes',
+  path: 'music/index.html',
+  sub: [{
+    name: 'Glyphs Reference',
+    chapter: '0',
+    path: 'music/glyphs/index.html'
+  }]
+}];
+var host = window.location.host;
+
+function get_link(ref_ref) {
+  var href = "";
+
+  if (host === "colbyn.github.io") {
+    href = "https://colbyn.github.io/school-notes/".concat(ref_ref);
+  } else {
+    href = "/".concat(ref_ref);
+  }
+
+  return href;
+}
+
+function build_entry(entry) {
+  var host = window.location.host;
+  var node = document.createElement("li"); // LINK NODE
+
+  $(function () {
+    var link_node = document.createElement('a');
+    link_node.href = get_link(entry.path); // SUFFIX
+
+    if ('suffix' in entry) {
+      var span_node = document.createElement('span');
+      span_node.className = "suffix";
+      span_node.textContent = entry.suffix;
+      link_node.appendChild(span_node);
+    } // CHAPTER
+
+
+    if ('chapter' in entry) {
+      var span = document.createElement("span");
+      span.className = "chapter";
+      span.textContent = "Chapter ".concat(entry.chapter);
+      link_node.appendChild(span);
+    } // NAME
+
+
+    if ('name' in entry) {
+      var _span = document.createElement("span");
+
+      _span.className = "name";
+      _span.textContent = entry.name;
+      link_node.appendChild(_span);
+    }
+
+    node.appendChild(link_node);
+  }); // CHILD NODES
+
+  if ('sub' in entry) {
+    node.appendChild(build_entries(entry.sub));
+  } // DONE
+
+
+  return node;
+}
+
+function build_entries(entries) {
+  var ul_node = document.createElement("ul");
+
+  var _iterator = _createForOfIteratorHelper(entries),
+      _step;
+
+  try {
+    for (_iterator.s(); !(_step = _iterator.n()).done;) {
+      entry = _step.value;
+      ul_node.appendChild(build_entry(entry));
+    }
+  } catch (err) {
+    _iterator.e(err);
+  } finally {
+    _iterator.f();
+  }
+
+  return ul_node;
+} // BUILD ROOT MENU
+
+
+var root_ul_node = document.querySelector("nav#side-nav");
+console.assert(root_ul_node);
+root_ul_node.appendChild(build_entries(menu));</script>
+        <div toc=""><ul toc=""><li entry="h1"><a href="#functions">Functions</a></li><li entry="h2"><a href="#function-symmetry">Function Symmetry</a></li><li entry="h3"><a href="#odd-functions-f(-x)%20=%20-f(x)">Odd Functions <span inline="" math-inline="">\(f(-x) = -f(x)\)</span></a></li><li entry="h4"><a href="#example-graph%20of-y%20=%20x%5E3">Example graph of <span inline="" math-inline="">\(y = x^3\)</span></a></li><li entry="h5"><a href="#be-aware%20of%20transformations%20to%20the%20original%20function%20of-f(x)%20=%20x%5E3">Be aware of transformations to the original function of <span inline="" math-inline="">\(f(x) = x^3\)</span></a></li><li entry="h6"><a href="#graph-of-y%20=%20(x%20-%201)%5E3">Graph of <span inline="" math-inline="">\(y = (x - 1)^3\)</span></a></li><li entry="h6"><a href="#graph-of-y%20=%20(x%20+%201)%5E3">Graph of <span inline="" math-inline="">\(y = (x + 1)^3\)</span></a></li><li entry="h6"><a href="#graph-of-y%20=%20x%5E3%20-%201">Graph of <span inline="" math-inline="">\(y = x^3 - 1\)</span></a></li><li entry="h6"><a href="#graph-of-y%20=%20x%5E3%20+%201">Graph of <span inline="" math-inline="">\(y = x^3 + 1\)</span></a></li><li entry="h3"><a href="#functions-that%20are%20neither%20even%20nor%20odd">Functions that are neither even nor odd</a></li><li entry="h4"><a href="#example">Example</a></li><li entry="h2"><a href="#function-symmetry">Function Symmetry</a></li><li entry="h3"><a href="#natural-logarithm%20properties">Natural Logarithm Properties</a></li></ul></div>
+    </header>
+    <h1 id="functions">Functions</h1>
+
+<h2 id="function-symmetry">Function Symmetry</h2>
+<section class="note-block block"><h3 id="odd-functions-f(-x)%20=%20-f(x)">Odd Functions <span inline="" math-inline="">\(f(-x) = -f(x)\)</span></h3><ul>
+        <li>
+            <dl>
+                <dt>Defined by (both are the same)</dt>
+                <dd><span inline="" math-inline="">\(f(-x) = -f(x)\)</span></dd>
+                <dd><span inline="" math-inline="">\(f(x) = -f(-x)\)</span></dd>
+            </dl>
+        </li>
+        <li>
+            <p>Odd functions are <b>symmetric</b> with respect to the <b>origin</b>.</p>
+            <p>The positive and negative sides have <b>equal magnitude</b>; going in <b>opposite directions</b>.</p>
+        </li>
+    </ul><section class="note-block block"><h4 id="example-graph%20of-y%20=%20x%5E3">Example graph of <span inline="" math-inline="">\(y = x^3\)</span></h4><p>The following is a graph of <span inline="" math-inline="">\(y = x^3\)</span>, notice how the left and right sides have <b>equal magnitude</b>, but in <b>opposite directions</b>.</p><div height="200px" width="200px" math-bounds="{&quot;left&quot;: -3, &quot;right&quot;: 3, &quot;top&quot;: 3, &quot;bottom&quot;: -3}" controls="false" lock="true" x-axis-numbers="false" y-axis-numbers="false" show-grid="false" block="" desmos="" desmos-wrapper="" style="
+        width: 100%;
+        max-width: unset;
+        margin: 0;
+        "><div></div>
+        <div id="des_ad19e9f8_123f_bde7_e91c_5932542e0720" style="width: 200px; height: 200px;" desmos-embed></div>
+        <script>
+        window.addEventListener("load", function on_load() {
+            var elt = document.getElementById('des_ad19e9f8_123f_bde7_e91c_5932542e0720');
+            var options = {
+                expressionsCollapsed: true,
+                expressions: false,
+                lockViewport: true,
+                settingsMenu: false,
+                border: false,
+                xAxisNumbers: false,
+                yAxisNumbers: false,
+                showGrid: false,
+            };
+            var calculator = Desmos.GraphingCalculator(elt, options);
+            calculator.setMathBounds({ left: -3, right: 3, top: 3, bottom: -3 });
+            for (cmd of [{"latex":"y = x^3"}]) {
+                calculator.setExpression(cmd);
+            }
+        });
+        </script>
+        </div><section class="note-block block"><h5 id="be-aware%20of%20transformations%20to%20the%20original%20function%20of-f(x)%20=%20x%5E3">Be aware of transformations to the original function of <span inline="" math-inline="">\(f(x) = x^3\)</span></h5><style>#functions-odd-trans-examples {
+                    padding: 0;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-row-gap: 20px;
+                    grid-column-gap: 20px;
+                    justify-content: center;
+                    align-items: center;
+                }
+                #functions-odd-trans-examples > * {
+                    margin: 0;
+                }
+                #functions-odd-trans-examples > h6 {
+                    justify-self: flex-end;
+                }
+                #functions-odd-trans-examples > div[desmos] {
+                    justify-self: flex-start;
+                }
+                #functions-odd-trans-examples > div[desmos] > [desmos-embed] {
+                    margin: 0;
+                    border: 1px solid #dadada;
+                    border-radius: 3px;
+                    padding: 3px;
+                }</style><p>(<b>Note</b> that these functions are <b>not odd</b>.)</p><div id="functions-odd-trans-examples">
+                <h6 id="graph-of-y%20=%20(x%20-%201)%5E3">Graph of <span inline="" math-inline="">\(y = (x - 1)^3\)</span></h6>
+                <div height="200px" width="200px" math-bounds="{&quot;left&quot;: -3, &quot;right&quot;: 3, &quot;top&quot;: 3, &quot;bottom&quot;: -3}" controls="false" lock="true" x-axis-numbers="false" y-axis-numbers="false" show-grid="false" block="" desmos="" desmos-wrapper="" style="
+        width: 100%;
+        max-width: unset;
+        margin: 0;
+        "><div></div>
+        <div id="des_bdf86401_42f4_b3a9_843f_98ab971988a7" style="width: 200px; height: 200px;" desmos-embed></div>
+        <script>
+        window.addEventListener("load", function on_load() {
+            var elt = document.getElementById('des_bdf86401_42f4_b3a9_843f_98ab971988a7');
+            var options = {
+                expressionsCollapsed: true,
+                expressions: false,
+                lockViewport: true,
+                settingsMenu: false,
+                border: false,
+                xAxisNumbers: false,
+                yAxisNumbers: false,
+                showGrid: false,
+            };
+            var calculator = Desmos.GraphingCalculator(elt, options);
+            calculator.setMathBounds({ left: -3, right: 3, top: 3, bottom: -3 });
+            for (cmd of [{"latex":"y = (x - 1)^3"},{"latex":"x = 1","lineStyle":"DASHED"}]) {
+                calculator.setExpression(cmd);
+            }
+        });
+        </script>
+        </div>
+                <h6 id="graph-of-y%20=%20(x%20+%201)%5E3">Graph of <span inline="" math-inline="">\(y = (x + 1)^3\)</span></h6>
+                <div height="200px" width="200px" math-bounds="{&quot;left&quot;: -3, &quot;right&quot;: 3, &quot;top&quot;: 3, &quot;bottom&quot;: -3}" controls="false" lock="true" x-axis-numbers="false" y-axis-numbers="false" show-grid="false" block="" desmos="" desmos-wrapper="" style="
+        width: 100%;
+        max-width: unset;
+        margin: 0;
+        "><div></div>
+        <div id="des_80703a99_c6f3_72de_9986_3162dccdcca9" style="width: 200px; height: 200px;" desmos-embed></div>
+        <script>
+        window.addEventListener("load", function on_load() {
+            var elt = document.getElementById('des_80703a99_c6f3_72de_9986_3162dccdcca9');
+            var options = {
+                expressionsCollapsed: true,
+                expressions: false,
+                lockViewport: true,
+                settingsMenu: false,
+                border: false,
+                xAxisNumbers: false,
+                yAxisNumbers: false,
+                showGrid: false,
+            };
+            var calculator = Desmos.GraphingCalculator(elt, options);
+            calculator.setMathBounds({ left: -3, right: 3, top: 3, bottom: -3 });
+            for (cmd of [{"latex":"y = (x + 1)^3"},{"latex":"x = -1","lineStyle":"DASHED"}]) {
+                calculator.setExpression(cmd);
+            }
+        });
+        </script>
+        </div>
+                <h6 id="graph-of-y%20=%20x%5E3%20-%201">Graph of <span inline="" math-inline="">\(y = x^3 - 1\)</span></h6>
+                <div height="200px" width="200px" math-bounds="{&quot;left&quot;: -3, &quot;right&quot;: 3, &quot;top&quot;: 3, &quot;bottom&quot;: -3}" controls="false" lock="true" x-axis-numbers="false" y-axis-numbers="false" show-grid="false" block="" desmos="" desmos-wrapper="" style="
+        width: 100%;
+        max-width: unset;
+        margin: 0;
+        "><div></div>
+        <div id="des_06254937_e386_01dc_33a6_c420eb8e8eea" style="width: 200px; height: 200px;" desmos-embed></div>
+        <script>
+        window.addEventListener("load", function on_load() {
+            var elt = document.getElementById('des_06254937_e386_01dc_33a6_c420eb8e8eea');
+            var options = {
+                expressionsCollapsed: true,
+                expressions: false,
+                lockViewport: true,
+                settingsMenu: false,
+                border: false,
+                xAxisNumbers: false,
+                yAxisNumbers: false,
+                showGrid: false,
+            };
+            var calculator = Desmos.GraphingCalculator(elt, options);
+            calculator.setMathBounds({ left: -3, right: 3, top: 3, bottom: -3 });
+            for (cmd of [{"latex":"y = x^3 - 1"},{"latex":"y = -1","lineStyle":"DASHED"}]) {
+                calculator.setExpression(cmd);
+            }
+        });
+        </script>
+        </div>
+                <h6 id="graph-of-y%20=%20x%5E3%20+%201">Graph of <span inline="" math-inline="">\(y = x^3 + 1\)</span></h6>
+                <div height="200px" width="200px" math-bounds="{&quot;left&quot;: -3, &quot;right&quot;: 3, &quot;top&quot;: 3, &quot;bottom&quot;: -3}" controls="false" lock="true" x-axis-numbers="false" y-axis-numbers="false" show-grid="false" block="" desmos="" desmos-wrapper="" style="
+        width: 100%;
+        max-width: unset;
+        margin: 0;
+        "><div></div>
+        <div id="des_91b1763e_cd10_d7ee_b619_2f25ce4aa7ba" style="width: 200px; height: 200px;" desmos-embed></div>
+        <script>
+        window.addEventListener("load", function on_load() {
+            var elt = document.getElementById('des_91b1763e_cd10_d7ee_b619_2f25ce4aa7ba');
+            var options = {
+                expressionsCollapsed: true,
+                expressions: false,
+                lockViewport: true,
+                settingsMenu: false,
+                border: false,
+                xAxisNumbers: false,
+                yAxisNumbers: false,
+                showGrid: false,
+            };
+            var calculator = Desmos.GraphingCalculator(elt, options);
+            calculator.setMathBounds({ left: -3, right: 3, top: 3, bottom: -3 });
+            for (cmd of [{"latex":"y = x^3 + 1"},{"latex":"y = 1","lineStyle":"DASHED"}]) {
+                calculator.setExpression(cmd);
+            }
+        });
+        </script>
+        </div>
+            </div></section></section></section>
+<section class="note-block block"><h3 id="functions-that%20are%20neither%20even%20nor%20odd">Functions that are neither even nor odd</h3><section class="note-block block"><h4 id="example">Example</h4><p>The following is a graph of <span inline="" math-inline="">\(f(x) = x^2 - 2x\)</span>.</p><div height="200px" width="200px" math-bounds="{&quot;left&quot;: -3, &quot;right&quot;: 3, &quot;top&quot;: 3, &quot;bottom&quot;: -3}" controls="false" lock="true" x-axis-numbers="false" y-axis-numbers="false" show-grid="false" block="" desmos="" desmos-wrapper="" style="
+        width: 100%;
+        max-width: unset;
+        margin: 0;
+        "><div></div>
+        <div id="des_c3747dde_ac1c_8497_050d_88671a9a2bb5" style="width: 200px; height: 200px;" desmos-embed></div>
+        <script>
+        window.addEventListener("load", function on_load() {
+            var elt = document.getElementById('des_c3747dde_ac1c_8497_050d_88671a9a2bb5');
+            var options = {
+                expressionsCollapsed: true,
+                expressions: false,
+                lockViewport: true,
+                settingsMenu: false,
+                border: false,
+                xAxisNumbers: false,
+                yAxisNumbers: false,
+                showGrid: false,
+            };
+            var calculator = Desmos.GraphingCalculator(elt, options);
+            calculator.setMathBounds({ left: -3, right: 3, top: 3, bottom: -3 });
+            for (cmd of [{"latex":"f(x) = x^2 + 2x"},{"latex":"y = -1","lineStyle":"DASHED","color":"#6042a6"},{"latex":"x = -1","lineStyle":"DASHED","color":"#6042a6"}]) {
+                calculator.setExpression(cmd);
+            }
+        });
+        </script>
+        </div><p>Since</p><ul>
+            <li><span inline="" math-inline="">\(f(-1) = 1 - 1 = 0\)</span></li>
+            <li><span inline="" math-inline="">\(f(1) = 1 + 1 = 2\)</span></li>
+        </ul><p>Therefore</p><dl>
+            <dt>Not even</dt>
+            <dd><span inline="" math-inline="">\(f(-x) \neq f(x)\)</span></dd>
+            <dt>Not odd</dt>
+            <dd><span inline="" math-inline="">\(f(-x) \neq -f(x)\)</span></dd>
+            <dt>Therefore</dt>
+            <dd>This function is neither even nor odd.</dd>
+        </dl></section></section>
+
+
+<h2 id="function-symmetry">Function Symmetry</h2>
+<section class="note-block block"><h3 id="natural-logarithm%20properties">Natural Logarithm Properties</h3><div block="" math-block="">$$\begin{equation}
+        \begin{split}
+            \ln(ab) &= \ln(a) \cdot \ln(b) \\
+            \ln\left(\frac{a}{b}\right) &= \ln(a) - \ln(b) \\
+            \ln(a^r) &= r \cdot \ln(a) \\
+        \end{split}
+        \end{equation}$$</div></section>
+
+<div style="height: 400px;"></div>
+</body>
+</html>

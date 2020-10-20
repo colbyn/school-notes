@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.567a0a18.css">
+    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.4933f710.css">
     <script src="https://colbyn.github.io/school-notes/system.f84e1103.js"></script>
     <!-- MATH-JAX -->
 <script>window.MathJax = {
@@ -107,10 +107,18 @@ var menu = [{
   name: 'Homepage',
   path: 'index.html'
 }, {
+  name: 'Algebra',
+  suffix: 'Reference',
+  path: 'algebra/index.html'
+}, {
   name: 'Calculus 1',
   suffix: 'Class Notes',
   path: 'calc/index.html',
   sub: [{
+    name: 'Reference',
+    chapter: '0',
+    path: 'calc/reference/index.html'
+  }, {
     name: 'Functions and Limits',
     chapter: '1',
     path: 'calc/chapter1/index.html'
@@ -263,7 +271,7 @@ function build_entries(entries) {
 var root_ul_node = document.querySelector("nav#side-nav");
 console.assert(root_ul_node);
 root_ul_node.appendChild(build_entries(menu));</script>
-        <div toc=""><ul toc=""><li entry="h1"><a href="#miscellaneous">Miscellaneous</a></li><li entry="h2"><a href="#functional-utilities">Functional Utilities</a></li><li entry="h2"><a href="#unit-conversion">Unit Conversion</a></li><li entry="h3"><a href="#or-alternatively">Or Alternatively</a></li><li entry="h3"><a href="#for-example">For example</a></li><li entry="h2"><a href="#identities">Identities</a></li><li entry="h2"><a href="#tricks-using%20modular%20arithmetic">Tricks using modular arithmetic</a></li><li entry="h2"><a href="#pythagorean-identity%20notes">Pythagorean Identity Notes</a></li><li entry="h3"><a href="#given">Given</a></li><li entry="h3"><a href="#then-therefore">Then Therefore</a></li><li entry="h3"><a href="#likewise">Likewise</a></li><li entry="h2"><a href="#trigonometric-identities%20reference">Trigonometric Identities Reference</a></li><li entry="h3"><a href="#pythagorean-identities">Pythagorean Identities</a></li><li entry="h3"><a href="#sum-and%20difference%20identities">Sum and Difference Identities</a></li><li entry="h3"><a href="#cofunction-identities">Cofunction Identities</a></li><li entry="h3"><a href="#double-angle-identities">Double-Angle Identities</a></li><li entry="h3"><a href="#half-angle-identities">Half-Angle Identities</a></li><li entry="h3"><a href="#power-reducing-identities">Power-Reducing Identities</a></li><li entry="h3"><a href="#product-to-sum-identities">Product-to-Sum Identities</a></li><li entry="h3"><a href="#sum-to-product-identities">Sum-to-Product-Identities</a></li><li entry="h2"><a href="#properties-of%20trigonometric%20functions">Properties of Trigonometric Functions</a></li><li entry="h3"><a href="#domain-and%20range%20of%20trigonometric%20functions">Domain and Range of Trigonometric Functions</a></li></ul></div>
+        <div toc=""><ul toc=""><li entry="h1"><a href="#miscellaneous">Miscellaneous</a></li><li entry="h2"><a href="#functional-utilities">Functional Utilities</a></li><li entry="h2"><a href="#unit-conversion">Unit Conversion</a></li><li entry="h3"><a href="#or-alternatively">Or Alternatively</a></li><li entry="h3"><a href="#for-example">For example</a></li><li entry="h2"><a href="#identities">Identities</a></li><li entry="h2"><a href="#tricks-using%20modular%20arithmetic">Tricks using modular arithmetic</a></li><li entry="h2"><a href="#pythagorean-identity%20notes">Pythagorean Identity Notes</a></li><li entry="h3"><a href="#given">Given</a></li><li entry="h3"><a href="#then-therefore">Then Therefore</a></li><li entry="h3"><a href="#likewise">Likewise</a></li><li entry="h2"><a href="#trigonometric-identities%20reference">Trigonometric Identities Reference</a></li><li entry="h3"><a href="#pythagorean-identities">Pythagorean Identities</a></li><li entry="h3"><a href="#sum-and%20difference%20identities">Sum and Difference Identities</a></li><li entry="h3"><a href="#cofunction-identities">Cofunction Identities</a></li><li entry="h3"><a href="#double-angle-identities">Double-Angle Identities</a></li><li entry="h3"><a href="#half-angle-identities">Half-Angle Identities</a></li><li entry="h3"><a href="#power-reducing-identities">Power-Reducing Identities</a></li><li entry="h3"><a href="#product-to-sum-identities">Product-to-Sum Identities</a></li><li entry="h3"><a href="#sum-to-product-identities">Sum-to-Product-Identities</a></li><li entry="h2"><a href="#inverse-trigonometric-identities%20reference">Inverse-Trigonometric Identities Reference</a></li><li entry="h3"><a href="#negative-arguments">Negative Arguments</a></li><li entry="h2"><a href="#properties-of%20trigonometric%20functions">Properties of Trigonometric Functions</a></li><li entry="h3"><a href="#domain-and%20range%20of%20trigonometric%20functions">Domain and Range of Trigonometric Functions</a></li></ul></div>
     </header>
     <h1 id="miscellaneous">Miscellaneous</h1>
 
@@ -415,6 +423,14 @@ root_ul_node.appendChild(build_entries(menu));</script>
 \end{split}
 \end{equation} $$</div></section></section>
 
+<section class="note-block block"><h2 id="inverse-trigonometric-identities%20reference">Inverse-Trigonometric Identities Reference</h2><section class="note-block block"><h3 id="negative-arguments">Negative Arguments</h3><div block="" math-block="">$$\begin{equation}
+            \begin{split}
+                \arcsin(-x) &= -\arcsin(x) \\
+                \arccos(-x) &= \pi-\arccos(x) \\
+                \arctan(-x) &= -\arctan(x)
+            \end{split}
+            \end{equation}$$</div></section></section>
+
 <section class="note-block block"><h2 id="properties-of%20trigonometric%20functions">Properties of Trigonometric Functions</h2><section class="note-block block"><h3 id="domain-and%20range%20of%20trigonometric%20functions">Domain and Range of Trigonometric Functions</h3><table>
             <thead>
                 <tr>
@@ -442,33 +458,7 @@ root_ul_node.appendChild(build_entries(menu));</script>
             </tbody>
         </table></section></section>
 
-<!-- .Domain and Range of Trigonometric Functions
-|===
-|Function|Domain|Range
 
-|latexmath:[\sin]|latexmath:[(-\infty,\infty)]|latexmath:[\lbrack -1, 1 \rbrack]
-|latexmath:[\cos]|latexmath:[(-\infty,\infty)]|latexmath:[\lbrack -1, 1 \rbrack]
-|latexmath:[\tan]||latexmath:[(-\infty,\infty)]
-|===
-
-.Domain and Range of Reciprocal Trigonometric Functions
-|===
-|Function|Domain|Range
-
-|latexmath:[\csc] | | latexmath:[(-\infty,-1\rbrack\cup\lbrack 1, \infty)]
-|latexmath:[\sec] | | latexmath:[(-\infty,-1\rbrack\cup\lbrack 1, \infty)]
-|latexmath:[\cot]| | latexmath:[(-\infty,\infty)]
-|===
-
-.Period of Trigonometric Functions
-|===
-|Function|Period|Reciprocal Function|Period
-
-|latexmath:[\sin]|latexmath:[\tau]|latexmath:[\csc]|latexmath:[\tau]
-|latexmath:[\cos]|latexmath:[\tau]|latexmath:[\sec]|latexmath:[\tau]
-|latexmath:[\tan]|latexmath:[\frac{1}{2}\tau]|latexmath:[\cot]|latexmath:[\frac{1}{2}\tau]
-|===
- -->
 
 </body>
 </html>
