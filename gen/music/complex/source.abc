@@ -1,0 +1,40 @@
+X: 4
+T: O lux beata Trinitas (4)
+C: Words: St. Ambrose 4th century
+C: Plainsong, Mode VIII
+C: Arranged: Stuart D. Gathman
+C: Copyright 2012: Creative Commons Attribution-ShareAlike 2.0
+M: 7/8
+L: 1/8
+Q: 1/4=80
+K: D
+%%MIDI gchord c3c4
+%%MIDI program 75
+V:1
+"D"z(AB) (AGFG) | "A7"EFG (AB) (BA) | "Dsus"A3-"D"A4 |
+w:i.~O*  lux*** |be-a-ta trin-* ni-*| tas,  |
+w:ii.~Te* ma-***|ne lau-dum car-*mi-*| ne, |
+w:iii.~De-* o***|Pa-tri sit glo-*ri-*| a, |
+V:2
+   D,3  A,2 A,2 |   E,3  A,2 A,2    | D,3  A,2 A,2 |
+V:1
+"D"z(AB) (AGFG) | "A7"EFG (AB) (BA) | "Dsus"A3-"D"A4 |
+w:  et* prin-***|ci-pa-lis U-*  ni-*| tas,  |
+w:  te* de-***  |pre-ce-mur ves-*pe-*|re: |
+w:  ei-* us-*** |que so-li   Fi-*li-*| o, |
+V:2
+   D,3  A,2 A,2 |   E,3  A,2 A,2    | D,3  A,2 A,2 |
+V:1
+"G"(AB) d (cd) B (A  |"Em"G) (AB)  (AGF)  F-|"D"F7 |
+w: i-* am sol* re-ce-|*     dit*  i-*gne-us,| * |
+w: te* nos-tra* sup-plex|* glo-*ri-**a | * |
+w: cum* Spi-ri-*tu Pa-|* ra-*cli-**to, | * |
+V:2
+   G,3  B,2 B,2 |   D,3  B,2 B,2    | D,3  A,2 A,2 |
+V:1
+"A7"z(GA) (AGFG) | "A7"EFG (AB) (BA) | "Dsus"A3-"D"A4 :|
+w: in-* fun-***  |  de lu-men cor-*di-*| bus. |
+w: per* cunc-*** | ta lau-det sae-*cu-*| la. |
+w: et*  nunc,*** |  et in per-pe-*tu-* | um |
+V:2
+   E,3  A,2 A,2 |   C,3  A,2 A,2    | D,3  A,2 A,2 :|
