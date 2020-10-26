@@ -633,5 +633,53 @@ If the graph of f lies above all of its tangents on an interval I, then it is ca
 </note>
 
 <h2>3.8 | Newtons Method</h2>
+
 <h2>3.9 | Anti-Derivatives</h2>
+
+<dl>
+    <dt>Position Function</dt>
+    <dd>The position function is the antiderivative of the velocity function.</dd>
+    <dd>The position function can be found by anti-differentiating twice.</dd>
+    <dd>If the acceleration and the initial values <tex>s(0)</tex> and <tex>v(0)</tex> are known, then the position function can be found by anti-differentiating twice.</dd>
+    <dt>Velocity Function</dt>
+    <dd>The velocity function is an antiderivative of the acceleration</dd>
+</dl>
+
+<note>
+    <p>Remember:</p>
+    <dl>
+        <dt>First Derivative</dt>
+        <dd>Denotes velocity</dd>
+        <dt>Second Derivative</dt>
+        <dd>Denotes acceleration</dd>
+    </dl>
+</note>
+
+<hr>
+
+<img width="600px" src="~/../static/images/calc-textbook/3.9/1.png" />
+<img width="600px" src="~/../static/images/calc-textbook/3.9/2.png" />
+<img width="600px" src="~/../static/images/calc-textbook/3.9/3.png" />
+
+<hr>
+
+<note>
+    <h2>Formulas</h2>
+    <tex block>
+        \begin{equation}
+        \begin{split}
+            \int c f(x) &= c \int f(x) + C \\
+            \int f(x) + g(x) &= \int f(x) + \int g(x) + C \\
+            \int x^n \; \text{if}\; x \neq -1 &= \frac{x^{n + 1}}{n + 1} + C \\
+            \int \cos(x) &= \sin(x) + C \\
+            \int \sin(x) &= -\cos(x) + C \\
+            \int \sec^2(x) &= \tan(x) + C \\
+            \int \tan(x) \cdot \sec(x) &= \sec(x) + C \\
+            \int \csc^2(x) &= -\cot(x) + C \\
+            \int \cot(x) \csc(x) &= -\csc(x) + C
+        \end{split}
+        \end{equation}
+    </tex>
+</note>
+
 

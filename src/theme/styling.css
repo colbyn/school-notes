@@ -4,6 +4,13 @@
 body {
     margin: 0;
 }
+
+body > hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #d6d6d6;
+}
+
 h1, h2, h3, h4, h5, h6, p, a, li, dt, dd, span {
     font-family: 'Source Sans Pro', sans-serif;
     text-rendering: optimizeLegibility;
