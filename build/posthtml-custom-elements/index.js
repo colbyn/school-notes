@@ -203,6 +203,9 @@ function element(tag, attrs, children) {
 function is_block_node(node) {
     let is_block = false;
     if (typeof node !== 'object') {return false};
+    if (node.tag === 'style') {
+        return true;
+    }
     if (node.tag === 'note') {
         return true;
     }
@@ -482,6 +485,8 @@ function geogebra(tree) {
         width: 100%;
         max-width: unset;
         margin: 0;
+        display: flex;
+        justify-content: center;
         `;
         node.content = [body];
         return node;
