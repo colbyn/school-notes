@@ -1,21 +1,7 @@
+import { type } from "os";
+
 function $<T>(f: () => T): T {
     return f();
-}
-
-function setup_canvas(canvas: HTMLCanvasElement) {
-    // Get the device pixel ratio, falling back to 1.
-    var dpr = window.devicePixelRatio || 1;
-    // Get the size of the canvas in CSS pixels.
-    var rect = canvas.getBoundingClientRect();
-    // Give the canvas pixel dimensions of their CSS
-    // size * the device pixel ratio.
-    canvas.width = rect.width * dpr;
-    canvas.height = rect.height * dpr;
-    var ctx = canvas.getContext('2d');
-    // Scale all drawing operations by the dpr, so you
-    // don't have to worry about the difference.
-    ctx.scale(dpr, dpr);
-    return ctx;
 }
 
 function new_linear_scale(
@@ -50,235 +36,213 @@ function to_screen_cordinates(
     };
 }
 
-type Cartesian2D = {
-    x: number,
-    y: number,
-};
 
-function point(x: number, y: number): Cartesian2D {
-    return {x, y}
+type Point = {x: string | number, y: string | number};
+
+function point(x: string | number, y: string | number): Point {
+    return {x, y};
 }
 
-type DrawPointCmd = {
-    point: Cartesian2D,
-    r: number
-    apply?: (ctx: CanvasRenderingContext2D) => void,
+///////////////////////////////////////////////////////////////////////////////
+// SVG HELPERS
+///////////////////////////////////////////////////////////////////////////////
+
+type V1 = string | number;
+
+type CircleCmd = {
+    pos: Point,
+    r: string | number
 };
 
-function draw_point(canvas: HTMLCanvasElement, cmd: DrawPointCmd) {
-    const ctx = canvas.getContext('2d');
-    const {x, y} = to_screen_cordinates(canvas, {
-        x: cmd.point.x,
-        y: cmd.point.y,
-    });
-    ctx.moveTo(0, 0);
-    ctx.beginPath();
-    ctx.arc(x, y, cmd.r, 0, 2 * Math.PI, false);
-    ctx.fillStyle = '#000';
-    ctx.fill();
-    if (cmd.apply) {
-        cmd.apply(ctx);
-    }
-    ctx.stroke();
-    ctx.restore();
-}
-
-type DrawLinesCmd = {
-    points: Array<Cartesian2D>,
-    apply?: (ctx: CanvasRenderingContext2D) => void,
+type LineCmd = {
+    start: Point,
+    end: Point,
 };
 
-function draw_lines(canvas: HTMLCanvasElement, cmd: DrawLinesCmd) {
-    const ctx = canvas.getContext('2d');
-    ctx.beginPath();
-    ctx.save();
-    cmd.points.forEach((point, ix) => {
-        const {x, y} = to_screen_cordinates(canvas, point);
-        if (ix === 0) {
-            ctx.moveTo(x, y);
-        } else {
-            ctx.lineTo(x, y);
+type PathPoint = [string, Point];
+
+type PathCmd = {
+    d: Array<PathPoint>,
+};
+
+type TextCmd = {
+    pos: Point,
+    dest?: Point,
+    lengthAdjust?: string,
+    textLength?: string,
+    text: string,
+    fontSize?: string,
+    attrs?: (ats: any) => any,
+};
+
+///////////////////////////////////////////////////////////////////////////////
+// SVG
+///////////////////////////////////////////////////////////////////////////////
+
+class Branch {
+    el: SVGElement
+    children: Array<Branch>;
+    constructor(tag: string, attrs?: object, children?: Array<Branch>) {
+        this.el = document.createElementNS('http://www.w3.org/2000/svg', tag);
+        if (tag === 'svg') {
+            this.el.setAttribute(
+                'viewBox', 
+                '0 0 100 50'
+            );
+            this.el.setAttribute(
+                'xmlns',
+                'http://www.w3.org/2000/svg'
+            );
+            // this.el.setAttribute(
+            //     'preserveAspectRatio',
+            //     "none"
+            // );
         }
-    });
-    if (cmd.apply) {
-        cmd.apply(ctx);
+        for (const key in (attrs || {})) {
+            const value = attrs[key];
+            this.el.setAttribute(key, value);
+        }
+        for (const child of (children || [])) {
+            this.append_child(child);
+        }
     }
-    ctx.stroke();
-    ctx.restore();
-}
-
-type DrawLabelCmd = {
-    point: Cartesian2D,
-    text: string
-    apply?: (ctx: CanvasRenderingContext2D) => void,
-};
-
-function draw_label(canvas: HTMLCanvasElement, cmd: DrawLabelCmd) {
-    const ctx = canvas.getContext('2d');
-    const {x, y} = to_screen_cordinates(canvas, {
-        x: cmd.point.x,
-        y: cmd.point.y,
-    });
-    ctx.moveTo(0, 0);
-    ctx.save();
-    if (cmd.apply) {
-        cmd.apply(ctx);
+    append_child(child: Branch) {
+        this.el.appendChild(child.el);
     }
-    ctx.fillText(cmd.text, x, y);
-    ctx.restore();
-}
-
-type DrawOverBraceCmd = {
-    start: Cartesian2D,
-    end: Cartesian2D,
-    // apply?: (ctx: CanvasRenderingContext2D) => void,
-};
-
-function draw_over_brace(canvas: HTMLCanvasElement, cmd: DrawOverBraceCmd) {
-    const ctx = canvas.getContext('2d');
-    const text = '⏞';
-    const text_width = ctx.measureText(text).width;
-    const start = to_screen_cordinates(canvas, cmd.start);
-    const end = to_screen_cordinates(canvas, cmd.end);
-    const mid = $(() => {
-        const x = (start.x + end.x) / 2;
-        const y = (start.x + end.x) / 2;
-        return {x, y};
-    });
-    const distance = $(() => {
-        return Math.sqrt(((end.x - start.x) ** 2) + ((end.y - start.y) ** 2))
-    });
-    const angle_radians = $(() => {
-        const p1 = start;
-        const p2 = end;
-        return Math.atan2(p2.y - p1.y, p2.x - p1.x);
-    });
-    ctx.moveTo(0, 0);
-    ctx.save();
-    ctx.beginPath();
-
-    
-    const res = $(() => {
-        // ctx.rotate(angle_radians);
-        var text_canvas = document.createElement('canvas');
-        text_canvas.width = distance;
-        $(() => {
-            const embed_ctx = text_canvas.getContext('2d');
-            embed_ctx.font = `${distance}px Computer Modern`;
-            embed_ctx.textAlign = 'left';
-            embed_ctx.textBaseline = 'middle';
-            embed_ctx.fillText(text, 1, 0);
-        });
-        
-        ctx.rotate(angle_radians);
-        // ctx.translate(-(distance / 2), -(distance / 2));
-        ctx.scale(0.5, 0.5);
-        // ctx.drawImage(text_canvas, start.x, start.y, distance, 50);
-
-
-
-        // ctx.font = `${distance}px Computer Modern`;
-        // ctx.textAlign = 'center';
-        // ctx.textBaseline = 'middle';
-        // ctx.scale(1, 0.8);
-        // ctx.translate(6, -50);
-        // ctx.fillText(text, start.x, start.y);
-
-        // ctx.font = `${distance}px Computer Modern`;
-        // ctx.textAlign = 'left';
-        // ctx.textBaseline = 'middle';
-        // // ctx.scale(1, 0.8);
-        // // ctx.translate(6, -50);
-        // ctx.fillText(text, 0, 0);
-    });
-
-    console.log("done: A ");
-
-    ctx.stroke();
-    ctx.restore();
+    attr(key: string, value: string) {
+        this.el.setAttribute(key, value);
+    }
+    circle(cmd: CircleCmd) {
+        const attrs = {
+            cx: cmd.pos.x,
+            cy: cmd.pos.y,
+            r: cmd.r,
+        };
+        const child = new Branch('circle', attrs, []);
+        this.append_child(child);
+        // return child;
+    }
+    line(cmd: LineCmd)  {
+        const attrs = {
+            x1: cmd.start.x,
+            y1: cmd.start.y,
+            x2: cmd.end.x,
+            y2: cmd.end.y,
+            stroke: 'black',
+        };
+        const child = new Branch('line', attrs, []);
+        this.append_child(child);
+    }
+    path(cmd: PathCmd) {
+        const attrs = {
+            'd': $(() => {
+                let path_data = "";
+                for (const point of cmd.d) {
+                    path_data += `${point[0]} ${point[1][0]},${point[1][1]} `;
+                }
+                return path_data;
+            }),
+        };
+        const child = new Branch('path', attrs, []);
+        this.append_child(child);
+        // return child;
+    }
+    text(cmd: TextCmd) {
+        let attrs = {} as any;
+        attrs.x = cmd.pos.x;
+        attrs.y = cmd.pos.y;
+        if (cmd.attrs) {
+            attrs = cmd.attrs(attrs);
+        }
+        if (cmd.dest) {
+            attrs['dx'] = cmd.dest.x;
+            attrs['dy'] = cmd.dest.y;
+        }
+        if (cmd.lengthAdjust) {
+            attrs['lengthAdjust'] = cmd.lengthAdjust;
+        }
+        if (cmd.textLength) {
+            attrs['textLength'] = cmd.textLength;
+        }
+        if (cmd.fontSize) {
+            if (attrs['style']) {
+                attrs['style'] += `font-size: ${cmd.fontSize};`;
+            } else {
+                attrs['style'] = `font-size: ${cmd.fontSize};`;
+            }
+        }
+        const child = new Branch('text', attrs, []);
+        child.el.innerHTML = cmd.text;
+        this.append_child(child);
+    }
 }
 
 
-function draw_figure(canvas: HTMLCanvasElement) {
-    const max_top = 70;
-    const max_bot = 80;
-    const point_x = point(-max_bot, -max_bot);
-    const point_y = point(20, max_top);
-    const point_z = point(max_bot, -max_bot);
-    const point_y_bot = point(point_y.x, -max_bot);
-    const point_y_mid = point(point_y.x, 0);
-    ///////////////////////////////////////////////////////////////////////////
-    // LINES
-    ///////////////////////////////////////////////////////////////////////////
-    draw_lines(canvas, {
-        points: [
-            point_y,
-            point_y_bot,
-        ],
-        apply: (ctx: CanvasRenderingContext2D) => {
-            ctx.lineWidth = 1;
-            ctx.fillStyle = "#7d7d7d;"
-            ctx.setLineDash([5]);
-        },
+///////////////////////////////////////////////////////////////////////////////
+// MAIN
+///////////////////////////////////////////////////////////////////////////////
+
+function figure(root: Branch) {
+    const point_a = point('10px', '90%');
+    const point_b = point('60%', '10px');
+    const point_c = point('90%', '90%');
+    root.circle({
+        pos: point_a,
+        r: '2px',
     });
-    draw_lines(canvas, {
-        points: [
-            point_x,
-            point_y,
-            point_z,
-            point_x,
-            point_y,
-        ],
-        apply: (ctx: CanvasRenderingContext2D) => {
-            ctx.lineWidth = 2;
-            ctx.lineJoin = 'round';
-        },
+    root.circle({
+        pos: point_b,
+        r: '2px',
     });
-    ///////////////////////////////////////////////////////////////////////////
-    // LABELS
-    ///////////////////////////////////////////////////////////////////////////
-    const draw_label_apply = (
-            ha_pos: CanvasTextAlign, 
-            va_pos: CanvasTextBaseline) => (ctx: CanvasRenderingContext2D) => {
-        ctx.textAlign = ha_pos;
-        ctx.textBaseline = va_pos;
-        ctx.fillStyle = "#000";
-        ctx.font = '16px Source Sans Pro'
-    };
-    draw_label(canvas, {
-        point: point_x,
-        text: 'A',
-        apply: draw_label_apply('right', 'top'),
+    root.circle({
+        pos: point_c,
+        r: '2px',
     });
-    draw_label(canvas, {
-        point: point_y,
+    root.line({
+        start: point_a,
+        end: point_b,
+    });
+    root.line({
+        start: point_b,
+        end: point_c,
+    });
+    root.line({
+        start: point_c,
+        end: point_a,
+    });
+    root.text({
+        pos: point_b,
         text: 'B',
-        apply: draw_label_apply('center', 'bottom'),
+        fontSize: '10px',
     });
-    draw_label(canvas, {
-        point: point_z,
+    root.text({
+        pos: point_a,
+        text: 'A',
+        fontSize: '10px',
+    });
+    root.text({
+        pos: point_c,
         text: 'C',
-        apply: draw_label_apply('left', 'top'),
+        fontSize: '10px',
     });
-    draw_label(canvas, {
-        point: point(
-            point_y_mid.x + 2,
-            point_y_mid.y,
-        ),
-        text: 'h',
-        apply: draw_label_apply('left', 'middle'),
-    });
-    draw_over_brace(canvas, {
-        start: point_x,
-        end: point_y,
-    });
+}
+
+function view(): Branch {
+    const root = new Branch('svg', {
+        width: "200px",
+        height: "100px",
+    }, []);
+    figure(root);
+    return root;
 }
 
 window.onload = () => {
-    const canvas = document.querySelector("canvas#figure-4-1-1-proof") as HTMLCanvasElement;
-    console.assert(canvas);
-    setup_canvas(canvas);
-    draw_figure(canvas);
+    // const svg = document.querySelector("svg#figure-4-1-1-proof") as SVG;
+    // console.assert(canvas);
+    // setup_canvas(canvas);
+    const parent = document.querySelector('div#figure-4-1-1-proof-wrapper');
+    console.assert(parent);
+    parent.appendChild(view().el);
 };
 
 

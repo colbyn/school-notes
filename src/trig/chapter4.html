@@ -20,13 +20,9 @@
     <h2>Proof</h2>
     <style>
         @font-face {
-        font-family: "Computer Modern";
-        src: url('~/../static/other/computer-modern/cmunbtl.woff');
-    }
-
-  body {
-    font-family: "Computer Modern", sans-serif;
-  }
+            font-family: "Computer Modern";
+            src: url('~/../static/other/computer-modern/cmunbtl.woff');
+        }
         #figure-4-1-1-proof-wrapper {
             width: 100%;
             display: flex;
@@ -34,16 +30,63 @@
             align-items: center;
             padding: 0;
         }
-        #figure-4-1-1-proof {
-            padding: 0;
+        #figure-4-1-1-proof-wrapper > svg {
+            max-width: 700px;
+            /* border: 1px solid #ccc; */
             margin: 12px;
         }
     </style>
     <div id='figure-4-1-1-proof-wrapper'>
-        <canvas block style='width: 300px;' id="figure-4-1-1-proof"></canvas>
         <script block src="~/../src/trig/scripts/law-of-sin-proof.ts"></script>
     </div>
 </note>
 
 <h2>§4.2 | The Law of Cosines</h2>
+<img width='200px' src="~/../static/images/trig-textbook/1.png">
+<tex block>
+    \begin{equation}
+    \begin{split}
+        c^2 = a^2 + b^2 - 2ab \cdot \cos(C) \\
+        a^2 = b^2 + c^2 - 2bc \cdot \cos(A) \\
+        b^2 = a^2 + c^2 - 2ac \cdot \cos(B) \\
+    \end{split}
+    \end{equation}
+</tex>
+<note>
+    <h3>Choosing Between the Law of Sines and the Law of Cosines</h3>
+    <p>Apply the Law of Sines to solve an oblique triangle for each of the following cases.</p>
+    <dl>
+        <dt>ASA</dt>
+        <dd>The measures of two angles of the triangle and the length of the included side are known.</dd>
+        <dt>AAS</dt>
+        <dd>The measures of two angles of the triangle and the length of a side opposite one of these angles are known.</dd>
+        <dt>SSA</dt>
+        <dd>The lengths of two sides of the triangle and the measure of an angle opposite one of these sides are known. This case is called the ambiguous case. It may yield one solution, two solutions, or no solution.</dd>
+    </dl>
+    <p>Apply the Law of Cosines to solve an oblique triangle for each of the following cases.</p>
+    <dl>
+        <dt>SSS</dt>
+        <dd>The lengths of all three sides of the triangle are known. After finding the measure of an angle, you can complete your solution by using the Law of Sines.</dd>
+        <dt>SAS</dt>
+        <dd>The lengths of two sides of the triangle and the measure of the included angle are known. After finding the measure of the third side, you can complete your solution by using the Law of Sines.</dd>
+    </dl>
+</note>
+<note>
+    <h3>Area of a Triangle</h3>
+    <p>The area K of triangle ABC is one-half the product of the lengths of any two sides and the sine of the included angle. Thus</p>
+    <tex block>K = \frac{1}{2}bc \cdot \sin(A)</tex>
+    <tex block>K = \frac{1}{2}ab \cdot \sin(C)</tex>
+    <tex block>K = \frac{1}{2}ac \cdot \sin(B)</tex>
+    <note>
+        <p>Because each formula requires two sides and the included angle, it is necessary to learn only one formula.</p>
+    </note>
+</note>
+<note>
+    <h3>Heron’s Formula for Finding the Area of a Triangle</h3>
+    <p>If a, b, and c are the lengths of the sides of a triangle, then the area K of the triangle is</p>
+    <tex block>
+        K = \sqrt{s(s - a)(s - b)(s - c)} \; \text{where} \; s = \frac{1}{2}(a + b + c)
+    </tex>
+</note>
+
 <h2>§4.3 | Vectors</h2>

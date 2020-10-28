@@ -1,7 +1,124 @@
 <h1>Chapter 4 | Integrals</h1>
 
-
 <h2>4.1 | Areas and Distances</h2>
+
+<note>
+    <h3>Preliminary</h3>
+    <tex block>
+        <tex block>
+            \begin{equation}
+            \begin{split}
+                \text{Height} &= f(x_{i}^{*}) \\
+                \text{Width} &= \Delta x = \frac{b - a}{n}
+            \end{split}
+            \end{equation}
+        </tex>
+    </tex>
+    <note>
+        <h4>Formula for the sum of the squares of the first n positive integers</h4>
+        <tex block>
+            1^2 + 2^2 + 3^2 + \cdots + n^2 = \frac{n(n + 1)(2n + 1)}{6}
+        </tex>
+        <note>
+            <p>Can be rewritten as follows:</p>
+            <tex block>
+                \sum_{i = 1}^{n} i^2 = \frac{n(n + 1)(2n + 1)}{6}
+            </tex>
+        </note>
+    </note>
+</note>
+
+<note>
+    <note>
+        <h3>Approximate Area</h3>
+        <tex block>
+            \begin{equation}
+            \begin{split}
+                R_n &= f(x_1)\Delta x + f(x_2)\Delta x + \cdots + f(x_n)\Delta x &= \sum_{i = 1}^{n} f(x_i)\Delta x \;\; (1)\;(2) \\
+            \end{split}
+            \end{equation}
+        </tex>
+    </note>
+    <note>
+        <h3>Definition 2</h3>
+        <p>The area A of the region S that lies under the graph of the continuous function <tex>f</tex> is the limit of the sum of the areas of approximating rectangles:</p>
+        <tex block>
+            \begin{equation}
+            \begin{split}
+                A &= \lim_{n \to \infty} R_n = \lim_{n \to \infty} \left[ f(x_1)\Delta x + f(x_2)\Delta x + \cdots + f(x_n)\Delta x \right] \;\; (2) \\
+                \\
+                A &= \lim_{n \to \infty} L_n = \lim_{n \to \infty} \left[ f(x_0)\Delta x + f(x_1)\Delta x + \cdots + f(x_{n - 1})\Delta x \right] \;\; (3)
+            \end{split}
+            \end{equation}
+        </tex>
+        <note>
+            <h4>Using sigma notation</h4>
+            <tex block>
+                \begin{equation}
+                \begin{split}
+                    A &= \lim_{n\to\infty} \sum_{i = 1}^n f(x_i) \Delta x \\
+                    A &= \lim_{n\to\infty} \sum_{i = 1}^n f(x_{i - 1}) \Delta x \\
+                    A &= \lim_{n\to\infty} \sum_{i = 1}^n f(x_i^*) \Delta x \\
+                \end{split}
+                \end{equation}
+            </tex>
+        </note>
+    </note>
+    <p>In fact, instead of using left endpoints or right endpoints, we could take the height of the <tex>i\text{th}</tex> rectangle to be the value of <tex>f</tex> at any number <tex>x_{i}^{*}</tex> in the <tex>i\text{th}</tex> subinterval <tex>[x_{i - 1}, x_i]</tex>.</p>
+    <p>We call the numbers <tex>x_{1}^{*}, x_{2}^{*}, \cdots , x_{n}^{*}</tex> the <b>sample points</b>.</p>
+    <note>
+        <p>The following shows approximating rectangles when the sample points are not chosen to be endpoints. So a more general expression for the area of <tex>S</tex> is:</p>
+        <tex block>
+            A = \lim_{x \to \infty} \left[ f(x_{1}^{*})\Delta x + f(x_{2}^{*})\Delta x + \cdots + f(x_{n}^{*})\Delta x \right]
+        </tex>
+        <img width='400px' src="~/../static/images/calc-textbook/4.1/1.png">
+    </note>
+    <note>
+        <dl>
+            <dt>Left Riemann Sum</dt>
+            <dd><tex>x_{i}^{*} = x_{i - 1} \;\; \text{for all $i$}</tex></dd>
+            <dt>Right Riemann Sum</dt>
+            <dd><tex>x_{i}^{*} = x_{i} \;\; \text{for all $i$}</tex></dd>
+            <dt>Middle Riemann Sum</dt>
+            <dd><tex>x_{i}^{*} = \frac{1}{2}(x_{i} + x_{i + 1}) \;\; \text{for all $i$}</tex></dd>
+        </dl>
+    </note>
+    <table>
+        <tr>
+            <td>(1)</td>
+            <td>Approximate Area</td>
+        </tr>
+        <tr>
+            <td>(2)</td>
+            <td>Using right endpoints</td>
+        </tr>
+        <tr>
+            <td>(3)</td>
+            <td>Using left endpoints</td>
+        </tr>
+    </table>
+</note>
+
+<note>
+    <h3>The Distance Problem</h3>
+    <dl>
+        <dt>The Distance Problem</dt>
+        <dd>find the distance traveled by an object during a certain time period if the velocity of the object is known at all times. </dd>
+    </dl>
+    <note>
+        <p>If the velocity remains constant, then the distance problem is easy to solve by means of the formula:</p>
+        <tex block>
+            \begin{equation}
+            \begin{split}
+                \text{distance} &= \text{velocity} \cdot \text{time} \\
+                \text{distance} &= \text{rate} \cdot \text{time}
+            \end{split}
+            \end{equation}
+        </tex>
+    </note>
+</note>
+
+
 <h2>4.2 | The Definite Integral</h2>
 <h2>4.3 | The Fundamental Theorem of Calculus</h2>
 <h2>4.4 | Indefinite Integrals and the Net Change Theorem</h2>
