@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.20c2f377.css">
+    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.79ed9ac5.css">
     <script src="https://colbyn.github.io/school-notes/system.f84e1103.js"></script>
     <!-- MATH-JAX -->
 <script>window.MathJax = {
@@ -271,8 +271,70 @@ function build_entries(entries) {
 var root_ul_node = document.querySelector("nav#side-nav");
 console.assert(root_ul_node);
 root_ul_node.appendChild(build_entries(menu));</script>
-        <div toc=""><ul toc=""><li entry="h1"><a href="#chapter-4%20%7C%20applications%20of%20trigonometry">Chapter 4 | Applications of Trigonometry</a></li></ul></div>
+        <div toc=""><ul toc=""><li entry="h1"><a href="#chapter-4%20%7C%20applications%20of%20trigonometry">Chapter 4 | Applications of Trigonometry</a></li><li entry="h2"><a href="#%C2%A74.1-%7C%20the%20law%20of%20sines">§4.1 | The Law of Sines</a></li><li entry="h3"><a href="#the-ambiguous%20case%20(ssa)">The Ambiguous Case (SSA)</a></li><li entry="h2"><a href="#proof">Proof</a></li><li entry="h2"><a href="#%C2%A74.2-%7C%20the%20law%20of%20cosines">§4.2 | The Law of Cosines</a></li><li entry="h3"><a href="#choosing-between%20the%20law%20of%20sines%20and%20the%20law%20of%20cosines">Choosing Between the Law of Sines and the Law of Cosines</a></li><li entry="h3"><a href="#area-of%20a%20triangle">Area of a Triangle</a></li><li entry="h4"><a href="#workflow">Workflow</a></li><li entry="h4"><a href="#theorem">Theorem</a></li><li entry="h3"><a href="#heron%E2%80%99s-formula%20for%20finding%20the%20area%20of%20a%20triangle">Heron’s Formula for Finding the Area of a Triangle</a></li><li entry="h2"><a href="#%C2%A74.3-%7C%20vectors">§4.3 | Vectors</a></li></ul></div>
     </header>
     <h1 id="chapter-4%20%7C%20applications%20of%20trigonometry">Chapter 4 | Applications of Trigonometry</h1>
+
+<h2 id="%C2%A74.1-%7C%20the%20law%20of%20sines">§4.1 | The Law of Sines</h2>
+
+<div block="" math-block="">$$\begin{equation}
+    \begin{split}
+        \frac{a}{\sin A} &= \frac{b}{\sin B} &= \frac{c}{\sin C} \\
+        \\
+        \frac{\sin A}{a} &= \frac{\sin B}{b} &= \frac{\sin C}{c}
+    \end{split}
+    \end{equation}$$</div>
+<section class="note-block block"><h3 id="the-ambiguous%20case%20(ssa)">The Ambiguous Case (SSA)</h3><p>TODO</p></section>
+
+<section class="note-block block"><h2 id="proof">Proof</h2><p>TODO</p></section>
+
+<h2 id="%C2%A74.2-%7C%20the%20law%20of%20cosines">§4.2 | The Law of Cosines</h2>
+<img width="200px" src="https://colbyn.github.io/school-notes/1.2aad96ac.png" style="min-width: 0; max-width: 200px;">
+<div block="" math-block="">$$\begin{equation}
+    \begin{split}
+        c^2 = a^2 + b^2 - 2ab \cdot \cos(C) \\
+        a^2 = b^2 + c^2 - 2bc \cdot \cos(A) \\
+        b^2 = a^2 + c^2 - 2ac \cdot \cos(B) \\
+    \end{split}
+    \end{equation}$$</div>
+<section class="note-block block"><h3 id="choosing-between%20the%20law%20of%20sines%20and%20the%20law%20of%20cosines">Choosing Between the Law of Sines and the Law of Cosines</h3><p>Apply the Law of Sines to solve an oblique triangle for each of the following cases.</p><table>
+        <tr>
+            <td>ASA</td>
+            <td><p>The measures of two angles of the triangle and the length of the included side are known.</p></td>
+        </tr>
+        <tr>
+            <td>AAS</td>
+            <td><p>The measures of two angles of the triangle and the length of a side opposite one of these angles are known.</p></td>
+        </tr>
+        <tr>
+            <td>SSA</td>
+            <td><p>The lengths of two sides of the triangle and the measure of an angle opposite one of these sides are known. This case is called the ambiguous case. It may yield one solution, two solutions, or no solution.</p></td>
+        </tr>
+    </table><p>Apply the Law of Cosines to solve an oblique triangle for each of the following cases.</p><table>
+        <tr>
+            <td>SSS</td>
+            <td><p>The lengths of all three sides of the triangle are known. After finding the measure of an angle, you can complete your solution by using the Law of Sines.</p></td>
+        </tr>
+        <tr>
+            <td>SAS</td>
+            <td><p>The lengths of two sides of the triangle and the measure of the included angle are known. After finding the measure of the third side, you can complete your solution by using the Law of Sines.</p></td>
+        </tr>
+    </table></section>
+<section class="note-block block"><h3 id="area-of%20a%20triangle">Area of a Triangle</h3><ul>
+        <li>To find the area of a triangle when the height is not given.</li>
+        <li>We will use <span inline="" math-inline="">\(K\)</span> for the area of a triangle because the letter <span inline="" math-inline="">\(A\)</span> is often used to represent the measure of an angle.</li>
+    </ul><section class="note-block block"><h4 id="workflow">Workflow</h4><div block="" math-block="">$$\begin{equation}
+            \begin{split}
+                \text{Height} &= c \cdot \sin(A) \\
+                \\
+                \text{Area} &= \frac{1}{2} \; b h \\
+                    &= \frac{1}{2} \; b \left[ c \cdot \sin(A) \right] \\
+                    &= \frac{1}{2} \; bc \cdot \sin(A)
+            \end{split}
+            \end{equation}$$</div></section><section class="note-block block"><h4 id="theorem">Theorem</h4><p>The area K of triangle ABC is one-half the product of the lengths of any two sides and the sine of the included angle. Thus</p><div block="" math-block="">$$K = \frac{1}{2}bc \cdot \sin(A)$$</div><div block="" math-block="">$$K = \frac{1}{2}ab \cdot \sin(C)$$</div><div block="" math-block="">$$K = \frac{1}{2}ac \cdot \sin(B)$$</div></section><section class="note-block block"><p>Because each formula requires two sides and the included angle, it is necessary to learn only one formula.</p></section></section>
+<section class="note-block block"><h3 id="heron%E2%80%99s-formula%20for%20finding%20the%20area%20of%20a%20triangle">Heron’s Formula for Finding the Area of a Triangle</h3><p>If a, b, and c are the lengths of the sides of a triangle, then the area K of the triangle is</p><div block="" math-block="">$$K = \sqrt{s(s - a)(s - b)(s - c)} \; \text{where} \; s = \frac{1}{2}(a + b + c)$$</div><section class="note-block block"><p>The teacher may not tell us what <span inline="" math-inline="">\(s\)</span> is on an exam (i.e. in the context of giving us the formula, but not e.g. <span inline="" math-inline="">\(s\)</span>).</p></section></section>
+
+<h2 id="%C2%A74.3-%7C%20vectors">§4.3 | Vectors</h2>
+
 </body>
 </html>

@@ -11,7 +11,7 @@ body > hr {
     border: 1px solid #d6d6d6;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, li, dt, dd, span {
+h1, h2, h3, h4, h5, h6, p, a, li, dt, dd, span, td, tr {
     font-family: 'Source Sans Pro', sans-serif;
     text-rendering: optimizeLegibility;
 }
@@ -218,6 +218,10 @@ body > table {
     width: 100%;
 }
 
+td {
+    vertical-align: text-top;
+}
+
 body > table > tbody > tr > td > div[row] {
     display: flex;
     justify-content: space-around;
@@ -337,4 +341,4 @@ div[desmos-embed] {
 
 
 
-/*# sourceMappingURL=https://colbyn.github.io/school-notes/styling.20c2f377.css.map */
+/*# sourceMappingURL=https://colbyn.github.io/school-notes/styling.79ed9ac5.css.map */
