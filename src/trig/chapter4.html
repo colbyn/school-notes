@@ -1,7 +1,6 @@
 <h1>Chapter 4 | Applications of Trigonometry</h1>
 
 <h2>§4.1 | The Law of Sines</h2>
-
 <tex block>
     \begin{equation}
     \begin{split}
@@ -15,68 +14,92 @@
     <h3>The Ambiguous Case (SSA)</h3>
     <p>TODO</p>
 </note>
-
 <note>
     <h2>Proof</h2>
-    <style>
-        @font-face {
-            font-family: "Computer Modern";
-            src: url('~/../static/other/computer-modern/cmunbtl.woff');
-        }
-        #figure-4-1-1-proof-wrapper {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0;
-        }
-        #figure-4-1-1-proof-wrapper > svg {
-            max-width: 700px;
-            /* border: 1px solid #ccc; */
-            margin: 12px;
-        }
-    </style>
-    <div id='figure-4-1-1-proof-wrapper'>
-        <script block src="~/../src/trig/scripts/law-of-sin-proof.ts"></script>
-    </div>
+    <p>TODO</p>
 </note>
 
 <h2>§4.2 | The Law of Cosines</h2>
-<img width='200px' src="~/../static/images/trig-textbook/1.png">
-<tex block>
-    \begin{equation}
-    \begin{split}
-        c^2 = a^2 + b^2 - 2ab \cdot \cos(C) \\
-        a^2 = b^2 + c^2 - 2bc \cdot \cos(A) \\
-        b^2 = a^2 + c^2 - 2ac \cdot \cos(B) \\
-    \end{split}
-    \end{equation}
-</tex>
+<note>
+    <div id='UID13412312341'>
+        <style>
+            #UID13412312341 {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+        <img width='200px' src="~/../static/images/trig-textbook/1.png">
+    </div>
+    <tex block>
+        \begin{equation}
+        \begin{split}
+            c^2 = a^2 + b^2 - 2ab \cdot \cos(C) \\
+            \\
+            a^2 = b^2 + c^2 - 2bc \cdot \cos(A) \\
+            \\
+            b^2 = a^2 + c^2 - 2ac \cdot \cos(B) \\
+        \end{split}
+        \end{equation}
+    </tex>
+</note>
 <note>
     <h3>Choosing Between the Law of Sines and the Law of Cosines</h3>
     <p>Apply the Law of Sines to solve an oblique triangle for each of the following cases.</p>
-    <dl>
-        <dt>ASA</dt>
-        <dd>The measures of two angles of the triangle and the length of the included side are known.</dd>
-        <dt>AAS</dt>
-        <dd>The measures of two angles of the triangle and the length of a side opposite one of these angles are known.</dd>
-        <dt>SSA</dt>
-        <dd>The lengths of two sides of the triangle and the measure of an angle opposite one of these sides are known. This case is called the ambiguous case. It may yield one solution, two solutions, or no solution.</dd>
-    </dl>
+    <table>
+        <tr>
+            <td>ASA</td>
+            <td><p>The measures of two angles of the triangle and the length of the included side are known.</p></td>
+        </tr>
+        <tr>
+            <td>AAS</td>
+            <td><p>The measures of two angles of the triangle and the length of a side opposite one of these angles are known.</p></td>
+        </tr>
+        <tr>
+            <td>SSA</td>
+            <td><p>The lengths of two sides of the triangle and the measure of an angle opposite one of these sides are known. This case is called the ambiguous case. It may yield one solution, two solutions, or no solution.</p></td>
+        </tr>
+    </table>
     <p>Apply the Law of Cosines to solve an oblique triangle for each of the following cases.</p>
-    <dl>
-        <dt>SSS</dt>
-        <dd>The lengths of all three sides of the triangle are known. After finding the measure of an angle, you can complete your solution by using the Law of Sines.</dd>
-        <dt>SAS</dt>
-        <dd>The lengths of two sides of the triangle and the measure of the included angle are known. After finding the measure of the third side, you can complete your solution by using the Law of Sines.</dd>
-    </dl>
+    <table>
+        <tr>
+            <td>SSS</td>
+            <td><p>The lengths of all three sides of the triangle are known. After finding the measure of an angle, you can complete your solution by using the Law of Sines.</p></td>
+        </tr>
+        <tr>
+            <td>SAS</td>
+            <td><p>The lengths of two sides of the triangle and the measure of the included angle are known. After finding the measure of the third side, you can complete your solution by using the Law of Sines.</p></td>
+        </tr>
+    </table>
 </note>
 <note>
     <h3>Area of a Triangle</h3>
-    <p>The area K of triangle ABC is one-half the product of the lengths of any two sides and the sine of the included angle. Thus</p>
-    <tex block>K = \frac{1}{2}bc \cdot \sin(A)</tex>
-    <tex block>K = \frac{1}{2}ab \cdot \sin(C)</tex>
-    <tex block>K = \frac{1}{2}ac \cdot \sin(B)</tex>
+    <ul>
+        <li>To find the area of a triangle when the height is not given.</li>
+        <li>We will use <tex>K</tex> for the area of a triangle because the letter <tex>A</tex> is often used to represent the measure of an angle.</li>
+    </ul>
+    <note>
+        <h4>Workflow</h4>
+        <tex block>
+            \begin{equation}
+            \begin{split}
+                \text{Height} &= c \cdot \sin(A) \\
+                \\
+                \text{Area} &= \frac{1}{2} \; b h \\
+                    &= \frac{1}{2} \; b \left[ c \cdot \sin(A) \right] \\
+                    &= \frac{1}{2} \; bc \cdot \sin(A)
+            \end{split}
+            \end{equation}
+        </tex>
+    </note>
+    <note>
+        <h4>Theorem</h4>
+        <p>The area K of triangle ABC is one-half the product of the lengths of any two sides and the sine of the included angle. Thus</p>
+        <tex block>K = \frac{1}{2}bc \cdot \sin(A)</tex>
+        <tex block>K = \frac{1}{2}ab \cdot \sin(C)</tex>
+        <tex block>K = \frac{1}{2}ac \cdot \sin(B)</tex>
+    </note>
     <note>
         <p>Because each formula requires two sides and the included angle, it is necessary to learn only one formula.</p>
     </note>
@@ -87,6 +110,9 @@
     <tex block>
         K = \sqrt{s(s - a)(s - b)(s - c)} \; \text{where} \; s = \frac{1}{2}(a + b + c)
     </tex>
+    <note>
+        <p>The teacher may not tell us what <tex>s</tex> is on an exam (i.e. in the context of giving us the formula, but not e.g. <tex>s</tex>).</p>
+    </note>
 </note>
 
 <h2>§4.3 | Vectors</h2>
