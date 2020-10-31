@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.79ed9ac5.css">
+    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.cca3bb46.css">
     <script src="https://colbyn.github.io/school-notes/system.f84e1103.js"></script>
     <!-- MATH-JAX -->
 <script>window.MathJax = {
   tex: {
-    inlineMath: [['\\(', '\\)'], ['stem:[', ']']]
+    inlineMath: [['\\(', '\\)'], ['stem:[', ']']],
+    macros: {
+      'dx': "{\\, \\mathrm{d}x\\;}",
+      'Integrate': ['{\\int_{#1}^{#2}\\, #3 \\dx}', 3],
+      'I': ['{\\Integrate{a}{b}{#1}}', 1]
+    }
   },
   svg: {
     fontCache: 'global',

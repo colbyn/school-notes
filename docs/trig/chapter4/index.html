@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.79ed9ac5.css">
+    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.cca3bb46.css">
     <script src="https://colbyn.github.io/school-notes/system.f84e1103.js"></script>
     <!-- MATH-JAX -->
 <script>window.MathJax = {
   tex: {
-    inlineMath: [['\\(', '\\)'], ['stem:[', ']']]
+    inlineMath: [['\\(', '\\)'], ['stem:[', ']']],
+    macros: {
+      'dx': "{\\, \\mathrm{d}x\\;}",
+      'Integrate': ['{\\int_{#1}^{#2}\\, #3 \\dx}', 3],
+      'I': ['{\\Integrate{a}{b}{#1}}', 1]
+    }
   },
   svg: {
     fontCache: 'global',
@@ -271,12 +276,11 @@ function build_entries(entries) {
 var root_ul_node = document.querySelector("nav#side-nav");
 console.assert(root_ul_node);
 root_ul_node.appendChild(build_entries(menu));</script>
-        <div toc=""><ul toc=""><li entry="h1"><a href="#chapter-4%20%7C%20applications%20of%20trigonometry">Chapter 4 | Applications of Trigonometry</a></li><li entry="h2"><a href="#%C2%A74.1-%7C%20the%20law%20of%20sines">§4.1 | The Law of Sines</a></li><li entry="h3"><a href="#the-ambiguous%20case%20(ssa)">The Ambiguous Case (SSA)</a></li><li entry="h2"><a href="#proof">Proof</a></li><li entry="h2"><a href="#%C2%A74.2-%7C%20the%20law%20of%20cosines">§4.2 | The Law of Cosines</a></li><li entry="h3"><a href="#choosing-between%20the%20law%20of%20sines%20and%20the%20law%20of%20cosines">Choosing Between the Law of Sines and the Law of Cosines</a></li><li entry="h3"><a href="#area-of%20a%20triangle">Area of a Triangle</a></li><li entry="h4"><a href="#workflow">Workflow</a></li><li entry="h4"><a href="#theorem">Theorem</a></li><li entry="h3"><a href="#heron%E2%80%99s-formula%20for%20finding%20the%20area%20of%20a%20triangle">Heron’s Formula for Finding the Area of a Triangle</a></li><li entry="h2"><a href="#%C2%A74.3-%7C%20vectors">§4.3 | Vectors</a></li></ul></div>
+        <div toc=""><ul toc=""><li entry="h1"><a href="#chapter-4%20%7C%20applications%20of%20trigonometry">Chapter 4 | Applications of Trigonometry</a></li><li entry="h2"><a href="#%C2%A74.1-%7C%20the%20law%20of%20sines">§4.1 | The Law of Sines</a></li><li entry="h3"><a href="#the-ambiguous%20case%20(ssa)">The Ambiguous Case (SSA)</a></li><li entry="h2"><a href="#proof">Proof</a></li><li entry="h2"><a href="#%C2%A74.2-%7C%20the%20law%20of%20cosines">§4.2 | The Law of Cosines</a></li><li entry="h3"><a href="#choosing-between%20the%20law%20of%20sines%20and%20the%20law%20of%20cosines">Choosing Between the Law of Sines and the Law of Cosines</a></li><li entry="h3"><a href="#area-of%20a%20triangle">Area of a Triangle</a></li><li entry="h4"><a href="#workflow">Workflow</a></li><li entry="h4"><a href="#theorem">Theorem</a></li><li entry="h3"><a href="#heron%E2%80%99s-formula%20for%20finding%20the%20area%20of%20a%20triangle">Heron’s Formula for Finding the Area of a Triangle</a></li><li entry="h2"><a href="#%C2%A74.3-%7C%20vectors">§4.3 | Vectors</a></li><li entry="h3"><a href="#definition-of%20a%20vector">Definition of a Vector</a></li><li entry="h4"><a href="#common-notation%20for%20vectors">Common Notation for Vectors</a></li><li entry="h4"><a href="#ad-hock-vector%20notations">Ad-Hock Vector Notations</a></li></ul></div>
     </header>
     <h1 id="chapter-4%20%7C%20applications%20of%20trigonometry">Chapter 4 | Applications of Trigonometry</h1>
 
 <h2 id="%C2%A74.1-%7C%20the%20law%20of%20sines">§4.1 | The Law of Sines</h2>
-
 <div block="" math-block="">$$\begin{equation}
     \begin{split}
         \frac{a}{\sin A} &= \frac{b}{\sin B} &= \frac{c}{\sin C} \\
@@ -285,18 +289,26 @@ root_ul_node.appendChild(build_entries(menu));</script>
     \end{split}
     \end{equation}$$</div>
 <section class="note-block block"><h3 id="the-ambiguous%20case%20(ssa)">The Ambiguous Case (SSA)</h3><p>TODO</p></section>
-
 <section class="note-block block"><h2 id="proof">Proof</h2><p>TODO</p></section>
 
 <h2 id="%C2%A74.2-%7C%20the%20law%20of%20cosines">§4.2 | The Law of Cosines</h2>
-<img width="200px" src="https://colbyn.github.io/school-notes/1.2aad96ac.png" style="min-width: 0; max-width: 200px;">
-<div block="" math-block="">$$\begin{equation}
-    \begin{split}
-        c^2 = a^2 + b^2 - 2ab \cdot \cos(C) \\
-        a^2 = b^2 + c^2 - 2bc \cdot \cos(A) \\
-        b^2 = a^2 + c^2 - 2ac \cdot \cos(B) \\
-    \end{split}
-    \end{equation}$$</div>
+<section class="note-block block"><div id="UID13412312341">
+        <style>#UID13412312341 {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }</style>
+        <img width="200px" src="https://colbyn.github.io/school-notes/1.2aad96ac.png" style="min-width: 0; max-width: 200px;">
+    </div><div block="" math-block="">$$\begin{equation}
+        \begin{split}
+            c^2 = a^2 + b^2 - 2ab \cdot \cos(C) \\
+            \\
+            a^2 = b^2 + c^2 - 2bc \cdot \cos(A) \\
+            \\
+            b^2 = a^2 + c^2 - 2ac \cdot \cos(B) \\
+        \end{split}
+        \end{equation}$$</div></section>
 <section class="note-block block"><h3 id="choosing-between%20the%20law%20of%20sines%20and%20the%20law%20of%20cosines">Choosing Between the Law of Sines and the Law of Cosines</h3><p>Apply the Law of Sines to solve an oblique triangle for each of the following cases.</p><table>
         <tr>
             <td>ASA</td>
@@ -335,6 +347,21 @@ root_ul_node.appendChild(build_entries(menu));</script>
 <section class="note-block block"><h3 id="heron%E2%80%99s-formula%20for%20finding%20the%20area%20of%20a%20triangle">Heron’s Formula for Finding the Area of a Triangle</h3><p>If a, b, and c are the lengths of the sides of a triangle, then the area K of the triangle is</p><div block="" math-block="">$$K = \sqrt{s(s - a)(s - b)(s - c)} \; \text{where} \; s = \frac{1}{2}(a + b + c)$$</div><section class="note-block block"><p>The teacher may not tell us what <span inline="" math-inline="">\(s\)</span> is on an exam (i.e. in the context of giving us the formula, but not e.g. <span inline="" math-inline="">\(s\)</span>).</p></section></section>
 
 <h2 id="%C2%A74.3-%7C%20vectors">§4.3 | Vectors</h2>
+<ul>
+    <li>The magnitude and direction of a vector can be found from its components.</li>
+    <li>A <b>unit vector</b> is a vector whose magnitude is 1.</li>
+</ul>
+<section class="note-block block"><h3 id="definition-of%20a%20vector">Definition of a Vector</h3><p>A vector is a directed line segment. The length of the line segment is the magnitude of the vector, and the direction of the vector is measured by an angle.</p><h4 id="common-notation%20for%20vectors">Common Notation for Vectors</h4><div block="" math-block="">$$\begin{equation}
+        \begin{split}
+            \text{Vector} & = \boldsymbol{V} = \overrightarrow{AB} \\\\
+            \text{Magnitude} &= \| \mathbf{v} \|
+        \end{split}
+        \end{equation}$$</div><section class="note-block block"><h4 id="ad-hock-vector%20notations">Ad-Hock Vector Notations</h4><ul>
+            <li>
+                <span inline="" math-inline="">\(\langle a,b \rangle\)</span> is relative to the origin. I.e. the initial point is at <span inline="" math-inline="">\((0, 0)\)</span>, and the terminal point is at <span inline="" math-inline="">\((a, b)\)</span>.
+            </li>
+        </ul></section></section>
 
+<div style="height: 200px;"></div>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <h1 id="chapter-4%20%7C%20integrals">Chapter 4 | Integrals</h1>
 
-<section class="note-block block"><h2 id="formulas">Formulas</h2><div block="" math-block="">$$\begin{equation}
+<section class="note-block block"><h2 id="general-formulas">General Formulas</h2><div block="" math-block="">$$\begin{equation}
         \begin{split}
             \int c f(x) &= c \int f(x) + C \\
             \int f(x) + g(x) &= \int f(x) + \int g(x) + C \\
@@ -16,14 +16,13 @@
 
 
 <h2 id="4.1-%7C%20areas%20and%20distances">4.1 | Areas and Distances</h2>
-
+<section class="note-block block"><p>The teacher said that we need to memorize the <b>summation formula</b> for an <b>arithmetic sequence</b>.</p><div block="" math-block="">$$\sum_{i = 1}^n i = \frac{n(n + 1)}{2}$$</div><p>Perhaps check with the summation rules (similar to limit laws).</p></section>
 <section class="note-block block"><h3 id="preliminary">Preliminary</h3><div block="" math-block="">$$\begin{equation}
             \begin{split}
                 \text{Height} &= f(x_{i}^{*}) \\
                 \text{Width} &= \Delta x = \frac{b - a}{n}
             \end{split}
             \end{equation}$$</div><section class="note-block block"><h4 id="formula-for%20the%20sum%20of%20the%20squares%20of%20the%20first%20n%20positive%20integers">Formula for the sum of the squares of the first n positive integers</h4><div block="" math-block="">$$1^2 + 2^2 + 3^2 + \cdots + n^2 = \frac{n(n + 1)(2n + 1)}{6}$$</div><section class="note-block block"><p>Can be rewritten as follows:</p><div block="" math-block="">$$\sum_{i = 1}^{n} i^2 = \frac{n(n + 1)(2n + 1)}{6}$$</div></section></section></section>
-
 <section class="note-block block"><section class="note-block block"><h3 id="approximate-area">Approximate Area</h3><div block="" math-block="">$$\begin{equation}
             \begin{split}
                 R_n &= f(x_1)\Delta x + f(x_2)\Delta x + \cdots + f(x_n)\Delta x &= \sum_{i = 1}^{n} f(x_i)\Delta x \;\; (1)\;(2) \\
@@ -47,7 +46,7 @@
             <dd><span inline="" math-inline="">\(x_{i}^{*} = x_{i} \;\; \text{for all $i$}\)</span></dd>
             <dt>Middle Riemann Sum</dt>
             <dd><span inline="" math-inline="">\(x_{i}^{*} = \frac{1}{2}(x_{i} + x_{i + 1}) \;\; \text{for all $i$}\)</span></dd>
-        </dl></section><section class="note-block block"><h3 id="riemann-sums">Riemann sums</h3><dl>
+        </dl><p><small><span inline="" math-inline="">\(x_{i}^{*}\)</span> may refer to right endpoints explicitly.</small></p></section><section class="note-block block"><h3 id="riemann-sums">Riemann sums</h3><dl>
             <dt>Left Riemann sum</dt>
             <dd><div block="" math-block="">$$\sum_{i = 0}^{n - 1} \Delta x \cdot f(x_i)$$</div></dd>
             <dt>Right Riemann sum</dt>
@@ -86,6 +85,33 @@
 
 
 <h2 id="4.2-%7C%20the%20definite%20integral">4.2 | The Definite Integral</h2>
+<ul>
+    <li>The definite integral VIA the limit definition will be on the exam.</li>
+    <li>
+        <p>Some definite integrals can be solved VIA simple solutions <b>using areas</b> in conjunction with the <b>upper and lower bounds</b> of integration.</p>
+        <p>For example:</p>
+        <ul>
+            <li>Linear equations can form a triangle using the upper and lower bounds of integration.</li>
+            <li>Square root functions can sometimes be mapped to a half-circle, and solved using the area for a circle (i.e. <span inline="" math-inline="">\(A = \pi \cdot r^2\)</span>).</li>
+        </ul>
+    </li>
+</ul>
+
+<section class="note-block block"><h3 id="definite-integral%20formulas">Definite Integral Formulas</h3><section class="note-block block"><h4 id="properties-of%20the%20definite%20integral:">Properties of the Definite Integral:</h4><div block="" math-block="">$$\begin{equation}
+            \begin{split}
+                \I{f(x)} &= - \I{f(x)} \\\\
+                \Integrate{a}{b}{f(x)} &= 0 \\\\
+                \I{c} &= c(b - a) \;\; \text{if $c$ is any constant}\; \\\\
+                \I{\left[ f(x) \pm g(x) \right]} &= \I{f(x)} \pm \I{g(x)}\\\\
+                \I{c \cdot f(x)} &= c \cdot \I{ f(x)} \\\\
+                \Integrate{a}{c}{f(x)} &= \Integrate{a}{b}{f(x)} + \Integrate{b}{c}{f(x)}
+            \end{split}
+            \end{equation}$$</div></section><section class="note-block block"><h4 id="comparison-properties%20of%20integrals">Comparison Properties of Integrals</h4><ul>
+            <li><p>If <span inline="" math-inline="">\(f(x) \geq 0\)</span> for all <span inline="" math-inline="">\(a \leq x \leq b\)</span>, then <span inline="" math-inline="">\(\I{f(x)} \geq 0\)</span></p></li>
+            <li><p>If <span inline="" math-inline="">\(f(x) \geq g(x)\)</span> for all <span inline="" math-inline="">\(a \leq x \leq b\)</span>, then <span inline="" math-inline="">\(\I{f(x)} \geq \I{g(x)}\)</span></p></li>
+            <li><p>If <span inline="" math-inline="">\(m \leq f(x) \leq M\)</span> for all <span inline="" math-inline="">\(a \leq x \leq b\)</span>, then <span inline="" math-inline="">\(m(b - a) \leq \I{f(x)} \leq M(b - a)\)</span></p></li>
+        </ul></section></section>
+
 <h2 id="4.3-%7C%20the%20fundamental%20theorem%20of%20calculus">4.3 | The Fundamental Theorem of Calculus</h2>
 <h2 id="4.4-%7C%20indefinite%20integrals%20and%20the%20net%20change%20theorem">4.4 | Indefinite Integrals and the Net Change Theorem</h2>
 <h2 id="4.5-%7C%20the%20substitution%20rule">4.5 | The Substitution Rule</h2>

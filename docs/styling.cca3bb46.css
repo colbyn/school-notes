@@ -339,6 +339,15 @@ div[desmos-embed] {
     margin: 0 auto;
 }
 
+ul li ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul li p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
 
 
-/*# sourceMappingURL=https://colbyn.github.io/school-notes/styling.79ed9ac5.css.map */
+/*# sourceMappingURL=https://colbyn.github.io/school-notes/styling.cca3bb46.css.map */
