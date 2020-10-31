@@ -1,7 +1,7 @@
 <h1>Chapter 4 | Integrals</h1>
 
 <note>
-    <h2>Formulas</h2>
+    <h2>General Formulas</h2>
     <tex block>
         \begin{equation}
         \begin{split}
@@ -21,15 +21,13 @@
 
 
 <h2>4.1 | Areas and Distances</h2>
-
 <note>
     <p>The teacher said that we need to memorize the <b>summation formula</b> for an <b>arithmetic sequence</b>.</p>
     <tex block>
         \sum_{i = 1}^n i = \frac{n(n + 1)}{2}
     </tex>
-    <p>Perhaps check with the summation rules (simular to limit laws).</p>
+    <p>Perhaps check with the summation rules (similar to limit laws).</p>
 </note>
-
 <note>
     <h3>Preliminary</h3>
     <tex block>
@@ -55,7 +53,6 @@
         </note>
     </note>
 </note>
-
 <note>
     <note>
         <h3>Approximate Area</h3>
@@ -131,6 +128,7 @@
             \end{split}
             \end{equation}
         </tex>
+        
     </note>
     <table>
         <tr>
@@ -169,6 +167,45 @@
 
 
 <h2>4.2 | The Definite Integral</h2>
+<ul>
+    <li>The definite integral VIA the limit definition will be on the exam.</li>
+    <li>
+        <p>Some definite integrals can be solved VIA simple solutions <b>using areas</b> in conjunction with the <b>upper and lower bounds</b> of integration.</p>
+        <p>For example:</p>
+        <ul>
+            <li>Linear equations can form a triangle using the upper and lower bounds of integration.</li>
+            <li>Square root functions can sometimes be mapped to a half-circle, and solved using the area for a circle (i.e. <tex>A = \pi \cdot r^2</tex>).</li>
+        </ul>
+    </li>
+</ul>
+
+<note>
+    <h3>Definite Integral Formulas</h3>
+    <note>
+        <h4>Properties of the Definite Integral:</h4>
+        <tex block>
+            \begin{equation}
+            \begin{split}
+                \I{f(x)} &= - \I{f(x)} \\\\
+                \Integrate{a}{b}{f(x)} &= 0 \\\\
+                \I{c} &= c(b - a) \;\; \text{if $c$ is any constant}\; \\\\
+                \I{\left[ f(x) \pm g(x) \right]} &= \I{f(x)} \pm \I{g(x)}\\\\
+                \I{c \cdot f(x)} &= c \cdot \I{ f(x)} \\\\
+                \Integrate{a}{c}{f(x)} &= \Integrate{a}{b}{f(x)} + \Integrate{b}{c}{f(x)}
+            \end{split}
+            \end{equation}
+        </tex>
+    </note>
+    <note>
+        <h4>Comparison Properties of Integrals</h4>
+        <ul>
+            <li><p>If <tex>f(x) \geq 0</tex> for all <tex>a \leq x \leq b</tex>, then <tex>\I{f(x)} \geq 0</tex></p></li>
+            <li><p>If <tex>f(x) \geq g(x)</tex> for all <tex>a \leq x \leq b</tex>, then <tex>\I{f(x)} \geq \I{g(x)}</tex></p></li>
+            <li><p>If <tex>m \leq f(x) \leq M</tex> for all <tex>a \leq x \leq b</tex>, then <tex>m(b - a) \leq \I{f(x)} \leq M(b - a)</tex></p></li>
+        </ul>
+    </note>
+</note>
+
 <h2>4.3 | The Fundamental Theorem of Calculus</h2>
 <h2>4.4 | Indefinite Integrals and the Net Change Theorem</h2>
 <h2>4.5 | The Substitution Rule</h2>

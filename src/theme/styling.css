@@ -339,3 +339,12 @@ div[desmos-embed] {
     margin: 0 auto;
 }
 
+ul li ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul li p {
+    margin-top: 0;
+    margin-bottom: 0;
+}

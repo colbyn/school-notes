@@ -2,7 +2,12 @@
 <script>
 window.MathJax = {
     tex: {
-        inlineMath: [['\\(', '\\)'], ['stem:[', ']']]
+        inlineMath: [['\\(', '\\)'], ['stem:[', ']']],
+        macros: {
+            'dx': "{\\, \\mathrm{d}x\\;}",
+            'Integrate': ['{\\int_{#1}^{#2}\\, #3 \\dx}', 3],
+            'I': ['{\\Integrate{a}{b}{#1}}', 1],
+        },
     },
     svg: {
         fontCache: 'global',
