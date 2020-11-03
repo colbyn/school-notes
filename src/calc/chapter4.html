@@ -17,6 +17,10 @@
         \end{split}
         \end{equation}
     </tex>
+    <h3>Miscellaneous</h3>
+    <tex block>
+        \I{f(x)} = \I{\text{(Integrand Function)}}
+    </tex>
 </note>
 
 
@@ -186,8 +190,9 @@
         <tex block>
             \begin{equation}
             \begin{split}
-                \I{f(x)} &= - \I{f(x)} \\\\
-                \Integrate{a}{b}{f(x)} &= 0 \\\\
+                \I{f(x)} &= - \Integrate{b}{a}{f(x)} \\\\
+                \Integrate{b}{a}{f(x)} &= - \I{f(x)} \\\\
+                \Integrate{a}{a}{f(x)} &= 0 \\\\
                 \I{c} &= c(b - a) \;\; \text{if $c$ is any constant}\; \\\\
                 \I{\left[ f(x) \pm g(x) \right]} &= \I{f(x)} \pm \I{g(x)}\\\\
                 \I{c \cdot f(x)} &= c \cdot \I{ f(x)} \\\\
@@ -203,6 +208,37 @@
             <li><p>If <tex>f(x) \geq g(x)</tex> for all <tex>a \leq x \leq b</tex>, then <tex>\I{f(x)} \geq \I{g(x)}</tex></p></li>
             <li><p>If <tex>m \leq f(x) \leq M</tex> for all <tex>a \leq x \leq b</tex>, then <tex>m(b - a) \leq \I{f(x)} \leq M(b - a)</tex></p></li>
         </ul>
+    </note>
+</note>
+<note>
+    <h3>Theorem 4</h3>
+    <tex block>
+        \begin{equation}
+        \begin{split}
+            \I{f(x)} &= \lim_{n \to \infty} \sum_{i = 1}^{n} f(x_i) \Delta x \\
+            \text{where}& \\
+            \Delta x &= \frac{b - a}{n} \\
+            x_i &= a + i \Delta x
+        \end{split}
+        \end{equation}
+    </tex>
+</note>
+<note>
+    <h3>Evaluating Integrals</h3>
+    <div style='width: 100%; display: flex; justify-content: center;'>
+        <img width='400px' src='~/../static/images/calc-textbook/4.2/1.png'>
+    </div>
+</note>
+<note>
+    <h3>the Midpoint rule</h3>
+    <div style='width: 100%; display: flex; justify-content: center;'>
+        <img width='400px' src='~/../static/images/calc-textbook/4.2/2.png'>
+    </div>
+    <note>
+        <p>Where</p>
+        <tex block>
+            x_i = a + i \Delta x
+        </tex>
     </note>
 </note>
 

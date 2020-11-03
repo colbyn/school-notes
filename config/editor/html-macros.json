@@ -4,7 +4,9 @@
         {
             "name": "tex",
             "description": "The tex element for LaTeX math code.",
-            "attributes": []
+            "attributes": [
+                { "name": "block" }
+            ]
         }
     ],
     "globalAttributes": [],
