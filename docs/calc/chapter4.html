@@ -12,7 +12,7 @@
             \int \csc^2(x) &= -\cot(x) + C \\
             \int \cot(x) \csc(x) &= -\csc(x) + C
         \end{split}
-        \end{equation}$$</div></section>
+        \end{equation}$$</div><h3 id="miscellaneous">Miscellaneous</h3><div block="" math-block="">$$\I{f(x)} = \I{\text{(Integrand Function)}}$$</div></section>
 
 
 <h2 id="4.1-%7C%20areas%20and%20distances">4.1 | Areas and Distances</h2>
@@ -99,8 +99,9 @@
 
 <section class="note-block block"><h3 id="definite-integral%20formulas">Definite Integral Formulas</h3><section class="note-block block"><h4 id="properties-of%20the%20definite%20integral:">Properties of the Definite Integral:</h4><div block="" math-block="">$$\begin{equation}
             \begin{split}
-                \I{f(x)} &= - \I{f(x)} \\\\
-                \Integrate{a}{b}{f(x)} &= 0 \\\\
+                \I{f(x)} &= - \Integrate{b}{a}{f(x)} \\\\
+                \Integrate{b}{a}{f(x)} &= - \I{f(x)} \\\\
+                \Integrate{a}{a}{f(x)} &= 0 \\\\
                 \I{c} &= c(b - a) \;\; \text{if $c$ is any constant}\; \\\\
                 \I{\left[ f(x) \pm g(x) \right]} &= \I{f(x)} \pm \I{g(x)}\\\\
                 \I{c \cdot f(x)} &= c \cdot \I{ f(x)} \\\\
@@ -111,6 +112,20 @@
             <li><p>If <span inline="" math-inline="">\(f(x) \geq g(x)\)</span> for all <span inline="" math-inline="">\(a \leq x \leq b\)</span>, then <span inline="" math-inline="">\(\I{f(x)} \geq \I{g(x)}\)</span></p></li>
             <li><p>If <span inline="" math-inline="">\(m \leq f(x) \leq M\)</span> for all <span inline="" math-inline="">\(a \leq x \leq b\)</span>, then <span inline="" math-inline="">\(m(b - a) \leq \I{f(x)} \leq M(b - a)\)</span></p></li>
         </ul></section></section>
+<section class="note-block block"><h3 id="theorem-4">Theorem 4</h3><div block="" math-block="">$$\begin{equation}
+        \begin{split}
+            \I{f(x)} &= \lim_{n \to \infty} \sum_{i = 1}^{n} f(x_i) \Delta x \\
+            \text{where}& \\
+            \Delta x &= \frac{b - a}{n} \\
+            x_i &= a + i \Delta x
+        \end{split}
+        \end{equation}$$</div></section>
+<section class="note-block block"><h3 id="evaluating-integrals">Evaluating Integrals</h3><div style="width: 100%; display: flex; justify-content: center;">
+        <img width="400px" src="https://colbyn.github.io/school-notes/1.51e995a5.png" style="min-width: 0; max-width: 400px;">
+    </div></section>
+<section class="note-block block"><h3 id="the-midpoint%20rule">the Midpoint rule</h3><div style="width: 100%; display: flex; justify-content: center;">
+        <img width="400px" src="https://colbyn.github.io/school-notes/2.37264ffb.png" style="min-width: 0; max-width: 400px;">
+    </div><section class="note-block block"><p>Where</p><div block="" math-block="">$$x_i = a + i \Delta x$$</div></section></section>
 
 <h2 id="4.3-%7C%20the%20fundamental%20theorem%20of%20calculus">4.3 | The Fundamental Theorem of Calculus</h2>
 <h2 id="4.4-%7C%20indefinite%20integrals%20and%20the%20net%20change%20theorem">4.4 | Indefinite Integrals and the Net Change Theorem</h2>
