@@ -1,20 +1,5 @@
 <h1 id="chapter-4%20%7C%20integrals">Chapter 4 | Integrals</h1>
 
-<section class="note-block block"><h2 id="general-formulas">General Formulas</h2><div block="" math-block="">$$\begin{equation}
-        \begin{split}
-            \int c f(x) &= c \int f(x) + C \\
-            \int f(x) + g(x) &= \int f(x) + \int g(x) + C \\
-            \int x^n \; \text{if}\; x \neq -1 &= \frac{x^{n + 1}}{n + 1} + C \\
-            \int \cos(x) &= \sin(x) + C \\
-            \int \sin(x) &= -\cos(x) + C \\
-            \int \sec^2(x) &= \tan(x) + C \\
-            \int \tan(x) \cdot \sec(x) &= \sec(x) + C \\
-            \int \csc^2(x) &= -\cot(x) + C \\
-            \int \cot(x) \csc(x) &= -\csc(x) + C
-        \end{split}
-        \end{equation}$$</div><h3 id="miscellaneous">Miscellaneous</h3><div block="" math-block="">$$\I{f(x)} = \I{\text{(Integrand Function)}}$$</div></section>
-
-
 <h2 id="4.1-%7C%20areas%20and%20distances">4.1 | Areas and Distances</h2>
 <section class="note-block block"><p>The teacher said that we need to memorize the <b>summation formula</b> for an <b>arithmetic sequence</b>.</p><div block="" math-block="">$$\sum_{i = 1}^n i = \frac{n(n + 1)}{2}$$</div><p>Perhaps check with the summation rules (similar to limit laws).</p></section>
 <section class="note-block block"><h3 id="preliminary">Preliminary</h3><div block="" math-block="">$$\begin{equation}
@@ -97,7 +82,7 @@
     </li>
 </ul>
 
-<section class="note-block block"><h3 id="definite-integral%20formulas">Definite Integral Formulas</h3><section class="note-block block"><h4 id="properties-of%20the%20definite%20integral:">Properties of the Definite Integral:</h4><div block="" math-block="">$$\begin{equation}
+<section class="note-block block"><h3 id="integral-formulas">Integral Formulas</h3><section class="note-block block"><h4 id="properties-of%20the%20definite%20integral:">Properties of the Definite Integral:</h4><div block="" math-block="">$$\begin{equation}
             \begin{split}
                 \I{f(x)} &= - \Integrate{b}{a}{f(x)} \\\\
                 \Integrate{b}{a}{f(x)} &= - \I{f(x)} \\\\
@@ -107,7 +92,7 @@
                 \I{c \cdot f(x)} &= c \cdot \I{ f(x)} \\\\
                 \Integrate{a}{c}{f(x)} &= \Integrate{a}{b}{f(x)} + \Integrate{b}{c}{f(x)}
             \end{split}
-            \end{equation}$$</div></section><section class="note-block block"><h4 id="comparison-properties%20of%20integrals">Comparison Properties of Integrals</h4><ul>
+            \end{equation}$$</div></section><section class="note-block block"><h4 id="comparison-properties%20of%20integrals%20(properties%206%20to%208)">Comparison Properties of Integrals (Properties 6 to 8)</h4><ul>
             <li><p>If <span inline="" math-inline="">\(f(x) \geq 0\)</span> for all <span inline="" math-inline="">\(a \leq x \leq b\)</span>, then <span inline="" math-inline="">\(\I{f(x)} \geq 0\)</span></p></li>
             <li><p>If <span inline="" math-inline="">\(f(x) \geq g(x)\)</span> for all <span inline="" math-inline="">\(a \leq x \leq b\)</span>, then <span inline="" math-inline="">\(\I{f(x)} \geq \I{g(x)}\)</span></p></li>
             <li><p>If <span inline="" math-inline="">\(m \leq f(x) \leq M\)</span> for all <span inline="" math-inline="">\(a \leq x \leq b\)</span>, then <span inline="" math-inline="">\(m(b - a) \leq \I{f(x)} \leq M(b - a)\)</span></p></li>
@@ -128,7 +113,66 @@
     </div><section class="note-block block"><p>Where</p><div block="" math-block="">$$x_i = a + i \Delta x$$</div></section></section>
 
 <h2 id="4.3-%7C%20the%20fundamental%20theorem%20of%20calculus">4.3 | The Fundamental Theorem of Calculus</h2>
+
+<section class="note-block block"><h3 id="the-fundamental%20theorem%20of%20calculus,%20part%202">the Fundamental theorem of calculus, Part 2</h3><p>
+    If <span inline="" math-inline="">\(f\)</span> is continuous on <span inline="" math-inline="">\([a, b]\)</span>, then:
+    </p><div block="" math-block="">$$\I{f(x)} = F(b) - F(a)$$</div><p>
+    Where <span inline="" math-inline="">\(F^\prime = f\)</span>.
+    </p><section class="note-block block"><h4 id="or-alternatively">Or Alternatively</h4><div block="" math-block="">$$\I{F^\prime(x)} = F(b) - F(a)$$</div></section></section>
+
+<section class="note-block block"><h3 id="the-fundamental%20theorem%20of%20calculus">the Fundamental theorem of calculus</h3><ol>
+        <li>
+            If <span inline="" math-inline="">\(g(x) = \IntegrateFor{a}{x}{f(t)}{t}\)</span>,
+            then <span inline="" math-inline="">\(g^\prime(x) = f(x)\)</span>
+        </li>
+        <li>
+            <span inline="" math-inline="">\(\I{f(x)} = F(b) - F(a)\)</span>, where <span inline="" math-inline="">\(F^\prime = f\)</span>.
+        </li>
+    </ol><section class="note-block block"><h4 id="part-1%20can%20be%20rewritten%20as">Part 1 can be rewritten as</h4><div block="" math-block="">$$\newcommand{\derivative}{\frac{\mathrm{d}}{\mathrm{d}x}\;} 
+            \begin{equation}
+            \begin{split}
+                \derivative \IntegrateFor{a}{x}{f(t)}{t} &= f(x)
+            \end{split}
+            \end{equation}$$</div></section><section class="note-block block"><p>
+        When applying Part 1, <b>pay attention</b> to the <b>upper and lower bounds</b>.
+    </p></section></section>
+
 <h2 id="4.4-%7C%20indefinite%20integrals%20and%20the%20net%20change%20theorem">4.4 | Indefinite Integrals and the Net Change Theorem</h2>
+<section class="note-block block"><p><em>You should distinguish carefully between definite and indefinite integrals. A definite integral <span inline="" math-inline="">\(\I{f(x)}\)</span> is a number, whereas an indefinite integral <span inline="" math-inline="">\(\int f(x) dx\)</span> is a function (or family of functions).</em></p></section>
+<section class="note-block block"><h2 id="integral-formulas">Integral Formulas</h2><div block="" math-block="">$$\newcommand{\In}[1]{\int {#1} \; \mathrm{d}x}
+        \begin{equation}
+        \begin{split}
+            \In{c f(x)} &= c \In{f(x)} + C \\
+            \In{k} &= k x + C \\
+            \In{f(x) + g(x)} &= \int f(x) + \int g(x) + C \\
+            \In{x^n} \; \text{if}\; x \neq -1 &= \frac{x^{n + 1}}{n + 1} + C \\
+            \In{\cos(x)} &= \sin(x) + C \\
+            \In{\sin(x)} &= -\cos(x) + C \\
+            \In{\sec^2(x)} &= \tan(x) + C \\
+            \In{\tan(x) \cdot \sec(x)} &= \sec(x) + C \\
+            \In{\csc^2(x)} &= -\cot(x) + C \\
+            \In{\cot(x)\csc(x)} &= -\csc(x) + C
+        \end{split}
+        \end{equation}$$</div><h3 id="miscellaneous">Miscellaneous</h3><div block="" math-block="">$$\I{f(x)} = \I{\text{(Integrand Function)}}$$</div><section class="note-block block"><p><img width="300px" style="min-width: 0; max-width: 300px;" src="https://colbyn.github.io/school-notes/4.b8733099.png"><img width="400px" style="min-width: 0; max-width: 400px;" src="https://colbyn.github.io/school-notes/5.72044a07.png"></p></section></section>
+<section class="note-block block"><h3 id="net-change%20theorem">Net Change Theorem</h3><div block="" math-block="">$$\I{F^\prime(x)} = F(b) - F(a)$$</div><section class="note-block block"><p>This is a reformulation  of the <b>FTC-P2</b>.</p></section></section>
+<section class="note-block block"><h3 id="definition-2%20-%20total%20displacement">Definition 2 - Total Displacement</h3><p>Given:</p><ul>
+        <li>A position function <span inline="" math-inline="">\(s(t)\)</span></li>
+        <li>The derivative of <span inline="" math-inline="">\(s(t)\)</span>, i.e. the velocity function <span inline="" math-inline="">\(v(t)\)</span></li>
+    </ul><div block="" math-block="">$$\IntegrateFor{t_1}{t_2}{v(t)}{t} = s(t_2) - s(t_1)$$</div><p>is the net change of position, or displacement, of the particle during the time period from <span inline="" math-inline="">\(t_1\)</span> to <span inline="" math-inline="">\(t_2\)</span>.</p><section class="note-block block"><p>This may only work for an object moving in a straight line.</p></section></section>
+<section class="note-block block"><h3 id="definition-3%20-%20total%20distance">Definition 3 - Total Distance</h3><p>Given:</p><ul>
+        <li>A position function <span inline="" math-inline="">\(s(t)\)</span></li>
+        <li>The derivative of <span inline="" math-inline="">\(s(t)\)</span>, i.e. the velocity function <span inline="" math-inline="">\(v(t)\)</span></li>
+    </ul><p>We can compute the distance by integrating the magnitude of the velocity function:</p><div block="" math-block="">$$\IntegrateFor{t_1}{t_2}{|v(t)|}{t} = \text{total distance traveled}$$</div></section>
+
+<section class="note-block block"><p><img width="200px" src="https://colbyn.github.io/school-notes/1.afa8b913.png" style="min-width: 0; max-width: 200px;"><img width="400px" src="https://colbyn.github.io/school-notes/2.9167a7f3.png" style="min-width: 0; max-width: 400px;"></p><hr><p><img width="400px" src="https://colbyn.github.io/school-notes/3.b49b8abc.png" style="min-width: 0; max-width: 400px;"></p></section>
+
 <h2 id="4.5-%7C%20the%20substitution%20rule">4.5 | The Substitution Rule</h2>
+<section class="note-block block"><h3 id="theorem-4%20-%20the%20substitution%20rule">Theorem 4 - The Substitution Rule</h3><p>If <span inline="" math-inline="">\(u = g(x)\)</span> is a differentiable function whose range is an interval <span inline="" math-inline="">\(I\)</span> and <span inline="" math-inline="">\(f\)</span> is continuous on <span inline="" math-inline="">\(I\)</span>, then:</p><div block="" math-block="">$$\newcommand{\In}[1]{\int {#1} \; \mathrm{d}x}
+        \newcommand{\InU}[1]{\int {#1} \; \mathrm{d}u}
+        \In{(f \circ g)(x) \; g^\prime(x)} = \InU{f(u)}$$</div></section>
+<section class="note-block block"><h3 id="theorem-5%20-%20the%20substitution%20rule%20for%20definite%20integrals">Theorem 5 - The Substitution Rule for Definite Integrals</h3><p>If <span inline="" math-inline="">\(g^\prime\)</span> is continuous on <span inline="" math-inline="">\([a, b]\)</span> and <span inline="" math-inline="">\(f\)</span> is continuous on the range of <span inline="" math-inline="">\(u = g(x)\)</span>, then:</p><div block="" math-block="">$$\newcommand{\In}[1]{\int {#1} \; \mathrm{d}x}
+        \newcommand{\InU}[1]{\int {#1} \; \mathrm{d}u}
+        \I{(f \circ g)(x) \; g^\prime(x)} = \IntegrateFor{g(a)}{g(b)}{f(u)}{u}$$</div></section>
+<section class="note-block block"><h3 id="theorem-6%20-%20integrals%20of%20symmetric%20functions">Theorem 6 - Integrals of Symmetric Functions</h3><p>Suppose <span inline="" math-inline="">\(f\)</span> is continuous on <span inline="" math-inline="">\([-a, a]\)</span>.</p><p><img width="400px" src="https://colbyn.github.io/school-notes/3.2c4df9c8.png" style="min-width: 0; max-width: 400px;"></p><section class="note-block block"><p><img width="400px" src="https://colbyn.github.io/school-notes/4.cfb0b635.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/5.8159c931.png" style="min-width: 0; max-width: 400px;"></p></section></section>
 
 
