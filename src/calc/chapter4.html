@@ -1,29 +1,5 @@
 <h1>Chapter 4 | Integrals</h1>
 
-<note>
-    <h2>General Formulas</h2>
-    <tex block>
-        \begin{equation}
-        \begin{split}
-            \int c f(x) &= c \int f(x) + C \\
-            \int f(x) + g(x) &= \int f(x) + \int g(x) + C \\
-            \int x^n \; \text{if}\; x \neq -1 &= \frac{x^{n + 1}}{n + 1} + C \\
-            \int \cos(x) &= \sin(x) + C \\
-            \int \sin(x) &= -\cos(x) + C \\
-            \int \sec^2(x) &= \tan(x) + C \\
-            \int \tan(x) \cdot \sec(x) &= \sec(x) + C \\
-            \int \csc^2(x) &= -\cot(x) + C \\
-            \int \cot(x) \csc(x) &= -\csc(x) + C
-        \end{split}
-        \end{equation}
-    </tex>
-    <h3>Miscellaneous</h3>
-    <tex block>
-        \I{f(x)} = \I{\text{(Integrand Function)}}
-    </tex>
-</note>
-
-
 <h2>4.1 | Areas and Distances</h2>
 <note>
     <p>The teacher said that we need to memorize the <b>summation formula</b> for an <b>arithmetic sequence</b>.</p>
@@ -184,7 +160,7 @@
 </ul>
 
 <note>
-    <h3>Definite Integral Formulas</h3>
+    <h3>Integral Formulas</h3>
     <note>
         <h4>Properties of the Definite Integral:</h4>
         <tex block>
@@ -202,7 +178,7 @@
         </tex>
     </note>
     <note>
-        <h4>Comparison Properties of Integrals</h4>
+        <h4>Comparison Properties of Integrals (Properties 6 to 8)</h4>
         <ul>
             <li><p>If <tex>f(x) \geq 0</tex> for all <tex>a \leq x \leq b</tex>, then <tex>\I{f(x)} \geq 0</tex></p></li>
             <li><p>If <tex>f(x) \geq g(x)</tex> for all <tex>a \leq x \leq b</tex>, then <tex>\I{f(x)} \geq \I{g(x)}</tex></p></li>
@@ -243,7 +219,154 @@
 </note>
 
 <h2>4.3 | The Fundamental Theorem of Calculus</h2>
+
+<note>
+    <h3>the Fundamental theorem of calculus, Part 2</h3>
+    If <tex>f</tex> is continuous on <tex>[a, b]</tex>, then:
+    <tex block>
+        \I{f(x)} = F(b) - F(a)
+    </tex>
+    Where <tex>F^\prime = f</tex>.
+    <note>
+        <h4>Or Alternatively</h4>
+        <tex block>
+            <tex block>
+                \I{F^\prime(x)} = F(b) - F(a)
+            </tex>
+        </tex>
+    </note>
+</note>
+
+<note>
+    <h3>the Fundamental theorem of calculus</h3>
+    <ol>
+        <li>
+            If <tex>g(x) = \IntegrateFor{a}{x}{f(t)}{t}</tex>,
+            then <tex>g^\prime(x) = f(x)</tex>
+        </li>
+        <li>
+            <tex>\I{f(x)} = F(b) - F(a)</tex>, where <tex>F^\prime = f</tex>.
+        </li>
+    </ol>
+    <note>
+        <h4>Part 1 can be rewritten as</h4>
+        <tex block>
+            \newcommand{\derivative}{\frac{\mathrm{d}}{\mathrm{d}x}\;} 
+            \begin{equation}
+            \begin{split}
+                \derivative \IntegrateFor{a}{x}{f(t)}{t} &= f(x)
+            \end{split}
+            \end{equation}
+        </tex>
+    </note>
+    <note>
+        When applying Part 1, <b>pay attention</b> to the <b>upper and lower bounds</b>.
+    </note>
+</note>
+
 <h2>4.4 | Indefinite Integrals and the Net Change Theorem</h2>
+<note>
+    <p><em>You should distinguish carefully between definite and indefinite integrals. A definite integral <tex>\I{f(x)}</tex> is a number, whereas an indefinite integral <tex>\int f(x) dx</tex> is a function (or family of functions).</em></p>
+</note>
+<note>
+    <h2>Integral Formulas</h2>
+    <tex block>
+        \newcommand{\In}[1]{\int {#1} \; \mathrm{d}x}
+        \begin{equation}
+        \begin{split}
+            \In{c f(x)} &= c \In{f(x)} + C \\
+            \In{k} &= k x + C \\
+            \In{f(x) + g(x)} &= \int f(x) + \int g(x) + C \\
+            \In{x^n} \; \text{if}\; x \neq -1 &= \frac{x^{n + 1}}{n + 1} + C \\
+            \In{\cos(x)} &= \sin(x) + C \\
+            \In{\sin(x)} &= -\cos(x) + C \\
+            \In{\sec^2(x)} &= \tan(x) + C \\
+            \In{\tan(x) \cdot \sec(x)} &= \sec(x) + C \\
+            \In{\csc^2(x)} &= -\cot(x) + C \\
+            \In{\cot(x)\csc(x)} &= -\csc(x) + C
+        \end{split}
+        \end{equation}
+    </tex>
+    <h3>Miscellaneous</h3>
+    <tex block>
+        \I{f(x)} = \I{\text{(Integrand Function)}}
+    </tex>
+    <note>
+        <img width='300px' style="margin: 0 auto;" src="~/../static/images/calc-textbook/4.4/4.png">
+        <img width='400px' style="margin: 0 auto;" src="~/../static/images/calc-textbook/4.4/5.png">
+    </note>
+</note>
+<note>
+    <h3>Net Change Theorem</h3>
+    <tex block>
+        \I{F^\prime(x)} = F(b) - F(a)
+    </tex>
+    <note>
+        <p>This is a reformulation  of the <b>FTC-P2</b>.</p>
+    </note>
+</note>
+<note>
+    <h3>Definition 2 - Total Displacement</h3>
+    <p>Given:</p>
+    <ul>
+        <li>A position function <tex>s(t)</tex></li>
+        <li>The derivative of <tex>s(t)</tex>, i.e. the velocity function <tex>v(t)</tex></li>
+    </ul>
+    <tex block>
+        \IntegrateFor{t_1}{t_2}{v(t)}{t} = s(t_2) - s(t_1)
+    </tex>
+    <p>is the net change of position, or displacement, of the particle during the time period from <tex>t_1</tex> to <tex>t_2</tex>.</p>
+    <note>
+        <p>This may only work for an object moving in a straight line.</p>
+    </note>
+</note>
+<note>
+    <h3>Definition 3 - Total Distance</h3>
+    <p>Given:</p>
+    <ul>
+        <li>A position function <tex>s(t)</tex></li>
+        <li>The derivative of <tex>s(t)</tex>, i.e. the velocity function <tex>v(t)</tex></li>
+    </ul>
+    <p>We can compute the distance by integrating the magnitude of the velocity function:</p>
+    <tex block>
+        \IntegrateFor{t_1}{t_2}{|v(t)|}{t} = \text{total distance traveled}
+    </tex>
+</note>
+
+<note>
+    <img width='200px' src="~/../static/images/calc-textbook/4.5/1.png">
+    <img width='400px' src="~/../static/images/calc-textbook/4.5/2.png">
+    <hr>
+    <img width='400px' src="~/../static/images/calc-textbook/4.4/3.png">
+</note>
+
 <h2>4.5 | The Substitution Rule</h2>
+<note>
+    <h3>Theorem 4 - The Substitution Rule</h3>
+    <p>If <tex>u = g(x)</tex> is a differentiable function whose range is an interval <tex>I</tex> and <tex>f</tex> is continuous on <tex>I</tex>, then:</p>
+    <tex block>
+        \newcommand{\In}[1]{\int {#1} \; \mathrm{d}x}
+        \newcommand{\InU}[1]{\int {#1} \; \mathrm{d}u}
+        \In{(f \circ g)(x) \; g^\prime(x)} = \InU{f(u)}
+    </tex>
+</note>
+<note>
+    <h3>Theorem 5 - The Substitution Rule for Definite Integrals</h3>
+    <p>If <tex>g^\prime</tex> is continuous on <tex>[a, b]</tex> and <tex>f</tex> is continuous on the range of <tex>u = g(x)</tex>, then:</p>
+    <tex block>
+        \newcommand{\In}[1]{\int {#1} \; \mathrm{d}x}
+        \newcommand{\InU}[1]{\int {#1} \; \mathrm{d}u}
+        \I{(f \circ g)(x) \; g^\prime(x)} = \IntegrateFor{g(a)}{g(b)}{f(u)}{u}
+    </tex>
+</note>
+<note>
+    <h3>Theorem 6 - Integrals of Symmetric Functions</h3>
+    <p>Suppose <tex>f</tex> is continuous on <tex>[-a, a]</tex>.</p>
+    <img width='400px' src="~/../static/images/calc-textbook/4.5/3.png">
+    <note>
+        <img width='400px' src="~/../static/images/calc-textbook/4.5/4.png">
+        <img width='400px' src="~/../static/images/calc-textbook/4.5/5.png">
+    </note>
+</note>
 
 
