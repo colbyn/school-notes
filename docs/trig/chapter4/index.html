@@ -3,7 +3,14 @@
 <head>
     <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.cca3bb46.css">
     <script src="https://colbyn.github.io/school-notes/system.f84e1103.js"></script>
-    <!-- MATH-JAX -->
+    <link rel="stylesheet" href="https://colbyn.github.io/school-notes/styling.cca3bb46.css">
+<link rel="stylesheet" href="https://colbyn.github.io/school-notes/latex-styling.8467b904.css">
+<link rel="stylesheet" href="https://colbyn.github.io/school-notes/base.306018ab.css">
+<link rel="stylesheet" href="https://colbyn.github.io/school-notes/katex.80871e6f.css">
+<script src="https://colbyn.github.io/school-notes/base.987e4d58.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+<!-- MATH-JAX -->
 <script>window.MathJax = {
   tex: {
     inlineMath: [['\\(', '\\)'], ['stem:[', ']']],
@@ -277,7 +284,7 @@ function build_entries(entries) {
 var root_ul_node = document.querySelector("nav#side-nav");
 console.assert(root_ul_node);
 root_ul_node.appendChild(build_entries(menu));</script>
-        <div toc=""><ul toc=""><li entry="h1"><a href="#chapter-4%20%7C%20applications%20of%20trigonometry">Chapter 4 | Applications of Trigonometry</a></li><li entry="h2"><a href="#%C2%A74.1-%7C%20the%20law%20of%20sines">§4.1 | The Law of Sines</a></li><li entry="h3"><a href="#the-ambiguous%20case%20(ssa)">The Ambiguous Case (SSA)</a></li><li entry="h2"><a href="#proof">Proof</a></li><li entry="h2"><a href="#%C2%A74.2-%7C%20the%20law%20of%20cosines">§4.2 | The Law of Cosines</a></li><li entry="h3"><a href="#choosing-between%20the%20law%20of%20sines%20and%20the%20law%20of%20cosines">Choosing Between the Law of Sines and the Law of Cosines</a></li><li entry="h3"><a href="#area-of%20a%20triangle">Area of a Triangle</a></li><li entry="h4"><a href="#workflow">Workflow</a></li><li entry="h4"><a href="#theorem">Theorem</a></li><li entry="h3"><a href="#heron%E2%80%99s-formula%20for%20finding%20the%20area%20of%20a%20triangle">Heron’s Formula for Finding the Area of a Triangle</a></li><li entry="h2"><a href="#%C2%A74.3-%7C%20vectors">§4.3 | Vectors</a></li><li entry="h3"><a href="#definition-of%20a%20vector">Definition of a Vector</a></li><li entry="h4"><a href="#common-notation%20for%20vectors">Common Notation for Vectors</a></li><li entry="h4"><a href="#ad-hock-vector%20notations">Ad-Hock Vector Notations</a></li></ul></div>
+        <div toc=""><ul toc=""><li entry="h1"><a href="#chapter-4%20%7C%20applications%20of%20trigonometry">Chapter 4 | Applications of Trigonometry</a></li><li entry="h2"><a href="#%C2%A74.1-%7C%20the%20law%20of%20sines">§4.1 | The Law of Sines</a></li><li entry="h3"><a href="#the-ambiguous%20case%20(ssa)">The Ambiguous Case (SSA)</a></li><li entry="h2"><a href="#proof">Proof</a></li><li entry="h2"><a href="#%C2%A74.2-%7C%20the%20law%20of%20cosines">§4.2 | The Law of Cosines</a></li><li entry="h3"><a href="#choosing-between%20the%20law%20of%20sines%20and%20the%20law%20of%20cosines">Choosing Between the Law of Sines and the Law of Cosines</a></li><li entry="h3"><a href="#area-of%20a%20triangle">Area of a Triangle</a></li><li entry="h4"><a href="#workflow">Workflow</a></li><li entry="h4"><a href="#theorem">Theorem</a></li><li entry="h3"><a href="#heron%E2%80%99s-formula%20for%20finding%20the%20area%20of%20a%20triangle">Heron’s Formula for Finding the Area of a Triangle</a></li><li entry="h2"><a href="#%C2%A74.3-%7C%20vectors">§4.3 | Vectors</a></li><li entry="h3"><a href="#definition-of%20a%20vector">Definition of a Vector</a></li><li entry="h4"><a href="#common-notation%20for%20vectors">Common Notation for Vectors</a></li><li entry="h4"><a href="#ad-hoc-vector%20notations">Ad-Hoc Vector Notations</a></li></ul></div>
     </header>
     <h1 id="chapter-4%20%7C%20applications%20of%20trigonometry">Chapter 4 | Applications of Trigonometry</h1>
 
@@ -357,7 +364,7 @@ root_ul_node.appendChild(build_entries(menu));</script>
             \text{Vector} & = \boldsymbol{V} = \overrightarrow{AB} \\\\
             \text{Magnitude} &= \| \mathbf{v} \|
         \end{split}
-        \end{equation}$$</div><section class="note-block block"><h4 id="ad-hock-vector%20notations">Ad-Hock Vector Notations</h4><ul>
+        \end{equation}$$</div><section class="note-block block"><h4 id="ad-hoc-vector%20notations">Ad-Hoc Vector Notations</h4><ul>
             <li>
                 <span inline="" math-inline="">\(\langle a,b \rangle\)</span> is relative to the origin. I.e. the initial point is at <span inline="" math-inline="">\((0, 0)\)</span>, and the terminal point is at <span inline="" math-inline="">\((a, b)\)</span>.
             </li>
