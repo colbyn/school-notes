@@ -356,7 +356,7 @@ function note_block(tree) {
 }
 
 function latex(tree) {
-    return tree.match({ tag: 'tex' }, (node) => {
+    function process(node) {
         let start_token = '\\(';
         let end_token = '\\)';
         let tag = 'span';
@@ -390,7 +390,18 @@ function latex(tree) {
         console.assert(node.attrs !== undefined);
         console.assert(node.attrs !== null);
         return node
-    })
+    }
+    tree.match({ tag: 'texblock' }, (node) => {
+        node.tag = 'tex';
+        if (!node.attrs) {
+            node.attrs = {};
+        }
+        node.attrs['block'] = '';
+        return process(node);
+    });
+    tree.match({ tag: 'tex' }, (node) => {
+        return process(node);
+    });
 }
 
 function guidGenerator() {

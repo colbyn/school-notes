@@ -7,6 +7,11 @@
             "attributes": [
                 { "name": "block" }
             ]
+        },
+        {
+            "name": "texblock",
+            "description": "The tex element for LaTeX math code.",
+            "attributes": []
         }
     ],
     "globalAttributes": [],
