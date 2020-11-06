@@ -1,5 +1,5 @@
 {
-  "name": "posthtml-custom-elements",
+  "name": "parcel-latex-assets",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,7 +13,6 @@
   },
   "devDependencies": {
     "latex.js": "^0.12.4",
-    "parcel-bundler": "^1.12.4",
     "post-sequence": "^0.3.0",
     "posthtml-parser": "^0.5.0"
   }

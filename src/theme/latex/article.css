@@ -1,0 +1,33 @@
+@import url("base.css");
+
+
+/**************/
+/* sectioning */
+/**************/
+
+/* section */
+[latex-root]  h2 {
+    counter-reset: subsection;
+    font-size: 1.4rem;      /* \Large */
+    font-weight: bold;
+    margin-top: 3.5ex;
+    margin-bottom: 2.3ex;
+}
+
+
+/* subsection */
+[latex-root]  h3 {
+    font-size: 1.2rem;      /* \large */
+    font-weight: bold;
+    margin-top: 3.25ex;
+    margin-bottom: 1.5ex;
+}
+
+
+/* subsubsection */
+[latex-root]  h4 {
+    font-size: 1rem;        /* \normalsize */
+    font-weight: bold;
+    margin-top: 3.25ex;
+    margin-bottom: 1.5ex;
+}

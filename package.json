@@ -4,18 +4,20 @@
   "description": "",
   "private": true,
   "scripts": {
-    "start": "parcel serve src/index.html src/**/*.html src/**/**/*.html --port 8000",
+    "start": "parcel serve src/index.html src/**/*.html src/**/**/*.html --port 8000 --no-cache",
     "release": "parcel build src/index.html src/**/*.html src/**/**/*.html --out-dir docs --no-minify --public-url https://colbyn.github.io/school-notes/"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "latex.js": "^0.12.4",
     "parcel-bundler": "^1.12.4",
     "post-sequence": "^0.3.0",
     "posthtml": "^0.13.3",
     "posthtml-custom-elements": "file:build/posthtml-custom-elements",
     "posthtml-include": "^1.4.3",
     "posthtml-modules": "^0.6.2",
-    "typescript": "^4.0.3"
+    "typescript": "^4.0.3",
+    "parcel-latex-assets": "file:build/parcel-latex-assets"
   }
 }

@@ -1,7 +1,8 @@
 const fs = require('fs');
 const parser = require('posthtml-parser');
 const { types } = require('util');
-const util = require('util')
+const util = require('util');
+
 
 function $(f) {
     return f();
@@ -668,6 +669,27 @@ function image_max_width_helper(tree) {
     });
 }
 
+function real_latex(tree) {
+    tree.match({ tag: 'latex' }, (node) => {
+        const { parse, HtmlGenerator } = require('latex.js');
+        const { createHTMLWindow } = require('svgdom');
+        const parser = require('posthtml-parser');
+        global.window = createHTMLWindow();
+        global.document = window.document;
+        if (has_attr(node, 'src')) {
+            const latex_data = fs.readFileSync(node.attrs.src, 'utf8');
+            let generator = new HtmlGenerator({ hyphenate: false });
+            let doc = parse(latex_data, { generator: generator }).htmlDocument();
+            const parsed_html = parser(doc.documentElement.innerHTML);
+            console.assert(parsed_html.length == 2);
+            const new_node = parsed_html[1].content[0];
+            new_node.attrs['latex-root'] = '';
+            node = new_node;
+        }
+        return node;
+    });
+}
+
 module.exports = function postHTMLPluginName(options = {}) {
     return (tree) => {
         tree.match({ tag: 'include' }, (node) => {
@@ -675,6 +697,7 @@ module.exports = function postHTMLPluginName(options = {}) {
             console.warn("WARNING: include tag - this should already be procesed");
             return node;
         });
+        real_latex(tree);
         header_ids(tree);
         note_block(tree);
         table_of_contents(tree);
@@ -685,3 +708,4 @@ module.exports = function postHTMLPluginName(options = {}) {
         return tree;
     }
 }
+
