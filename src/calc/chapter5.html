@@ -1,7 +1,7 @@
 <h1>Chapter 5 | Applications of Integration</h1>
 
 
-<h2>5.1 | Areas Between Curves</h2>
+<h2>§5.1 | Areas Between Curves</h2>
 <note>
     <img width='400px' src="~/../static/images/calc-textbook/5.1/1.png">
     <img width='400px' src="~/../static/images/calc-textbook/5.1/2.png">
@@ -9,15 +9,81 @@
     <img width='400px' src="~/../static/images/calc-textbook/5.1/4.png">
 </note>
 
-<h2>5.2 | Volumes</h2>
+<h2>§5.2 | Volumes</h2>
 
 <note>
     <tex block>V = A \cdot h</tex>
-    <img width='400px' src="~/../static/images/calc-textbook/5.2/1.png">
-    <img width='400px' src="~/../static/images/calc-textbook/5.2/2.png">
+    <img center width='400px' src="~/../static/images/calc-textbook/5.2/1.png">
+    <img center width='400px' src="~/../static/images/calc-textbook/5.2/2.png">
+</note>
+<note>
+    <h3>Solids of revolution</h3>
+    <p>Called Solids of revolution because they are obtained by revolving a region about a line. In general, we calculate the volume of a solid of revolution by using the basic defining formula</p>
+    <div>
+        <texblock>V=\IntegrateFor{a}{b}{A(x)}{x}</texblock>
+        <texblock>V=\IntegrateFor{c}{d}{A(y)}{y}</texblock>
+    </div>
+    <note>
+        <h4>Cross-sectional Area</h4>
+        <p>We find the cross-sectional area <tex>A(x)</tex> or <tex>A(y)</tex> in one of the following ways:</p>
+        <ul>
+            <li>
+                If the cross-section is a disk (i.e. a <b>solid shape</b>), we find the radius of the disk (in terms of x or y) and use
+                <texblock>
+                    A = \pi\left(\text{radius}\right)^2
+                </texblock>
+                <note>
+                    <h5>Disk Function Examples</h5>
+                    <img width='400px' src="~/../static/images/calc1/5.2/1.jpg">
+                    <img width='200px' src="~/../static/images/calc1/5.2/2.jpg">
+                </note>
+            </li>
+            <li>
+                If the cross-section is a washer (i.e. a <b>hollow shape</b>), we find the inner radius <tex>r_{\text{in}}</tex> and outer radius <tex>r_{\text{out}}</tex> from a sketch and compute the area of the washer by subtracting the area of the inner disk from the area of the outer disk:
+                <texblock>
+                    A = \pi\left(\text{outer radius}\right)^2 - \pi\left(\text{inner radius}\right)^2
+                </texblock>
+                <note>
+                    <h5>Washer Function Examples</h5>
+                    <img width='400px' center src="~/../static/images/calc-textbook/5.2/3.png">
+                </note>
+            </li>
+        </ul>
+    </note>
 </note>
 
-<h2>5.3 | Volumes by Cylindrical Shells</h2>
-<h2>5.4 | Work</h2>
-<h2>5.5 | Average Value of a Function</h2>
+<img width='800px' center src="~/../static/images/calc1/5.2/3.png">
+
+<h2>§5.3 | Volumes by Cylindrical Shells</h2>
+<note>
+    <img width='400px' src="~/../static/images/calc-textbook/5.3/1.png">
+    <img width='400px' src="~/../static/images/calc-textbook/5.3/2.png">
+    <note>
+        <img width='400px' src="~/../static/images/calc-textbook/5.3/3.png">
+        <img width='400px' src="~/../static/images/calc-textbook/5.3/4.png">
+    </note>
+</note>
+
+<note>
+    <h3>The Shell Method</h3>
+    <note>
+        <h4>Significant Distinction</h4>
+        For the disk/washer method, the slice is <b>perpendicular to the axis of revolution</b>, whereas, for the shell method, the slice is <b>parallel to the axis of revolution</b>.
+        <img width='400px' center src="~/../static/images/calc1/5.2/4.png">
+        <img width='400px' center src="~/../static/images/calc1/5.2/5.png">
+    </note>
+    <ul style="max-width: 500px; margin: 0 auto;">
+        <li style="display: flex; justify-content: space-around;">
+            Rotated about the y-axis
+            <tex>2\pi \IntegrateFor{a}{b}{x \cdot f(x)}{x}</tex>
+        </li>
+        <li style="display: flex; justify-content: space-around;">
+            Rotated about the x-axis:
+            <tex>2\pi \IntegrateFor{a}{b}{y \cdot f(y)}{y}</tex>
+        </li>
+    </ul>
+</note>
+
+<h2>§5.4 | Work</h2>
+<h2>§5.5 | Average Value of a Function</h2>
 

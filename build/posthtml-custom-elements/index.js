@@ -316,7 +316,14 @@ function note_block(tree) {
         let current_paragraph = [];
         for (ix in node.content) {
             let child = node.content[ix];
-            if (is_inline_node(child)) {
+            let inline_pred = (x) => {
+                if (node.tag == 'img') {
+                    return false;
+                } else {
+                    return is_inline_node(x);
+                }
+            };
+            if (inline_pred(child)) {
                 let is_empty = false;
                 if (typeof child === 'string' && child.trim().length === 0) {
                     is_empty = true;
@@ -671,7 +678,7 @@ function desmos(tree) {
 function image_max_width_helper(tree) {
     tree.match({ tag: 'img' }, (node) => {
         if (has_attr(node, 'width')) {
-            const prop = `min-width: 0; max-width: ${node.attrs.width};`;
+            const prop = `min-width: 0; max-width: ${node.attrs.width}; width: 100%;`;
             node.attrs.style = prop;
         }
         return node;
