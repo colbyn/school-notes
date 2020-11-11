@@ -18,7 +18,8 @@
       'dx': "{\\, \\mathrm{d}x\\;}",
       'Integrate': ['{\\int_{#1}^{#2}\\, #3 \\dx}', 3],
       'IntegrateFor': ['{\\int_{#1}^{#2}\\, #3 {\\, \\mathrm{d}{#4}\\;}}', 4],
-      'I': ['{\\Integrate{a}{b}{#1}}', 1]
+      'I': ['{\\Integrate{a}{b}{#1}}', 1],
+      'angles': ['\\langle {#1},{#2} \\rangle', 2]
     }
   },
   svg: {
@@ -284,7 +285,7 @@ function build_entries(entries) {
 var root_ul_node = document.querySelector("nav#side-nav");
 console.assert(root_ul_node);
 root_ul_node.appendChild(build_entries(menu));</script>
-        <div toc=""><ul toc=""><li entry="h1"><a href="#chapter-1%20%7C%20functions%20and%20graphs">Chapter 1 | Functions and Graphs</a></li><li entry="h1"><a href="#chapter-2%20%7C%20trigonometric%20functions">Chapter 2 | Trigonometric Functions</a></li><li entry="h2"><a href="#reciprocal-identities">Reciprocal Identities</a></li><li entry="h1"><a href="#chapter-3%20%7C%20trigonometric%20identities%20and%20equations">Chapter 3 | Trigonometric Identities and Equations</a></li><li entry="h2"><a href="#%C2%A73.1-%7C%20verification%20of%20trigonometric%20identities">§3.1 | Verification of Trigonometric Identities</a></li><li entry="h2"><a href="#%C2%A73.2-%7C%20sum,%20difference,%20and%20cofunction%20identities">§3.2 | Sum, Difference, and Cofunction Identities</a></li><li entry="h3"><a href="#sum-and%20difference%20identities">Sum and Difference Identities</a></li><li entry="h3"><a href="#cofunction-identities">Cofunction Identities</a></li><li entry="h3"><a href="#ratio-identities">Ratio Identities</a></li><li entry="h2"><a href="#%C2%A73.3-%7C%20double-%20and%20half-angle%20identities">§3.3 | Double- and Half-Angle Identities</a></li><li entry="h3"><a href="#double-angle-identities">Double-Angle Identities</a></li><li entry="h3"><a href="#half-angle-identities">Half-Angle Identities</a></li><li entry="h3"><a href="#power-reducing-identities">Power-Reducing Identities</a></li><li entry="h2"><a href="#%C2%A73.4-%7C%20identities%20involving%20the%20sum%20of%20trigonometric%20functions">§3.4 | Identities Involving the Sum of Trigonometric Functions</a></li><li entry="h3"><a href="#product-to-sum-identities">Product-to-Sum Identities</a></li><li entry="h3"><a href="#sum-to-product-identities">Sum-to-Product-Identities</a></li><li entry="h3"><a href="#miscellaneous">Miscellaneous</a></li><li entry="h2"><a href="#%C2%A73.5-%7C%20inverse%20trigonometric%20functions">§3.5 | Inverse Trigonometric Functions</a></li><li entry="h3"><a href="#definition-of%20stem:%5B%5Carcsin(x)%5D">Definition of stem:[\arcsin(x)]</a></li><li entry="h3"><a href="#definition-of%20stem:%5B%5Carccos(x)%5D">Definition of stem:[\arccos(x)]</a></li><li entry="h3"><a href="#inverse-reciprocal%20identities">Inverse Reciprocal Identities</a></li><li entry="h3"><a href="#other-inverse%20co-tangent%20identities">Other Inverse Co-Tangent Identities</a></li><li entry="h3"><a href="#composition-of%20trigonometric%20functions%20and%20their%20inverses">Composition of Trigonometric Functions and Their Inverses</a></li><li entry="h2"><a href="#%C2%A73.6-%7C%20trigonometric%20equations">§3.6 | Trigonometric Equations</a></li><li entry="h2"><a href="#concepts">Concepts</a></li><li entry="h1"><a href="#chapter-4%20%7C%20applications%20of%20trigonometry">Chapter 4 | Applications of Trigonometry</a></li><li entry="h2"><a href="#%C2%A74.1-%7C%20the%20law%20of%20sines">§4.1 | The Law of Sines</a></li><li entry="h3"><a href="#the-ambiguous%20case%20(ssa)">The Ambiguous Case (SSA)</a></li><li entry="h2"><a href="#proof">Proof</a></li><li entry="h2"><a href="#%C2%A74.2-%7C%20the%20law%20of%20cosines">§4.2 | The Law of Cosines</a></li><li entry="h3"><a href="#choosing-between%20the%20law%20of%20sines%20and%20the%20law%20of%20cosines">Choosing Between the Law of Sines and the Law of Cosines</a></li><li entry="h3"><a href="#area-of%20a%20triangle">Area of a Triangle</a></li><li entry="h4"><a href="#workflow">Workflow</a></li><li entry="h4"><a href="#theorem">Theorem</a></li><li entry="h3"><a href="#heron%E2%80%99s-formula%20for%20finding%20the%20area%20of%20a%20triangle">Heron’s Formula for Finding the Area of a Triangle</a></li><li entry="h2"><a href="#%C2%A74.3-%7C%20vectors">§4.3 | Vectors</a></li><li entry="h3"><a href="#definition-of%20a%20vector">Definition of a Vector</a></li><li entry="h4"><a href="#common-notation%20for%20vectors">Common Notation for Vectors</a></li><li entry="h4"><a href="#ad-hoc-vector%20notations">Ad-Hoc Vector Notations</a></li><li entry="h1"><a href="#chapter-5%20%7C%20complex%20numbers">Chapter 5 | Complex Numbers</a></li><li entry="h1"><a href="#chapter-6%20%7C%20topics%20in%20analytic%20geometry">Chapter 6 | Topics in Analytic Geometry</a></li><li entry="h1"><a href="#chapter-7%20%7C%20exponential%20and%20logarithmic%20functions">Chapter 7 | Exponential and Logarithmic Functions</a></li></ul></div>
+        <div toc=""><ul toc=""><li entry="h1"><a href="#chapter-1%20%7C%20functions%20and%20graphs">Chapter 1 | Functions and Graphs</a></li><li entry="h1"><a href="#chapter-2%20%7C%20trigonometric%20functions">Chapter 2 | Trigonometric Functions</a></li><li entry="h2"><a href="#reciprocal-identities">Reciprocal Identities</a></li><li entry="h1"><a href="#chapter-3%20%7C%20trigonometric%20identities%20and%20equations">Chapter 3 | Trigonometric Identities and Equations</a></li><li entry="h2"><a href="#%C2%A73.1-%7C%20verification%20of%20trigonometric%20identities">§3.1 | Verification of Trigonometric Identities</a></li><li entry="h2"><a href="#%C2%A73.2-%7C%20sum,%20difference,%20and%20cofunction%20identities">§3.2 | Sum, Difference, and Cofunction Identities</a></li><li entry="h3"><a href="#sum-and%20difference%20identities">Sum and Difference Identities</a></li><li entry="h3"><a href="#cofunction-identities">Cofunction Identities</a></li><li entry="h3"><a href="#ratio-identities">Ratio Identities</a></li><li entry="h2"><a href="#%C2%A73.3-%7C%20double-%20and%20half-angle%20identities">§3.3 | Double- and Half-Angle Identities</a></li><li entry="h3"><a href="#double-angle-identities">Double-Angle Identities</a></li><li entry="h3"><a href="#half-angle-identities">Half-Angle Identities</a></li><li entry="h3"><a href="#power-reducing-identities">Power-Reducing Identities</a></li><li entry="h2"><a href="#%C2%A73.4-%7C%20identities%20involving%20the%20sum%20of%20trigonometric%20functions">§3.4 | Identities Involving the Sum of Trigonometric Functions</a></li><li entry="h3"><a href="#product-to-sum-identities">Product-to-Sum Identities</a></li><li entry="h3"><a href="#sum-to-product-identities">Sum-to-Product-Identities</a></li><li entry="h3"><a href="#miscellaneous">Miscellaneous</a></li><li entry="h2"><a href="#%C2%A73.5-%7C%20inverse%20trigonometric%20functions">§3.5 | Inverse Trigonometric Functions</a></li><li entry="h3"><a href="#definition-of%20stem:%5B%5Carcsin(x)%5D">Definition of stem:[\arcsin(x)]</a></li><li entry="h3"><a href="#definition-of%20stem:%5B%5Carccos(x)%5D">Definition of stem:[\arccos(x)]</a></li><li entry="h3"><a href="#inverse-reciprocal%20identities">Inverse Reciprocal Identities</a></li><li entry="h3"><a href="#other-inverse%20co-tangent%20identities">Other Inverse Co-Tangent Identities</a></li><li entry="h3"><a href="#composition-of%20trigonometric%20functions%20and%20their%20inverses">Composition of Trigonometric Functions and Their Inverses</a></li><li entry="h2"><a href="#%C2%A73.6-%7C%20trigonometric%20equations">§3.6 | Trigonometric Equations</a></li><li entry="h2"><a href="#concepts">Concepts</a></li><li entry="h1"><a href="#chapter-4%20%7C%20applications%20of%20trigonometry">Chapter 4 | Applications of Trigonometry</a></li><li entry="h2"><a href="#%C2%A74.1-%7C%20the%20law%20of%20sines">§4.1 | The Law of Sines</a></li><li entry="h3"><a href="#the-ambiguous%20case%20(ssa)">The Ambiguous Case (SSA)</a></li><li entry="h2"><a href="#proof">Proof</a></li><li entry="h2"><a href="#%C2%A74.2-%7C%20the%20law%20of%20cosines">§4.2 | The Law of Cosines</a></li><li entry="h3"><a href="#choosing-between%20the%20law%20of%20sines%20and%20the%20law%20of%20cosines">Choosing Between the Law of Sines and the Law of Cosines</a></li><li entry="h3"><a href="#area-of%20a%20triangle">Area of a Triangle</a></li><li entry="h4"><a href="#workflow">Workflow</a></li><li entry="h4"><a href="#theorem">Theorem</a></li><li entry="h3"><a href="#heron%E2%80%99s-formula%20for%20finding%20the%20area%20of%20a%20triangle">Heron’s Formula for Finding the Area of a Triangle</a></li><li entry="h2"><a href="#%C2%A74.3-%7C%20vectors">§4.3 | Vectors</a></li><li entry="h3"><a href="#definition-of%20a%20vector">Definition of a Vector</a></li><li entry="h4"><a href="#common-notation%20for%20vectors">Common Notation for Vectors</a></li><li entry="h4"><a href="#ad-hoc-vector%20notations">Ad-Hoc Vector Notations</a></li><li entry="h3"><a href="#vector-operations">Vector Operations</a></li><li entry="h3"><a href="#vector-forms%20reference">Vector Forms Reference</a></li><li entry="h4"><a href="#components-from%20magnitude%20and%20direction">Components from Magnitude and Direction</a></li><li entry="h5"><a href="#example">Example</a></li><li entry="h3"><a href="#application-of%20vectors">Application of Vectors</a></li><li entry="h4"><a href="#airplane-problems">Airplane Problems</a></li><li entry="h5"><a href="#remember-for-compass%20problems">Remember for <b>Compass Problems</b></a></li><li entry="h5"><a href="#complicated-heading%20(from%20the%20textbook)%20%5Btodo%20fix%20this%5D">Complicated Heading (From the Textbook) [TODO FIX THIS]</a></li><li entry="h1"><a href="#chapter-5%20%7C%20complex%20numbers">Chapter 5 | Complex Numbers</a></li><li entry="h2"><a href="#complex-numbers">Complex Numbers</a></li><li entry="h3"><a href="#simplify-%5Cfrac%7B1%7D%7B%5Cmathrm%7Bi%7D%5Cmkern1mu%7D">Simplify <span inline="" math-inline="">\(\frac{1}{\mathrm{i}\mkern1mu}\)</span></a></li><li entry="h2"><a href="#trigonometric-form%20of%20complex%20numbers">Trigonometric Form of Complex Numbers</a></li><li entry="h2"><a href="#de-moivre%E2%80%99s%20theorem">De Moivre’s Theorem</a></li><li entry="h1"><a href="#chapter-6%20%7C%20topics%20in%20analytic%20geometry">Chapter 6 | Topics in Analytic Geometry</a></li><li entry="h1"><a href="#chapter-7%20%7C%20exponential%20and%20logarithmic%20functions">Chapter 7 | Exponential and Logarithmic Functions</a></li></ul></div>
     </header>
     <h1 id="chapter-1%20%7C%20functions%20and%20graphs">Chapter 1 | Functions and Graphs</h1>
     <h1 id="chapter-2%20%7C%20trigonometric%20functions">Chapter 2 | Trigonometric Functions</h1>
@@ -524,10 +525,10 @@ root_ul_node.appendChild(build_entries(menu));</script>
         max-width: unset;
         margin: 0;
         "><div></div>
-        <div id="des_34279bfb_2c4d_1315_1f2d_feeb3e17472b" style="width: 200px; height: 200px;" desmos-embed></div>
+        <div id="des_06f7bd6c_6388_b7b7_fe5b_4ec8ab30db18" style="width: 200px; height: 200px;" desmos-embed></div>
         <script>
         window.addEventListener("load", function on_load() {
-            var elt = document.getElementById('des_34279bfb_2c4d_1315_1f2d_feeb3e17472b');
+            var elt = document.getElementById('des_06f7bd6c_6388_b7b7_fe5b_4ec8ab30db18');
             var options = {
                 expressionsCollapsed: true,
                 expressions: false,
@@ -672,7 +673,13 @@ root_ul_node.appendChild(build_entries(menu));</script>
 <ul>
     <li>The magnitude and direction of a vector can be found from its components.</li>
     <li>A <b>unit vector</b> is a vector whose magnitude is 1.</li>
+    <li><a href="https://www.khanacademy.org/math/algebra-home/alg-vectors/alg-magnitude-direction/a/vector-forms-review">Vector Forms Review <small>(Khan Academy)</small></a></li>
+    <li><a href="https://www.khanacademy.org/math/algebra-home/alg-vectors/alg-component-form-of-vectors/a/vector-magnitude-and-direction-review">Vector Magnitude and Direction Review <small>(Khan Academy)</small></a></li>
 </ul>
+
+<section class="note-block block"><p><img width="400px" src="https://colbyn.github.io/school-notes/1.162c6531.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/2.1eb9fe35.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/3.b13c0db2.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/4.d5dbcd00.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/5.a28b6c59.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/6.4ddbdb14.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/7.8662eabc.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/8.589b2dbc.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/9.0cab61b8.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/10.1bd1eb32.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/11.544b5b08.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/12.1612d616.png" style="min-width: 0; max-width: 400px;"></p></section>
+
+
 <section class="note-block block"><h3 id="definition-of%20a%20vector">Definition of a Vector</h3><p>A vector is a directed line segment. The length of the line segment is the magnitude of the vector, and the direction of the vector is measured by an angle.</p><h4 id="common-notation%20for%20vectors">Common Notation for Vectors</h4><div block="" math-block="">$$\begin{equation}
         \begin{split}
             \text{Vector} & = \boldsymbol{V} = \overrightarrow{AB} \\\\
@@ -680,12 +687,157 @@ root_ul_node.appendChild(build_entries(menu));</script>
         \end{split}
         \end{equation}$$</div><section class="note-block block"><h4 id="ad-hoc-vector%20notations">Ad-Hoc Vector Notations</h4><ul>
             <li>
-                <span inline="" math-inline="">\(\langle a,b \rangle\)</span> is relative to the origin. I.e. the initial point is at <span inline="" math-inline="">\((0, 0)\)</span>, and the terminal point is at <span inline="" math-inline="">\((a, b)\)</span>.
+                <span inline="" math-inline="">\(\langle x,y \rangle\)</span> is relative to the origin. I.e. the initial point is at <span inline="" math-inline="">\((0, 0)\)</span>, and the terminal point is at <span inline="" math-inline="">\((a, b)\)</span>.
+                But Khan Academy seems to just use <span inline="" math-inline="">\((x, y)\)</span>, or <span inline="" math-inline="">\((\Delta x, \Delta y)\)</span>. 
             </li>
         </ul></section></section>
 
+<section class="note-block block"><h3 id="vector-operations">Vector Operations</h3><div style="display: flex; justify-content: center;">
+        <img width="400px" src="https://physics.nfshost.com/textbook/01-Vectors/img/VectorAddition.png" style="min-width: 0; max-width: 400px;">
+    </div></section>
+
+<section class="note-block block"><h3 id="vector-forms%20reference">Vector Forms Reference</h3><section class="note-block block"><h4 id="components-from%20magnitude%20and%20direction">Components from Magnitude and Direction</h4><h5 id="example">Example</h5><p>Given <span inline="" math-inline="">\(||\vec{v}|| = 5\)</span>, and <span inline="" math-inline="">\(\theta = 27^\circ\)</span></p><div block="" math-block="">$$\newcommand{\X}{5 \cdot \cos(27^\circ)}
+            \newcommand{\Y}{5 \cdot \cos(27^\circ)}
+            \begin{aligned}
+                \overbrace{\angles{\X}{\Y}}^{\text{textbook notation}} &= \overbrace{(\X, \Y)}^{\text{alternative notation}}
+            \end{aligned}$$</div></section></section>
+
+<section class="note-block block"><h3 id="application-of%20vectors">Application of Vectors</h3><section class="note-block block"><h4 id="airplane-problems">Airplane Problems</h4><ul>
+            <li><a href="https://youtu.be/igG_qmqQu28">Convert True Bearing to an Angle in Standard Position (YouTube Video)</a></li>
+        </ul><section class="note-block block"><h5 id="remember-for-compass%20problems">Remember for <b>Compass Problems</b></h5><ul>
+                <li><span inline="" math-inline="">\(0^\circ = \text{North}\)</span></li>
+                <li><span inline="" math-inline="">\(90^\circ = \text{East}\)</span></li>
+                <li><span inline="" math-inline="">\(180^\circ = \text{South}\)</span></li>
+                <li><span inline="" math-inline="">\(270^\circ = \text{West}\)</span></li>
+                <li>Moves <b>clock-wise</b></li>
+            </ul><div id="id252234AA2">
+                <style>#id252234AA2 {
+                        display: flex;
+                        flex-direction: row;
+                    }
+                    @media (max-width: 500px) {
+                        #id252234AA2 {
+                            flex-direction: column;
+                        }
+                    }</style>
+                <div height="200px" width="200px" math-bounds="{&quot;left&quot;: -1.9, &quot;right&quot;: 1.9, &quot;top&quot;: 1.9, &quot;bottom&quot;: -1.9}" controls="false" lock="true" x-axis-numbers="false" y-axis-numbers="false" show-grid="false" block="" desmos="" desmos-wrapper="" style="
+        width: 100%;
+        max-width: unset;
+        margin: 0;
+        "><div></div>
+        <div id="des_3604e8e4_c7ec_6cca_f9d0_3d9996bd969c" style="width: 200px; height: 200px;" desmos-embed></div>
+        <script>
+        window.addEventListener("load", function on_load() {
+            var elt = document.getElementById('des_3604e8e4_c7ec_6cca_f9d0_3d9996bd969c');
+            var options = {
+                expressionsCollapsed: true,
+                expressions: false,
+                lockViewport: true,
+                settingsMenu: false,
+                border: false,
+                xAxisNumbers: false,
+                yAxisNumbers: false,
+                showGrid: false,
+            };
+            var calculator = Desmos.GraphingCalculator(elt, options);
+            calculator.setMathBounds({ left: -1.9, right: 1.9, top: 1.9, bottom: -1.9 });
+            for (cmd of [{"latex":"x^2 + y^2 = 1"},{"latex":"N=(\\cos(\\frac{90}{360}2\\pi), \\sin(\\frac{90}{360}2\\pi))","label":"0°","showLabel":true,"labelOrientation":"above","labelSize":"small"},{"latex":"N=(\\cos(\\frac{0}{360}2\\pi), \\sin(\\frac{0}{360}2\\pi))","label":"90°","showLabel":true,"labelOrientation":"right","labelSize":"small"},{"latex":"N=(\\cos(-\\frac{90}{360}2\\pi), \\sin(-\\frac{90}{360}2\\pi))","label":"180°","showLabel":true,"labelOrientation":"below","labelSize":"small"},{"latex":"N=(\\cos(\\frac{180}{360}2\\pi), \\sin(\\frac{180}{360}2\\pi))","label":"270°","showLabel":true,"labelOrientation":"left","labelSize":"small"}]) {
+                calculator.setExpression(cmd);
+            }
+        });
+        </script>
+        </div>
+                <div height="200px" width="200px" math-bounds="{&quot;left&quot;: -1.9, &quot;right&quot;: 1.9, &quot;top&quot;: 1.9, &quot;bottom&quot;: -1.9}" controls="false" lock="true" x-axis-numbers="false" y-axis-numbers="false" show-grid="false" block="" desmos="" desmos-wrapper="" style="
+        width: 100%;
+        max-width: unset;
+        margin: 0;
+        "><div></div>
+        <div id="des_034eb006_a5ac_6dae_5f8b_270387011920" style="width: 200px; height: 200px;" desmos-embed></div>
+        <script>
+        window.addEventListener("load", function on_load() {
+            var elt = document.getElementById('des_034eb006_a5ac_6dae_5f8b_270387011920');
+            var options = {
+                expressionsCollapsed: true,
+                expressions: false,
+                lockViewport: true,
+                settingsMenu: false,
+                border: false,
+                xAxisNumbers: false,
+                yAxisNumbers: false,
+                showGrid: false,
+            };
+            var calculator = Desmos.GraphingCalculator(elt, options);
+            calculator.setMathBounds({ left: -1.9, right: 1.9, top: 1.9, bottom: -1.9 });
+            for (cmd of [{"latex":"x^2 + y^2 = 1"},{"latex":"N=(\\cos(\\frac{90}{360}2\\pi), \\sin(\\frac{90}{360}2\\pi))","label":"North","showLabel":true,"labelOrientation":"above","labelSize":"small"},{"latex":"N=(\\cos(\\frac{0}{360}2\\pi), \\sin(\\frac{0}{360}2\\pi))","label":"East","showLabel":true,"labelOrientation":"right","labelSize":"small"},{"latex":"N=(\\cos(-\\frac{90}{360}2\\pi), \\sin(-\\frac{90}{360}2\\pi))","label":"South","showLabel":true,"labelOrientation":"below","labelSize":"small"},{"latex":"N=(\\cos(\\frac{180}{360}2\\pi), \\sin(\\frac{180}{360}2\\pi))","label":"West","showLabel":true,"labelOrientation":"left","labelSize":"small"}]) {
+                calculator.setExpression(cmd);
+            }
+        });
+        </script>
+        </div>
+            </div></section><p>
+        The combined forces are a <b>sum of vectors</b>.
+        For instance, given <span inline="" math-inline="">\(F_1\)</span>, and <span inline="" math-inline="">\(F_2\)</span>, then the combined effects would be
+
+        </p><div block="" math-block="">$$F_1 + F_2$$</div><section class="note-block block"><p>
+            The <b>actual velocity</b> of the plane is the plane’s velocity with respect to the ground. The <b>magnitude</b> of the plane’s actual velocity is called its <b>ground speed</b>.
+        </p></section><section class="note-block block"><p>
+            Usually the heading is relative to the <u><b>y axis</b></u>.
+            Whereas standard position is relative to the <u><b>x axis</b></u>,
+            therefore you need to update your equations accordingly. 
+            </p><hr><p>
+            For example, if the heading is <span inline="" math-inline="">\(17^\circ\)</span>, then the actual angle (i.e. in standard position) is <span inline="" math-inline="">\(\theta = 73^\circ\)</span>.
+            </p><hr><section class="note-block block"><h5 id="complicated-heading%20(from%20the%20textbook)%20%5Btodo%20fix%20this%5D">Complicated Heading (From the Textbook) [TODO FIX THIS]</h5><p>
+                If a plane is going <span inline="" math-inline="">\(340\text{mph}\)</span>, with a heading of <span inline="" math-inline="">\(124^\circ\)</span>, then the actual direction is <b>not </b><span inline="" math-inline="">\(124^\circ - 90^\circ\)</span>, but <span inline="" math-inline="">\(-(124^\circ - 90^\circ)\)</span>.
+
+                </p><div height="200px" width="200px" math-bounds="{&quot;left&quot;: -1.9, &quot;right&quot;: 1.9, &quot;top&quot;: 1.9, &quot;bottom&quot;: -1.9}" controls="false" lock="true" x-axis-numbers="false" y-axis-numbers="false" show-grid="false" block="" desmos="" desmos-wrapper="" style="
+        width: 100%;
+        max-width: unset;
+        margin: 0;
+        "><div></div>
+        <div id="des_6b48a55b_7946_eb2a_ea71_255702da3cc3" style="width: 200px; height: 200px;" desmos-embed></div>
+        <script>
+        window.addEventListener("load", function on_load() {
+            var elt = document.getElementById('des_6b48a55b_7946_eb2a_ea71_255702da3cc3');
+            var options = {
+                expressionsCollapsed: true,
+                expressions: false,
+                lockViewport: true,
+                settingsMenu: false,
+                border: false,
+                xAxisNumbers: false,
+                yAxisNumbers: false,
+                showGrid: false,
+            };
+            var calculator = Desmos.GraphingCalculator(elt, options);
+            calculator.setMathBounds({ left: -1.9, right: 1.9, top: 1.9, bottom: -1.9 });
+            for (cmd of [{"latex":"x^2 + y^2 = 1"},{"latex":"E=\\left(\\cos\\left(\\frac{34}{360}\\cdot 2\\pi\\right), \\sin\\left(\\frac{34}{360}\\cdot 2\\pi\\right)\\right)","label":"34°","showLabel":true,"labelOrientation":"right","labelSize":"small"},{"latex":"E=\\left(\\cos\\left(\\frac{-34}{360}\\cdot 2\\pi\\right), \\sin\\left(\\frac{-34}{360}\\cdot 2\\pi\\right)\\right)","label":"-34°","showLabel":true,"labelOrientation":"right","labelSize":"small"}]) {
+                calculator.setExpression(cmd);
+            }
+        });
+        </script>
+        </div></section><hr><p>
+            Why do these things have to be complicated?
+        </p></section></section></section>
+
 <div style="height: 200px;"></div>
     <h1 id="chapter-5%20%7C%20complex%20numbers">Chapter 5 | Complex Numbers</h1>
+
+<h2 id="complex-numbers">Complex Numbers</h2>
+<section class="note-block block"><p><img width="400px" src="https://colbyn.github.io/school-notes/1.a077349c.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/2.1d5e9353.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/3.8fdce385.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/4.4fd14475.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/5.c3b174f3.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/6.dda1e43c.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/7.f1591dc3.png" style="min-width: 0; max-width: 400px;"></p></section>
+<section class="note-block block"><h3 id="simplify-%5Cfrac%7B1%7D%7B%5Cmathrm%7Bi%7D%5Cmkern1mu%7D">Simplify <span inline="" math-inline="">\(\frac{1}{\mathrm{i}\mkern1mu}\)</span></h3><div block="" math-block="">$$\newcommand{\iu}{\mathrm{i}\mkern1mu}
+        \begin{equation}
+        \begin{split}
+            \frac{1}{\iu} &= \frac{1}{\iu} \cdot \left(\frac{\iu}{\iu}\right) \\
+                &= \frac{\iu}{\iu^2} \\
+                &= \frac{\iu}{-1} \\
+                &= -\iu
+        \end{split}
+        \end{equation}$$</div></section>
+
+<h2 id="trigonometric-form%20of%20complex%20numbers">Trigonometric Form of Complex Numbers</h2>
+<section class="note-block block"><p><img width="400px" src="https://colbyn.github.io/school-notes/1.f04ba762.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/2.9968544a.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/3.80d40e54.png" style="min-width: 0; max-width: 400px;"></p></section>
+
+<h2 id="de-moivre%E2%80%99s%20theorem">De Moivre’s Theorem</h2>
     <h1 id="chapter-6%20%7C%20topics%20in%20analytic%20geometry">Chapter 6 | Topics in Analytic Geometry</h1>
     <h1 id="chapter-7%20%7C%20exponential%20and%20logarithmic%20functions">Chapter 7 | Exponential and Logarithmic Functions</h1>
 </body>

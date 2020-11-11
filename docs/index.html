@@ -17,7 +17,8 @@
       'dx': "{\\, \\mathrm{d}x\\;}",
       'Integrate': ['{\\int_{#1}^{#2}\\, #3 \\dx}', 3],
       'IntegrateFor': ['{\\int_{#1}^{#2}\\, #3 {\\, \\mathrm{d}{#4}\\;}}', 4],
-      'I': ['{\\Integrate{a}{b}{#1}}', 1]
+      'I': ['{\\Integrate{a}{b}{#1}}', 1],
+      'angles': ['\\langle {#1},{#2} \\rangle', 2]
     }
   },
   svg: {
@@ -295,10 +296,10 @@ root_ul_node.appendChild(build_entries(menu));</script>
         max-width: unset;
         margin: 0;
         "><div></div>
-        <div id="des_b1102690_53dd_e07f_f14c_360a344b60db" style="width: 100%; height: 200px;" desmos-embed></div>
+        <div id="des_75a7d165_b6ee_4905_2d79_953a017e6943" style="width: 100%; height: 200px;" desmos-embed></div>
         <script>
         window.addEventListener("load", function on_load() {
-            var elt = document.getElementById('des_b1102690_53dd_e07f_f14c_360a344b60db');
+            var elt = document.getElementById('des_75a7d165_b6ee_4905_2d79_953a017e6943');
             var options = {
                 expressionsCollapsed: true,
                 expressions: true,
@@ -322,10 +323,10 @@ root_ul_node.appendChild(build_entries(menu));</script>
         max-width: unset;
         margin: 0;
         "><div></div>
-        <div id="des_c5558e23_bfc0_7106_2b58_699e7bfded58" style="width: 100%; height: 200px;" desmos-embed></div>
+        <div id="des_1828cabb_b7f5_a3cd_f530_c2777201643d" style="width: 100%; height: 200px;" desmos-embed></div>
         <script>
         window.addEventListener("load", function on_load() {
-            var elt = document.getElementById('des_c5558e23_bfc0_7106_2b58_699e7bfded58');
+            var elt = document.getElementById('des_1828cabb_b7f5_a3cd_f530_c2777201643d');
             var options = {
                 expressionsCollapsed: true,
                 expressions: true,
@@ -351,11 +352,11 @@ root_ul_node.appendChild(build_entries(menu));</script>
         display: flex;
         justify-content: center;
         ">
-        <div id="geo_cfe005f5_d66e_d50a_09df_50aa9e167287" style="width: 100%;"></div>
+        <div id="geo_9b75864b_1ff4_19e0_86cc_c6b0d37f4441" style="width: 100%;"></div>
         <script>
-        var geo_cfe005f5_d66e_d50a_09df_50aa9e167287_setup = new GGBApplet(
+        var geo_9b75864b_1ff4_19e0_86cc_c6b0d37f4441_setup = new GGBApplet(
             {
-                id: "geo_cfe005f5_d66e_d50a_09df_50aa9e167287",
+                id: "geo_9b75864b_1ff4_19e0_86cc_c6b0d37f4441",
                 "appName": 'graphing',
                 "width": null || window.innerWidth,
                 "height": 200 || 500,
@@ -374,22 +375,22 @@ root_ul_node.appendChild(build_entries(menu));</script>
                 "preventFocus": true,
                 appletOnLoad: (x) => {
                     for (cmd of ["SetPerspective(\"G\")","y=x^2"]) {
-                        window.geo_cfe005f5_d66e_d50a_09df_50aa9e167287.evalCommand(cmd);
+                        window.geo_9b75864b_1ff4_19e0_86cc_c6b0d37f4441.evalCommand(cmd);
                     }
                     if (!null) {
-                        window.geo_cfe005f5_d66e_d50a_09df_50aa9e167287.setWidth(window.innerWidth);
+                        window.geo_9b75864b_1ff4_19e0_86cc_c6b0d37f4441.setWidth(window.innerWidth);
                     }
                 }
             },
             true
         );
         window.addEventListener("load", function() {
-            geo_cfe005f5_d66e_d50a_09df_50aa9e167287_setup.inject('geo_cfe005f5_d66e_d50a_09df_50aa9e167287', 'preferHTML5');
+            geo_9b75864b_1ff4_19e0_86cc_c6b0d37f4441_setup.inject('geo_9b75864b_1ff4_19e0_86cc_c6b0d37f4441', 'preferHTML5');
         });
         window.addEventListener('resize', (event) => {
             let width = window.innerWidth;
             if (!null) {
-                window.geo_cfe005f5_d66e_d50a_09df_50aa9e167287.setWidth(width);
+                window.geo_9b75864b_1ff4_19e0_86cc_c6b0d37f4441.setWidth(width);
             }
         });
         </script>
@@ -401,11 +402,11 @@ root_ul_node.appendChild(build_entries(menu));</script>
         display: flex;
         justify-content: center;
         ">
-        <div id="geo_ee42ea54_df69_fd60_c0d6_e866b4868d3c" style="width: 100%;"></div>
+        <div id="geo_8979287f_4fdd_4131_7116_63ea597a2e6c" style="width: 100%;"></div>
         <script>
-        var geo_ee42ea54_df69_fd60_c0d6_e866b4868d3c_setup = new GGBApplet(
+        var geo_8979287f_4fdd_4131_7116_63ea597a2e6c_setup = new GGBApplet(
             {
-                id: "geo_ee42ea54_df69_fd60_c0d6_e866b4868d3c",
+                id: "geo_8979287f_4fdd_4131_7116_63ea597a2e6c",
                 "appName": 'geometry',
                 "width": null || window.innerWidth,
                 "height": 200 || 500,
@@ -424,22 +425,22 @@ root_ul_node.appendChild(build_entries(menu));</script>
                 "preventFocus": true,
                 appletOnLoad: (x) => {
                     for (cmd of ["SetPerspective(\"G\")","y=x^2"]) {
-                        window.geo_ee42ea54_df69_fd60_c0d6_e866b4868d3c.evalCommand(cmd);
+                        window.geo_8979287f_4fdd_4131_7116_63ea597a2e6c.evalCommand(cmd);
                     }
                     if (!null) {
-                        window.geo_ee42ea54_df69_fd60_c0d6_e866b4868d3c.setWidth(window.innerWidth);
+                        window.geo_8979287f_4fdd_4131_7116_63ea597a2e6c.setWidth(window.innerWidth);
                     }
                 }
             },
             true
         );
         window.addEventListener("load", function() {
-            geo_ee42ea54_df69_fd60_c0d6_e866b4868d3c_setup.inject('geo_ee42ea54_df69_fd60_c0d6_e866b4868d3c', 'preferHTML5');
+            geo_8979287f_4fdd_4131_7116_63ea597a2e6c_setup.inject('geo_8979287f_4fdd_4131_7116_63ea597a2e6c', 'preferHTML5');
         });
         window.addEventListener('resize', (event) => {
             let width = window.innerWidth;
             if (!null) {
-                window.geo_ee42ea54_df69_fd60_c0d6_e866b4868d3c.setWidth(width);
+                window.geo_8979287f_4fdd_4131_7116_63ea597a2e6c.setWidth(width);
             }
         });
         </script>
@@ -451,11 +452,11 @@ root_ul_node.appendChild(build_entries(menu));</script>
         display: flex;
         justify-content: center;
         ">
-        <div id="geo_c053503a_0aea_cd23_9a58_fe310545c198" style="width: 100%;"></div>
+        <div id="geo_91d58676_91b4_96dc_93a0_a5015fc76f2c" style="width: 100%;"></div>
         <script>
-        var geo_c053503a_0aea_cd23_9a58_fe310545c198_setup = new GGBApplet(
+        var geo_91d58676_91b4_96dc_93a0_a5015fc76f2c_setup = new GGBApplet(
             {
-                id: "geo_c053503a_0aea_cd23_9a58_fe310545c198",
+                id: "geo_91d58676_91b4_96dc_93a0_a5015fc76f2c",
                 "appName": 'classic',
                 "width": null || window.innerWidth,
                 "height": 200 || 500,
@@ -474,22 +475,22 @@ root_ul_node.appendChild(build_entries(menu));</script>
                 "preventFocus": true,
                 appletOnLoad: (x) => {
                     for (cmd of ["SetPerspective(\"G\")","y=x^2"]) {
-                        window.geo_c053503a_0aea_cd23_9a58_fe310545c198.evalCommand(cmd);
+                        window.geo_91d58676_91b4_96dc_93a0_a5015fc76f2c.evalCommand(cmd);
                     }
                     if (!null) {
-                        window.geo_c053503a_0aea_cd23_9a58_fe310545c198.setWidth(window.innerWidth);
+                        window.geo_91d58676_91b4_96dc_93a0_a5015fc76f2c.setWidth(window.innerWidth);
                     }
                 }
             },
             true
         );
         window.addEventListener("load", function() {
-            geo_c053503a_0aea_cd23_9a58_fe310545c198_setup.inject('geo_c053503a_0aea_cd23_9a58_fe310545c198', 'preferHTML5');
+            geo_91d58676_91b4_96dc_93a0_a5015fc76f2c_setup.inject('geo_91d58676_91b4_96dc_93a0_a5015fc76f2c', 'preferHTML5');
         });
         window.addEventListener('resize', (event) => {
             let width = window.innerWidth;
             if (!null) {
-                window.geo_c053503a_0aea_cd23_9a58_fe310545c198.setWidth(width);
+                window.geo_91d58676_91b4_96dc_93a0_a5015fc76f2c.setWidth(width);
             }
         });
         </script>
@@ -501,11 +502,11 @@ root_ul_node.appendChild(build_entries(menu));</script>
         display: flex;
         justify-content: center;
         ">
-        <div id="geo_e037655a_184c_0312_fac1_600ba347f158" style="width: 100%;"></div>
+        <div id="geo_64fab372_57b3_6c89_8a24_328e9564b1f0" style="width: 100%;"></div>
         <script>
-        var geo_e037655a_184c_0312_fac1_600ba347f158_setup = new GGBApplet(
+        var geo_64fab372_57b3_6c89_8a24_328e9564b1f0_setup = new GGBApplet(
             {
-                id: "geo_e037655a_184c_0312_fac1_600ba347f158",
+                id: "geo_64fab372_57b3_6c89_8a24_328e9564b1f0",
                 "appName": 'suite',
                 "width": null || window.innerWidth,
                 "height": 200 || 500,
@@ -524,22 +525,22 @@ root_ul_node.appendChild(build_entries(menu));</script>
                 "preventFocus": true,
                 appletOnLoad: (x) => {
                     for (cmd of ["SetPerspective(\"G\")","y=x^2"]) {
-                        window.geo_e037655a_184c_0312_fac1_600ba347f158.evalCommand(cmd);
+                        window.geo_64fab372_57b3_6c89_8a24_328e9564b1f0.evalCommand(cmd);
                     }
                     if (!null) {
-                        window.geo_e037655a_184c_0312_fac1_600ba347f158.setWidth(window.innerWidth);
+                        window.geo_64fab372_57b3_6c89_8a24_328e9564b1f0.setWidth(window.innerWidth);
                     }
                 }
             },
             true
         );
         window.addEventListener("load", function() {
-            geo_e037655a_184c_0312_fac1_600ba347f158_setup.inject('geo_e037655a_184c_0312_fac1_600ba347f158', 'preferHTML5');
+            geo_64fab372_57b3_6c89_8a24_328e9564b1f0_setup.inject('geo_64fab372_57b3_6c89_8a24_328e9564b1f0', 'preferHTML5');
         });
         window.addEventListener('resize', (event) => {
             let width = window.innerWidth;
             if (!null) {
-                window.geo_e037655a_184c_0312_fac1_600ba347f158.setWidth(width);
+                window.geo_64fab372_57b3_6c89_8a24_328e9564b1f0.setWidth(width);
             }
         });
         </script>

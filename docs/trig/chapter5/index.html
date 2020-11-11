@@ -18,7 +18,8 @@
       'dx': "{\\, \\mathrm{d}x\\;}",
       'Integrate': ['{\\int_{#1}^{#2}\\, #3 \\dx}', 3],
       'IntegrateFor': ['{\\int_{#1}^{#2}\\, #3 {\\, \\mathrm{d}{#4}\\;}}', 4],
-      'I': ['{\\Integrate{a}{b}{#1}}', 1]
+      'I': ['{\\Integrate{a}{b}{#1}}', 1],
+      'angles': ['\\langle {#1},{#2} \\rangle', 2]
     }
   },
   svg: {
@@ -284,8 +285,25 @@ function build_entries(entries) {
 var root_ul_node = document.querySelector("nav#side-nav");
 console.assert(root_ul_node);
 root_ul_node.appendChild(build_entries(menu));</script>
-        <div toc=""><ul toc=""><li entry="h1"><a href="#chapter-5%20%7C%20complex%20numbers">Chapter 5 | Complex Numbers</a></li></ul></div>
+        <div toc=""><ul toc=""><li entry="h1"><a href="#chapter-5%20%7C%20complex%20numbers">Chapter 5 | Complex Numbers</a></li><li entry="h2"><a href="#complex-numbers">Complex Numbers</a></li><li entry="h3"><a href="#simplify-%5Cfrac%7B1%7D%7B%5Cmathrm%7Bi%7D%5Cmkern1mu%7D">Simplify <span inline="" math-inline="">\(\frac{1}{\mathrm{i}\mkern1mu}\)</span></a></li><li entry="h2"><a href="#trigonometric-form%20of%20complex%20numbers">Trigonometric Form of Complex Numbers</a></li><li entry="h2"><a href="#de-moivre%E2%80%99s%20theorem">De Moivre’s Theorem</a></li></ul></div>
     </header>
     <h1 id="chapter-5%20%7C%20complex%20numbers">Chapter 5 | Complex Numbers</h1>
+
+<h2 id="complex-numbers">Complex Numbers</h2>
+<section class="note-block block"><p><img width="400px" src="https://colbyn.github.io/school-notes/1.a077349c.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/2.1d5e9353.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/3.8fdce385.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/4.4fd14475.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/5.c3b174f3.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/6.dda1e43c.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/7.f1591dc3.png" style="min-width: 0; max-width: 400px;"></p></section>
+<section class="note-block block"><h3 id="simplify-%5Cfrac%7B1%7D%7B%5Cmathrm%7Bi%7D%5Cmkern1mu%7D">Simplify <span inline="" math-inline="">\(\frac{1}{\mathrm{i}\mkern1mu}\)</span></h3><div block="" math-block="">$$\newcommand{\iu}{\mathrm{i}\mkern1mu}
+        \begin{equation}
+        \begin{split}
+            \frac{1}{\iu} &= \frac{1}{\iu} \cdot \left(\frac{\iu}{\iu}\right) \\
+                &= \frac{\iu}{\iu^2} \\
+                &= \frac{\iu}{-1} \\
+                &= -\iu
+        \end{split}
+        \end{equation}$$</div></section>
+
+<h2 id="trigonometric-form%20of%20complex%20numbers">Trigonometric Form of Complex Numbers</h2>
+<section class="note-block block"><p><img width="400px" src="https://colbyn.github.io/school-notes/1.f04ba762.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/2.9968544a.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/3.80d40e54.png" style="min-width: 0; max-width: 400px;"></p></section>
+
+<h2 id="de-moivre%E2%80%99s%20theorem">De Moivre’s Theorem</h2>
 </body>
 </html>

@@ -18,7 +18,8 @@
       'dx': "{\\, \\mathrm{d}x\\;}",
       'Integrate': ['{\\int_{#1}^{#2}\\, #3 \\dx}', 3],
       'IntegrateFor': ['{\\int_{#1}^{#2}\\, #3 {\\, \\mathrm{d}{#4}\\;}}', 4],
-      'I': ['{\\Integrate{a}{b}{#1}}', 1]
+      'I': ['{\\Integrate{a}{b}{#1}}', 1],
+      'angles': ['\\langle {#1},{#2} \\rangle', 2]
     }
   },
   svg: {
@@ -284,7 +285,7 @@ function build_entries(entries) {
 var root_ul_node = document.querySelector("nav#side-nav");
 console.assert(root_ul_node);
 root_ul_node.appendChild(build_entries(menu));</script>
-        <div toc=""><ul toc=""><li entry="h1"><a href="#chapter-4%20%7C%20applications%20of%20trigonometry">Chapter 4 | Applications of Trigonometry</a></li><li entry="h2"><a href="#%C2%A74.1-%7C%20the%20law%20of%20sines">§4.1 | The Law of Sines</a></li><li entry="h3"><a href="#the-ambiguous%20case%20(ssa)">The Ambiguous Case (SSA)</a></li><li entry="h2"><a href="#proof">Proof</a></li><li entry="h2"><a href="#%C2%A74.2-%7C%20the%20law%20of%20cosines">§4.2 | The Law of Cosines</a></li><li entry="h3"><a href="#choosing-between%20the%20law%20of%20sines%20and%20the%20law%20of%20cosines">Choosing Between the Law of Sines and the Law of Cosines</a></li><li entry="h3"><a href="#area-of%20a%20triangle">Area of a Triangle</a></li><li entry="h4"><a href="#workflow">Workflow</a></li><li entry="h4"><a href="#theorem">Theorem</a></li><li entry="h3"><a href="#heron%E2%80%99s-formula%20for%20finding%20the%20area%20of%20a%20triangle">Heron’s Formula for Finding the Area of a Triangle</a></li><li entry="h2"><a href="#%C2%A74.3-%7C%20vectors">§4.3 | Vectors</a></li><li entry="h3"><a href="#definition-of%20a%20vector">Definition of a Vector</a></li><li entry="h4"><a href="#common-notation%20for%20vectors">Common Notation for Vectors</a></li><li entry="h4"><a href="#ad-hoc-vector%20notations">Ad-Hoc Vector Notations</a></li></ul></div>
+        <div toc=""><ul toc=""><li entry="h1"><a href="#chapter-4%20%7C%20applications%20of%20trigonometry">Chapter 4 | Applications of Trigonometry</a></li><li entry="h2"><a href="#%C2%A74.1-%7C%20the%20law%20of%20sines">§4.1 | The Law of Sines</a></li><li entry="h3"><a href="#the-ambiguous%20case%20(ssa)">The Ambiguous Case (SSA)</a></li><li entry="h2"><a href="#proof">Proof</a></li><li entry="h2"><a href="#%C2%A74.2-%7C%20the%20law%20of%20cosines">§4.2 | The Law of Cosines</a></li><li entry="h3"><a href="#choosing-between%20the%20law%20of%20sines%20and%20the%20law%20of%20cosines">Choosing Between the Law of Sines and the Law of Cosines</a></li><li entry="h3"><a href="#area-of%20a%20triangle">Area of a Triangle</a></li><li entry="h4"><a href="#workflow">Workflow</a></li><li entry="h4"><a href="#theorem">Theorem</a></li><li entry="h3"><a href="#heron%E2%80%99s-formula%20for%20finding%20the%20area%20of%20a%20triangle">Heron’s Formula for Finding the Area of a Triangle</a></li><li entry="h2"><a href="#%C2%A74.3-%7C%20vectors">§4.3 | Vectors</a></li><li entry="h3"><a href="#definition-of%20a%20vector">Definition of a Vector</a></li><li entry="h4"><a href="#common-notation%20for%20vectors">Common Notation for Vectors</a></li><li entry="h4"><a href="#ad-hoc-vector%20notations">Ad-Hoc Vector Notations</a></li><li entry="h3"><a href="#vector-operations">Vector Operations</a></li><li entry="h3"><a href="#vector-forms%20reference">Vector Forms Reference</a></li><li entry="h4"><a href="#components-from%20magnitude%20and%20direction">Components from Magnitude and Direction</a></li><li entry="h5"><a href="#example">Example</a></li><li entry="h3"><a href="#application-of%20vectors">Application of Vectors</a></li><li entry="h4"><a href="#airplane-problems">Airplane Problems</a></li><li entry="h5"><a href="#remember-for-compass%20problems">Remember for <b>Compass Problems</b></a></li><li entry="h5"><a href="#complicated-heading%20(from%20the%20textbook)%20%5Btodo%20fix%20this%5D">Complicated Heading (From the Textbook) [TODO FIX THIS]</a></li></ul></div>
     </header>
     <h1 id="chapter-4%20%7C%20applications%20of%20trigonometry">Chapter 4 | Applications of Trigonometry</h1>
 
@@ -358,7 +359,13 @@ root_ul_node.appendChild(build_entries(menu));</script>
 <ul>
     <li>The magnitude and direction of a vector can be found from its components.</li>
     <li>A <b>unit vector</b> is a vector whose magnitude is 1.</li>
+    <li><a href="https://www.khanacademy.org/math/algebra-home/alg-vectors/alg-magnitude-direction/a/vector-forms-review">Vector Forms Review <small>(Khan Academy)</small></a></li>
+    <li><a href="https://www.khanacademy.org/math/algebra-home/alg-vectors/alg-component-form-of-vectors/a/vector-magnitude-and-direction-review">Vector Magnitude and Direction Review <small>(Khan Academy)</small></a></li>
 </ul>
+
+<section class="note-block block"><p><img width="400px" src="https://colbyn.github.io/school-notes/1.162c6531.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/2.1eb9fe35.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/3.b13c0db2.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/4.d5dbcd00.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/5.a28b6c59.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/6.4ddbdb14.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/7.8662eabc.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/8.589b2dbc.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/9.0cab61b8.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/10.1bd1eb32.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/11.544b5b08.png" style="min-width: 0; max-width: 400px;"><img width="400px" src="https://colbyn.github.io/school-notes/12.1612d616.png" style="min-width: 0; max-width: 400px;"></p></section>
+
+
 <section class="note-block block"><h3 id="definition-of%20a%20vector">Definition of a Vector</h3><p>A vector is a directed line segment. The length of the line segment is the magnitude of the vector, and the direction of the vector is measured by an angle.</p><h4 id="common-notation%20for%20vectors">Common Notation for Vectors</h4><div block="" math-block="">$$\begin{equation}
         \begin{split}
             \text{Vector} & = \boldsymbol{V} = \overrightarrow{AB} \\\\
@@ -366,9 +373,137 @@ root_ul_node.appendChild(build_entries(menu));</script>
         \end{split}
         \end{equation}$$</div><section class="note-block block"><h4 id="ad-hoc-vector%20notations">Ad-Hoc Vector Notations</h4><ul>
             <li>
-                <span inline="" math-inline="">\(\langle a,b \rangle\)</span> is relative to the origin. I.e. the initial point is at <span inline="" math-inline="">\((0, 0)\)</span>, and the terminal point is at <span inline="" math-inline="">\((a, b)\)</span>.
+                <span inline="" math-inline="">\(\langle x,y \rangle\)</span> is relative to the origin. I.e. the initial point is at <span inline="" math-inline="">\((0, 0)\)</span>, and the terminal point is at <span inline="" math-inline="">\((a, b)\)</span>.
+                But Khan Academy seems to just use <span inline="" math-inline="">\((x, y)\)</span>, or <span inline="" math-inline="">\((\Delta x, \Delta y)\)</span>. 
             </li>
         </ul></section></section>
+
+<section class="note-block block"><h3 id="vector-operations">Vector Operations</h3><div style="display: flex; justify-content: center;">
+        <img width="400px" src="https://physics.nfshost.com/textbook/01-Vectors/img/VectorAddition.png" style="min-width: 0; max-width: 400px;">
+    </div></section>
+
+<section class="note-block block"><h3 id="vector-forms%20reference">Vector Forms Reference</h3><section class="note-block block"><h4 id="components-from%20magnitude%20and%20direction">Components from Magnitude and Direction</h4><h5 id="example">Example</h5><p>Given <span inline="" math-inline="">\(||\vec{v}|| = 5\)</span>, and <span inline="" math-inline="">\(\theta = 27^\circ\)</span></p><div block="" math-block="">$$\newcommand{\X}{5 \cdot \cos(27^\circ)}
+            \newcommand{\Y}{5 \cdot \cos(27^\circ)}
+            \begin{aligned}
+                \overbrace{\angles{\X}{\Y}}^{\text{textbook notation}} &= \overbrace{(\X, \Y)}^{\text{alternative notation}}
+            \end{aligned}$$</div></section></section>
+
+<section class="note-block block"><h3 id="application-of%20vectors">Application of Vectors</h3><section class="note-block block"><h4 id="airplane-problems">Airplane Problems</h4><ul>
+            <li><a href="https://youtu.be/igG_qmqQu28">Convert True Bearing to an Angle in Standard Position (YouTube Video)</a></li>
+        </ul><section class="note-block block"><h5 id="remember-for-compass%20problems">Remember for <b>Compass Problems</b></h5><ul>
+                <li><span inline="" math-inline="">\(0^\circ = \text{North}\)</span></li>
+                <li><span inline="" math-inline="">\(90^\circ = \text{East}\)</span></li>
+                <li><span inline="" math-inline="">\(180^\circ = \text{South}\)</span></li>
+                <li><span inline="" math-inline="">\(270^\circ = \text{West}\)</span></li>
+                <li>Moves <b>clock-wise</b></li>
+            </ul><div id="id252234AA2">
+                <style>#id252234AA2 {
+                        display: flex;
+                        flex-direction: row;
+                    }
+                    @media (max-width: 500px) {
+                        #id252234AA2 {
+                            flex-direction: column;
+                        }
+                    }</style>
+                <div height="200px" width="200px" math-bounds="{&quot;left&quot;: -1.9, &quot;right&quot;: 1.9, &quot;top&quot;: 1.9, &quot;bottom&quot;: -1.9}" controls="false" lock="true" x-axis-numbers="false" y-axis-numbers="false" show-grid="false" block="" desmos="" desmos-wrapper="" style="
+        width: 100%;
+        max-width: unset;
+        margin: 0;
+        "><div></div>
+        <div id="des_9e6c9349_8910_0ea5_03df_49710eb85f8b" style="width: 200px; height: 200px;" desmos-embed></div>
+        <script>
+        window.addEventListener("load", function on_load() {
+            var elt = document.getElementById('des_9e6c9349_8910_0ea5_03df_49710eb85f8b');
+            var options = {
+                expressionsCollapsed: true,
+                expressions: false,
+                lockViewport: true,
+                settingsMenu: false,
+                border: false,
+                xAxisNumbers: false,
+                yAxisNumbers: false,
+                showGrid: false,
+            };
+            var calculator = Desmos.GraphingCalculator(elt, options);
+            calculator.setMathBounds({ left: -1.9, right: 1.9, top: 1.9, bottom: -1.9 });
+            for (cmd of [{"latex":"x^2 + y^2 = 1"},{"latex":"N=(\\cos(\\frac{90}{360}2\\pi), \\sin(\\frac{90}{360}2\\pi))","label":"0°","showLabel":true,"labelOrientation":"above","labelSize":"small"},{"latex":"N=(\\cos(\\frac{0}{360}2\\pi), \\sin(\\frac{0}{360}2\\pi))","label":"90°","showLabel":true,"labelOrientation":"right","labelSize":"small"},{"latex":"N=(\\cos(-\\frac{90}{360}2\\pi), \\sin(-\\frac{90}{360}2\\pi))","label":"180°","showLabel":true,"labelOrientation":"below","labelSize":"small"},{"latex":"N=(\\cos(\\frac{180}{360}2\\pi), \\sin(\\frac{180}{360}2\\pi))","label":"270°","showLabel":true,"labelOrientation":"left","labelSize":"small"}]) {
+                calculator.setExpression(cmd);
+            }
+        });
+        </script>
+        </div>
+                <div height="200px" width="200px" math-bounds="{&quot;left&quot;: -1.9, &quot;right&quot;: 1.9, &quot;top&quot;: 1.9, &quot;bottom&quot;: -1.9}" controls="false" lock="true" x-axis-numbers="false" y-axis-numbers="false" show-grid="false" block="" desmos="" desmos-wrapper="" style="
+        width: 100%;
+        max-width: unset;
+        margin: 0;
+        "><div></div>
+        <div id="des_99fee9da_f759_ca25_68e6_6e2c240cd0c9" style="width: 200px; height: 200px;" desmos-embed></div>
+        <script>
+        window.addEventListener("load", function on_load() {
+            var elt = document.getElementById('des_99fee9da_f759_ca25_68e6_6e2c240cd0c9');
+            var options = {
+                expressionsCollapsed: true,
+                expressions: false,
+                lockViewport: true,
+                settingsMenu: false,
+                border: false,
+                xAxisNumbers: false,
+                yAxisNumbers: false,
+                showGrid: false,
+            };
+            var calculator = Desmos.GraphingCalculator(elt, options);
+            calculator.setMathBounds({ left: -1.9, right: 1.9, top: 1.9, bottom: -1.9 });
+            for (cmd of [{"latex":"x^2 + y^2 = 1"},{"latex":"N=(\\cos(\\frac{90}{360}2\\pi), \\sin(\\frac{90}{360}2\\pi))","label":"North","showLabel":true,"labelOrientation":"above","labelSize":"small"},{"latex":"N=(\\cos(\\frac{0}{360}2\\pi), \\sin(\\frac{0}{360}2\\pi))","label":"East","showLabel":true,"labelOrientation":"right","labelSize":"small"},{"latex":"N=(\\cos(-\\frac{90}{360}2\\pi), \\sin(-\\frac{90}{360}2\\pi))","label":"South","showLabel":true,"labelOrientation":"below","labelSize":"small"},{"latex":"N=(\\cos(\\frac{180}{360}2\\pi), \\sin(\\frac{180}{360}2\\pi))","label":"West","showLabel":true,"labelOrientation":"left","labelSize":"small"}]) {
+                calculator.setExpression(cmd);
+            }
+        });
+        </script>
+        </div>
+            </div></section><p>
+        The combined forces are a <b>sum of vectors</b>.
+        For instance, given <span inline="" math-inline="">\(F_1\)</span>, and <span inline="" math-inline="">\(F_2\)</span>, then the combined effects would be
+
+        </p><div block="" math-block="">$$F_1 + F_2$$</div><section class="note-block block"><p>
+            The <b>actual velocity</b> of the plane is the plane’s velocity with respect to the ground. The <b>magnitude</b> of the plane’s actual velocity is called its <b>ground speed</b>.
+        </p></section><section class="note-block block"><p>
+            Usually the heading is relative to the <u><b>y axis</b></u>.
+            Whereas standard position is relative to the <u><b>x axis</b></u>,
+            therefore you need to update your equations accordingly. 
+            </p><hr><p>
+            For example, if the heading is <span inline="" math-inline="">\(17^\circ\)</span>, then the actual angle (i.e. in standard position) is <span inline="" math-inline="">\(\theta = 73^\circ\)</span>.
+            </p><hr><section class="note-block block"><h5 id="complicated-heading%20(from%20the%20textbook)%20%5Btodo%20fix%20this%5D">Complicated Heading (From the Textbook) [TODO FIX THIS]</h5><p>
+                If a plane is going <span inline="" math-inline="">\(340\text{mph}\)</span>, with a heading of <span inline="" math-inline="">\(124^\circ\)</span>, then the actual direction is <b>not </b><span inline="" math-inline="">\(124^\circ - 90^\circ\)</span>, but <span inline="" math-inline="">\(-(124^\circ - 90^\circ)\)</span>.
+
+                </p><div height="200px" width="200px" math-bounds="{&quot;left&quot;: -1.9, &quot;right&quot;: 1.9, &quot;top&quot;: 1.9, &quot;bottom&quot;: -1.9}" controls="false" lock="true" x-axis-numbers="false" y-axis-numbers="false" show-grid="false" block="" desmos="" desmos-wrapper="" style="
+        width: 100%;
+        max-width: unset;
+        margin: 0;
+        "><div></div>
+        <div id="des_f87d7b28_e72b_9ad9_8bf6_bc35f9105848" style="width: 200px; height: 200px;" desmos-embed></div>
+        <script>
+        window.addEventListener("load", function on_load() {
+            var elt = document.getElementById('des_f87d7b28_e72b_9ad9_8bf6_bc35f9105848');
+            var options = {
+                expressionsCollapsed: true,
+                expressions: false,
+                lockViewport: true,
+                settingsMenu: false,
+                border: false,
+                xAxisNumbers: false,
+                yAxisNumbers: false,
+                showGrid: false,
+            };
+            var calculator = Desmos.GraphingCalculator(elt, options);
+            calculator.setMathBounds({ left: -1.9, right: 1.9, top: 1.9, bottom: -1.9 });
+            for (cmd of [{"latex":"x^2 + y^2 = 1"},{"latex":"E=\\left(\\cos\\left(\\frac{34}{360}\\cdot 2\\pi\\right), \\sin\\left(\\frac{34}{360}\\cdot 2\\pi\\right)\\right)","label":"34°","showLabel":true,"labelOrientation":"right","labelSize":"small"},{"latex":"E=\\left(\\cos\\left(\\frac{-34}{360}\\cdot 2\\pi\\right), \\sin\\left(\\frac{-34}{360}\\cdot 2\\pi\\right)\\right)","label":"-34°","showLabel":true,"labelOrientation":"right","labelSize":"small"}]) {
+                calculator.setExpression(cmd);
+            }
+        });
+        </script>
+        </div></section><hr><p>
+            Why do these things have to be complicated?
+        </p></section></section></section>
 
 <div style="height: 200px;"></div>
 </body>
