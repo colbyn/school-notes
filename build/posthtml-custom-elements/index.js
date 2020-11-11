@@ -204,12 +204,9 @@ function element(tag, attrs, children) {
 function is_block_node(node) {
     let is_block = false;
     if (typeof node !== 'object') {return false};
-    if (node.tag === 'style') {
-        return true;
-    }
-    if (node.tag === 'note') {
-        return true;
-    }
+    if (node.tag === 'style') {return true;}
+    if (node.tag === 'note') {return true;}
+    if (node.tag === 'texblock') {return true;}
     if (node.attrs && 'block' in node.attrs) {
         is_block = true;
     }
@@ -288,6 +285,7 @@ function is_inline_node(node) {
     if (node.tag === 'var') {return true;}
     if (node.tag === 'video') {return true;}
     if (node.tag === 'wbr') {return true;}
+    if (node.tag === 'u') {return true;}
     return is_inline;
 }
 

@@ -138,6 +138,7 @@
     <img width='400px' src="~/../static/images/trig-textbook/4.3/12.png">
 </note>
 
+
 <note>
     <h3>Definition of a Vector</h3>
     <p>A vector is a directed line segment. The length of the line segment is the magnitude of the vector, and the direction of the vector is measured by an angle.</p>
@@ -154,9 +155,130 @@
         <h4>Ad-Hoc Vector Notations</h4>
         <ul>
             <li>
-                <tex>\langle a,b \rangle</tex> is relative to the origin. I.e. the initial point is at <tex>(0, 0)</tex>, and the terminal point is at <tex>(a, b)</tex>.
+                <tex>\langle x,y \rangle</tex> is relative to the origin. I.e. the initial point is at <tex>(0, 0)</tex>, and the terminal point is at <tex>(a, b)</tex>.
+                But Khan Academy seems to just use <tex>(x, y)</tex>, or <tex>(\Delta x, \Delta y)</tex>. 
             </li>
         </ul>
+    </note>
+</note>
+
+<note>
+    <h3>Vector Operations</h3>
+    <div style='display: flex; justify-content: center;'>
+        <img width='400px' src="https://physics.nfshost.com/textbook/01-Vectors/img/VectorAddition.png">
+    </div>
+</note>
+
+<note>
+    <h3>Vector Forms Reference</h3>
+    <note>
+        <h4>Components from Magnitude and Direction</h4>
+        <h5>Example</h5>
+        <p>Given <tex>||\vec{v}|| = 5</tex>, and <tex>\theta = 27^\circ</tex></p>
+        <texblock>
+            \newcommand{\X}{5 \cdot \cos(27^\circ)}
+            \newcommand{\Y}{5 \cdot \cos(27^\circ)}
+            \begin{aligned}
+                \overbrace{\angles{\X}{\Y}}^{\text{textbook notation}} &= \overbrace{(\X, \Y)}^{\text{alternative notation}}
+            \end{aligned}
+        </texblock>
+    </note>
+</note>
+
+<note>
+    <h3>Application of Vectors</h3>
+    <note>
+        <h4>Airplane Problems</h4>
+        <ul>
+            <li><a href="https://youtu.be/igG_qmqQu28">Convert True Bearing to an Angle in Standard Position (YouTube Video)</a></li>
+        </ul>
+        <note>
+            <h5>Remember for <b>Compass Problems</b></h5>
+            <ul>
+                <li><tex>0^\circ = \text{North}</tex></li>
+                <li><tex>90^\circ = \text{East}</tex></li>
+                <li><tex>180^\circ = \text{South}</tex></li>
+                <li><tex>270^\circ = \text{West}</tex></li>
+                <li>Moves <b>clock-wise</b></li>
+            </ul>
+            <div id='id252234AA2'>
+                <style>
+                    #id252234AA2 {
+                        display: flex;
+                        flex-direction: row;
+                    }
+                    @media (max-width: 500px) {
+                        #id252234AA2 {
+                            flex-direction: column;
+                        }
+                    }
+                </style>
+                <desmos height='200px' width='200px' math-bounds='{"left": -1.9, "right": 1.9, "top": 1.9, "bottom": -1.9}' controls='false' lock='true' x-axis-numbers='false' y-axis-numbers='false' show-grid='false'>
+                    <expr>x^2 + y^2 = 1</expr>
+                    <expr label-size='small' label-orientations='above' label='0°'>
+                        N=(\cos(\frac{90}{360}2\pi), \sin(\frac{90}{360}2\pi))
+                    </expr>
+                    <expr label-size='small' label-orientations='right' label='90°'>
+                        N=(\cos(\frac{0}{360}2\pi), \sin(\frac{0}{360}2\pi))
+                    </expr>
+                    <expr label-size='small' label-orientations='below' label='180°'>
+                        N=(\cos(-\frac{90}{360}2\pi), \sin(-\frac{90}{360}2\pi))
+                    </expr>
+                    <expr label-size='small' label-orientations='left' label='270°'>
+                        N=(\cos(\frac{180}{360}2\pi), \sin(\frac{180}{360}2\pi))
+                    </expr>
+                </desmos>
+                <desmos height='200px' width='200px' math-bounds='{"left": -1.9, "right": 1.9, "top": 1.9, "bottom": -1.9}' controls='false' lock='true' x-axis-numbers='false' y-axis-numbers='false' show-grid='false'>
+                    <expr>x^2 + y^2 = 1</expr>
+                    <expr label-size='small' label-orientations='above' label='North'>
+                        N=(\cos(\frac{90}{360}2\pi), \sin(\frac{90}{360}2\pi))
+                    </expr>
+                    <expr label-size='small' label-orientations='right' label='East'>
+                        N=(\cos(\frac{0}{360}2\pi), \sin(\frac{0}{360}2\pi))
+                    </expr>
+                    <expr label-size='small' label-orientations='below' label='South'>
+                        N=(\cos(-\frac{90}{360}2\pi), \sin(-\frac{90}{360}2\pi))
+                    </expr>
+                    <expr label-size='small' label-orientations='left' label='West'>
+                        N=(\cos(\frac{180}{360}2\pi), \sin(\frac{180}{360}2\pi))
+                    </expr>
+                </desmos>
+            </div>
+        </note>
+        The combined forces are a <b>sum of vectors</b>.
+        For instance, given <tex>F_1</tex>, and <tex>F_2</tex>, then the combined effects would be
+
+        <texblock>
+            F_1 + F_2
+        </texblock>
+
+        <note>
+            The <b>actual velocity</b> of the plane is the plane’s velocity with respect to the ground. The <b>magnitude</b> of the plane’s actual velocity is called its <b>ground speed</b>.
+        </note>
+        <note>
+            Usually the heading is relative to the <u><b>y axis</b></u>.
+            Whereas standard position is relative to the <u><b>x axis</b></u>,
+            therefore you need to update your equations accordingly. 
+            <hr>
+            For example, if the heading is <tex>17^\circ</tex>, then the actual angle (i.e. in standard position) is <tex>\theta = 73^\circ</tex>.
+            <hr>
+            <note>
+                <h5>Complicated Heading (From the Textbook) [TODO FIX THIS]</h5>
+                If a plane is going <tex>340\text{mph}</tex>, with a heading of <tex>124^\circ</tex>, then the actual direction is <b>not </b> <tex>124^\circ - 90^\circ</tex>, but <tex>-(124^\circ - 90^\circ)</tex>.
+
+                <desmos height='200px' width='200px' math-bounds='{"left": -1.9, "right": 1.9, "top": 1.9, "bottom": -1.9}' controls='false' lock='true' x-axis-numbers='false' y-axis-numbers='false' show-grid='false'>
+                    <expr>x^2 + y^2 = 1</expr>
+                    <expr label-size='small' label-orientations='right' label='34°'>
+                        E=\left(\cos\left(\frac{34}{360}\cdot 2\pi\right), \sin\left(\frac{34}{360}\cdot 2\pi\right)\right)
+                    </expr>
+                    <expr label-size='small' label-orientations='right' label='-34°'>
+                        E=\left(\cos\left(\frac{-34}{360}\cdot 2\pi\right), \sin\left(\frac{-34}{360}\cdot 2\pi\right)\right)
+                    </expr>
+                </desmos>
+            </note>
+            <hr>
+            Why do these things have to be complicated?
+        </note>
     </note>
 </note>
 

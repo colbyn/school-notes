@@ -351,6 +351,55 @@
     </tex>
 </note>
 <note>
+    <h3>U Substitution Alternative</h3>
+
+
+    <p>Consider the result as a product of <tex>A</tex> and <tex>B</tex>. Identify <tex>A</tex> as the original function applied to the chain rule, and rewrite it in terms of a derivative to make it clearer, then use the following framework to find <tex>B</tex>.</p>
+
+
+    <texblock>
+        \begin{align*}
+            \int\frac{\cos(5x)}{e^{sin(5x)}} \mathrm{d}x &= AB + C \;\;
+            \text{where}\left\{
+                \begin{array}{ll}
+                    A = \int \frac{\mathrm{d}}{\mathrm{d}x} e^{-\sin(5x)}
+                \end{array}
+            \right.
+        \end{align*}
+    </texblock>
+
+    If <tex>A = e^{-\sin(5x)}</tex>, we need to eliminate what is left (the 'Leftovers' above), and find <tex>B</tex>. Setup the equation using the following framework:
+
+    <ul>
+        <li><tex>\text{Leftovers} = \cos(5x)</tex></li>
+        <li><tex>\text{Artifacts} = \text{Artifacts from $\frac{\mathrm{d}}{\mathrm{d}x} A$}</tex></li>
+    </ul>
+
+    <texblock>
+        \begin{align*}
+            \text{Leftovers} &= B \cdot \left(\text{Artifacts from $\frac{\mathrm{d}}{\mathrm{d}x} f(x)$}\right)
+        \end{align*}
+    </texblock>
+
+    <texblock>
+        \begin{align*}
+            \overbrace{\cos(5x)}^{\text{Leftovers}} = B \cdot \overbrace{\frac{\mathrm{d}}{\mathrm{d}x} \left( -\sin(5x) \right)}^{\text{Artifacts}} &= - A \cdot 5\cos(5x) \\
+            -\frac{\cos(5x)}{5\cos(5x)} & = A = -\frac{1}{5}
+        \end{align*}
+    </texblock>
+
+    <texblock>
+        \begin{equation}
+            \int\frac{\cos(5x)}{e^{sin(5x)}} \mathrm{d}x = -\frac{1}{5}e^{-\sin(5x)} + C
+        \end{equation}
+    </texblock>
+
+    <p>I reduced U-Substitution to a simple formula. :)</p>
+
+
+
+</note>
+<note>
     <h3>Theorem 5 - The Substitution Rule for Definite Integrals</h3>
     <p>If <tex>g^\prime</tex> is continuous on <tex>[a, b]</tex> and <tex>f</tex> is continuous on the range of <tex>u = g(x)</tex>, then:</p>
     <tex block>
