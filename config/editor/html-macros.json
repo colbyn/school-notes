@@ -12,6 +12,11 @@
             "name": "texblock",
             "description": "The tex element for LaTeX math code.",
             "attributes": []
+        },
+        {
+            "name": "equation",
+            "description": "The tex element for LaTeX math code in an equation environment.",
+            "attributes": []
         }
     ],
     "globalAttributes": [],

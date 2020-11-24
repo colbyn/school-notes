@@ -404,6 +404,19 @@ function latex(tree) {
         node.attrs['block'] = '';
         return process(node);
     });
+    tree.match({ tag: 'equation' }, (node) => {
+        node.tag = 'tex';
+        if (!node.attrs) {
+            node.attrs = {};
+        }
+        node.attrs['block'] = '';
+        
+        const old_text = get_text_contents(node);
+        const new_text =
+            `\\begin{equation}\n\\begin{split}\n${old_text}\n\\end{split}\n\\end{equation}`;
+        node.content = [new_text];
+        return process(node);
+    });
     tree.match({ tag: 'tex' }, (node) => {
         return process(node);
     });
