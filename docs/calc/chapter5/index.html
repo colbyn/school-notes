@@ -203,6 +203,10 @@ var menu = [{
     chapter: '0',
     path: 'music/glyphs/index.html'
   }]
+}, {
+  name: 'Lojban',
+  suffix: 'Other',
+  path: 'lojban/index.html'
 }];
 var host = window.location.host;
 
@@ -285,7 +289,7 @@ function build_entries(entries) {
 var root_ul_node = document.querySelector("nav#side-nav");
 console.assert(root_ul_node);
 root_ul_node.appendChild(build_entries(menu));</script>
-        <div toc=""><ul toc=""><li entry="h1"><a href="#chapter-5%20%7C%20applications%20of%20integration">Chapter 5 | Applications of Integration</a></li><li entry="h2"><a href="#%C2%A75.1-%7C%20areas%20between%20curves">§5.1 | Areas Between Curves</a></li><li entry="h2"><a href="#%C2%A75.2-%7C%20volumes">§5.2 | Volumes</a></li><li entry="h3"><a href="#solids-of%20revolution">Solids of revolution</a></li><li entry="h4"><a href="#cross-sectional-area">Cross-sectional Area</a></li><li entry="h5"><a href="#disk-function%20examples">Disk Function Examples</a></li><li entry="h5"><a href="#washer-function%20examples">Washer Function Examples</a></li><li entry="h2"><a href="#%C2%A75.3-%7C%20volumes%20by%20cylindrical%20shells">§5.3 | Volumes by Cylindrical Shells</a></li><li entry="h3"><a href="#the-shell%20method">The Shell Method</a></li><li entry="h4"><a href="#significant-distinction">Significant Distinction</a></li><li entry="h2"><a href="#%C2%A75.4-%7C%20work">§5.4 | Work</a></li><li entry="h2"><a href="#%C2%A75.5-%7C%20average%20value%20of%20a%20function">§5.5 | Average Value of a Function</a></li></ul></div>
+        <div toc=""><ul toc=""><li entry="h1"><a href="#chapter-5%20%7C%20applications%20of%20integration">Chapter 5 | Applications of Integration</a></li><li entry="h2"><a href="#%C2%A75.1-%7C%20areas%20between%20curves">§5.1 | Areas Between Curves</a></li><li entry="h2"><a href="#%C2%A75.2-%7C%20volumes">§5.2 | Volumes</a></li><li entry="h3"><a href="#solids-of%20revolution">Solids of revolution</a></li><li entry="h4"><a href="#cross-sectional-area">Cross-sectional Area</a></li><li entry="h5"><a href="#disk-function%20examples">Disk Function Examples</a></li><li entry="h5"><a href="#washer-function%20examples">Washer Function Examples</a></li><li entry="h2"><a href="#%C2%A75.3-%7C%20volumes%20by%20cylindrical%20shells">§5.3 | Volumes by Cylindrical Shells</a></li><li entry="h3"><a href="#the-shell%20method">The Shell Method</a></li><li entry="h4"><a href="#significant-distinction">Significant Distinction</a></li><li entry="h5"><a href="#alternatively">Alternatively</a></li><li entry="h2"><a href="#summary-of%20%C2%A75.2%20and%20%C2%A75.3">Summary of §5.2 and §5.3</a></li><li entry="h3"><a href="#volumes-by%20cylindrical%20shells%20-%20general%20formulas">Volumes by Cylindrical Shells - General Formulas</a></li><li entry="h4"><a href="#cylindrical-shells%20across-x=n">Cylindrical Shells Across <span inline="" math-inline="">\(x=n\)</span></a></li><li entry="h2"><a href="#%C2%A75.4-%7C%20work">§5.4 | Work</a></li><li entry="h2"><a href="#%C2%A75.5-%7C%20average%20value%20of%20a%20function">§5.5 | Average Value of a Function</a></li></ul></div>
     </header>
     <h1 id="chapter-5%20%7C%20applications%20of%20integration">Chapter 5 | Applications of Integration</h1>
 
@@ -299,7 +303,7 @@ root_ul_node.appendChild(build_entries(menu));</script>
 <section class="note-block block"><h3 id="solids-of%20revolution">Solids of revolution</h3><p>Called Solids of revolution because they are obtained by revolving a region about a line. In general, we calculate the volume of a solid of revolution by using the basic defining formula</p><div>
         <div block="" math-block="">$$V=\IntegrateFor{a}{b}{A(x)}{x}$$</div>
         <div block="" math-block="">$$V=\IntegrateFor{c}{d}{A(y)}{y}$$</div>
-    </div><section class="note-block block"><h4 id="cross-sectional-area">Cross-sectional Area</h4><p>We find the cross-sectional area <span inline="" math-inline="">\(A(x)\)</span> or <span inline="" math-inline="">\(A(y)\)</span> in one of the following ways:</p><ul>
+    </div><section class="note-block block"><h4 id="cross-sectional-area">Cross-sectional Area</h4><section class="note-block block"><p><img center="" width="500px" src="https://calcworkshop.com/wp-content/uploads/volume-by-slicing.png" style="min-width: 0; max-width: 500px; width: 100%;"><img center="" width="500px" src="https://calcworkshop.com/wp-content/uploads/volume-revolution.png" style="min-width: 0; max-width: 500px; width: 100%;"></p></section><p>We find the cross-sectional area <span inline="" math-inline="">\(A(x)\)</span> or <span inline="" math-inline="">\(A(y)\)</span> in one of the following ways:</p><ul>
             <li>
                 If the cross-section is a disk (i.e. a <b>solid shape</b>), we find the radius of the disk (in terms of x or y) and use
                 <div block="" math-block="">$$A = \pi\left(\text{radius}\right)^2$$</div>
@@ -318,8 +322,11 @@ root_ul_node.appendChild(build_entries(menu));</script>
 <section class="note-block block"><p><img width="400px" src="https://colbyn.github.io/school-notes/1.8544acc1.png" style="min-width: 0; max-width: 400px; width: 100%;"><img width="400px" src="https://colbyn.github.io/school-notes/2.2f0bf47d.png" style="min-width: 0; max-width: 400px; width: 100%;"></p><section class="note-block block"><p><img width="400px" src="https://colbyn.github.io/school-notes/3.e31358c2.png" style="min-width: 0; max-width: 400px; width: 100%;"><img width="400px" src="https://colbyn.github.io/school-notes/4.0c394ebd.png" style="min-width: 0; max-width: 400px; width: 100%;"></p></section></section>
 
 <section class="note-block block"><h3 id="the-shell%20method">The Shell Method</h3><section class="note-block block"><h4 id="significant-distinction">Significant Distinction</h4><p>
-        For the disk/washer method, the slice is <b>perpendicular to the axis of revolution</b>, whereas, for the shell method, the slice is <b>parallel to the axis of revolution</b>.
-        <img width="400px" center="" src="https://colbyn.github.io/school-notes/4.d6457cf0.png" style="min-width: 0; max-width: 400px; width: 100%;"><img width="400px" center="" src="https://colbyn.github.io/school-notes/5.f5e88264.png" style="min-width: 0; max-width: 400px; width: 100%;"></p></section><ul style="max-width: 500px; margin: 0 auto;">
+        For the disk/washer method, the slice is <b>perpendicular</b> to the <b>axis of revolution</b>, whereas, for the shell method, the slice is <u><b>parallel</b> to the <b>axis of revolution</b></u>.
+        <img width="400px" center="" src="https://colbyn.github.io/school-notes/4.d6457cf0.png" style="min-width: 0; max-width: 400px; width: 100%;"><img width="400px" center="" src="https://colbyn.github.io/school-notes/5.f5e88264.png" style="min-width: 0; max-width: 400px; width: 100%;"></p><section class="note-block block"><h5 id="alternatively">Alternatively</h5><p>
+            There are a couple of important differences between this method and the method of rings/disks that we should note before moving on. First, rotation about a vertical axis (i.e. <span inline="" math-inline="">\(y=n\)</span>) will give an area that is a function of <span inline="" math-inline="">\(x\)</span> and rotation about a horizontal axis (i.e. <span inline="" math-inline="">\(x=k\)</span>) will give an area that is a function of  <span inline="" math-inline="">\(y\)</span>. This is exactly opposite of the method of rings/disks.
+            Second, we don’t take the complete range of x or  y for the limits of integration as we did in the previous section. Instead we take a range of x or y that will cover one side of the solid. As we noted in the first example if we expand out the radius to cover one side we will automatically expand in the other direction as well to cover the other side.
+        </p></section></section><ul style="max-width: 500px; margin: 0 auto;">
         <li style="display: flex; justify-content: space-around;">
             Rotated about the y-axis
             <span inline="" math-inline="">\(2\pi \IntegrateFor{a}{b}{x \cdot f(x)}{x}\)</span>
@@ -329,6 +336,16 @@ root_ul_node.appendChild(build_entries(menu));</script>
             <span inline="" math-inline="">\(2\pi \IntegrateFor{a}{b}{y \cdot f(y)}{y}\)</span>
         </li>
     </ul></section>
+
+<h2 id="summary-of%20%C2%A75.2%20and%20%C2%A75.3">Summary of §5.2 and §5.3</h2>
+
+<img src="https://opentextbc.ca/calculusv2openstax/wp-content/uploads/sites/287/2019/08/CNX_Calc_Figure_06_03_009.jpg">
+
+<section class="note-block block"><h3 id="volumes-by%20cylindrical%20shells%20-%20general%20formulas">Volumes by Cylindrical Shells - General Formulas</h3><section class="note-block block"><h4 id="cylindrical-shells%20across-x=n">Cylindrical Shells Across <span inline="" math-inline="">\(x=n\)</span></h4><div block="" math-block="">$$\begin{equation}
+            \begin{split}
+                A(x) &= 2\pi \; \overbrace{\left(\text{radius}\right)}^{n - x \; \text{or} \; x} \; \left(\text{height}\right)
+            \end{split}
+            \end{equation}$$</div></section></section>
 
 <h2 id="%C2%A75.4-%7C%20work">§5.4 | Work</h2>
 <h2 id="%C2%A75.5-%7C%20average%20value%20of%20a%20function">§5.5 | Average Value of a Function</h2>
